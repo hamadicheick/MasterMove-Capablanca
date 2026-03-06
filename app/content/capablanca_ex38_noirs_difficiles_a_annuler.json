@@ -1,0 +1,40 @@
+{
+  "id": "capablanca_ex38_noirs_difficiles_a_annuler",
+  "title": "Exemple 38 - Défense noire difficile",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
+      "text": "Le livre indique que les Noirs auraient une nouvelle fois beaucoup de mal à annuler cette finale."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
+      "moves": [
+        { "uci": "d7f6", "comment": "Le Cavalier noir se centralise pour organiser la défense." },
+        { "uci": "c1f4", "comment": "Le Fou blanc prend une diagonale active sur les deux ailes." },
+        { "uci": "e8d7", "comment": "Le Roi noir s'oriente vers le centre." },
+        { "uci": "e1e2", "comment": "Le Roi blanc suit le principe du livre : avancer vers le centre." },
+        { "uci": "f6d5", "comment": "Les Noirs cherchent des cases de blocage." },
+        { "uci": "f4g3", "comment": "Le Fou garde sa flexibilité pour soutenir les pions passés." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Dans ces finales, il faut activer le Roi vers le centre ou vers les pions faibles.",
+        "Les pions passés doivent avancer vite, mais sans perdre leur sécurité.",
+        "Le livre insiste sur un point : pas de recette unique, seulement calcul et visualisation."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
+      "question": "Quiz final : quel coup noir active d'abord le Cavalier pour défendre ?",
+      "correct_move": "d7f6",
+      "success_message": "Exact, c'est la centralisation défensive naturelle du Cavalier.",
+      "error_message": "Cherche le premier saut actif du Cavalier noir."
+    }
+  ]
+}

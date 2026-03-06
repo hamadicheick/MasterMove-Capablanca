@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "required": ["profileId", "chapters"],
+  "properties": {
+    "profileId": { "type": "string" },
+    "chapters": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "lastSequenceIndex": { "type": "number" },
+          "quizState": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "solved": { "type": "boolean" },
+                "attempts": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

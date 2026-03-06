@@ -1,0 +1,39 @@
+﻿{
+  "id": "capablanca_ex14_echanges_forces",
+  "title": "Échanges forcés gagnants",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
+      "text": "Les Blancs enchaînent des échanges forcés pour gagner la qualité et simplifier."
+    },
+    {
+      "type": "animation",
+      "fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
+      "moves": [
+        { "uci": "b5d7", "comment": "Le Fou capture le défenseur central." },
+        { "uci": "e8e4", "comment": "La Tour noire contre-attaque le Cavalier." },
+        { "uci": "d7c8", "comment": "Le Fou blanc prend la Dame noire." },
+        { "uci": "e4e3", "comment": "La Tour noire capture en e3." },
+        { "uci": "d3e3", "comment": "La Dame blanche reprend et garde l'avantage." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Éliminer un défenseur peut déclencher une cascade tactique.",
+        "Les échanges forcés doivent être calculés jusqu'au bout.",
+        "Simplifier avec avantage matériel est souvent le bon plan."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
+      "question": "Quiz final : trouve le premier échange forcé.",
+      "correct_move": "b5d7",
+      "success_message": "Exact, tu déclenches la séquence gagnante.",
+      "error_message": "Cherche une capture de Fou qui enlève le défenseur clé."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+﻿{
+  "id": "capablanca_ex26_roi_actif_et_opposition",
+  "title": "Exemple 26 - Roi actif et opposition",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/8/8/1p5p/1P5P/8/8/4K3 w - - 0 1",
+      "text": "Les Blancs utilisent l'activité du Roi pour gagner la course de pions."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/8/8/1p5p/1P5P/8/8/4K3 w - - 0 1",
+      "moves": [
+        { "uci": "e1e2", "comment": "Le Roi blanc s'active immédiatement." },
+        { "uci": "e8e7", "comment": "Le Roi noir centralise aussi." },
+        { "uci": "e2e3", "comment": "Les Blancs gagnent du terrain." },
+        { "uci": "e7e6", "comment": "Les Noirs cherchent l'opposition." },
+        { "uci": "e3e4", "comment": "Le Roi blanc continue l'infiltration." },
+        { "uci": "e6d6", "comment": "Le Roi noir bascule vers l'aile Dame." },
+        { "uci": "e4d4", "comment": "Le Roi blanc prend une case clé." },
+        { "uci": "d6c6", "comment": "Le Roi noir essaie de défendre les pions." },
+        { "uci": "d4e5", "comment": "Le Roi blanc contourne la défense." },
+        { "uci": "c6b7", "comment": "Le Roi noir recule." },
+        { "uci": "e5d6", "comment": "Le Roi blanc pénètre plus profondément." },
+        { "uci": "b7b6", "comment": "Le Roi noir reste lié au pion b." },
+        { "uci": "d6d5", "comment": "Le Roi blanc contrôle les cases de passage." },
+        { "uci": "b6b7", "comment": "Les Noirs maintiennent la défense." },
+        { "uci": "d5c5", "comment": "Le Roi blanc force le zugzwang." },
+        { "uci": "b7a6", "comment": "Le Roi noir est repoussé." },
+        { "uci": "c5c6", "comment": "Le Roi blanc gagne le pion b5." },
+        { "uci": "a6a7", "comment": "Le Roi noir n'a plus de ressource utile." },
+        { "uci": "c6b5", "comment": "Le Roi blanc capture et gagne la finale." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "En finale de pions, l'activité du Roi est décisive.",
+        "L'opposition permet d'obtenir des cases d'infiltration.",
+        "Forcer le zugzwang adverse ouvre souvent un pion à gagner."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/8/8/1p5p/1P5P/8/8/4K3 w - - 0 1",
+      "question": "Quiz final en 3 coups : démarre le bon plan de Roi actif.",
+      "steps": [
+        {
+          "coups_acceptes": ["e1e2"],
+          "reponse": "e8e7",
+          "indice": "Étape 1 : active ton Roi sans tarder.",
+          "solution": "e1e2"
+        },
+        {
+          "fen": "8/4k3/8/1p5p/1P5P/8/4K3/8 w - - 2 2",
+          "coups_acceptes": ["e2e3"],
+          "reponse": "e7e6",
+          "indice": "Étape 2 : continue la marche vers le centre.",
+          "solution": "e2e3"
+        },
+        {
+          "fen": "8/8/4k3/1p5p/1P5P/4K3/8/8 w - - 4 3",
+          "coups_acceptes": ["e3e4"],
+          "reponse": "e6d6",
+          "indice": "Étape 3 : garde l'initiative de l'opposition.",
+          "solution": "e3e4"
+        }
+      ],
+      "correct_move": "e1e2",
+      "success_message": "Excellent, tu as lancé le bon plan d'opposition.",
+      "error_message": "Reprends le plan : Roi actif, centre, puis opposition."
+    }
+  ]
+}

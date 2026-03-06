@@ -1,0 +1,41 @@
+{
+  "id": "capablanca_ex43_attaque_sans_cavaliers",
+  "title": "Exemple 43 - L'attaque sans Cavaliers",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1",
+      "text": "Les Noirs jouent en premiers. Ils ont un Cavalier et un pion de moins. Mais leur attaque est foudroyante ! Sauras-tu trouver le bon coup ?"
+    },
+    {
+      "type": "animation",
+      "fen": "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1",
+      "moves": [
+        { "uci": "d8g8", "comment": "Les deux Tours noires se doublent sur la colonne g. Elles menacent de capturer en g2 avec echec !" },
+        { "uci": "f1f2", "comment": "Les Blancs defendent le pion g2 avec leur Tour. C est leur seule defense." },
+        { "uci": "g4g2", "comment": "La Tour noire capture en g2 avec echec ! Les Blancs ne peuvent pas reprendre avec la Tour." },
+        { "uci": "g1f1", "comment": "Le Roi blanc est force de fuir en f1." },
+        { "uci": "e6c4", "comment": "Le Fou vient en c4 avec echec en diagonale. Il force le Cavalier blanc a se deplacer." },
+        { "uci": "a3c4", "comment": "Le Cavalier est oblige de capturer le Fou. Mais alors..." },
+        { "uci": "g2g1", "comment": "Tour en g1 : echec et mat ! Le Roi est pris sans aucune case de fuite." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu il faut retenir",
+      "content": [
+        "Les Noirs avaient moins de pieces, mais leur attaque etait plus forte que le materiel.",
+        "L attaque a ete realisee par les Tours, le Fou et la Dame : aucun Cavalier n a attaque !",
+        "Doubler les Tours sur une colonne ouverte est une arme redoutable."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1",
+      "question": "Les Noirs ont moins de materiel mais une attaque decisive. Trouve leur premier coup brillant !",
+      "correct_move": "d8g8",
+      "success_message": "Exact ! Les deux Tours se doublent sur la colonne g et menacent de capturer en g2 avec echec.",
+      "error_message": "Si tu captures en g2 tout de suite, les Blancs reprennent avec la Tour et l attaque s arrete."
+    }
+  ]
+}

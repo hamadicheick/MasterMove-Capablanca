@@ -1,0 +1,73 @@
+﻿{
+  "id": "capablanca_ch1_ex6_roi_pion_opposition",
+  "title": "Finale Roi et pion : opposition active",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/8/5k2/8/5K2/8/4P3/8 w - - 0 1",
+      "text": "Les Blancs doivent utiliser l'opposition pour faire progresser leur pion."
+    },
+    {
+      "type": "animation",
+      "fen": "8/8/5k2/8/5K2/8/4P3/8 w - - 0 1",
+      "moves": [
+        { "uci": "f4e4", "comment": "Le Roi blanc prend l'opposition au centre." },
+        { "uci": "f6e6", "comment": "Le Roi noir répond en gardant le contact." },
+        { "uci": "e2e3", "comment": "Le pion avance sous protection." },
+        { "uci": "e6f6", "comment": "Le Roi noir reste actif." },
+        { "uci": "e4d5", "comment": "Le Roi blanc gagne une case clé." },
+        { "uci": "f6e7", "comment": "Le Roi noir cherche un angle de blocage." },
+        { "uci": "d5e5", "comment": "Le Roi blanc maintient la pression." },
+        { "uci": "e7d7", "comment": "Le Roi noir recule pour tenir la zone." },
+        { "uci": "e5f6", "comment": "Le Roi blanc s'infiltre." },
+        { "uci": "d7e8", "comment": "Le Roi noir vise la case de promotion." },
+        { "uci": "e3e4", "comment": "Le pion continue sa progression." },
+        { "uci": "e8d7", "comment": "Le Roi noir revient au blocage." },
+        { "uci": "e4e5", "comment": "Nouveau gain d'espace pour les Blancs." },
+        { "uci": "d7e8", "comment": "Le Roi noir attend la percée." },
+        { "uci": "f6e6", "comment": "Le Roi blanc reprend l'opposition décisive." },
+        { "uci": "e8f8", "comment": "Le Roi noir est contraint." },
+        { "uci": "e6d7", "comment": "Le Roi blanc contrôle l'accès et prépare la promotion." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "L'opposition permet au Roi blanc de gagner du terrain.",
+        "Le pion avance quand le Roi adverse est repoussé.",
+        "Le duo Roi+pion progresse par petites étapes forcées."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/8/5k2/8/5K2/8/4P3/8 w - - 0 1",
+      "question": "Quiz final en 3 coups : applique le plan d'opposition.",
+      "steps": [
+        {
+          "coups_acceptes": ["f4e4"],
+          "reponse": "f6e6",
+          "indice": "Étape 1 : prends l'opposition avec ton Roi.",
+          "solution": "f4e4"
+        },
+        {
+          "fen": "8/8/4k3/8/4K3/8/4P3/8 w - - 0 1",
+          "coups_acceptes": ["e2e3"],
+          "reponse": "e6f6",
+          "indice": "Étape 2 : fais avancer le pion au bon moment.",
+          "solution": "e2e3"
+        },
+        {
+          "fen": "8/8/5k2/8/4K3/4P3/8/8 w - - 0 1",
+          "coups_acceptes": ["e4d5"],
+          "reponse": "f6e7",
+          "indice": "Étape 3 : améliore encore la position de ton Roi.",
+          "solution": "e4d5"
+        }
+      ],
+      "correct_move": "f4e4",
+      "success_message": "Excellent, tu maîtrises le plan d'opposition.",
+      "error_message": "Reprends le plan : opposition du Roi, puis poussée du pion."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+
+# Temp files
+.tmp_userdata/
+_video_frames/
+
+# Build artifacts
+*.zip
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

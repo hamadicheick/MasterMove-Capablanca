@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "required": ["chapitre_id", "titre", "description", "sequences"],
+  "properties": {
+    "chapitre_id": { "type": "string" },
+    "titre": { "type": "string" },
+    "description": { "type": "string" },
+    "sequences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "texte_ecran", "texte_audio", "position_depart_fen"],
+        "properties": {
+          "id": { "type": ["number", "string"] },
+          "type": { "enum": ["theorie_animee", "quiz_interactif"] },
+          "texte_ecran": { "type": "string" },
+          "texte_audio": { "type": "string" },
+          "position_depart_fen": { "type": "string" },
+          "animations": {
+            "type": "array",
+            "items": { "type": "object", "required": ["coup"], "properties": { "coup": { "type": "string" } } }
+          },
+          "validation": {
+            "type": "object",
+            "properties": {
+              "coups_acceptes": { "type": "array", "items": { "type": "string" } },
+              "indice": { "type": "string" },
+              "feedback_succes": { "type": "string" },
+              "feedback_erreur": { "type": "string" },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "coups_acceptes": { "type": "array", "items": { "type": "string" } },
+                    "reponse": {
+                      "anyOf": [
+                        { "type": "string" },
+                        { "type": "array", "items": { "type": "string" } }
+                      ]
+                    },
+                    "indice": { "type": "string" },
+                    "solution": {
+                      "anyOf": [
+                        { "type": "string" },
+                        { "type": "array", "items": { "type": "string" } }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

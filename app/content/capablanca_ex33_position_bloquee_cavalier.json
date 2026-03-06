@@ -1,0 +1,62 @@
+{
+  "id": "capablanca_ex33_position_bloquee_cavalier",
+  "title": "Exemple 33 - Position bloquée : Cavalier supérieur",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "text": "Dans cette position bloquée sur une seule aile, le Cavalier noir a de meilleures perspectives que le Fou blanc."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "moves": [
+        { "uci": "d7f6", "comment": "Le Cavalier se centralise et vise plusieurs points d'appui." },
+        { "uci": "c1f4", "comment": "Le Fou blanc cherche de l'activité, mais sa portée reste limitée." },
+        { "uci": "f6e4", "comment": "Le Cavalier occupe une case forte au cœur de la structure." },
+        { "uci": "f4e5", "comment": "Le Fou se réorganise sans créer de menace directe." },
+        { "uci": "e4g3", "comment": "Le Cavalier change d'aile rapidement et continue d'améliorer sa portée." },
+        { "uci": "e1f2", "comment": "Le Roi blanc doit rester prudent face aux sauts du Cavalier." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Dans les positions bloquées sur une seule aile, le Cavalier peut devenir plus fort que le Fou.",
+        "Des pions placés sur la couleur de son propre Fou réduisent souvent l'efficacité de ce dernier.",
+        "Le Cavalier profite mieux des cases fortes et des trajets courts dans les structures fermées."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "question": "Quiz final en 3 étapes : rejoue le plan d'amélioration du Cavalier noir.",
+      "steps": [
+        {
+          "coups_acceptes": ["d7f6"],
+          "reponse": "c1f4",
+          "indice": "Étape 1 : centralise le Cavalier noir.",
+          "solution": "d7f6"
+        },
+        {
+          "fen": "4k3/8/2p2n2/1pPp4/pP1P1B2/P7/8/4K3 b - - 2 2",
+          "coups_acceptes": ["f6e4"],
+          "reponse": "f4e5",
+          "indice": "Étape 2 : place le Cavalier sur une case forte.",
+          "solution": "f6e4"
+        },
+        {
+          "fen": "4k3/8/2p5/1pPpB3/pP1Pn3/P7/8/4K3 b - - 4 3",
+          "coups_acceptes": ["e4g3"],
+          "reponse": "e1f2",
+          "indice": "Étape 3 : bascule le Cavalier vers l'aile Roi.",
+          "solution": "e4g3"
+        }
+      ],
+      "correct_move": "d7f6",
+      "success_message": "Exact, le Cavalier noir suit le bon plan d'amélioration.",
+      "error_message": "Repars du principe : case forte centrale puis redéploiement du Cavalier."
+    }
+  ]
+}

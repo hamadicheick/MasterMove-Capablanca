@@ -1,0 +1,63 @@
+﻿{
+  "id": "capablanca_ex24_majorite_et_promotion",
+  "title": "Exemple 24 - Majorité de pions et promotion",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
+      "text": "Les Blancs exploitent leur majorité de pions passés pour forcer une promotion."
+    },
+    {
+      "type": "animation",
+      "fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
+      "moves": [
+        { "uci": "b5b6", "comment": "Le pion b avance pour créer une menace de percée." },
+        { "uci": "c7b6", "comment": "Les Noirs capturent pour réduire la majorité blanche." },
+        { "uci": "a5a6", "comment": "Les Blancs activent un second pion passé." },
+        { "uci": "b6c5", "comment": "Les Noirs capturent sur c5 et cherchent le contre-jeu." },
+        { "uci": "a6b7", "comment": "Le pion blanc capture et se rapproche de la promotion." },
+        { "uci": "c5c4", "comment": "Les Noirs poussent leur pion pour gagner un tempo." },
+        { "uci": "b7b8q", "comment": "Promotion en Dame : avantage décisif des Blancs." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Une majorité de pions peut créer plusieurs menaces simultanées.",
+        "Le bon ordre des poussées décide souvent de la course.",
+        "Promouvoir en premier suffit généralement à gagner."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
+      "question": "Quiz final en 3 coups : lance le plan gagnant de promotion.",
+      "steps": [
+        {
+          "coups_acceptes": ["b5b6"],
+          "reponse": "c7b6",
+          "indice": "Étape 1 : démarre la percée avec le pion b.",
+          "solution": "b5b6"
+        },
+        {
+          "fen": "8/pp5k/1p6/P1P5/8/8/8/7K w - - 0 2",
+          "coups_acceptes": ["a5a6"],
+          "reponse": "b6c5",
+          "indice": "Étape 2 : active le pion a pour créer une deuxième menace.",
+          "solution": "a5a6"
+        },
+        {
+          "fen": "8/pp5k/P7/2p5/8/8/8/7K w - - 0 3",
+          "coups_acceptes": ["a6b7"],
+          "reponse": "c5c4",
+          "indice": "Étape 3 : rapproche ton pion de la case de promotion.",
+          "solution": "a6b7"
+        }
+      ],
+      "correct_move": "b5b6",
+      "success_message": "Excellent, tu as lancé le plan de promotion gagnant.",
+      "error_message": "Reprends le plan : percée sur b, puis relais du pion a."
+    }
+  ]
+}

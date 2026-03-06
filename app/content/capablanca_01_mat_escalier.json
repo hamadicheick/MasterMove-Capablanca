@@ -1,0 +1,56 @@
+{
+  "chapitre_id": "capablanca_01_mat_escalier",
+  "titre": "Capablanca - Mat de l'escalier (demo)",
+  "description": "Apprendre a mater avec deux Tours. Texte placeholder a remplacer par l'adaptation Capablanca.",
+  "sequences": [
+    {
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Etape 1 : Une Tour coupe la route au Roi pour l'empecher d'avancer.",
+      "texte_audio": "Etape 1. Observe bien. La premiere tour coupe la route au roi.",
+      "position_depart_fen": "8/8/8/4k3/8/8/8/R3K2R w KQ - 0 1",
+      "animations": [
+        {
+          "coup": "h1h4",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "e5d5",
+          "acteur": "noir"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Etape 2 : L'autre Tour donne echec et force le Roi a reculer.",
+      "texte_audio": "Etape 2. L'autre tour attaque le roi. Echec.",
+      "position_depart_fen": "8/8/8/3k4/7R/8/8/R3K3 w Q - 0 2",
+      "animations": [
+        {
+          "coup": "a1a5",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "d5d6",
+          "acteur": "noir"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "quiz_interactif",
+      "texte_ecran": "A toi de jouer ! Trouve un bon coup de Tour pour continuer l'escalier.",
+      "texte_audio": "A toi de jouer ! Quel coup de tour continue le principe ?",
+      "position_depart_fen": "8/8/3k4/R7/7R/8/8/4K3 w - - 0 3",
+      "validation": {
+        "coups_acceptes": [
+          "h4h6",
+          "h4h5"
+        ],
+        "feedback_succes": "Bravo ! Tu as compris le principe de l'escalier.",
+        "feedback_erreur": "Oups ! Essaie d'attaquer la ligne du roi noir avec ta tour."
+      }
+    }
+  ]
+}

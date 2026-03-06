@@ -1,0 +1,68 @@
+{
+  "id": "capablanca_ex31_deux_cavaliers_mat",
+  "title": "Exemple 31 - Cavalier et Roi : mat",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
+      "text": "Dans cette position, les Blancs gagnent grâce à la coordination du Cavalier et du Roi."
+    },
+    {
+      "type": "animation",
+      "fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
+      "moves": [
+        { "uci": "h1h2", "comment": "Les Noirs choisissent la défense la plus résistante." },
+        { "uci": "f6g4", "comment": "Échec : le Cavalier active le réseau de mat." },
+        { "uci": "h2h1", "comment": "Le Roi noir revient en h1." },
+        { "uci": "f2f1", "comment": "Le Roi blanc se rapproche pour soutenir le Cavalier." },
+        { "uci": "g6g5", "comment": "Le pion noir avance pour créer une case de fuite potentielle." },
+        { "uci": "f1f2", "comment": "Le Roi blanc garde le contrôle des cases critiques." },
+        { "uci": "h3h2", "comment": "Le pion noir continue sa course." },
+        { "uci": "g4e3", "comment": "Le Cavalier se repositionne et coupe les sorties." },
+        { "uci": "g5g4", "comment": "Dernière tentative noire." },
+        { "uci": "e3f1", "comment": "Le Cavalier revient pour forcer le mat." },
+        { "uci": "g4g3", "comment": "Échec noir intermédiaire." },
+        { "uci": "f1g3", "comment": "Mat : le Cavalier capture et ferme toutes les cases." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "La coordination du Cavalier avec le Roi permet de construire un filet de mat précis.",
+        "Les tempos gagnés sur les poussées du pion noir sont utilisés pour améliorer les pièces blanches.",
+        "Le coup final montre l'importance de calculer jusqu'au mat, même en finale réduite."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
+      "question": "Quiz final en 3 étapes : rejoue le plan gagnant des Blancs.",
+      "steps": [
+        {
+          "coups_acceptes": ["h1h2"],
+          "reponse": "f6g4",
+          "indice": "Étape 1 : joue la défense noire indiquée par le livre.",
+          "solution": "h1h2"
+        },
+        {
+          "fen": "8/8/6p1/8/6N1/7p/5K1k/8 b - - 1 2",
+          "coups_acceptes": ["h2h1"],
+          "reponse": "f2f1",
+          "indice": "Étape 2 : le Roi noir revient, puis le Roi blanc progresse.",
+          "solution": "h2h1"
+        },
+        {
+          "fen": "8/8/6p1/8/6N1/7p/8/5K1k b - - 4 3",
+          "coups_acceptes": ["g6g5"],
+          "reponse": "f1f2",
+          "indice": "Étape 3 : pousse le pion noir, puis observe la coordination blanche.",
+          "solution": "g6g5"
+        }
+      ],
+      "correct_move": "h1h2",
+      "success_message": "Exact, tu as bien relancé la variante de référence.",
+      "error_message": "Reprends la séquence du livre : défense noire, puis activation blanche."
+    }
+  ]
+}

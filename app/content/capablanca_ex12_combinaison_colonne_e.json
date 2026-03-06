@@ -1,0 +1,43 @@
+﻿{
+  "id": "capablanca_ex12_combinaison_colonne_e",
+  "title": "Combinaison tactique sur la colonne e",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
+      "text": "Les Blancs gagnent du matériel par une séquence forcée sur la colonne e."
+    },
+    {
+      "type": "animation",
+      "fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
+      "moves": [
+        { "uci": "d4c6", "comment": "Le Cavalier capture en c6." },
+        { "uci": "e7g5", "comment": "Le Fou noir contre-attaque." },
+        { "uci": "c6e7", "comment": "Le Cavalier arrive en e7 avec échec." },
+        { "uci": "c7e7", "comment": "La Dame noire capture le Cavalier." },
+        { "uci": "e3e7", "comment": "La Tour blanche reprend la Dame." },
+        { "uci": "g5e7", "comment": "Le Fou noir reprend la Tour." },
+        { "uci": "h3d7", "comment": "La Dame blanche entre dans le camp noir." },
+        { "uci": "f7f6", "comment": "Les Noirs tentent de se défendre." },
+        { "uci": "d7b7", "comment": "Les Blancs gagnent une pièce supplémentaire." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "La tactique exploite l'alignement des pièces lourdes.",
+        "Chaque reprise prépare la suivante.",
+        "Le calcul précis transforme l'initiative en gain matériel."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
+      "question": "Quiz final : trouve le premier coup tactique.",
+      "correct_move": "d4c6",
+      "success_message": "Parfait, tu lances correctement la combinaison.",
+      "error_message": "Cherche une capture de Cavalier qui ouvre la colonne e."
+    }
+  ]
+}

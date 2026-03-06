@@ -1,0 +1,136 @@
+{
+  "id": "capablanca_ch1_ex1_tour_roi",
+  "title": "Le mat avec la Tour",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
+      "text": "Les Blancs doivent mater avec la Tour et le Roi."
+    },
+    {
+      "type": "animation",
+      "fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
+      "moves": [
+        {
+          "uci": "a1a7",
+          "comment": "Coup 1 des Blancs: a1a7."
+        },
+        {
+          "uci": "h8g8",
+          "comment": "Réponse des Noirs: h8g8."
+        },
+        {
+          "uci": "h1g2",
+          "comment": "Coup 2 des Blancs: h1g2."
+        },
+        {
+          "uci": "g8f8",
+          "comment": "Réponse des Noirs: g8f8."
+        },
+        {
+          "uci": "g2f3",
+          "comment": "Coup 3 des Blancs: g2f3."
+        },
+        {
+          "uci": "f8e8",
+          "comment": "Réponse des Noirs: f8e8."
+        },
+        {
+          "uci": "f3e4",
+          "comment": "Coup 4 des Blancs: f3e4."
+        },
+        {
+          "uci": "e8d8",
+          "comment": "Réponse des Noirs: e8d8."
+        },
+        {
+          "uci": "e4d5",
+          "comment": "Coup 5 des Blancs: e4d5."
+        },
+        {
+          "uci": "d8c8",
+          "comment": "Réponse des Noirs: d8c8."
+        },
+        {
+          "uci": "d5d6",
+          "comment": "Coup 6 des Blancs: d5d6."
+        },
+        {
+          "uci": "c8b8",
+          "comment": "Réponse des Noirs: c8b8."
+        },
+        {
+          "uci": "a7c7",
+          "comment": "Coup 7 des Blancs: a7c7."
+        },
+        {
+          "uci": "b8a8",
+          "comment": "Réponse des Noirs: b8a8."
+        },
+        {
+          "uci": "d6c6",
+          "comment": "Coup 8 des Blancs: d6c6."
+        },
+        {
+          "uci": "a8b8",
+          "comment": "Réponse des Noirs: a8b8."
+        },
+        {
+          "uci": "c6b6",
+          "comment": "Coup 9 des Blancs: c6b6."
+        },
+        {
+          "uci": "b8a8",
+          "comment": "Réponse des Noirs: b8a8."
+        },
+        {
+          "uci": "c7c8",
+          "comment": "Coup 10 des Blancs: c7c8."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "La Tour repousse le Roi au bord.",
+        "Le Roi blanc doit s’approcher.",
+        "Le mat vient quand le Roi noir est bloqué."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
+      "question": "Joue la méthode en 3 coups : coupe, approche, continue.",
+      "steps": [
+        {
+          "coups_acceptes": [
+            "a1a7"
+          ],
+          "reponse": "h8g8",
+          "indice": "Étape 1 : coupe le Roi noir avec la Tour.",
+          "solution": "a1a7"
+        },
+        {
+          "coups_acceptes": [
+            "h1g2"
+          ],
+          "reponse": "g8f8",
+          "indice": "Étape 2 : active ton Roi.",
+          "solution": "h1g2"
+        },
+        {
+          "coups_acceptes": [
+            "g2f3"
+          ],
+          "reponse": "f8e8",
+          "indice": "Étape 3 : continue à rapprocher ton Roi.",
+          "solution": "g2f3"
+        }
+      ],
+      "correct_move": "a1a7",
+      "success_message": "Parfait, tu appliques bien la méthode.",
+      "error_message": "Reprends la séquence : coupe, puis avance ton Roi."
+    }
+  ]
+}

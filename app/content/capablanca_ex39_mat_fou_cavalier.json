@@ -1,0 +1,290 @@
+{
+  "id": "capablanca_ex39_mat_fou_cavalier",
+  "title": "Exemple 39 - Mat avec Fou et Cavalier",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "text": "Objectif : mater dans un coin de la couleur du Fou (a1 ou h8)."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "moves": [
+        {
+          "uci": "e1e2",
+          "comment": "Le Roi blanc avance vers le centre, principe de base."
+        },
+        {
+          "uci": "e8d7",
+          "comment": ""
+        },
+        {
+          "uci": "e2d3",
+          "comment": ""
+        },
+        {
+          "uci": "d7c6",
+          "comment": ""
+        },
+        {
+          "uci": "c1f4",
+          "comment": ""
+        },
+        {
+          "uci": "c6d5",
+          "comment": ""
+        },
+        {
+          "uci": "g1e2",
+          "comment": ""
+        },
+        {
+          "uci": "d5c5",
+          "comment": ""
+        },
+        {
+          "uci": "e2c3",
+          "comment": ""
+        },
+        {
+          "uci": "c5b4",
+          "comment": ""
+        },
+        {
+          "uci": "d3d4",
+          "comment": ""
+        },
+        {
+          "uci": "b4a5",
+          "comment": ""
+        },
+        {
+          "uci": "d4c5",
+          "comment": ""
+        },
+        {
+          "uci": "a5a6",
+          "comment": ""
+        },
+        {
+          "uci": "c5c6",
+          "comment": ""
+        },
+        {
+          "uci": "a6a7",
+          "comment": ""
+        },
+        {
+          "uci": "c3d5",
+          "comment": "Le Cavalier participe au confinement du Roi noir."
+        },
+        {
+          "uci": "a7a8",
+          "comment": ""
+        },
+        {
+          "uci": "d5b6",
+          "comment": ""
+        },
+        {
+          "uci": "a8a7",
+          "comment": ""
+        },
+        {
+          "uci": "f4c7",
+          "comment": "Le Fou restreint les cases blanches et maintient l'étau."
+        },
+        {
+          "uci": "a7a6",
+          "comment": ""
+        },
+        {
+          "uci": "c7b8",
+          "comment": ""
+        },
+        {
+          "uci": "a6a5",
+          "comment": ""
+        },
+        {
+          "uci": "b6d5",
+          "comment": "Les Blancs préparent la bascule du Roi noir vers le coin a1."
+        },
+        {
+          "uci": "a5a4",
+          "comment": ""
+        },
+        {
+          "uci": "c6c5",
+          "comment": "Début de la phase méthodique de transfert vers a1."
+        },
+        {
+          "uci": "a4b3",
+          "comment": ""
+        },
+        {
+          "uci": "d5b4",
+          "comment": ""
+        },
+        {
+          "uci": "b3c3",
+          "comment": ""
+        },
+        {
+          "uci": "b8f4",
+          "comment": ""
+        },
+        {
+          "uci": "c3b3",
+          "comment": ""
+        },
+        {
+          "uci": "f4e5",
+          "comment": ""
+        },
+        {
+          "uci": "b3a4",
+          "comment": ""
+        },
+        {
+          "uci": "c5c4",
+          "comment": ""
+        },
+        {
+          "uci": "a4a5",
+          "comment": ""
+        },
+        {
+          "uci": "e5c7",
+          "comment": ""
+        },
+        {
+          "uci": "a5a4",
+          "comment": ""
+        },
+        {
+          "uci": "b4d3",
+          "comment": ""
+        },
+        {
+          "uci": "a4a3",
+          "comment": ""
+        },
+        {
+          "uci": "c7b6",
+          "comment": ""
+        },
+        {
+          "uci": "a3a4",
+          "comment": ""
+        },
+        {
+          "uci": "d3b2",
+          "comment": ""
+        },
+        {
+          "uci": "a4a3",
+          "comment": ""
+        },
+        {
+          "uci": "c4c3",
+          "comment": "Le Roi blanc complète le confinement sur la colonne a."
+        },
+        {
+          "uci": "a3a2",
+          "comment": ""
+        },
+        {
+          "uci": "c3c2",
+          "comment": ""
+        },
+        {
+          "uci": "a2a3",
+          "comment": ""
+        },
+        {
+          "uci": "b6c5",
+          "comment": ""
+        },
+        {
+          "uci": "a3a2",
+          "comment": ""
+        },
+        {
+          "uci": "b2d3",
+          "comment": ""
+        },
+        {
+          "uci": "a2a1",
+          "comment": ""
+        },
+        {
+          "uci": "c5b4",
+          "comment": ""
+        },
+        {
+          "uci": "a1a2",
+          "comment": ""
+        },
+        {
+          "uci": "d3c1",
+          "comment": "Dernière coordination Fou+Cavalier avant le mat."
+        },
+        {
+          "uci": "a2a1",
+          "comment": ""
+        },
+        {
+          "uci": "b4c3",
+          "comment": "Mat : le Roi noir est enfermé dans le coin de la couleur du Fou."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Cette finale se joue en deux temps : confiner le Roi adverse à la bande, puis le conduire vers le bon coin.",
+        "Le Roi blanc est une pièce active : il doit participer au filet de mat avec le Fou et le Cavalier.",
+        "La méthode est exigeante mais stable si les cases de fuite sont contrôlées avec précision."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "question": "Quiz final en 3 étapes : démarre la méthode de mat correctement.",
+      "steps": [
+        {
+          "coups_acceptes": [
+            "e1e2"
+          ],
+          "reponse": "e8d7",
+          "indice": "Étape 1 : active le Roi blanc vers le centre.",
+          "solution": "e1e2"
+        },
+        {
+          "fen": "8/3k4/8/8/8/8/4K3/2B3N1 w - - 2 2",
+          "coups_acceptes": [
+            "e2d3"
+          ],
+          "reponse": "d7c6",
+          "indice": "Étape 2 : continue l'approche méthodique du Roi.",
+          "solution": "e2d3"
+        },
+        {
+          "fen": "8/8/2k5/8/8/3K4/8/2B3N1 w - - 4 3",
+          "coups_acceptes": [
+            "c1f4"
+          ],
+          "reponse": "c6d5",
+          "indice": "Étape 3 : place le Fou sur une diagonale de contrôle.",
+          "solution": "c1f4"
+        }
+      ],
+      "correct_move": "e1e2",
+      "success_message": "Exact, la méthode démarre correctement.",
+      "error_message": "Reprends la logique : Roi actif d'abord, puis coordination des pièces."
+    }
+  ]
+}

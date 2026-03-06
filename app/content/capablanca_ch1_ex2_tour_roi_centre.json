@@ -1,0 +1,144 @@
+{
+  "id": "capablanca_ch1_ex2_tour_roi_centre",
+  "title": "Activer le Roi contre un Roi central",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/8/8/4k3/8/8/8/4K2R w K - 0 1",
+      "text": "Le Roi noir est au centre. Comment le repousser ?"
+    },
+    {
+      "type": "animation",
+      "fen": "8/8/8/4k3/8/8/8/4K2R w K - 0 1",
+      "moves": [
+        {
+          "uci": "e1e2",
+          "comment": "Coup 1 des Blancs: e1e2."
+        },
+        {
+          "uci": "e5d5",
+          "comment": "Réponse des Noirs: e5d5."
+        },
+        {
+          "uci": "e2e3",
+          "comment": "Coup 2 des Blancs: e2e3."
+        },
+        {
+          "uci": "d5c4",
+          "comment": "Réponse des Noirs: d5c4."
+        },
+        {
+          "uci": "h1h5",
+          "comment": "Coup 3 des Blancs: h1h5."
+        },
+        {
+          "uci": "c4c3",
+          "comment": "Réponse des Noirs: c4c3."
+        },
+        {
+          "uci": "h5h4",
+          "comment": "Coup 4 des Blancs: h5h4."
+        },
+        {
+          "uci": "c3c2",
+          "comment": "Réponse des Noirs: c3c2."
+        },
+        {
+          "uci": "h4c4",
+          "comment": "Coup 5 des Blancs: h4c4."
+        },
+        {
+          "uci": "c2b3",
+          "comment": "Réponse des Noirs: c2b3."
+        },
+        {
+          "uci": "e3d3",
+          "comment": "Coup 6 des Blancs: e3d3."
+        },
+        {
+          "uci": "b3b2",
+          "comment": "Réponse des Noirs: b3b2."
+        },
+        {
+          "uci": "c4b4",
+          "comment": "Coup 7 des Blancs: c4b4."
+        },
+        {
+          "uci": "b2a3",
+          "comment": "Réponse des Noirs: b2a3."
+        },
+        {
+          "uci": "d3c3",
+          "comment": "Coup 8 des Blancs: d3c3."
+        },
+        {
+          "uci": "a3a2",
+          "comment": "Réponse des Noirs: a3a2."
+        },
+        {
+          "uci": "b4a4",
+          "comment": "Coup 9 des Blancs: b4a4."
+        },
+        {
+          "uci": "a2b1",
+          "comment": "Réponse des Noirs: a2b1."
+        },
+        {
+          "uci": "a4a8",
+          "comment": "Coup 10 des Blancs: a4a8."
+        },
+        {
+          "uci": "b1c1",
+          "comment": "Réponse des Noirs: b1c1."
+        },
+        {
+          "uci": "a8a1",
+          "comment": "Coup 11 des Blancs: a8a1."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe cle",
+      "content": [
+        "Le Roi doit aller vers le centre.",
+        "La Tour limite les cases.",
+        "Le Roi aide a construire le mat."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/8/8/4k3/8/8/8/4K2R w K - 0 1",
+      "question": "Quiz final en 3 coups : active le Roi puis coupe avec la Tour.",
+      "steps": [
+        {
+          "coups_acceptes": [
+            "e1e2"
+          ],
+          "reponse": "e5d5",
+          "indice": "Étape 1 : active ton Roi vers le centre.",
+          "solution": "e1e2"
+        },
+        {
+          "coups_acceptes": [
+            "e2e3"
+          ],
+          "reponse": "d5c4",
+          "indice": "Étape 2 : continue d’avancer ton Roi.",
+          "solution": "e2e3"
+        },
+        {
+          "coups_acceptes": [
+            "h1h5"
+          ],
+          "reponse": "c4c3",
+          "indice": "Étape 3 : la Tour coupe le Roi noir.",
+          "solution": "h1h5"
+        }
+      ],
+      "correct_move": "e1e2",
+      "success_message": "Excellent, tu combines Roi actif et Tour qui coupe.",
+      "error_message": "Suis le plan : Roi vers le centre, puis Tour active."
+    }
+  ]
+}

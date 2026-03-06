@@ -1,0 +1,40 @@
+{
+  "id": "capablanca_ex35_fou_deux_ailes",
+  "title": "Exemple 35 - Fou plus utile sur deux ailes",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
+      "text": "Avec des pions sur les deux ailes, le Fou devient généralement plus pratique que le Cavalier."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
+      "moves": [
+        { "uci": "d7f6", "comment": "Le Cavalier noir s'active, mais son rayon d'action reste local." },
+        { "uci": "c1f4", "comment": "Le Fou blanc se centralise et contrôle rapidement les deux ailes." },
+        { "uci": "e8d7", "comment": "Le Roi noir se rapproche en finale." },
+        { "uci": "e1e2", "comment": "Le Roi blanc fait de même, en soutenant ses pions." },
+        { "uci": "f6d5", "comment": "Le Cavalier cherche une case forte centrale." },
+        { "uci": "f4g3", "comment": "Le Fou bascule d'une aile à l'autre sans perdre de temps." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Sur deux ailes, le Fou peut changer de front plus vite que le Cavalier.",
+        "Cet avantage est souvent pratique plutôt que tactique immédiat.",
+        "Même avec cet avantage, une défense précise peut conduire à la nulle."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
+      "question": "Quiz final : quel coup noir centralise naturellement le Cavalier ?",
+      "correct_move": "d7f6",
+      "success_message": "Exact, c'est la centralisation naturelle du Cavalier.",
+      "error_message": "Cherche le saut du Cavalier vers une case active au centre."
+    }
+  ]
+}

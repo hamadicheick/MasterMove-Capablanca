@@ -1,0 +1,45 @@
+{
+  "id": "capablanca_ex41_dame_tour_gain",
+  "title": "Exemple 41 - Dame contre Tour : forcer le gain",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/k7/2K5/4Q3/8/8/8/1r6 w - - 0 1",
+      "text": "Dame contre Tour. Le Roi noir est en a7, sa Tour en b1, loin de son Roi. Les Blancs jouent en premiers."
+    },
+    {
+      "type": "animation",
+      "fen": "8/k7/2K5/4Q3/8/8/8/1r6 w - - 0 1",
+      "moves": [
+        { "uci": "e5d4", "comment": "La Dame vient en d4 avec echec. Elle menace a la fois le Roi en a7 et la Tour en b1." },
+        { "uci": "a7b8", "comment": "Le Roi fuit en b8 pour echapper a la double menace." },
+        { "uci": "d4h8", "comment": "La Dame saute en h8, echec sur la 8e rangee. Le Roi doit repartir." },
+        { "uci": "b8a7", "comment": "Le Roi retourne en a7, il n a pas d autre choix." },
+        { "uci": "h8h7", "comment": "La Dame joue h7, echec sur la 7e rangee. Le Roi est force de nouveau en b8." },
+        { "uci": "a7b8", "comment": "Le Roi revient en b8. Et maintenant les Blancs frappent." },
+        { "uci": "h7b1", "comment": "La Dame capture la Tour en b1 avec echec. La Tour est gagnee !" },
+        { "uci": "b8c8", "comment": "Le Roi fuit en c8, c est sa seule case." },
+        { "uci": "b1h7", "comment": "Coup tranquille ! La Dame en h7 menace le mat en b7. Le Roi ne peut pas s echapper." },
+        { "uci": "c8b8", "comment": "Le Roi est force de revenir en b8. Il n y a plus rien a faire." },
+        { "uci": "h7b7", "comment": "Dame en b7 : echec et mat ! Le Roi est pris entre la Dame, son propre Roi et le bord de l echiquier." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu il faut retenir",
+      "content": [
+        "La Dame peut attaquer deux pieces en meme temps : le Roi et la Tour.",
+        "Apres avoir gagne la Tour, un coup tranquille peut forcer le mat sans echec direct.",
+        "La Tour ne pouvait pas aller en b8 : les Blancs auraient mate immediatement."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/k7/2K5/4Q3/8/8/8/1r6 w - - 0 1",
+      "question": "Quel est le premier coup des Blancs pour attaquer a la fois le Roi et la Tour ?",
+      "correct_move": "e5d4",
+      "success_message": "Exact ! La Dame en d4 attaque a la fois le Roi en a7 et la Tour en b1.",
+      "error_message": "Cherche un echec de Dame qui vise a la fois le Roi et la Tour en b1."
+    }
+  ]
+}

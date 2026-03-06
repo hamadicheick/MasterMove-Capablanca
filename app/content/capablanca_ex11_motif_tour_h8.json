@@ -1,0 +1,39 @@
+﻿{
+  "id": "capablanca_ex11_motif_tour_h8",
+  "title": "Motif tactique : sacrifice et mat en h8",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
+      "text": "Les Blancs déclenchent un sacrifice de Dame pour forcer un mat de Tour."
+    },
+    {
+      "type": "animation",
+      "fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
+      "moves": [
+        { "uci": "h3h7", "comment": "Sacrifice de Dame avec échec." },
+        { "uci": "g8h7", "comment": "Le Roi noir est forcé de capturer." },
+        { "uci": "f3h3", "comment": "La Tour arrive avec échec." },
+        { "uci": "h7g8", "comment": "Le Roi noir revient en g8." },
+        { "uci": "h3h8", "comment": "Mat final sur la 8e rangée." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Un sacrifice peut ouvrir la ligne de mat.",
+        "La coordination Dame+Tour crée des menaces forcées.",
+        "Quand les coups sont forcés, le calcul devient fiable."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
+      "question": "Quiz final : trouve le coup forcé qui lance le mat.",
+      "correct_move": "h3h7",
+      "success_message": "Exact, le sacrifice de Dame force le mat.",
+      "error_message": "Cherche un sacrifice avec échec pour forcer la suite."
+    }
+  ]
+}

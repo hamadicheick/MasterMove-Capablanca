@@ -1,0 +1,49 @@
+{
+  "id": "capablanca_ex42_dame_tour_difficile",
+  "title": "Exemple 42 - Dame contre Tour : position plus difficile",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/5rk1/8/5Q1K/8/8/8/8 w - - 0 1",
+      "text": "Dame contre Tour. Le Roi noir est en g7 avec sa Tour devant lui en f7. Attention : le coup evident ne marche pas !"
+    },
+    {
+      "type": "animation",
+      "fen": "8/5rk1/8/5Q1K/8/8/8/8 w - - 0 1",
+      "moves": [
+        { "uci": "f5g5", "comment": "Dame en g5, echec a grande distance sur la colonne g ! Le Roi doit s eloigner de sa Tour." },
+        { "uci": "g7f8", "comment": "Le Roi fuit en f8." },
+        { "uci": "g5d8", "comment": "La Dame bondit en d8, echec sur la 8e rangee. Un tempo pour approcher le Roi blanc." },
+        { "uci": "f8g7", "comment": "Le Roi retourne en g7." },
+        { "uci": "h5g5", "comment": "Le Roi blanc avance en g5. Dame et Roi resserrent l etau." },
+        { "uci": "f7f1", "comment": "La Tour fuit loin en f1 pour echapper au piege." },
+        { "uci": "d8d4", "comment": "La Dame vient en d4, echec en diagonale sur le Roi en g7. Un echec a grande distance !" },
+        { "uci": "g7f8", "comment": "Le Roi recule en f8." },
+        { "uci": "g5g6", "comment": "Le Roi blanc avance en g6. Il menace mat. Le Roi noir doit fuir vers le centre." },
+        { "uci": "f8e7", "comment": "Le Roi noir s echappe en e7, mais s eloigne encore de sa Tour en f1." },
+        { "uci": "d4e3", "comment": "Echec en e3 ! La Dame chasse le Roi encore plus loin de la Tour." },
+        { "uci": "e7d6", "comment": "Le Roi bat en retraite en d6." },
+        { "uci": "e3d3", "comment": "Echec en d3 ! Le Roi est maintenant tres loin de sa Tour." },
+        { "uci": "d6e5", "comment": "Le Roi fuit en e5." },
+        { "uci": "d3f1", "comment": "La Dame capture la Tour en f1. La Tour est gagnee ! Le Roi etait trop loin pour la proteger." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu il faut retenir",
+      "content": [
+        "Le coup evident Dame en e5 ne marche pas : la Tour defend en d7 et les Blancs ne peuvent plus gagner.",
+        "Le bon premier coup est Dame en g5 : un echec a grande distance sur la diagonale, qui force le Roi a s eloigner.",
+        "La cle de ces finales : Dame et Roi travaillent ensemble pour isoler la Tour de son Roi, puis la capturer."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/5rk1/8/5Q1K/8/8/8/8 w - - 0 1",
+      "question": "Le coup evident ne marche pas. Trouve le bon premier coup des Blancs pour eloigner le Roi de sa Tour.",
+      "correct_move": "f5g5",
+      "success_message": "Exact ! Dame en g5, echec sur la colonne g. Le Roi est force de s eloigner de sa Tour en f7.",
+      "error_message": "Ce coup ne marche pas. Si tu joues Dame en e5, la Tour defend en d7 et tu ne peux plus gagner facilement."
+    }
+  ]
+}

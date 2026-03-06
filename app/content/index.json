@@ -1,0 +1,324 @@
+{
+  "book_chapters": [
+    {
+      "chapter": 1,
+      "titre": "Chapitre I – Premiers principes : finales, milieux de jeu et ouvertures",
+      "livre_pages": "11-24",
+      "exemples": "Ex1 à Ex21"
+    },
+    {
+      "chapter": 2,
+      "titre": "Chapitre II – D'autres principes de jeu en finale",
+      "livre_pages": "25-38",
+      "exemples": "Ex22 à Ex42"
+    },
+    {
+      "chapter": 3,
+      "titre": "Chapitre III – Les plans de gain en milieu de jeu",
+      "livre_pages": "39-43",
+      "exemples": "Ex43 et suivants"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "capablanca_ch1_ex1_tour_roi",
+      "chapter": 1,
+      "titre": "Le mat avec la Tour",
+      "description": "Technique fondamentale : mater avec Tour et Roi.",
+      "order": 1,
+      "level": "debutant",
+      "estimated_minutes": 15,
+      "file": "capablanca_ch1_ex1_tour_roi.json"
+    },
+    {
+      "id": "capablanca_ch1_ex2_tour_roi_centre",
+      "chapter": 1,
+      "titre": "Activer le Roi contre un Roi central",
+      "description": "Apprendre à activer le Roi avant la Tour.",
+      "order": 2,
+      "level": "debutant",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex2_tour_roi_centre.json"
+    },
+    {
+      "id": "capablanca_ch1_ex3_deux_fous_roi",
+      "chapter": 1,
+      "titre": "Mat avec deux Fous et le Roi",
+      "description": "Méthode de mat avec deux Fous et le Roi, basée sur le livre de Capablanca.",
+      "order": 3,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex3_deux_fous_roi.json"
+    },
+    {
+      "id": "capablanca_ch1_ex4_dame_roi",
+      "chapter": 1,
+      "titre": "Mat avec la Dame et le Roi",
+      "description": "Technique de mat avec la Dame et le Roi.",
+      "order": 4,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex4_dame_roi.json"
+    },
+    {
+      "id": "capablanca_ch1_ex5_roi_pion",
+      "chapter": 1,
+      "titre": "Finale Roi et pion contre Roi",
+      "description": "Technique d'opposition et de progression du pion en finale.",
+      "order": 5,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex5_roi_pion.json"
+    },
+    {
+      "id": "capablanca_ch1_ex6_roi_pion_opposition",
+      "chapter": 1,
+      "titre": "Finale Roi et pion : opposition active",
+      "description": "Maîtriser l'opposition pour faire progresser le pion.",
+      "order": 6,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex6_roi_pion_opposition.json"
+    },
+    {
+      "id": "capablanca_ch1_ex7_promotion_mate",
+      "chapter": 1,
+      "titre": "Promotion et mat avec deux pions",
+      "description": "Convertir une finale de pions en promotion puis mat.",
+      "order": 7,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex7_promotion_mate.json"
+    },
+    {
+      "id": "capablanca_ch1_ex9_majorite_pions",
+      "chapter": 1,
+      "titre": "Majorité de pions et percée",
+      "description": "Fixer, activer le Roi, puis créer une percée décisive.",
+      "order": 9,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex9_majorite_pions.json"
+    },
+    {
+      "id": "capablanca_ch1_ex10_finale_pions_eloignes",
+      "chapter": 1,
+      "titre": "Finale de pions éloignés",
+      "description": "Créer des menaces sur deux ailes pour forcer la percée.",
+      "order": 10,
+      "level": "debutant+",
+      "estimated_minutes": 20,
+      "file": "capablanca_ch1_ex10_finale_pions_eloignes.json"
+    },
+    {
+      "id": "capablanca_ex11_motif_tour_h8",
+      "chapter": 1,
+      "titre": "Motif tactique : sacrifice et mat en h8",
+      "description": "Combinaison forcée avec sacrifice de Dame et mat de Tour.",
+      "order": 11,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex11_motif_tour_h8.json"
+    },
+    {
+      "id": "capablanca_ex12_combinaison_colonne_e",
+      "chapter": 1,
+      "titre": "Combinaison tactique sur la colonne e",
+      "description": "Séquence de captures forcées pour gagner du matériel.",
+      "order": 12,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex12_combinaison_colonne_e.json"
+    },
+    {
+      "id": "capablanca_ex13_mate_diagonale",
+      "chapter": 1,
+      "titre": "Mat par diagonale et Dame",
+      "description": "Sacrifice puis mat coordonné Dame et Fou.",
+      "order": 13,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex13_mate_diagonale.json"
+    },
+    {
+      "id": "capablanca_ex14_echanges_forces",
+      "chapter": 1,
+      "titre": "Échanges forcés gagnants",
+      "description": "Enchaîner les reprises pour simplifier avec avantage.",
+      "order": 14,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex14_echanges_forces.json"
+    },
+    {
+      "id": "capablanca_ex15_attaque_roi_expose",
+      "chapter": 1,
+      "titre": "Attaque sur Roi exposé",
+      "description": "Sacrifice, échecs et coordination des pièces contre le Roi.",
+      "order": 15,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex15_attaque_roi_expose.json"
+    },
+    {
+      "id": "capablanca_ex16_combinaison_e7",
+      "chapter": 1,
+      "titre": "Combinaison sur e7",
+      "description": "Motif de déviation et reprises successives.",
+      "order": 16,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex16_combinaison_e7.json"
+    },
+    {
+      "id": "capablanca_ex17_coup_intermediaire",
+      "chapter": 1,
+      "titre": "Coup intermédiaire en ouverture",
+      "description": "Centralisation active par coup intermédiaire.",
+      "order": 17,
+      "level": "intermediaire",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex17_coup_intermediaire.json"
+    },
+    {
+      "id": "capablanca_ex18_developpement_ouverture",
+      "chapter": 1,
+      "titre": "Exemple 18 - Ouverture : développement méthodique",
+      "description": "Punir un plan passif par un développement harmonieux.",
+      "order": 18,
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_ex18_developpement_ouverture.json"
+    },
+    {
+      "id": "capablanca_ex19_initiative_ouverture",
+      "chapter": 1,
+      "titre": "Exemple 19 - Initiative en ouverture",
+      "description": "Développement actif et pression centrale continue.",
+      "order": 19,
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_ex19_initiative_ouverture.json"
+    },
+    {
+      "id": "capablanca_ex20_centre_et_developpement",
+      "chapter": 1,
+      "titre": "Exemple 20 - Centre et développement",
+      "description": "Ouvrir le centre quand les pièces sont prêtes.",
+      "order": 20,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex20_centre_et_developpement.json"
+    },
+    {
+      "id": "capablanca_ex22_pion_passe_lointain",
+      "chapter": 2,
+      "titre": "Exemple 22 - Pion passé lointain",
+      "description": "Créer une menace distante avec une poussée de pion.",
+      "order": 22,
+      "level": "intermediaire",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex22_pion_passe_lointain.json"
+    },
+    {
+      "id": "capablanca_ex23_course_de_pions",
+      "chapter": 2,
+      "titre": "Exemple 23 - Course de pions",
+      "description": "Calculer les tempos critiques d'une course de promotion.",
+      "order": 23,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex23_course_de_pions.json"
+    },
+    {
+      "id": "capablanca_ex24_majorite_et_promotion",
+      "chapter": 2,
+      "titre": "Exemple 24 - Majorité de pions et promotion",
+      "description": "Transformer une majorité de pions en Dame.",
+      "order": 24,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex24_majorite_et_promotion.json"
+    },
+    {
+      "id": "capablanca_ex25_percee_aile_dame",
+      "chapter": 2,
+      "titre": "Exemple 25 - Percée sur l'aile Dame",
+      "description": "Forcer la promotion par une course de pions à l'aile Dame.",
+      "order": 25,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex25_percee_aile_dame.json"
+    },
+    {
+      "id": "capablanca_ex26_roi_actif_et_opposition",
+      "chapter": 2,
+      "titre": "Exemple 26 - Roi actif et opposition",
+      "description": "Gagner la finale de pions grâce à l'opposition du Roi.",
+      "order": 26,
+      "level": "intermediaire",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex26_roi_actif_et_opposition.json"
+    },
+    {
+      "id": "capablanca_ex27_roi_contraint_et_tempo",
+      "chapter": 2,
+      "titre": "Exemple 27 - Roi contraint et tempo",
+      "description": "Neutraliser l'activité adverse par un jeu précis de tempos.",
+      "order": 27,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex27_roi_contraint_et_tempo.json"
+    },
+    {
+      "id": "capablanca_ex28_diag1a_qd3",
+      "chapter": 2,
+      "titre": "Exemple 28 - Manœuvre Dame sur cases faibles",
+      "description": "Activer la Dame pour créer une double menace tactique.",
+      "order": 28,
+      "level": "intermediaire",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex28_diag1a_qd3.json"
+    },
+    {
+      "id": "capablanca_ex41_dame_tour_gain",
+      "chapter": 2,
+      "titre": "Exemple 41 - Dame contre Tour : forcer le gain",
+      "description": "Attaquer le Roi et la Tour en même temps pour gagner la Tour.",
+      "order": 41,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex41_dame_tour_gain.json"
+    },
+    {
+      "id": "capablanca_ex42_dame_tour_difficile",
+      "chapter": 2,
+      "titre": "Exemple 42 - Dame contre Tour : position plus difficile",
+      "description": "Le coup évident ne marche pas. Trouver le bon échec à grande distance.",
+      "order": 42,
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex42_dame_tour_difficile.json"
+    },
+    {
+      "id": "capablanca_ex43_attaque_sans_cavaliers",
+      "chapter": 3,
+      "titre": "Exemple 43 - L'attaque sans Cavaliers",
+      "description": "Les Noirs matent en 4 coups avec Tours et Fou malgré un déficit matériel.",
+      "order": 43,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex43_attaque_sans_cavaliers.json"
+    },
+    {
+      "id": "capablanca_ex44_mat_en_trois",
+      "chapter": 3,
+      "titre": "Exemple 44 - Mat en trois coups",
+      "description": "Détourner la Dame adverse pour neutraliser l'échec perpétuel et forcer le mat.",
+      "order": 44,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex44_mat_en_trois.json"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+﻿{
+  "id": "capablanca_ex16_combinaison_e7",
+  "title": "Combinaison sur e7",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "text": "Les Blancs utilisent un motif de déviation pour gagner du matériel."
+    },
+    {
+      "type": "animation",
+      "fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "moves": [
+        { "uci": "f5e7", "comment": "Le Cavalier capture en e7 avec échec." },
+        { "uci": "d8e7", "comment": "Le Fou noir reprend." },
+        { "uci": "e2e7", "comment": "La Tour blanche reprend à son tour." },
+        { "uci": "c8e7", "comment": "Le Cavalier noir capture la Tour." },
+        { "uci": "d3h7", "comment": "Le Fou blanc finit la combinaison avec échec." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Dévier un défenseur ouvre des tactiques cachées.",
+        "Les reprises successives peuvent favoriser l'attaquant.",
+        "Il faut toujours vérifier les échecs intermédiaires."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "question": "Quiz final : trouve le coup tactique initial.",
+      "correct_move": "f5e7",
+      "success_message": "Parfait, la combinaison commence bien sur e7.",
+      "error_message": "Cherche une capture avec échec qui force les reprises."
+    }
+  ]
+}

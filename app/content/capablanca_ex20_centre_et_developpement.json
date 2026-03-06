@@ -1,0 +1,45 @@
+﻿{
+  "id": "capablanca_ex20_centre_et_developpement",
+  "title": "Exemple 20 - Centre et développement",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "rnbqkbnr/pppp1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 3",
+      "text": "Les Blancs développent rapidement leurs pièces et contestent le centre noir."
+    },
+    {
+      "type": "animation",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": [
+        { "uci": "e2e4", "comment": "Les Blancs prennent le centre." },
+        { "uci": "e7e5", "comment": "Réponse symétrique des Noirs." },
+        { "uci": "g1f3", "comment": "Le Cavalier attaque e5 et se développe." },
+        { "uci": "d7d6", "comment": "Les Noirs soutiennent leur pion central." },
+        { "uci": "f1c4", "comment": "Le Fou vise la diagonale active vers f7." },
+        { "uci": "b8c6", "comment": "Les Noirs développent leur Cavalier." },
+        { "uci": "d2d4", "comment": "Les Blancs ouvrent le centre au bon moment." },
+        { "uci": "c8g4", "comment": "Les Noirs clouent le Cavalier f3." },
+        { "uci": "b1c3", "comment": "Les Blancs renforcent le centre." },
+        { "uci": "h7h6", "comment": "Les Noirs jouent un coup d'attente à l'aile Roi." },
+        { "uci": "d4e5", "comment": "Les Blancs gagnent de l'espace central." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Développement et contrôle du centre vont ensemble.",
+        "Les coups de pions d'aile trop tôt peuvent coûter du temps.",
+        "Ouvrir le centre favorise le camp le mieux développé."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bqkbnr/ppp2pp1/2np3p/4p3/2BPP1b1/2N2N2/PPP2PPP/R1BQK2R w KQkq - 0 6",
+      "question": "Quiz final : quel coup blanc exploite le mieux l'avance de développement ?",
+      "correct_move": "d4e5",
+      "success_message": "Exact, l'ouverture du centre favorise les Blancs.",
+      "error_message": "Cherche la capture centrale qui profite des pièces actives."
+    }
+  ]
+}

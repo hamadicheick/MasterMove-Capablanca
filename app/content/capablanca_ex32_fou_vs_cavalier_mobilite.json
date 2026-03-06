@@ -1,0 +1,36 @@
+{
+  "id": "capablanca_ex32_fou_vs_cavalier_mobilite",
+  "title": "Exemple 32 - Fou contre Cavalier : mobilité",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "text": "Position d'illustration : le livre compare la portée du Fou à la mobilité plus limitée du Cavalier."
+    },
+    {
+      "type": "animation",
+      "fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "moves": [
+        { "uci": "d5e6", "comment": "Le Fou change rapidement d'axe tout en restant actif sur les deux diagonales." },
+        { "uci": "a5b7", "comment": "Le Cavalier progresse, mais son trajet reste plus lent et plus contraint." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Le Fou traverse l'échiquier plus vite que le Cavalier.",
+        "Le Cavalier alterne les couleurs et ne peut contrôler qu'un nombre limité de cases à chaque coup.",
+        "Cet exemple est un diagramme de comparaison, pas une ligne forcée de mat."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "question": "Quiz final : quel coup de Fou illustre la mobilité diagonale immédiate ?",
+      "correct_move": "d5e6",
+      "success_message": "Exact, le Fou se redéploie immédiatement sur une nouvelle diagonale.",
+      "error_message": "Cherche le déplacement simple du Fou qui maintient une activité centrale."
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "chapitre_id": "capablanca_01_tour_roi_vs_roi",
+  "titre": "Capablanca - Lecon 1 : Tour et Roi vs Roi",
+  "description": "Lecon 1 (Chapitre I, Exemple 1) : apprendre la methode de mat Tour + Roi contre Roi.",
+  "sequences": [
+    {
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Apprends le mat Tour + Roi !",
+      "texte_audio": "Aujourd'hui, tu apprends ? mater avec la Tour et le Roi. Tu vas voir: c'est une m?thode simple.",
+      "position_depart_fen": "7k/8/8/8/8/8/8/R3K3 w - - 0 1",
+      "animations": [
+        {
+          "coup": "e1e2",
+          "acteur": "blanc",
+          "commentaire": "Le Roi et la Tour vont travailler ensemble !"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "La Tour coupe le Roi noir.",
+      "texte_audio": "Premier principe: la Tour coupe le chemin du Roi noir. Elle cr?e une barri?re.",
+      "position_depart_fen": "7k/8/8/8/8/8/8/R3K3 w - - 0 1",
+      "animations": [
+        {
+          "coup": "a1a7",
+          "acteur": "blanc",
+          "commentaire": "La Tour coupe ! Le roi noir ne peut plus descendre."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Ton Roi doit aider.",
+      "texte_audio": "La Tour seule ne suffit pas. Ton Roi doit avancer pour aider au mat.",
+      "position_depart_fen": "7k/R7/8/8/8/8/8/4K3 b - - 1 1",
+      "animations": [
+        {
+          "coup": "h8g8",
+          "acteur": "noir",
+          "commentaire": "Le roi noir recule."
+        },
+        {
+          "coup": "e1f2",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc avance pour aider !"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Place ton Roi en face.",
+      "texte_audio": "Mets ton Roi sur la m?me rang?e ou colonne que le Roi noir pour r?duire ses cases.",
+      "position_depart_fen": "6k1/R7/8/8/8/8/5K2/8 w - - 2 2",
+      "animations": [
+        {
+          "coup": "f2f3",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc monte, meme colonne que le roi noir."
+        },
+        {
+          "coup": "g8h8",
+          "acteur": "noir",
+          "commentaire": "Le roi noir est coince dans le coin."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "quiz_interactif",
+      "texte_ecran": "? toi: coupe le chemin.",
+      "texte_audio": "Joue un coup de Tour qui coupe le Roi noir.",
+      "position_depart_fen": "8/8/8/3k4/8/8/8/R3K3 w - - 0 1",
+      "validation": {
+        "coups_acceptes": [
+          "a1a4",
+          "a1a5",
+          "a1a6",
+          "a1a7",
+          "a1a8"
+        ],
+        "indice": "La Tour doit empecher le roi noir de monter.",
+        "feedback_succes": "Bravo ! Ta Tour coupe bien le chemin !",
+        "feedback_erreur": "Essaie avec la Tour. Elle doit faire une barriere horizontale."
+      }
+    },
+    {
+      "id": 6,
+      "type": "theorie_animee",
+      "texte_ecran": "Avance ton Roi petit ? petit.",
+      "texte_audio": "La Tour coupe d?j?. Maintenant, avance ton Roi pas ? pas.",
+      "position_depart_fen": "8/R7/8/3k4/8/8/8/4K3 w - - 0 1",
+      "animations": [
+        {
+          "coup": "e1d2",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc avance."
+        },
+        {
+          "coup": "d5e5",
+          "acteur": "noir",
+          "commentaire": "Le roi noir s'eloigne."
+        },
+        {
+          "coup": "d2e3",
+          "acteur": "blanc",
+          "commentaire": "Continue d'avancer !"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "theorie_animee",
+      "texte_ecran": "Opposition: rois face ? face.",
+      "texte_audio": "Quand les rois se font face, c'est l'opposition. C'est un point cl? de la finale.",
+      "position_depart_fen": "8/R7/4k3/8/2K5/8/8/8 w - - 0 1",
+      "animations": [
+        {
+          "coup": "c4c5",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc se rapproche pour reduire les cases du Roi noir."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "quiz_interactif",
+      "texte_ecran": "O? placer ton Roi ?",
+      "texte_audio": "Rapproche ton Roi du Roi noir pour pr?parer le mat.",
+      "position_depart_fen": "6k1/R7/8/8/8/4K3/8/8 w - - 0 1",
+      "validation": {
+        "coups_acceptes": [
+          "e3f3",
+          "e3f4",
+          "e3e4"
+        ],
+        "indice": "Rapproche ton Roi du roi noir.",
+        "feedback_succes": "Parfait ! Ton Roi avance bien !",
+        "feedback_erreur": "Ton Roi doit se rapprocher du roi adverse. Avance vers lui !"
+      }
+    },
+    {
+      "id": 9,
+      "type": "theorie_animee",
+      "texte_ecran": "Resserre le filet.",
+      "texte_audio": "Le Roi noir a de moins en moins de cases. Continue ? resserrer le filet.",
+      "position_depart_fen": "6k1/R7/8/8/8/5K2/8/8 w - - 0 1",
+      "animations": [
+        {
+          "coup": "f3f4",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc se rapproche encore."
+        },
+        {
+          "coup": "g8h8",
+          "acteur": "noir",
+          "commentaire": "Le roi noir n'a presque plus de cases !"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "theorie_animee",
+      "texte_ecran": "Phase finale: Roi noir coinc?.",
+      "texte_audio": "On arrive ? la fin. Tour et Roi blancs coop?rent pour enfermer le Roi noir.",
+      "position_depart_fen": "1k6/R7/3K4/8/8/8/8/8 w - - 0 1",
+      "animations": [
+        {
+          "coup": "a7c7",
+          "acteur": "blanc",
+          "commentaire": "La Tour coupe la 7e rangee."
+        },
+        {
+          "coup": "b8a8",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir est force dans le coin."
+        },
+        {
+          "coup": "d6c6",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc se rapproche pour soutenir le mat."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "quiz_interactif",
+      "texte_ecran": "Mat en 1 coup !",
+      "texte_audio": "Le Roi noir est coince en a8. Trouve le mat en un avec la Tour.",
+      "position_depart_fen": "k7/2R5/1K6/8/8/8/8/8 w - - 0 1",
+      "validation": {
+        "coups_acceptes": [
+          "c7c8"
+        ],
+        "indice": "Cherche une case de la Tour qui coupe toutes les sorties du Roi noir.",
+        "feedback_succes": "Bravo ! Tc8, echec et mat.",
+        "feedback_erreur": "Ce coup ne mate pas. Regarde la case c8."
+      }
+    },
+    {
+      "id": 12,
+      "type": "theorie_animee",
+      "texte_ecran": "S?quence compl?te (1/2): couper et approcher.",
+      "texte_audio": "Partie 1: la Tour coupe, puis le Roi blanc se rapproche en gardant le contr?le.",
+      "position_depart_fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
+      "animations": [
+        {
+          "coup": "a1a7",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "h8g8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "h1g2",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "g8f8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "g2f3",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "f8e8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "f3e4",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "e8d8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "e4d5",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "d8c8",
+          "acteur": "noir"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": "theorie_animee",
+      "texte_ecran": "S?quence compl?te (2/2): resserrer et mater.",
+      "texte_audio": "Partie 2: on resserre le filet, puis on mate en Tc8.",
+      "position_depart_fen": "2k5/R7/8/3K4/8/8/8/8 w - - 0 1",
+      "animations": [
+        {
+          "coup": "d5d6",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "c8b8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "a7c7",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "b8a8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "d6c6",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "a8b8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "c6b6",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "b8a8",
+          "acteur": "noir"
+        },
+        {
+          "coup": "c7c8",
+          "acteur": "blanc",
+          "commentaire": "Mat final: Tc8#."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "quiz_interactif",
+      "texte_ecran": "Quiz technique: finis en 4 ?tapes.",
+      "texte_audio": "Rejoue la phase finale: coupe, rapproche le Roi, puis mate.",
+      "position_depart_fen": "1k6/R7/3K4/8/8/8/8/8 w - - 0 1",
+      "validation": {
+        "indice": "Suis la m?thode: Tour active, Roi proche, puis mat.",
+        "steps": [
+          {
+            "coups_acceptes": [
+              "a7c7"
+            ],
+            "reponse": "b8a8",
+            "indice": "Etape 1: coupe la 7e rangee.",
+            "solution": "a7c7"
+          },
+          {
+            "coups_acceptes": [
+              "d6c6"
+            ],
+            "reponse": "a8b8",
+            "indice": "Etape 2: rapproche ton Roi.",
+            "solution": "d6c6"
+          },
+          {
+            "coups_acceptes": [
+              "c6b6"
+            ],
+            "reponse": "b8a8",
+            "indice": "Etape 3: continue le rapprochement.",
+            "solution": "c6b6"
+          },
+          {
+            "coups_acceptes": [
+              "c7c8"
+            ],
+            "reponse": null,
+            "indice": "Etape 4: donne le mat.",
+            "solution": "c7c8"
+          }
+        ],
+        "feedback_succes": "Excellent ! Tu ma?trises la finale Tour + Roi.",
+        "feedback_erreur": "Reprends: coupe, rapproche le Roi, puis mate."
+      }
+    },
+    {
+      "id": 15,
+      "type": "theorie_animee",
+      "texte_ecran": "Variante: le Roi noir tient bon.",
+      "texte_audio": "Si le Roi noir reste au centre, garde la meme methode: coupe, avance, puis resserre le filet.",
+      "position_depart_fen": "8/8/8/3k4/8/8/8/R3K3 w - - 0 1",
+      "animations": [
+        {
+          "coup": "a1a5",
+          "acteur": "blanc",
+          "commentaire": "Coupe a la 5eme rangee."
+        },
+        {
+          "coup": "d5d6",
+          "acteur": "noir",
+          "commentaire": "Le roi noir monte."
+        },
+        {
+          "coup": "e1d2",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc le suit."
+        },
+        {
+          "coup": "d6e6",
+          "acteur": "noir"
+        },
+        {
+          "coup": "d2e3",
+          "acteur": "blanc",
+          "commentaire": "Toujours la meme technique !"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "type": "theorie_animee",
+      "texte_ecran": "Piege a eviter: le pat.",
+      "texte_audio": "Attention au piege du pat. Si le Roi noir ne peut plus bouger et qu il n est pas en echec, la partie est nulle.",
+      "position_depart_fen": "k7/R7/1K6/8/8/8/8/8 w - - 0 1",
+      "animations": [
+        {
+          "coup": "a7a1",
+          "acteur": "blanc",
+          "commentaire": "Echec et mat ! Pas pat, car c'est echec."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "type": "quiz_interactif",
+      "texte_ecran": "?vite le pat !",
+      "texte_audio": "Trouve un coup s?r: ne bloque pas compl?tement le Roi noir.",
+      "position_depart_fen": "k7/R7/1K6/8/8/8/8/8 w - - 0 1",
+      "validation": {
+        "coups_acceptes": [
+          "a7a2",
+          "a7a3",
+          "a7a4",
+          "a7a5",
+          "a7a6",
+          "a7b7",
+          "a7c7",
+          "a7d7",
+          "a7e7",
+          "a7f7",
+          "a7g7",
+          "a7h7"
+        ],
+        "indice": "Ne bloque pas completement le roi noir ! Laisse-lui une case.",
+        "feedback_succes": "Bien joue ! Tu as evite le piege du pat !",
+        "feedback_erreur": "Oups, c'est pat ! Le roi noir ne peut plus bouger mais n'est pas en echec. Il faut lui laisser au moins une case."
+      }
+    },
+    {
+      "id": 18,
+      "type": "theorie_animee",
+      "texte_ecran": "R?sum? de la m?thode.",
+      "texte_audio": "R?sum?: 1) la Tour coupe, 2) le Roi avance, 3) on resserre, 4) mat.",
+      "position_depart_fen": "8/8/8/8/4k3/8/8/R3K3 w - - 0 1",
+      "animations": [
+        {
+          "coup": "a1a4",
+          "acteur": "blanc",
+          "commentaire": "Etape 1 : Couper."
+        },
+        {
+          "coup": "e4d5",
+          "acteur": "noir"
+        },
+        {
+          "coup": "e1d2",
+          "acteur": "blanc",
+          "commentaire": "Etape 2 : Avancer le Roi."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "type": "quiz_interactif",
+      "texte_ecran": "Quiz final: applique la m?thode en 3 ?tapes.",
+      "texte_audio": "Rejoue le d?but de la m?thode de Capablanca: coupe avec la Tour, puis avance le Roi.",
+      "position_depart_fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
+      "validation": {
+        "indice": "1) Coupe avec la Tour. 2) Avance ton Roi. 3) Continue le rapprochement.",
+        "steps": [
+          {
+            "coups_acceptes": [
+              "a1a7"
+            ],
+            "reponse": "h8g8",
+            "indice": "Etape 1 : joue Ta7 pour confiner le Roi noir.",
+            "solution": "a1a7"
+          },
+          {
+            "coups_acceptes": [
+              "h1g2"
+            ],
+            "reponse": "g8f8",
+            "indice": "Etape 2 : avance ton Roi vers le centre.",
+            "solution": "h1g2"
+          },
+          {
+            "coups_acceptes": [
+              "g2f3"
+            ],
+            "reponse": null,
+            "indice": "Etape 3 : continue le rapprochement du Roi.",
+            "solution": "g2f3"
+          }
+        ],
+        "feedback_succes": "Parfait ! Tu appliques bien la m?thode.",
+        "feedback_erreur": "Reprends la s?quence: Ta7, puis avance du Roi."
+      }
+    }
+  ]
+}

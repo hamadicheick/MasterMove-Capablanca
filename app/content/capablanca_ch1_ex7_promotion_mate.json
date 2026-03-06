@@ -1,0 +1,69 @@
+﻿{
+  "id": "capablanca_ch1_ex7_promotion_mate",
+  "title": "Promotion et mat avec deux pions",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
+      "text": "Les Blancs coordonnent Roi et pions pour forcer la promotion puis le mat."
+    },
+    {
+      "type": "animation",
+      "fen": "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
+      "moves": [
+        { "uci": "e6d7", "comment": "Le Roi blanc prend une case d'appui décisive." },
+        { "uci": "f8g8", "comment": "Le Roi noir recule vers le coin." },
+        { "uci": "d7e7", "comment": "Le Roi blanc maintient la pression." },
+        { "uci": "g8h8", "comment": "Le Roi noir reste enfermé." },
+        { "uci": "f5f6", "comment": "Le pion f avance pour ouvrir la position." },
+        { "uci": "g7f6", "comment": "Le pion noir capture, mais se détourne du pion g." },
+        { "uci": "e7f7", "comment": "Le Roi blanc soutient l'avance finale." },
+        { "uci": "f6f5", "comment": "Le pion noir tente de créer de l'air." },
+        { "uci": "g6g7", "comment": "Le pion g arrive en septième avec échec." },
+        { "uci": "h8h7", "comment": "Le Roi noir n'a qu'une case." },
+        { "uci": "g7g8q", "comment": "Promotion en Dame, avec échec." },
+        { "uci": "h7h6", "comment": "Le Roi noir est forcé de descendre." },
+        { "uci": "g8g6", "comment": "La nouvelle Dame donne le mat." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Le Roi actif transforme l'avantage de pions en gain concret.",
+        "La promotion doit être préparée avant d'être exécutée.",
+        "Après promotion, il faut trouver le mat le plus simple et sûr."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1",
+      "question": "Quiz final en 3 coups : prépare la promotion gagnante.",
+      "steps": [
+        {
+          "coups_acceptes": ["e6d7"],
+          "reponse": "f8g8",
+          "indice": "Étape 1 : active ton Roi pour limiter le Roi noir.",
+          "solution": "e6d7"
+        },
+        {
+          "fen": "6k1/3K2p1/6P1/5P2/8/8/8/8 w - - 1 2",
+          "coups_acceptes": ["d7e7"],
+          "reponse": "g8h8",
+          "indice": "Étape 2 : garde l'opposition et la pression.",
+          "solution": "d7e7"
+        },
+        {
+          "fen": "7k/4K1p1/6P1/5P2/8/8/8/8 w - - 3 3",
+          "coups_acceptes": ["f5f6"],
+          "reponse": "g7f6",
+          "indice": "Étape 3 : ouvre la voie vers la promotion du pion g.",
+          "solution": "f5f6"
+        }
+      ],
+      "correct_move": "e6d7",
+      "success_message": "Excellent, tu as bien préparé la promotion gagnante.",
+      "error_message": "Reprends le plan : Roi actif, pression, puis percée des pions."
+    }
+  ]
+}

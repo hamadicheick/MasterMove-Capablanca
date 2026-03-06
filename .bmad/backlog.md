@@ -1,0 +1,75 @@
+﻿# BACKLOG
+
+Technique :
+- [x] Refactor content.js (adaptateur BMAD simplifie -> sequences legacy au chargement)
+- [x] Gerer BOM UTF-8 au parse JSON contenu
+- [x] Migrer SAN -> UCI pour les chapitres actifs Ex1/Ex2
+- [x] Support `steps` dans l adaptateur runtime (4 blocs -> renderer legacy)
+- [ ] Supprimer logique legacy (apres migration complete des chapitres)
+- [ ] Ajouter validation automatique du format chapitre (CI locale)
+- [x] Integrer provider narration Piper (squelette fonctionnel + fallback)
+- [ ] Installer binaire Piper local (`app/resources/piper/piper.exe`)
+- [ ] Installer au moins une voix Piper (`app/resources/piper/models/*.onnx`)
+
+Contenu :
+- [x] Ajouter chapitres `capablanca_ch1_ex1_tour_roi` et `capablanca_ch1_ex2_tour_roi_centre` dans index
+- [x] Aligner Ex1/Ex2 sur PGN de reference (FEN + ligne de coups)
+- [x] Corriger textes corrompus pour TTS
+- [x] Regle quiz final: minimum 2 coups (cible 3) appliquee sur Ex1/Ex2
+- [x] Produire Ex3 (deux Fous + Roi) a partir du PGN source
+- [x] Ajouter Ex3 dans `app/content/index.json`
+- [x] Produire Ex4 (Dame + Roi) a partir du PGN source
+- [x] Ajouter Ex4 dans `app/content/index.json`
+- [x] Corriger commentaires Ex4 en francais accentue (TTS)
+- [x] Produire Ex5 (Roi+pion vs Roi) a partir du PGN source
+- [x] Ajouter Ex5 dans `app/content/index.json`
+- [x] Produire Ex6 (Roi+pion, opposition) a partir du PGN source
+- [x] Ajouter Ex6 dans `app/content/index.json`
+- [x] Produire Ex7 (promotion + mat) a partir du PGN source
+- [x] Ajouter Ex7 dans `app/content/index.json`
+- [x] Produire Ex9 (majorite de pions) a partir du PGN source
+- [x] Ajouter Ex9 dans `app/content/index.json`
+- [x] Produire Ex10 (pions eloignes) a partir du PGN source
+- [x] Ajouter Ex10 dans `app/content/index.json`
+- [x] Produire Ex11 (site001 / white) a partir du PGN source
+- [x] Produire Ex12 (site002 / white) a partir du PGN source
+- [x] Produire Ex13 (site003 / white) a partir du PGN source
+- [x] Produire Ex14 (site004 / white) a partir du PGN source
+- [x] Produire Ex15 (site005 / white) a partir du PGN source
+- [x] Produire Ex16 (site006 / white) a partir du PGN source
+- [x] Produire Ex17 (site007 / white) a partir du PGN source
+- [x] Ajouter Ex11 a Ex17 dans `app/content/index.json`
+- [x] Produire Ex18 (developpement en ouverture) a partir du PGN source
+- [x] Ajouter Ex18 dans `app/content/index.json`
+- [x] Produire Ex19 (initiative en ouverture) a partir du PGN source
+- [x] Ajouter Ex19 dans `app/content/index.json`
+- [x] Produire Ex20 (centre et developpement) a partir du PGN source
+- [x] Ajouter Ex20 dans `app/content/index.json`
+- [x] Produire Ex22 (pion passe lointain) a partir du PGN source
+- [x] Ajouter Ex22 dans `app/content/index.json`
+- [x] Produire Ex23 (course de pions) a partir du PGN source
+- [x] Ajouter Ex23 dans `app/content/index.json`
+- [x] Produire Ex24 (majorite et promotion) a partir du PGN source
+- [x] Ajouter Ex24 dans `app/content/index.json`
+- [x] Produire Ex25 (percee aile Dame) a partir du PGN source
+- [x] Ajouter Ex25 dans `app/content/index.json`
+- [x] Produire Ex26 (roi actif et opposition) a partir du PGN source
+- [x] Ajouter Ex26 dans `app/content/index.json`
+- [x] Produire Ex27 (roi contraint et tempo) a partir du PGN source
+- [x] Ajouter Ex27 dans `app/content/index.json`
+- [x] Produire Ex28 (diag 1a / manoeuvre Dame) a partir du PGN source
+- [x] Ajouter Ex28 dans `app/content/index.json`
+- [x] Ajouter commentaires de coup (affichage + TTS) sur Ex1/Ex2/Ex3
+- [x] Corriger affichage francais avec accents sur Ex1/Ex2/Ex3
+- [x] Ajuster delai narration pour eviter les phrases coupees
+- [ ] Convertir Ex1/Ex2 au format `sequences` final cible (sans adaptateur)
+- [ ] Convertir Ex3 au format `sequences` final cible (sans adaptateur)
+- [x] Produire Ex41 (Dame contre Tour, gain) a partir du PGN source (Stockfish)
+- [x] Ajouter Ex41 dans `app/content/index.json`
+- [x] Produire Ex42 (Dame contre Tour, position difficile) a partir du PGN source
+- [x] Ajouter Ex42 dans `app/content/index.json`
+- [x] Ajouter structure chapitres (book_chapters + champ chapter) dans index.json
+- [x] Produire Ex43 (attaque sans Cavaliers, mat en 4) a partir du PGN source
+- [x] Ajouter Ex43 dans `app/content/index.json`
+- [ ] Refactor Chapitre 1
+- [ ] Produire Chapitre 2

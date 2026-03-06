@@ -1,0 +1,132 @@
+===== PAGE 13 =====
+11
+Première partie
+CHAPITRE I
+Premiers principes : finales, 
+milieux de jeu et ouvertures
+La première chose à faire pour le lecteur est 
+de se familiariser avec la puissance des pièces. 
+Pour cela, le plus simple consiste à rapidement 
+apprendre comment administrer des mats 
+simples. 
+1. Quelques mats simples
+Exemple 1  — La ﬁ nale Tour et Roi contre 
+Roi. 
+Le principe consiste à repousser le Roi adverse 
+sur la dernière rangée de l’échiquier. 
+ XABCDEFGHY
+ 8-+-+-+-m(
+ 7+-+-+-+-’
+ 6-+-+-+-+&
+ 5+-+-+-+-%
+ 4-+-+-+-+$
+ 3+-+-+-+-#
+ 2-+-+-+-+"
+O 1T-+-+-+K!
+ xabcdefghy
+Dans cett e position, la puissance de la Tour 
+est démontrée par le premier coup, 1. Îa7, qui 
+conﬁ ne immédiatement le Roi noir à la dernière 
+rangée, après quoi le mat est administré en peu 
+de coups par :
+1.Îa7 Êg8 2.Êg2
+Il faut absolument combiner l’action du Roi 
+et de la Tour pour forcer une position où l’on 
+peut mater. Le principe général à suivre, pour 
+un débutant, est de garder le plus possible son Roi 
+sur la même rangée, ou, comme dans cet exemple, 
+la même colonne, que le Roi adverse. Et quand son 
+propre Roi arrive sur la sixième rangée, mieux 
+vaut le placer non plus sur la même colonne, 
+mais sur la première colonne voisine, côté 
+centre.
+2...Êf8 3. Êf3 Êe8 4. Êe4 Êd8 5. Êd5 Êc8 
+6.Êd6
+Et non 6. Êc6, car le Roi Noir se rendrait 
+alors en d8 et il faudrait beaucoup plus de 
+temps pour le mater. Si le Roi s’en retourne 
+maintenant en d8, 7.Îa8 mate de suite.
+6...Êb8 7. Îc7 Êa8 8. Êc6 Êb8 9. Êb6 Êa8 
+10.Îc8#.
+Il a fallu exactement dix coups pour mater 
+à partir de la position originale. Au cinquième 
+coup, les Noirs auraient pu jouer 5... Êe8 et, en 
+accord avec les principes, les Blancs auraient 
+continué 6. Êd6 Êf8 (le Roi noir serait ﬁ nale-
+ment forcé de jouer sur une case faisant face 
+au Roi blanc, et serait maté par Îa8) 7.Êe6 Êg8 
+8.Êf6 Êh8 9.Êg6 Êg8 10.Îa8#.
+
+===== PAGE 14 =====
+12
+José Raúl Capablanca  |  Les principes fondamentaux des échecs
+Exemple 2 
+ XABCDEFGHY
+ 8-+-+-+-+(
+ 7+-+-+-+-’
+ 6-+-+-+-+&
+ 5+-+-m-+-%
+ 4-+-+-+-+$
+ 3+-+-+-+-#
+ 2-+-+-+-+"
+O 1+-+-M-+R!
+ xabcdefghy
+Le Roi noir étant au centre de l’échiquier, la 
+meilleure façon de procéder est d’avancer son 
+propre Roi ainsi :
+1.Êe2 Êd5 2.Êe3
+La Tour n’étant toujours pas entrée en piste, 
+mieux vaut jouer directement le Roi vers le 
+centre de l’échiquier, non pas en face du Roi 
+adverse, mais sur l’un de ses ﬂ ancs.
+2...Êc4
+Si le Roi noir jouait maintenant 2... Êe5, la 
+Tour le repousserait par 3.Îh5+.
+3.Îh5 Êc3
+Si maintenant 3...Êb4, alors 4.Êd3.
+4.Îh4 
+Limitant autant que possible les cases du 
+Roi noir. La suite pourrait maintenant être :
+4...Êc2 5.Îc4+ Êb3 6.Êd3 Êb2 7.Îb4+ Êa3 
+8.Êc3 Êa2
+Notez le grand nombre de fois où le Roi 
+blanc s’est rapproché de sa Tour, non seule-
+ment pour la défendre, mais aussi pour réduire 
+la mobilité du Roi adverse. Les Blancs matent 
+maintenant en trois coups ainsi :
+9.Îa4+ Êb1 10.Îa8
+Ou sur toute autre case de la colonne a, for-
+çant le Roi ennemi à venir en face du Roi blanc
+10...Êc1 11.Îa1#
+Il a fallu onze coups pour mater, et à partir 
+de n’importe quelle position initiale je pense 
+qu’il faut moins de vingt coups. Le débutant 
+aura intérêt à pratiquer ce genre de ﬁ nale, 
+même si cela peut sembler monotone, car il 
+apprendra ce faisant à bien manier ses pièces.
+Exemple 3
+Passons maintenant à la ﬁ nale Roi et deux 
+Fous contre Roi dépouillé.
+ XABCDEFGHY
+ 8-+-+-+-m(
+ 7+-+-+-+-’
+ 6-+-+-+-+&
+ 5+-+-+-+-%
+ 4-+-+-+-+$
+ 3+-+-+-+-#
+ 2-+-+-+-+"
+o 1+-V-ML+-!
+ xabcdefghy
+Le Roi noir étant dans un coin, les Blancs 
+peuvent jouer 1.Íd3 Êg7 2.Íg5 Êf7 3.Íf5 et le 
+Roi noir est déjà limité à un nombre restreint de 
+cases. Si le Roi noir, dans la position originale, 
+avait été au centre de l’échiquier, ou loin de la 
+dernière rangée, les Blancs auraient dû avan-
+cer leur Roi puis, à l’aide de leurs Fous, limiter 
+autant que faire se peut les mouvements du Roi 
+adverse.
+On peut maintenant continuer par :
+3...Êg7 4.Êf2
+Dans ce tt e ﬁ nale, il ne faut pas seulement 
+repousser le Roi noir au bout de l’échiquier,

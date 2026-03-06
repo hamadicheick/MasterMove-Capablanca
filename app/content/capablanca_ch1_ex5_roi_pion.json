@@ -1,0 +1,78 @@
+﻿{
+  "id": "capablanca_ch1_ex5_roi_pion",
+  "title": "Finale Roi et pion contre Roi",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/8/8/8/4k3/8/3KP3/8 w - - 0 1",
+      "text": "Les Blancs veulent convertir l'avantage du pion avec l'aide du Roi."
+    },
+    {
+      "type": "animation",
+      "fen": "8/8/8/8/4k3/8/3KP3/8 w - - 0 1",
+      "moves": [
+        { "uci": "e2e3", "comment": "Le pion avance avec soutien du Roi." },
+        { "uci": "e4e5", "comment": "Le Roi noir se place devant le pion." },
+        { "uci": "d2d3", "comment": "Le Roi blanc se rapproche pour l'opposition." },
+        { "uci": "e5d5", "comment": "Le Roi noir garde le contact." },
+        { "uci": "e3e4", "comment": "Le pion gagne encore une case, avec échec." },
+        { "uci": "d5e5", "comment": "Le Roi noir revient dans l'axe." },
+        { "uci": "d3e3", "comment": "Le Roi blanc centralise." },
+        { "uci": "e5e6", "comment": "Le Roi noir attend le bon moment." },
+        { "uci": "e3f4", "comment": "Le Roi blanc prend l'espace clé." },
+        { "uci": "e6f6", "comment": "Le Roi noir tente de tenir la zone de promotion." },
+        { "uci": "e4e5", "comment": "Le pion pousse encore, avec échec." },
+        { "uci": "f6e6", "comment": "Le Roi noir reste actif." },
+        { "uci": "f4e4", "comment": "Le Roi blanc garde l'opposition utile." },
+        { "uci": "e6e7", "comment": "Le Roi noir recule vers la case de promotion." },
+        { "uci": "e4d5", "comment": "Le Roi blanc contourne et soutient le pion." },
+        { "uci": "e7d7", "comment": "Le Roi noir bloque encore." },
+        { "uci": "e5e6", "comment": "Le pion avance avec tempo." },
+        { "uci": "d7e7", "comment": "Le Roi noir reste au contact." },
+        { "uci": "d5e5", "comment": "Le Roi blanc maintient la pression." },
+        { "uci": "e7e8", "comment": "Le Roi noir attend la percée." },
+        { "uci": "e5d6", "comment": "Le Roi blanc prend l'opposition décisive." },
+        { "uci": "e8d8", "comment": "Le Roi noir ne peut plus améliorer sa position." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "En finale Roi+pion, l'opposition décide souvent du résultat.",
+        "Le Roi blanc doit soutenir le pion sans le bloquer.",
+        "Le plan est de gagner du terrain, puis forcer la promotion."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/8/8/8/4k3/8/3KP3/8 w - - 0 1",
+      "question": "Quiz final en 3 coups : lance le bon plan en finale Roi+pion.",
+      "steps": [
+        {
+          "coups_acceptes": ["e2e3"],
+          "reponse": "e4e5",
+          "indice": "Étape 1 : avance le pion au bon moment.",
+          "solution": "e2e3"
+        },
+        {
+          "fen": "8/8/8/4k3/8/4P3/3K4/8 w - - 0 1",
+          "coups_acceptes": ["d2d3"],
+          "reponse": "e5d5",
+          "indice": "Étape 2 : rapproche ton Roi pour l'opposition.",
+          "solution": "d2d3"
+        },
+        {
+          "fen": "8/8/8/3k4/8/3KP3/8/8 w - - 0 1",
+          "coups_acceptes": ["e3e4"],
+          "reponse": "d5e5",
+          "indice": "Étape 3 : continue le gain d'espace avec le pion.",
+          "solution": "e3e4"
+        }
+      ],
+      "correct_move": "e2e3",
+      "success_message": "Excellent, ton plan Roi+pion est bien lancé.",
+      "error_message": "Reprends le plan : activité du Roi et avance progressive du pion."
+    }
+  ]
+}

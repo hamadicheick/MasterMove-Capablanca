@@ -1,0 +1,40 @@
+{
+  "id": "capablanca_ex30_fou_mauvaise_couleur_nulle",
+  "title": "Exemple 30 - Fou de mauvaise couleur : nulle",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "7k/8/8/5K2/8/3B4/7P/8 w - - 0 1",
+      "text": "Malgré un Fou et un pion de plus, les Blancs ne gagnent pas : c'est une finale nulle."
+    },
+    {
+      "type": "animation",
+      "fen": "7k/8/8/5K2/8/3B4/7P/8 w - - 0 1",
+      "moves": [
+        { "uci": "h2h3", "comment": "Les Blancs essaient d'avancer leur pion h." },
+        { "uci": "h8g8", "comment": "Le Roi noir garde le contrôle du coin de promotion." },
+        { "uci": "f5e6", "comment": "Le Roi blanc tente d'améliorer sa position." },
+        { "uci": "g8h8", "comment": "Les Noirs reviennent dans le coin sans s'en éloigner." },
+        { "uci": "e6f6", "comment": "Les Blancs cherchent un progrès, mais la forteresse tient." },
+        { "uci": "h8g8", "comment": "Le plan défensif noir reste le même : tenir le coin." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Si la case de promotion du pion est d'une couleur opposée à celle du Fou, la victoire peut être impossible.",
+        "Avec son Roi devant le pion, le défenseur tient souvent la nulle.",
+        "Ici, le Roi noir se contente de bouger sans quitter le coin critique."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "7k/8/8/5K2/8/3B4/7P/8 w - - 0 1",
+      "question": "Quiz final : quel premier coup blanc tente le plan de progression du pion h ?",
+      "correct_move": "h2h3",
+      "success_message": "Correct, mais la position reste nulle avec la bonne défense noire.",
+      "error_message": "Cherche la poussée naturelle du pion h."
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "id": "capablanca_ch1_ex3_deux_fous_roi",
+  "title": "Mat avec deux Fous et le Roi",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1",
+      "text": "Les Blancs matent avec deux Fous et le Roi."
+    },
+    {
+      "type": "animation",
+      "fen": "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1",
+      "moves": [
+        {
+          "uci": "f1e2",
+          "comment": "Coup 1 des Blancs: f1e2."
+        },
+        {
+          "uci": "g8h8",
+          "comment": "Réponse des Noirs: g8h8."
+        },
+        {
+          "uci": "e2d3",
+          "comment": "Coup 2 des Blancs: e2d3."
+        },
+        {
+          "uci": "h8g7",
+          "comment": "Réponse des Noirs: h8g7."
+        },
+        {
+          "uci": "c1g5",
+          "comment": "Coup 3 des Blancs: c1g5."
+        },
+        {
+          "uci": "g7f7",
+          "comment": "Réponse des Noirs: g7f7."
+        },
+        {
+          "uci": "d3f5",
+          "comment": "Coup 4 des Blancs: d3f5."
+        },
+        {
+          "uci": "f7g7",
+          "comment": "Réponse des Noirs: f7g7."
+        },
+        {
+          "uci": "e1f2",
+          "comment": "Coup 5 des Blancs: e1f2."
+        },
+        {
+          "uci": "g7f7",
+          "comment": "Réponse des Noirs: g7f7."
+        },
+        {
+          "uci": "f2g3",
+          "comment": "Coup 6 des Blancs: f2g3."
+        },
+        {
+          "uci": "f7g7",
+          "comment": "Réponse des Noirs: f7g7."
+        },
+        {
+          "uci": "g3h4",
+          "comment": "Coup 7 des Blancs: g3h4."
+        },
+        {
+          "uci": "g7f7",
+          "comment": "Réponse des Noirs: g7f7."
+        },
+        {
+          "uci": "h4h5",
+          "comment": "Coup 8 des Blancs: h4h5."
+        },
+        {
+          "uci": "f7g7",
+          "comment": "Réponse des Noirs: f7g7."
+        },
+        {
+          "uci": "f5g6",
+          "comment": "Coup 9 des Blancs: f5g6."
+        },
+        {
+          "uci": "g7g8",
+          "comment": "Réponse des Noirs: g7g8."
+        },
+        {
+          "uci": "h5h6",
+          "comment": "Coup 10 des Blancs: h5h6."
+        },
+        {
+          "uci": "g8f8",
+          "comment": "Réponse des Noirs: g8f8."
+        },
+        {
+          "uci": "g6h5",
+          "comment": "Coup 11 des Blancs: g6h5."
+        },
+        {
+          "uci": "f8g8",
+          "comment": "Réponse des Noirs: f8g8."
+        },
+        {
+          "uci": "g5e7",
+          "comment": "Coup 12 des Blancs: g5e7."
+        },
+        {
+          "uci": "g8h8",
+          "comment": "Réponse des Noirs: g8h8."
+        },
+        {
+          "uci": "h5g4",
+          "comment": "Coup 13 des Blancs: h5g4."
+        },
+        {
+          "uci": "h8g8",
+          "comment": "Réponse des Noirs: h8g8."
+        },
+        {
+          "uci": "g4e6",
+          "comment": "Coup 14 des Blancs: g4e6."
+        },
+        {
+          "uci": "g8h8",
+          "comment": "Réponse des Noirs: g8h8."
+        },
+        {
+          "uci": "e7f6",
+          "comment": "Coup 15 des Blancs: e7f6."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Les deux Fous contrôlent des diagonales complémentaires.",
+        "Le Roi blanc avance pour fermer les cases de fuite.",
+        "La coordination Roi + Fous construit le mat progressivement."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1",
+      "question": "Quiz final en 3 coups : active les Fous et progresse vers le mat.",
+      "steps": [
+        {
+          "coups_acceptes": [
+            "f1e2"
+          ],
+          "reponse": "g8h8",
+          "indice": "Étape 1 : place un Fou pour commencer la restriction.",
+          "solution": "f1e2"
+        },
+        {
+          "coups_acceptes": [
+            "e2d3"
+          ],
+          "reponse": "h8g7",
+          "indice": "Étape 2 : continue la manœuvre du Fou.",
+          "solution": "e2d3"
+        },
+        {
+          "coups_acceptes": [
+            "c1g5"
+          ],
+          "reponse": "g7f7",
+          "indice": "Étape 3 : active le deuxième Fou pour renforcer le filet.",
+          "solution": "c1g5"
+        }
+      ],
+      "correct_move": "f1e2",
+      "success_message": "Excellent, tu lances correctement le plan de mat.",
+      "error_message": "Reprends la séquence : Fou, Fou, puis coordination."
+    }
+  ]
+}

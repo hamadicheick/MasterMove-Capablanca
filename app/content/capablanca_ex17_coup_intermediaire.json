@@ -1,0 +1,35 @@
+﻿{
+  "id": "capablanca_ex17_coup_intermediaire",
+  "title": "Coup intermédiaire en ouverture",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "text": "Les Blancs trouvent un coup intermédiaire fort qui améliore instantanément leur jeu."
+    },
+    {
+      "type": "animation",
+      "fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "moves": [
+        { "uci": "c3d5", "comment": "Le Cavalier centralise avec tempo et pression tactique." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Un coup intermédiaire peut changer l'évaluation d'une position.",
+        "Centraliser une pièce active augmente la pression globale.",
+        "Cherche toujours les coups dynamiques avant de simplifier."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "question": "Quiz final : trouve le coup intermédiaire fort des Blancs.",
+      "correct_move": "c3d5",
+      "success_message": "Exact, ce coup centralise et crée des menaces immédiates.",
+      "error_message": "Cherche un coup de Cavalier qui saute au centre avec initiative."
+    }
+  ]
+}

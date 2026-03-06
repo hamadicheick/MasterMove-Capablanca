@@ -1,0 +1,67 @@
+﻿{
+  "id": "capablanca_ch1_ex9_majorite_pions",
+  "title": "Majorité de pions et percée",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/6pp/3k4/8/3K1PPP/8/8/8 w - - 0 1",
+      "text": "Les Blancs exploitent leur majorité de pions pour créer une percée décisive."
+    },
+    {
+      "type": "animation",
+      "fen": "8/6pp/3k4/8/3K1PPP/8/8/8 w - - 0 1",
+      "moves": [
+        { "uci": "f4f5", "comment": "Le pion f avance pour fixer la structure noire." },
+        { "uci": "d6e7", "comment": "Le Roi noir se recentre pour contenir les pions." },
+        { "uci": "d4e5", "comment": "Le Roi blanc gagne une case active." },
+        { "uci": "e7f7", "comment": "Le Roi noir tente de garder les cases de rupture." },
+        { "uci": "g4g5", "comment": "Le pion g crée une seconde menace." },
+        { "uci": "f7e7", "comment": "Le Roi noir revient vers le centre." },
+        { "uci": "h4h5", "comment": "Le pion h prépare l'ouverture de ligne." },
+        { "uci": "g7g6", "comment": "Les Noirs bloquent, mais affaiblissent leurs cases." },
+        { "uci": "h5g6", "comment": "Les Blancs ouvrent la structure par la capture." },
+        { "uci": "h7g6", "comment": "Les Noirs reprennent, laissant une faiblesse durable." },
+        { "uci": "f5f6", "comment": "Percée finale : le pion passe avec échec." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "La majorité de pions sert à créer des menaces simultanées.",
+        "Le Roi actif soutient les ruptures au bon moment.",
+        "Une ouverture de structure peut suffire pour obtenir un pion passé."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/6pp/3k4/8/3K1PPP/8/8/8 w - - 0 1",
+      "question": "Quiz final en 3 coups : lance la percée de pions correctement.",
+      "steps": [
+        {
+          "coups_acceptes": ["f4f5"],
+          "reponse": "d6e7",
+          "indice": "Étape 1 : avance le pion f pour fixer les Noirs.",
+          "solution": "f4f5"
+        },
+        {
+          "fen": "8/4k1pp/8/5P2/3K2PP/8/8/8 w - - 1 2",
+          "coups_acceptes": ["d4e5"],
+          "reponse": "e7f7",
+          "indice": "Étape 2 : active ton Roi avant la rupture.",
+          "solution": "d4e5"
+        },
+        {
+          "fen": "8/5kpp/8/4KP2/6PP/8/8/8 w - - 3 3",
+          "coups_acceptes": ["g4g5"],
+          "reponse": "f7e7",
+          "indice": "Étape 3 : crée une deuxième menace avec le pion g.",
+          "solution": "g4g5"
+        }
+      ],
+      "correct_move": "f4f5",
+      "success_message": "Excellent, tu as bien lancé la percée de pions.",
+      "error_message": "Reprends le plan : fixation, Roi actif, puis double menace."
+    }
+  ]
+}

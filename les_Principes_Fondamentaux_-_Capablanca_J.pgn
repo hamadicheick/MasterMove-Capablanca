@@ -1,0 +1,157 @@
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 41"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k7/2K5/4Q3/8/8/8/1r6 w - - 0 1"]
+[PlyCount "11"]
+
+1. Qd4+ Kb8 2. Qh8+ Ka7 3. Qh7+ Kb8 4. Qxb1+ Kc8 5. Qh7 Kb8 6. Qb7# *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 42"]
+[Date "2026.03.02"]
+[Round "42"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/5rk1/8/5Q1K/8/8/8/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2026.??.??"]
+
+1. Qg5+ Kf8 2. Qd8+ Kg7 3. Kg5 Rf1 4. Qd4+ Kf8 5. Kg6 Ke7 6. Qe3+ Kd6 7. Qd3+
+Ke5 8. Qxf1 {et ainsi de suite.} *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 43"]
+[Date "2026.03.02"]
+[Round "43"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1"]
+[PlyCount "7"]
+[EventDate "2026.??.??"]
+
+1... Rdg8 2. Rf2 Rxg2+ 3. Kf1 Bc4+ 4. Nxc4 Rg1# *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 44"]
+[Date "2026.03.03"]
+[Round "44"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "kr2r3/pRp3pp/Q1P5/5R2/Pp1q4/3pp2P/6PK/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2026.??.??"]
+
+1. Rxa7+ Qxa7 2. Ra5 Qxa6 3. Rxa6# *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 45"]
+[Date "2026.03.03"]
+[Round "45"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "3q1kn1/r5p1/1ppr1pQn/p2ppP2/P3P3/1BPPB3/1P3PK1/7R w - - 0 1"]
+[SetUp "1"]
+[Theme "Autre"]
+[Difficulty "Facile"]
+
+{ [Erreur analyse: Stockfish indisponible] } *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 46"]
+[Date "2026.03.03"]
+[Round "46"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "4r3/p1pb1ppk/2ppn2p/1q3N1N/4PPP1/1P2Q3/4R2P/6K1 w - - 0 1"]
+[SetUp "1"]
+[Theme "Autre"]
+[Difficulty "Facile"]
+
+{ [Erreur analyse: Stockfish indisponible] } *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 47"]
+[Date "2026.03.03"]
+[Round "47"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r1bq1rk1/pp2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1"]
+[SetUp "1"]
+[Theme "Autre"]
+[Difficulty "Facile"]
+
+{ [Erreur analyse: Stockfish indisponible] } *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 48"]
+[Date "2026.03.03"]
+[Round "48"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "2r1r1k1/2p2pbp/2ppq1p1/8/2n1P3/2N2P2/PP1BQ1PP/1R3RK1 b - - 0 1"]
+[SetUp "1"]
+[Theme "Autre"]
+[Difficulty "Facile"]
+
+{ [Erreur analyse: Stockfish indisponible] } *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 49"]
+[Date "2026.03.03"]
+[Round "49"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r4rk1/p3q1pp/1pb5/2pn1p2/8/3BPN2/PP2QPPP/2RR2K1 w - - 0 1"]
+[SetUp "1"]
+[Theme "Autre"]
+[Difficulty "Facile"]
+
+{ [Erreur analyse: Stockfish indisponible] } *
+
+1. Nxe5 {[%eval 471,0]} *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 50"]
+[Date "2026.03.03"]
+[Round "50"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r1bq1rk1/1p2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1"]
+[SetUp "1"]
+[Theme "Autre"]
+[Difficulty "Facile"]
+
+ 1. Be2 b6 2. Qc2 Bb7 3. b4 Nd7 4. Rfd1 Qc7 5. Rac1 Ne5 6. Nd4 Rac8 *
+
+[Event "les Principes Fondamentaux - Capablanca"]
+[Site "Exercice 51"]
+[Date "2026.03.03"]
+[Round "51"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "r1bq1k1r/b5pp/1nRN4/4p3/1P2P1n1/5NB1/P4PPP/3Q1RK1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2026.??.??"]
+
+

@@ -1,0 +1,45 @@
+﻿{
+  "id": "capablanca_ex15_attaque_roi_expose",
+  "title": "Attaque sur Roi exposé",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
+      "text": "Les Blancs combinent sacrifice, échecs et pièce active pour mater le Roi noir."
+    },
+    {
+      "type": "animation",
+      "fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
+      "moves": [
+        { "uci": "d3h7", "comment": "Sacrifice du Fou avec échec." },
+        { "uci": "g8h7", "comment": "Le Roi noir accepte le sacrifice." },
+        { "uci": "d5h5", "comment": "La Dame blanche arrive avec échec." },
+        { "uci": "h7g8", "comment": "Le Roi noir recule." },
+        { "uci": "f3g5", "comment": "Le Cavalier rejoint l'attaque." },
+        { "uci": "e8e4", "comment": "La Dame noire cherche du contre-jeu." },
+        { "uci": "g5e4", "comment": "Le Cavalier capture la Dame noire." },
+        { "uci": "f8e8", "comment": "La Tour noire se replace." },
+        { "uci": "e4g5", "comment": "Le Cavalier revient vers le Roi noir." },
+        { "uci": "g8f8", "comment": "Le Roi noir tente de fuir." },
+        { "uci": "h5f7", "comment": "Mat : la Dame contrôle toutes les fuites." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "L'initiative vaut souvent plus que le matériel.",
+        "Les échecs successifs réduisent les options défensives.",
+        "La coordination Dame+Cavalier est redoutable contre un Roi exposé."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
+      "question": "Quiz final : quel sacrifice lance l'attaque gagnante ?",
+      "correct_move": "d3h7",
+      "success_message": "Très bien, c'est le bon déclencheur tactique.",
+      "error_message": "Cherche un sacrifice du Fou avec échec sur le Roi noir."
+    }
+  ]
+}

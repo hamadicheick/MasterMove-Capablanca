@@ -1,0 +1,39 @@
+﻿{
+  "id": "capablanca_ex13_mate_diagonale",
+  "title": "Mat par diagonale et Dame",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "text": "Les Blancs utilisent un saut de Cavalier pour ouvrir une attaque de mat."
+    },
+    {
+      "type": "animation",
+      "fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "moves": [
+        { "uci": "e4f6", "comment": "Le Cavalier donne échec en f6." },
+        { "uci": "g7f6", "comment": "Les Noirs capturent le Cavalier." },
+        { "uci": "d3g3", "comment": "La Dame donne échec sur la diagonale." },
+        { "uci": "g8h8", "comment": "Le Roi noir se réfugie en h8." },
+        { "uci": "b2f6", "comment": "Le Fou conclut par un mat net." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Un sacrifice de Cavalier peut ouvrir le Roi adverse.",
+        "La Dame et le Fou coopèrent pour un mat géométrique.",
+        "Les cases de fuite doivent être toutes contrôlées."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "question": "Quiz final : quel coup force l'attaque décisive ?",
+      "correct_move": "e4f6",
+      "success_message": "Excellent, le sacrifice ouvre la position du Roi noir.",
+      "error_message": "Cherche un échec de Cavalier qui force une capture."
+    }
+  ]
+}

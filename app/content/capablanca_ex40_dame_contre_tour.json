@@ -1,0 +1,71 @@
+{
+  "id": "capablanca_ex40_dame_contre_tour",
+  "title": "Exemple 40 - Dame contre Tour",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
+      "text": "Dans cette position standard de Dame contre Tour, les Blancs doivent forcer la Tour à s'éloigner de son Roi."
+    },
+    {
+      "type": "animation",
+      "fen": "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
+      "moves": [
+        { "uci": "a5e5", "comment": "Échec de Dame à distance : le plan commence." },
+        { "uci": "b8a7", "comment": "Le Roi noir choisit la case la plus tenable." },
+        { "uci": "e5a1", "comment": "La Dame se replace pour obtenir la bonne version de la position-type." },
+        { "uci": "a7b8", "comment": "Le Roi noir revient." },
+        { "uci": "a1a5", "comment": "Position recherchée : la Tour va devoir s'éloigner du Roi." },
+        { "uci": "b7b3", "comment": "La Tour se déplace sur case blanche pour éviter sa perte immédiate." },
+        { "uci": "a5e5", "comment": "Nouveau échec, la pression continue." },
+        { "uci": "b8a8", "comment": "Le Roi noir reste au bord de l'échiquier." },
+        { "uci": "e5h8", "comment": "La Dame gagne du terrain avec échec." },
+        { "uci": "a8a7", "comment": "Le Roi noir cherche la meilleure défense." },
+        { "uci": "h8g7", "comment": "La Dame maintient le filet." },
+        { "uci": "a7a8", "comment": "Le Roi noir n'a presque plus d'espace." },
+        { "uci": "g7g8", "comment": "Dernier échec préparatoire." },
+        { "uci": "b3b8", "comment": "La Tour interpose et s'éloigne du Roi." },
+        { "uci": "g8a2", "comment": "Mat : la configuration de l'exemple est résolue." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "L'idée directrice est de séparer la Tour de son Roi protecteur.",
+        "Les échecs de Dame à distance sur diagonales sont souvent décisifs.",
+        "La précision des cases intermédiaires compte plus qu'une attaque brutale immédiate."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
+      "question": "Quiz final en 3 étapes : lance correctement la méthode gagnante.",
+      "steps": [
+        {
+          "coups_acceptes": ["a5e5"],
+          "reponse": "b8a7",
+          "indice": "Étape 1 : commence par l'échec de Dame à distance.",
+          "solution": "a5e5"
+        },
+        {
+          "fen": "8/kr6/2K5/4Q3/8/8/8/8 w - - 2 2",
+          "coups_acceptes": ["e5a1"],
+          "reponse": "a7b8",
+          "indice": "Étape 2 : replace la Dame sur la colonne a.",
+          "solution": "e5a1"
+        },
+        {
+          "fen": "1k6/1r6/2K5/8/8/8/8/Q7 w - - 4 3",
+          "coups_acceptes": ["a1a5"],
+          "reponse": "b7b3",
+          "indice": "Étape 3 : rejoue la position-type avec la Tour contrainte de bouger.",
+          "solution": "a1a5"
+        }
+      ],
+      "correct_move": "a5e5",
+      "success_message": "Exact, tu as enclenché la bonne méthode de Dame contre Tour.",
+      "error_message": "Repars de l'idée centrale : échec à distance puis séparation Roi/Tour."
+    }
+  ]
+}

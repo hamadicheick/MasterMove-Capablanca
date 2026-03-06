@@ -1,0 +1,81 @@
+{
+  "chapitre_id": "capablanca_XX_titre_court",
+  "titre": "Capablanca - [Titre complet du chapitre]",
+  "description": "[Description courte du chapitre - ce que l'enfant va apprendre]",
+  "sequences": [
+    {
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "[Texte court affiche a l'ecran - 1-2 lignes max]",
+      "texte_audio": "[Texte lu par la synthese vocale - naturel et encourageant]",
+      "position_depart_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "animations": [
+        {
+          "coup": "e2e4",
+          "acteur": "blanc"
+        },
+        {
+          "coup": "e7e5",
+          "acteur": "noir"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "quiz_interactif",
+      "texte_ecran": "[Question ou instruction pour l'enfant]",
+      "texte_audio": "[Meme question avec encouragement - ton bienveillant]",
+      "position_depart_fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
+      "validation": {
+        "coups_acceptes": [
+          "g1f3",
+          "f1c4",
+          "d2d4"
+        ],
+        "indice": "[Indice qui reoriente sans donner la solution complete]",
+        "feedback_succes": "Excellent ! [Explication courte pourquoi c'est bon]",
+        "feedback_erreur": "Pas tout a fait. [Explication pedagogique de l'erreur]"
+      }
+    },
+    {
+      "id": 3,
+      "type": "quiz_interactif",
+      "texte_ecran": "[Exemple quiz multi-etapes]",
+      "texte_audio": "[Audio pour quiz multi-etapes]",
+      "position_depart_fen": "8/8/8/3k4/8/8/8/R3K2R w KQ - 0 1",
+      "validation": {
+        "steps": [
+          {
+            "coups_acceptes": [
+              "h1h5",
+              "h1h4"
+            ],
+            "reponse": "d5d6",
+            "indice": "La tour doit couper le chemin du roi adverse",
+            "solution": "h1h5"
+          },
+          {
+            "coups_acceptes": [
+              "a1a6"
+            ],
+            "reponse": [
+              "d6d7",
+              "d6c7"
+            ],
+            "indice": "Maintenant donne echec avec l'autre tour",
+            "solution": "a1a6"
+          },
+          {
+            "coups_acceptes": [
+              "h5h7"
+            ],
+            "indice": "Continue l'escalier ! Coupe encore la route",
+            "solution": "h5h7"
+          }
+        ],
+        "feedback_succes": "Parfait ! Tu maitrises le mat de l'escalier !",
+        "feedback_erreur": "Regarde bien le principe : couper, donner echec, couper a nouveau."
+      }
+    }
+  ]
+}

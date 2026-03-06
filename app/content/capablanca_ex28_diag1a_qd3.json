@@ -1,0 +1,37 @@
+﻿{
+  "id": "capablanca_ex28_diag1a_qd3",
+  "title": "Exemple 28 - Manœuvre Dame sur cases faibles",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bq1rk1/1p2bppp/4p3/8/p1nP4/2P2Q2/P1B1NPPP/R1B2RK1 w - - 0 1",
+      "text": "Les Blancs activent la Dame pour viser simultanément deux faiblesses."
+    },
+    {
+      "type": "animation",
+      "fen": "r1bq1rk1/1p2bppp/4p3/8/p1nP4/2P2Q2/P1B1NPPP/R1B2RK1 w - - 0 1",
+      "moves": [
+        { "uci": "f3d3", "comment": "La Dame se repositionne avec double idée tactique." },
+        { "uci": "g7g6", "comment": "Les Noirs protègent leur Roi, mais affaiblissent des cases." },
+        { "uci": "d3c4", "comment": "La Dame capture le Cavalier et gagne du matériel." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Une bonne manœuvre de Dame combine menace et amélioration de pièce.",
+        "Les coups défensifs de pions peuvent créer de nouvelles faiblesses.",
+        "Le calcul tactique doit confirmer le gain matériel immédiat."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bq1rk1/1p2bppp/4p3/8/p1nP4/2P2Q2/P1B1NPPP/R1B2RK1 w - - 0 1",
+      "question": "Quiz final : trouve la manœuvre de Dame qui lance le gain tactique.",
+      "correct_move": "f3d3",
+      "success_message": "Exact, la manœuvre prépare le gain du Cavalier c4.",
+      "error_message": "Cherche un déplacement de Dame qui vise à la fois c4 et h7."
+    }
+  ]
+}

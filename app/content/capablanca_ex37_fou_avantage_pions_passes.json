@@ -1,0 +1,40 @@
+{
+  "id": "capablanca_ex37_fou_avantage_pions_passes",
+  "title": "Exemple 37 - Fou et pions passés des deux côtés",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/pppn1p2/8/8/8/8/2P2PPP/2B1K3 b - - 0 1",
+      "text": "Ici, le Fou blanc a un net avantage pratique car chaque camp possède un pion passé sur une aile différente."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/pppn1p2/8/8/8/8/2P2PPP/2B1K3 b - - 0 1",
+      "moves": [
+        { "uci": "d7f6", "comment": "Le Cavalier noir se centralise pour freiner le jeu blanc." },
+        { "uci": "c1g5", "comment": "Le Fou blanc prend une diagonale longue active." },
+        { "uci": "e8e7", "comment": "Le Roi noir tente de se rapprocher de l'action." },
+        { "uci": "g2g4", "comment": "Les Blancs avancent leur majorité de l'aile Roi." },
+        { "uci": "e7e6", "comment": "Les Noirs restent flexibles au centre." },
+        { "uci": "g5f4", "comment": "Le Fou se redéploie rapidement vers l'autre front." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Quand des pions passés existent sur les deux ailes, la pièce la plus mobile prend de la valeur.",
+        "Le Fou change d'aile plus vite que le Cavalier, ce qui améliore les chances pratiques de gain.",
+        "Le livre souligne que la défense noire reste difficile, même si l'évaluation exacte dépend du calcul."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/pppn1p2/8/8/8/8/2P2PPP/2B1K3 b - - 0 1",
+      "question": "Quiz final : quel coup noir centralise le Cavalier dans ce type de position ?",
+      "correct_move": "d7f6",
+      "success_message": "Exact, c'est le développement naturel du Cavalier noir.",
+      "error_message": "Cherche le saut du Cavalier vers une case centrale active."
+    }
+  ]
+}

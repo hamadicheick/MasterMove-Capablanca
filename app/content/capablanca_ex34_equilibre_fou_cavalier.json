@@ -1,0 +1,38 @@
+{
+  "id": "capablanca_ex34_equilibre_fou_cavalier",
+  "title": "Exemple 34 - Équilibre Fou/Cavalier",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "text": "Quand les pions sont sur une seule aile et la structure reste symétrique, Fou et Cavalier s'équilibrent souvent."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "moves": [
+        { "uci": "d7f6", "comment": "Le Cavalier s'active sans créer de déséquilibre décisif." },
+        { "uci": "c1f4", "comment": "Le Fou répond par une centralisation équivalente." },
+        { "uci": "e8d7", "comment": "Le Roi noir se rapproche, plan classique de finale." },
+        { "uci": "e1e2", "comment": "Le Roi blanc fait de même : la position reste proche de l'égalité." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Dans cette structure, aucun camp ne possède d'avantage de pièce évident.",
+        "Le Fou et le Cavalier ont des ressources comparables quand le jeu reste fermé et symétrique.",
+        "Avec un jeu précis des deux côtés, la nulle est le résultat le plus probable."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "question": "Quiz final : quel coup noir active le Cavalier sans rompre l'équilibre ?",
+      "correct_move": "d7f6",
+      "success_message": "Exact, le Cavalier s'active mais la position reste équilibrée.",
+      "error_message": "Cherche la centralisation naturelle du Cavalier noir."
+    }
+  ]
+}

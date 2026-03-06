@@ -1,0 +1,69 @@
+﻿{
+  "id": "capablanca_ex27_roi_contraint_et_tempo",
+  "title": "Exemple 27 - Roi contraint et tempo",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 1",
+      "text": "Les Blancs neutralisent l'activité du Roi noir par un jeu précis de tempos."
+    },
+    {
+      "type": "animation",
+      "fen": "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 1",
+      "moves": [
+        { "uci": "g2h1", "comment": "Le Roi blanc se met en sécurité sur la case d'attente." },
+        { "uci": "d1d2", "comment": "Le Roi noir avance pour chercher l'infiltration." },
+        { "uci": "h1h2", "comment": "Les Blancs gardent le contrôle des tempos." },
+        { "uci": "d2d3", "comment": "Le Roi noir continue sa marche." },
+        { "uci": "h2h3", "comment": "Le Roi blanc maintient la distance utile." },
+        { "uci": "d3e2", "comment": "Le Roi noir tente de contourner." },
+        { "uci": "h3g2", "comment": "Le Roi blanc revient vers le centre critique." },
+        { "uci": "e2e3", "comment": "Le Roi noir insiste sur les cases d'entrée." },
+        { "uci": "g2g3", "comment": "Le Roi blanc tient l'opposition locale." },
+        { "uci": "e3d4", "comment": "Le Roi noir change d'aile." },
+        { "uci": "g3g4", "comment": "Le Roi blanc reste actif et empêche le progrès noir." },
+        { "uci": "d4e3", "comment": "Les Noirs n'ont pas de percée claire." },
+        { "uci": "g4g3", "comment": "Les Blancs consolident : position tenue." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "En finale de Rois, un tempo juste peut suffire à tenir.",
+        "Le Roi actif doit contrôler les cases d'infiltration.",
+        "L'opposition locale empêche la percée adverse."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 1",
+      "question": "Quiz final en 3 coups : trouve le bon plan de temporisation.",
+      "steps": [
+        {
+          "coups_acceptes": ["g2h1"],
+          "reponse": "d1d2",
+          "indice": "Étape 1 : joue la case d'attente la plus précise.",
+          "solution": "g2h1"
+        },
+        {
+          "fen": "8/8/8/4p1p1/8/5P2/3k4/7K w - - 1 2",
+          "coups_acceptes": ["h1h2"],
+          "reponse": "d2d3",
+          "indice": "Étape 2 : continue la temporisation utile.",
+          "solution": "h1h2"
+        },
+        {
+          "fen": "8/8/8/4p1p1/8/3k1P2/7K/8 w - - 3 3",
+          "coups_acceptes": ["h2h3"],
+          "reponse": "d3e2",
+          "indice": "Étape 3 : garde les cases d'infiltration sous contrôle.",
+          "solution": "h2h3"
+        }
+      ],
+      "correct_move": "g2h1",
+      "success_message": "Excellent, ton plan de tempos neutralise l'activité noire.",
+      "error_message": "Reprends le plan : case d'attente, opposition locale, contrôle des entrées."
+    }
+  ]
+}

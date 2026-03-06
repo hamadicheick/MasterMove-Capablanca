@@ -1,0 +1,77 @@
+﻿{
+  "id": "capablanca_ex19_initiative_ouverture",
+  "title": "Exemple 19 - Initiative en ouverture",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "rnbqkbnr/pppp1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 3",
+      "text": "Les Blancs utilisent le développement actif pour garder l'initiative."
+    },
+    {
+      "type": "animation",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": [
+        { "uci": "e2e4", "comment": "Les Blancs occupent le centre." },
+        { "uci": "e7e5", "comment": "Réponse symétrique des Noirs." },
+        { "uci": "g1f3", "comment": "Développement naturel avec attaque sur e5." },
+        { "uci": "d7d6", "comment": "Les Noirs soutiennent leur pion central." },
+        { "uci": "d2d4", "comment": "Les Blancs ouvrent le centre." },
+        { "uci": "c8g4", "comment": "Les Noirs clouent le Cavalier f3." },
+        { "uci": "d4e5", "comment": "Les Blancs capturent au centre." },
+        { "uci": "g4f3", "comment": "Les Noirs éliminent le Cavalier." },
+        { "uci": "d1f3", "comment": "La Dame reprend et reste active." },
+        { "uci": "d6e5", "comment": "Les Noirs récupèrent le pion." },
+        { "uci": "f1c4", "comment": "Le Fou vise la diagonale du Roi noir." },
+        { "uci": "d8f6", "comment": "La Dame noire défend et contre-attaque." },
+        { "uci": "f3b3", "comment": "La Dame blanche met une pression latérale." },
+        { "uci": "b7b6", "comment": "Les Noirs consolident leur aile Dame." },
+        { "uci": "b1c3", "comment": "Nouvelle pièce blanche développée." },
+        { "uci": "c7c6", "comment": "Les Noirs construisent une structure solide." },
+        { "uci": "c3d5", "comment": "Le Cavalier occupe une case forte." },
+        { "uci": "c6d5", "comment": "Les Noirs échangent le Cavalier avancé." },
+        { "uci": "c4b5", "comment": "Échec intermédiaire utile." },
+        { "uci": "b8c6", "comment": "Les Noirs bloquent l'échec." },
+        { "uci": "c1g5", "comment": "Les Blancs finissent leur développement avec initiative." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "L'initiative vient du développement rapide et coordonné.",
+        "Occuper les cases fortes force des concessions adverses.",
+        "Les coups avec tempo gardent la pression dans l'ouverture."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "rnbqkbnr/pppp1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 3",
+      "question": "Quiz final en 3 coups : lance le plan actif des Blancs.",
+      "steps": [
+        {
+          "coups_acceptes": ["d2d4"],
+          "reponse": "c8g4",
+          "indice": "Étape 1 : ouvre le centre immédiatement.",
+          "solution": "d2d4"
+        },
+        {
+          "fen": "rnbqk1nr/pppp1ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+          "coups_acceptes": ["d4e5"],
+          "reponse": "g4f3",
+          "indice": "Étape 2 : gagne de l'espace au centre.",
+          "solution": "d4e5"
+        },
+        {
+          "fen": "rnbqk1nr/pppp1ppp/3p4/4p3/4P3/5b2/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+          "coups_acceptes": ["d1f3"],
+          "reponse": "d6e5",
+          "indice": "Étape 3 : reprends en gardant une Dame active.",
+          "solution": "d1f3"
+        }
+      ],
+      "correct_move": "d2d4",
+      "success_message": "Excellent, ton plan garde l'initiative dès l'ouverture.",
+      "error_message": "Reprends le plan : centre actif, reprise dynamique, développement rapide."
+    }
+  ]
+}

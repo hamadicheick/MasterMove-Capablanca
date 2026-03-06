@@ -1,0 +1,12 @@
+{
+  "name": "mastermove-capablanca",
+  "version": "0.3.1",
+  "private": true,
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}

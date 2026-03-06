@@ -1,0 +1,573 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 1"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "7k/8/8/8/8/8/8/R6K w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Ra7 Kg8 2. Kg2 Kf8 3. Kf3 Ke8 4. Ke4 Kd8 5. Kd5 Kc8 6. Kd6 Kb8 7. Rc7
+Ka8 8. Kc6 Kb8 9. Kb6 Ka8 10. Rc8# *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 2"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/8/4K2R w K - 0 1"]
+[PlyCount "21"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Ke2 Kd5 2. Ke3 Kc4 3. Rh5 Kc3 4. Rh4 Kc2 5. Rc4+ Kb3 6. Kd3 Kb2 7.
+Rb4+ Ka3 8. Kc3 Ka2 9. Ra4+ Kb1 10. Ra8 Kc1 11. Ra1# *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 3"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1"]
+[PlyCount "29"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Be2 Kh8 2. Bd3 Kg7 3. Bg5 Kf7 4. Bf5 Kg7 5. Kf2 Kf7 6. Kg3 Kg7 7. Kh4
+Kf7 8. Kh5 Kg7 9. Bg6 Kg8 10. Kh6 Kf8 11. Bh5 Kg8 12. Be7 Kh8 13. Bg4 Kg8 14.
+Be6+ Kh8 15. Bf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 4"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/8/4K2Q w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Qc6 Kd4 2. Kd2 Ke5 3. Ke3 Kf5 4. Qd6 Kg5 5. Qe6 Kh4 6. Qg6 Kh3 7. Kf3
+Kh2 8. Qg2# *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 5"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/8/8/8/4k3/8/3KP3/8 w - - 0 1"]
+[PlyCount "22"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. e3 Ke5 2. Kd3 Kd5 3. e4+ Ke5 4. Ke3 Ke6 5. Kf4 Kf6 6. e5+ Ke6 7. Ke4
+Ke7 8. Kd5 Kd7 9. e6+ Ke7 10. Ke5 Ke8 11. Kd6 Kd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 6"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/5K2/8/4P3/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Ke4 Ke6 2. e3 Kf6 3. Kd5 Ke7 4. Ke5 Kd7 5. Kf6 Ke8 6. e4 Kd7 7. e5 Ke8
+8. Ke6 Kf8 9. Kd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 7"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "5k2/6p1/4K1P1/5P2/8/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Kd7 Kg8 2. Ke7 Kh8 3. f6 gxf6 4. Kf7 f5 5. g7+ Kh7 6. g8=Q+ Kh6 7.
+Qg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 9"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/6pp/3k4/8/3K1PPP/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. f5 Ke7 2. Ke5 Kf7 3. g5 Ke7 4. h5 g6 5. hxg6 hxg6 6. f6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 8"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/6p1/3k4/8/3K1PP1/8/8/8 w - - 0 1"]
+[PlyCount "35"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. Ke4 Ke6 2. f5+ Kf6 3. Kf4 g6 4. g5+ Kf7 5. f6 Ke6 6. Ke4 Kf7 7. Ke5
+Kf8 8. f7 Kxf7 9. Kd6 Kf8 10. Ke6 Kg7 11. Ke7 Kg8 12. Kf6 Kh7 13. Kf7 Kh8 14.
+Kxg6 Kg8 15. Kh6 Kh8 16. g6 Kg8 17. g7 Kf7 18. Kh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 10"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/p6p/4k3/8/4K3/8/P5PP/8 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.18"]
+
+{[#]} 1. g4 a5 2. a4 Kf6 3. h4 Ke6 4. g5 Kf7 5. Kf5 Kg7 6. h5 Kf7 7. Ke5 h6 8.
+g6+ Kg7 9. Ke6 Kf8 10. Kf6 Kg8 11. Ke7 *
+
+[Event "event"]
+[Site "site001"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2020.??.??"]
+
+1. Qxh7+ Kxh7 2. Rh3+ Kg8 3. Rh8# 1-0
+
+[Event "event"]
+[Site "site002"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2020.??.??"]
+
+1. Nxc6 Bg5 2. Ne7+ Qxe7 3. Rxe7 Bxe7 4. Qd7 f6 5. Qxb7 1-0
+
+[Event "event"]
+[Site "site003"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2020.??.??"]
+
+1. Nf6+ gxf6 2. Qg3+ Kh8 3. Bxf6# 1-0
+
+[Event "event"]
+[Site "site004"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2020.??.??"]
+
+1. Bxd7 Rxe4 2. Bxc8 Rxe3 3. Qxe3 1-0
+
+[Event "event"]
+[Site "site005"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+1. Bxh7+ Kxh7 2. Qh5+ Kg8 3. Ng5 Qe4 4. Nxe4 Rfe8 5. Ng5 Kf8 6. Qxf7# 1-0
+
+[Event "event"]
+[Site "site006"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2020.??.??"]
+
+1. Nxe7+ Bxe7 2. Rxe7 Nxe7 3. Bxh7+ 1-0
+
+[Event "event"]
+[Site "site007"]
+[Date "2020.11.18"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2020.??.??"]
+
+1. Nd5 1-0
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "Exemple 18"]
+[Black "?"]
+[Result "*"]
+[ECO "C41"]
+[Annotator "konea"]
+[PlyCount "25"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.29"]
+
+{[%evp 0,25,25,16,10,25,70,69,90,69,103,72,70,63,64,56,46,25,45,38,32,32,1,-91,
+-101,-57,-65,-65]} 1. e4 e5 2. Nf3 d6 3. d4 Nd7 4. Bc4 {Les noirs se voient
+contraint de subir le châtiment de leur coup précédent. En soi un tel coup
+suffit à disqualifier toute forme d'ouverture qui le rend necessaire. les
+blancs menaçaient Cg5.} h6 {Si Fe7} (4... Be7 5. dxe5 Nxe5 6. Nxe5 dxe5 7. Qh5
+g6 8. Qxe5 Nf6 9. O-O O-O 10. Bg5) 5. Nc3 Ngf6 6. Be3 Be7 {Soulignons que les
+blancs ne roquent pas encore: ils veulent être les premiers à deployer leurs
+forces} 7. Qe2 c6 8. Rd1 Qc7 9. O-O b5 10. Bb3 a5 11. a3 Ba6 12. dxe5 dxe5 13.
+Nb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 19"]
+[Black "?"]
+[Result "*"]
+[ECO "C41"]
+[PlyCount "21"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.29"]
+
+1. e4 e5 2. Nf3 d6 3. d4 Bg4 4. dxe5 Bxf3 5. Qxf3 dxe5 6. Bc4 Qf6 7. Qb3 b6 8.
+Nc3 c6 9. Nd5 cxd5 10. Bb5+ Nc6 11. Bg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "2020.11.18"]
+[Round "?"]
+[White "exemple 20"]
+[Black "?"]
+[Result "*"]
+[ECO "C50"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+[SourceVersionDate "2020.11.29"]
+
+1. e4 e5 2. Nf3 d6 3. Bc4 Nc6 4. d4 Bg4 5. Nc3 h6 6. dxe5 *
+
+[Event "event"]
+[Site "site001"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 22"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2020.??.??"]
+
+1. b4 1-0
+
+[Event "event"]
+[Site "site004"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 23"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2020.??.??"]
+
+1. Kh1 g5 2. Kg1 g4 3. Kh1 g3 4. hxg3 hxg3 5. Kg1 g2 1-0
+
+[Event "event"]
+[Site "site007"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 26"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/8/4k3/1p5p/1P2K2P/8/8/8 w - - 0 1"]
+[PlyCount "4"]
+[EventDate "2020.??.??"]
+
+1. Kd4 Kd6 2. Ke4 Ke6 1-0
+
+[Event "event"]
+[Site "site008"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 26"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "4k3/8/8/1p5p/1P5P/8/8/4K3 w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2020.??.??"]
+
+1. Ke2 Ke7 2. Ke3 Ke6 3. Ke4 Kd6 4. Kd4 Kc6 5. Ke5 Kb7 6. Kd6 Kb6 7. Kd5 Kb7 8.
+Kc5 Ka6 9. Kc6 Ka7 10. Kxb5 1-0
+
+[Event "event"]
+[Site "site009"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 27"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/8/8/4p1p1/8/5P2/6K1/3k4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2020.??.??"]
+
+1. Kh1 Kd2 2. Kh2 Kd3 3. Kh3 Ke2 4. Kg2 Ke3 5. Kg3 Kd4 6. Kg4 Ke3 7. Kg3 1-0
+
+[Event "event"]
+[Site "site002"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 23"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/6p1/7p/8/4k3/8/6KP/8 w - - 0 1"]
+[PlyCount "28"]
+[EventDate "2020.??.??"]
+
+1. Kg3 Ke3 2. Kg2 Kf4 3. Kg1 Kg4 4. Kg2 Kh4 5. Kg1 Kh3 6. Kh1 h5 7. Kg1 h4 8.
+Kh1 g5 9. Kg1 g4 10. Kh1 g3 11. hxg3 hxg3 12. Kg1 g2 13. Kf2 Kh2 14. Ke2 g1=Q
+1-0
+
+[Event "event"]
+[Site "site003"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "white"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/6p1/7p/8/8/7k/7P/6K1 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+1. Kh1 g5 2. Kg1 g4 3. Kh1 h5 4. Kg1 h4 5. Kh1 g3 6. hxg3 hxg3 7. Kg1 g2 8. Kf2
+Kh2 1-0
+
+[Event "event"]
+[Site "site003"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 23"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/6p1/7p/8/8/7k/7P/6K1 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2020.??.??"]
+
+1. Kh1 g5 2. Kg1 g4 3. Kh1 h5 4. Kg1 h4 5. Kh1 g3 6. hxg3 hxg3 7. Kg1 g2 8. Kf2
+Kh2 1-0
+
+[Event "event"]
+[Site "site005"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 24"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2020.??.??"]
+
+1. b6 axb6 2. c6 bxa5 3. cxb7 1-0
+
+[Event "event"]
+[Site "site005"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 24"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2020.??.??"]
+
+1. b6 cxb6 2. a6 bxc5 3. axb7 c4 4. b8=Q 1-0
+
+[Event "event"]
+[Site "site006"]
+[Date "2020.11.29"]
+[Round "1"]
+[White "Exemple 25"]
+[Black "black"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2020.??.??"]
+
+1. a4 h5 2. a5 h4 3. b6 axb6 4. a6 h3 5. a7 h2 6. a8=Q 1-0
+
+[Event "London Phillips&Drew"]
+[Site "London"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "Seirawan, Yasser"]
+[Black "Karpov, Anatoly"]
+[Result "1-0"]
+[ECO "D53"]
+[WhiteElo "2575"]
+[BlackElo "2720"]
+[Annotator "konea"]
+[PlyCount "73"]
+[EventDate "1982.04.??"]
+[EventType "tourn"]
+[EventRounds "13"]
+[EventCountry "ENG"]
+[EventCategory "14"]
+[SourceTitle "MCD"]
+[Source "ChessBase"]
+[SourceDate "1999.07.01"]
+[SourceVersion "1"]
+[SourceVersionDate "1999.07.01"]
+[SourceQuality "1"]
+
+{[%evp 0,61,25,19,31,-9,-11,-7,-3,6,33,35,34,-5,5,5,24,28,26,21,22,22,24,17,28,
+-15,3,1,125,158,149,153,149,156,160,144,138,161,168,177,176,192,185,181,183,
+171,173,216,221,214,216,237,257,250,274,290,644,672,673,702,693,750,750,758]} 
+1. Nf3 Nf6 2. c4 e6 3. Nc3 d5 4. d4 Be7 5. Bg5 h6 6. Bh4 O-O 7. Rc1 b6 8. cxd5
+Nxd5 9. Nxd5 exd5 10. Bxe7 Qxe7 11. g3 Re8 12. Rc3 Na6 13. Qa4 c5 14. Re3 $1 {
+[%cal Re3e8,Ra4e8] Ce coup élimine la pression sur la colonne « e » et
+attaque la Dame noire. Notez que la retraite 14...Dd8 échoue sur 15.Txe8+ car
+la Dame blanche contrôle la case e8. Bloquer la colonne « e » est le seul
+moyen dont disposent les Noirs pour se défendre contre cette menace.} Be6 {
+[%csl Ra6][%cal Ra4a6] Le Cavalier noir en a6 est maintenant sans défense, et
+mûr à point.} 15. Qxa6 {Voilà. Je prends ainsi l'avantage matériel, mais
+dois répondre à la question • Puis-je développer mes autres pièces et
+mettre mon Roi en sûreté ?} cxd4 {Les Noirs prennent un pion et attaquent ma
+Tour tout en ouvrant la colonne c pour leurs Tours. Le Champion du Monde doit
+jouer avec toute son énergie sous peine de me voir consolider ma position.}
+16. Rb3 $1 {[%csl Rd4][%cal Gf3d4,Re7b4,Rb4d4,Rb4d2] Évitant 16. Cxd4?? Db4+,
+perdant le Cavalier d4.} Bf5 {[%csl Rc1][%cal Gf3d4,Re7c5,Rc5c1,Rc5d4] Le
+séduisant 17.Cxd4?? perd encore, car après 17...Dc5, il n'y a pas de défense
+} 17. Bg2 Bc2 18. Nxd4 Bxb3 19. Nxb3 {En rendant un peu de matériel, j
+'amoindris le potentiel offensif de Karpov et facilite ma défense. L'avantage
+matériel de deux pièces contre une Tour est toujours suffisant pour gagner
+si je parviens à éloigner mon Roi du centre. L'un des atouts d'un avantage
+matériel est d'offrir un grand choix de possibilités défensives- On peut
+par exemple rendre du matériel et finir quand même par gagner. Retenez ceci :
+L'avantage matériel évoque le lest d'une montgolfière. Si vous commencez à
+plonger, lâcher un peu de lest suffit à stopper la descente.} Rac8 20. Bf3 {
+[%csl Ge2][%cal Gf3e2] Défendant mon pion e2 et créant un abri à mon Roi
+après 20...Db4+ 21 .Rfl, suivi de Rg2 et les Blancs se retranchent sur
+l'aile-Roi. Notez que j'évite 20.Fxd5?, qui gagne un pion mais perd du temps.
+Je ne veux rien capturer d'autre avant de mettre mon Roi en sûreté ! Quand
+ce sera fait, Je laisserai libre court à mon appétit.} Rc2 21. O-O {Mon Roi
+est enfin à l'abri ! Sa Majesté s'étant maintenant claquemurée, je peux
+envisager de créer des menaces à mon tour.} Rxb2 22. Rd1 {[%csl Gd5][%cal
+Gd1d5,Gf3d5] La première étape a consisté à gagner du matériel, la
+deuxième à le digérer et à mettre mon Roi en sûreté. Par ce coup
+j'entame la troisième phase : attaquer et détruire les faiblesses noires,
+dont la première est le pion d5.} Rd8 23. Nd4 $1 {Centralisant mon Cavalier
+et menaçant 24.Cc6 avec une fourchette juteuse. Notez que 23...Dd7 stoppe
+Cd4-c6 mais échoue sur 24.Da3, et la Tour noire est prise au piège en b2 !}
+Rd7 24. Nc6 Qe8 25. Nxa7 {Mon avantage matériel est à nouveau plus prononcé.
+J'apprécie ce festin tant il me plaît de dévorer les pièces et pions
+ennemis.} Rc7 26. a4 Qa8 {Les Noirs clouent mon Cavalier, mais j'ai préparé
+une petite surprise.} 27. Rxd5 $1 {Maintenant, 27...Txa7 28.Dd3 laisserait les
+Noirs impuissants contre la menace 29.Td8+, gagnant la Dame.} Qxa7 28. Rd8+ Kh7
+29. Qd3+ f5 {Une triste nécessité. Sur 29...g6, je joue 30.Dd4, armant la
+double menace Dd4xb2 - qui gagne la Tour - et Dd4-h8 mat. Les Noirs devraient
+alors donner leur pion « f » par 30...Tbl+, qui mène à une fin similaire
+à celle de la partie après 31.Rg2 f6} 30. Qxf5+ g6 31. Qe6 {Les Noirs
+abandonnent, voyant que 31...h5 32.Dg8+ Rh6 33.Dh8+ crée une double attaque
+sur leur roi et leur tour eb b2, ce qui entraine la perte de celle-ci.} Rg7 32.
+Qc6 Rg8 33. Rxg8 Kxg8 34. Qxg6+ Qg7 35. Bd5+ Kh8 36. Qe8+ Kh7 37. Be4+ 1-0
+
+[Event "London Phillips&Drew"]
+[Site "London"]
+[Date "1982.??.??"]
+[Round "?"]
+[White "diag 1a"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "r1bq1rk1/1p2bppp/4p3/8/p1nP4/2P2Q2/P1B1NPPP/R1B2RK1 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "1982.04.??"]
+[SourceVersionDate "2025.10.23"]
+
+{[%csl Rc4,Rh7][%cal Gf3d3,Rd3h7] [#]} 1. Qd3 {[%csl Gc4,Gh7][%cal Gd3h7,Gd3c4]
+} g6 2. Qxc4 *
+

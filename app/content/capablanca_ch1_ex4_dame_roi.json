@@ -1,0 +1,71 @@
+﻿{
+  "id": "capablanca_ch1_ex4_dame_roi",
+  "title": "Mat avec la Dame et le Roi",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/8/8/4k3/8/8/8/4K2Q w - - 0 1",
+      "text": "Les Blancs veulent mater avec la Dame et le Roi."
+    },
+    {
+      "type": "animation",
+      "fen": "8/8/8/4k3/8/8/8/4K2Q w - - 0 1",
+      "moves": [
+        { "uci": "h1c6", "comment": "La Dame coupe le Roi noir." },
+        { "uci": "e5d4", "comment": "Le Roi noir cherche du contre-jeu." },
+        { "uci": "e1d2", "comment": "Le Roi blanc se rapproche." },
+        { "uci": "d4e5", "comment": "Le Roi noir reste mobile." },
+        { "uci": "d2e3", "comment": "Le Roi blanc continue l'approche." },
+        { "uci": "e5f5", "comment": "Le Roi noir fuit encore." },
+        { "uci": "c6d6", "comment": "La Dame réduit encore les cases." },
+        { "uci": "f5g5", "comment": "Le Roi noir est poussé vers le bord." },
+        { "uci": "d6e6", "comment": "Coordination Dame et Roi." },
+        { "uci": "g5h4", "comment": "Le Roi noir approche du coin." },
+        { "uci": "e6g6", "comment": "La Dame prépare le mat." },
+        { "uci": "h4h3", "comment": "Le Roi noir n'a presque plus d'air." },
+        { "uci": "e3f3", "comment": "Le Roi blanc verrouille les fuites." },
+        { "uci": "h3h2", "comment": "Dernière case pour le Roi noir." },
+        { "uci": "g6g2", "comment": "Échec et mat." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "La Dame coupe des lignes entières très vite.",
+        "Le Roi blanc doit avancer pour soutenir le mat.",
+        "Le but est de pousser le Roi noir vers un bord puis un coin."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/8/8/4k3/8/8/8/4K2Q w - - 0 1",
+      "question": "Quiz final en 3 coups : lance le plan du mat avec la Dame.",
+      "steps": [
+        {
+          "coups_acceptes": ["h1c6"],
+          "reponse": "e5d4",
+          "indice": "Étape 1 : coupe le Roi noir avec la Dame.",
+          "solution": "h1c6"
+        },
+        {
+          "fen": "8/8/2Q5/8/3k4/8/8/4K3 w - - 0 1",
+          "coups_acceptes": ["e1d2"],
+          "reponse": "d4e5",
+          "indice": "Étape 2 : rapproche ton Roi.",
+          "solution": "e1d2"
+        },
+        {
+          "fen": "8/8/2Q5/4k3/8/8/3K4/8 w - - 0 1",
+          "coups_acceptes": ["d2e3"],
+          "reponse": "e5f5",
+          "indice": "Étape 3 : continue l'approche du Roi.",
+          "solution": "d2e3"
+        }
+      ],
+      "correct_move": "h1c6",
+      "success_message": "Excellent, tu lances bien le mat Dame + Roi.",
+      "error_message": "Reprends le plan : Dame qui coupe, puis Roi qui approche."
+    }
+  ]
+}

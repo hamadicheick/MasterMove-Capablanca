@@ -1,0 +1,81 @@
+﻿{
+  "id": "capablanca_ex18_developpement_ouverture",
+  "title": "Exemple 18 - Ouverture : développement méthodique",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "rn1qkbnr/pppb1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "text": "Les Blancs punissent un plan noir passif en développant toutes leurs forces avec précision."
+    },
+    {
+      "type": "animation",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": [
+        { "uci": "e2e4", "comment": "Les Blancs prennent le centre." },
+        { "uci": "e7e5", "comment": "Les Noirs répondent symétriquement." },
+        { "uci": "g1f3", "comment": "Développement naturel du Cavalier." },
+        { "uci": "d7d6", "comment": "Les Noirs soutiennent le pion e5." },
+        { "uci": "d2d4", "comment": "Les Blancs ouvrent encore le centre." },
+        { "uci": "b8d7", "comment": "Les Noirs choisissent un développement passif." },
+        { "uci": "f1c4", "comment": "Le Fou vise les cases sensibles autour du Roi noir." },
+        { "uci": "h7h6", "comment": "Coup prophylactique, mais lent." },
+        { "uci": "b1c3", "comment": "Les Blancs accélèrent leur mobilisation." },
+        { "uci": "g8f6", "comment": "Les Noirs développent enfin une pièce." },
+        { "uci": "c1e3", "comment": "Le Fou sort avec tempo positionnel." },
+        { "uci": "f8e7", "comment": "Les Noirs préparent le roque." },
+        { "uci": "d1e2", "comment": "La Dame soutient le centre et le roque long éventuel." },
+        { "uci": "c7c6", "comment": "Les Noirs consolident, mais restent serrés." },
+        { "uci": "a1d1", "comment": "La Tour s'aligne sur la colonne semi-ouverte." },
+        { "uci": "d8c7", "comment": "La Dame noire protège e5." },
+        { "uci": "e1g1", "comment": "Les Blancs roquent au bon moment." },
+        { "uci": "b7b5", "comment": "Les Noirs gagnent de l'espace à l'aile Dame." },
+        { "uci": "c4b3", "comment": "Le Fou conserve sa diagonale active." },
+        { "uci": "a7a5", "comment": "Les Noirs poursuivent leur expansion latérale." },
+        { "uci": "a2a3", "comment": "Les Blancs contrôlent b4 et limitent les pièces noires." },
+        { "uci": "c8a6", "comment": "Le Fou noir sort, mais la coordination reste fragile." },
+        { "uci": "d4e5", "comment": "Les Blancs ouvrent la position au moment opportun." },
+        { "uci": "d6e5", "comment": "Les Noirs reprennent au centre." },
+        { "uci": "c3b1", "comment": "Manœuvre de Cavalier pour se réorganiser sans faiblesse." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Développer vite et harmonieusement crée des menaces durables.",
+        "Les coups de pions latéraux sont risqués si le centre n'est pas prêt.",
+        "Le bon timing d'ouverture du centre décide souvent du milieu de jeu."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "rn1qkbnr/pppb1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "question": "Quiz final en 3 coups : lance le bon plan de développement.",
+      "steps": [
+        {
+          "coups_acceptes": ["f1c4"],
+          "reponse": "h7h6",
+          "indice": "Étape 1 : développe le Fou sur une diagonale active.",
+          "solution": "f1c4"
+        },
+        {
+          "fen": "rn1qkbnr/pppb1pp1/3p3p/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+          "coups_acceptes": ["b1c3"],
+          "reponse": "g8f6",
+          "indice": "Étape 2 : développe le Cavalier et soutiens le centre.",
+          "solution": "b1c3"
+        },
+        {
+          "fen": "rn1qkb1r/pppb1pp1/3p1n1p/4p3/2BPP3/2N2N2/PPP2PPP/R1BQK2R w KQkq - 2 6",
+          "coups_acceptes": ["c1e3"],
+          "reponse": "f8e7",
+          "indice": "Étape 3 : complète le développement des pièces mineures.",
+          "solution": "c1e3"
+        }
+      ],
+      "correct_move": "f1c4",
+      "success_message": "Excellent, ton plan de développement est solide.",
+      "error_message": "Reprends le plan : développement rapide, puis coordination centrale."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿{
+  "id": "capablanca_ex23_course_de_pions",
+  "title": "Exemple 23 - Course de pions",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
+      "text": "Les deux camps lancent une course de pions vers la promotion."
+    },
+    {
+      "type": "animation",
+      "fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
+      "moves": [
+        { "uci": "g1h1", "comment": "Le Roi blanc se place pour soutenir son pion h." },
+        { "uci": "g7g5", "comment": "Les Noirs poussent leur pion g." },
+        { "uci": "h1g1", "comment": "Le Roi blanc revient pour garder l'opposition utile." },
+        { "uci": "g5g4", "comment": "Les Noirs continuent la course." },
+        { "uci": "g1h1", "comment": "Les Blancs temporisent et contrôlent les cases clés." },
+        { "uci": "g4g3", "comment": "Le pion noir approche de la promotion." },
+        { "uci": "h2g3", "comment": "Les Blancs capturent et ouvrent la colonne h." },
+        { "uci": "h4g3", "comment": "Les Noirs reprennent immédiatement." },
+        { "uci": "h1g1", "comment": "Le Roi blanc reste actif contre le pion passé." },
+        { "uci": "g3g2", "comment": "Le pion noir atteint la 2e rangée et gagne la course." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "En course de pions, chaque tempo compte.",
+        "Le Roi doit soutenir son pion tout en freinant celui de l'adversaire.",
+        "Calculer la promotion finale évite les erreurs de timing."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
+      "question": "Quiz final en 3 coups : lance correctement la course de pions.",
+      "steps": [
+        {
+          "coups_acceptes": ["g1h1"],
+          "reponse": "g7g5",
+          "indice": "Étape 1 : place ton Roi pour soutenir le pion h.",
+          "solution": "g1h1"
+        },
+        {
+          "fen": "8/8/8/6p1/7p/7k/7P/7K w - - 0 2",
+          "coups_acceptes": ["h1g1"],
+          "reponse": "g5g4",
+          "indice": "Étape 2 : conserve l'activité du Roi blanc.",
+          "solution": "h1g1"
+        },
+        {
+          "fen": "8/8/8/8/6pp/7k/7P/6K1 w - - 0 3",
+          "coups_acceptes": ["g1h1"],
+          "reponse": "g4g3",
+          "indice": "Étape 3 : garde la bonne case d'attente avant les captures.",
+          "solution": "g1h1"
+        }
+      ],
+      "correct_move": "g1h1",
+      "success_message": "Excellent, tu as bien lancé la course de pions.",
+      "error_message": "Reprends le plan : précision des tempos et activité du Roi."
+    }
+  ]
+}

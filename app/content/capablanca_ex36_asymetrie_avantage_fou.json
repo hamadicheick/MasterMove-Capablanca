@@ -1,0 +1,40 @@
+{
+  "id": "capablanca_ex36_asymetrie_avantage_fou",
+  "title": "Exemple 36 - Asymétrie : avantage du Fou",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
+      "text": "Avec une structure de pions asymétrique, le Fou offre des chances pratiques supérieures."
+    },
+    {
+      "type": "animation",
+      "fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
+      "moves": [
+        { "uci": "d7f6", "comment": "Le Cavalier noir se place activement, mais reste dépendant de cases fixes." },
+        { "uci": "c1f4", "comment": "Le Fou blanc se centralise et garde un rayon d'action large." },
+        { "uci": "e8d7", "comment": "Le Roi noir se rapproche de la majorité de l'aile Dame." },
+        { "uci": "e1e2", "comment": "Le Roi blanc soutient l'aile Roi et prépare la flexibilité." },
+        { "uci": "f6d5", "comment": "Le Cavalier tient le centre, mais son redéploiement reste plus lent." },
+        { "uci": "f4d2", "comment": "Le Fou peut changer d'axe rapidement selon le front de jeu." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "En structure asymétrique, la mobilité du Fou devient un avantage concret.",
+        "Le Cavalier peut être solide, mais il bascule moins vite d'une aile à l'autre.",
+        "Le livre indique que la nulle reste probable avec un jeu précis, malgré de meilleures chances blanches."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
+      "question": "Quiz final : quel coup noir active naturellement le Cavalier ?",
+      "correct_move": "d7f6",
+      "success_message": "Exact, c'est le développement logique du Cavalier dans cette structure.",
+      "error_message": "Cherche le saut central du Cavalier depuis d7."
+    }
+  ]
+}

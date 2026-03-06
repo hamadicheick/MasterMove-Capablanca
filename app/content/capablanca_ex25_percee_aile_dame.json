@@ -1,0 +1,67 @@
+﻿{
+  "id": "capablanca_ex25_percee_aile_dame",
+  "title": "Exemple 25 - Percée sur l'aile Dame",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
+      "text": "Les Blancs forcent la promotion par une percée de pions sur l'aile Dame."
+    },
+    {
+      "type": "animation",
+      "fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
+      "moves": [
+        { "uci": "a2a4", "comment": "Le pion a démarre la course vers la promotion." },
+        { "uci": "h7h5", "comment": "Les Noirs avancent leur pion h en contre-jeu." },
+        { "uci": "a4a5", "comment": "Les Blancs poursuivent la percée." },
+        { "uci": "h5h4", "comment": "Les Noirs continuent leur plan de course." },
+        { "uci": "b5b6", "comment": "Le pion b soutient la rupture décisive." },
+        { "uci": "a7b6", "comment": "Les Noirs capturent pour freiner l'aile Dame." },
+        { "uci": "a5a6", "comment": "Le pion a devient extrêmement dangereux." },
+        { "uci": "h4h3", "comment": "Les Noirs n'ont plus assez de temps." },
+        { "uci": "a6a7", "comment": "Le pion blanc atteint la 7e rangée." },
+        { "uci": "h3h2", "comment": "Dernière poussée noire, trop lente." },
+        { "uci": "a7a8q", "comment": "Promotion en Dame : gain décisif." }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Principe clé",
+      "content": [
+        "Créer un pion passé éloigné peut neutraliser le contre-jeu adverse.",
+        "Le soutien d'un second pion rend la percée plus robuste.",
+        "En finale, la vitesse de promotion est souvent le facteur principal."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
+      "question": "Quiz final en 3 coups : lance le plan gagnant sur l'aile Dame.",
+      "steps": [
+        {
+          "coups_acceptes": ["a2a4"],
+          "reponse": "h7h5",
+          "indice": "Étape 1 : démarre la course de ton pion a.",
+          "solution": "a2a4"
+        },
+        {
+          "fen": "8/p5k1/8/1P5p/P7/1K6/8/8 w - - 0 2",
+          "coups_acceptes": ["a4a5"],
+          "reponse": "h5h4",
+          "indice": "Étape 2 : continue la poussée sans perdre de tempo.",
+          "solution": "a4a5"
+        },
+        {
+          "fen": "8/p5k1/8/P6p/7p/1K6/8/8 w - - 0 3",
+          "coups_acceptes": ["b5b6"],
+          "reponse": "a7b6",
+          "indice": "Étape 3 : ouvre la voie décisive pour le pion a.",
+          "solution": "b5b6"
+        }
+      ],
+      "correct_move": "a2a4",
+      "success_message": "Excellent, ton plan de percée est correct.",
+      "error_message": "Reprends le plan : vitesse, soutien du pion b, puis promotion."
+    }
+  ]
+}
