@@ -1,144 +1,76 @@
 {
   "id": "capablanca_ch1_ex2_tour_roi_centre",
-  "title": "Activer le Roi contre un Roi central",
+  "title": "Exemple 2 — Le Roi noir est au centre",
   "sequences": [
     {
       "type": "diagram",
-      "fen": "8/8/8/4k3/8/8/8/4K2R w K - 0 1",
-      "text": "Le Roi noir est au centre. Comment le repousser ?"
+      "fen": "8/8/8/4k3/8/8/8/4K2R w - - 0 1",
+      "text": "Tour et Roi contre Roi seul, mais le Roi noir est au centre de l'échiquier ! Cette fois, il faut d'abord avancer le Roi blanc vers le centre avant d'utiliser la Tour."
     },
     {
       "type": "animation",
-      "fen": "8/8/8/4k3/8/8/8/4K2R w K - 0 1",
+      "fen": "8/8/8/4k3/8/8/8/4K2R w - - 0 1",
+      "text": "Regardez comment le Roi blanc avance vers le centre, puis comment la Tour repousse progressivement le Roi noir jusqu'au mat. Il faut 11 coups !",
       "moves": [
-        {
-          "uci": "e1e2",
-          "comment": "Coup 1 des Blancs: e1e2."
-        },
-        {
-          "uci": "e5d5",
-          "comment": "Réponse des Noirs: e5d5."
-        },
-        {
-          "uci": "e2e3",
-          "comment": "Coup 2 des Blancs: e2e3."
-        },
-        {
-          "uci": "d5c4",
-          "comment": "Réponse des Noirs: d5c4."
-        },
-        {
-          "uci": "h1h5",
-          "comment": "Coup 3 des Blancs: h1h5."
-        },
-        {
-          "uci": "c4c3",
-          "comment": "Réponse des Noirs: c4c3."
-        },
-        {
-          "uci": "h5h4",
-          "comment": "Coup 4 des Blancs: h5h4."
-        },
-        {
-          "uci": "c3c2",
-          "comment": "Réponse des Noirs: c3c2."
-        },
-        {
-          "uci": "h4c4",
-          "comment": "Coup 5 des Blancs: h4c4."
-        },
-        {
-          "uci": "c2b3",
-          "comment": "Réponse des Noirs: c2b3."
-        },
-        {
-          "uci": "e3d3",
-          "comment": "Coup 6 des Blancs: e3d3."
-        },
-        {
-          "uci": "b3b2",
-          "comment": "Réponse des Noirs: b3b2."
-        },
-        {
-          "uci": "c4b4",
-          "comment": "Coup 7 des Blancs: c4b4."
-        },
-        {
-          "uci": "b2a3",
-          "comment": "Réponse des Noirs: b2a3."
-        },
-        {
-          "uci": "d3c3",
-          "comment": "Coup 8 des Blancs: d3c3."
-        },
-        {
-          "uci": "a3a2",
-          "comment": "Réponse des Noirs: a3a2."
-        },
-        {
-          "uci": "b4a4",
-          "comment": "Coup 9 des Blancs: b4a4."
-        },
-        {
-          "uci": "a2b1",
-          "comment": "Réponse des Noirs: a2b1."
-        },
-        {
-          "uci": "a4a8",
-          "comment": "Coup 10 des Blancs: a4a8."
-        },
-        {
-          "uci": "b1c1",
-          "comment": "Réponse des Noirs: b1c1."
-        },
-        {
-          "uci": "a8a1",
-          "comment": "Coup 11 des Blancs: a8a1."
-        }
+        { "uci": "e1e2", "comment": "Le Roi blanc avance vers le centre en e2 ! Capablanca nous enseigne : il faut combiner Roi et Tour pour mater. Le Roi doit d'abord s'activer." },
+        { "uci": "e5d5", "comment": "Le Roi noir recule vers d5. Il essaie de garder le centre de l'échiquier." },
+        { "uci": "e2e3", "comment": "Le Roi blanc continue en e3. Il avance sur le FLANC du Roi noir, pas directement en face — c'est le secret pour le manœuvrer." },
+        { "uci": "d5c4", "comment": "Le Roi noir part vers la gauche en c4. Il cherche à s'échapper." },
+        { "uci": "h1h5", "comment": "La Tour vient en h5 et coupe les cases du Roi noir ! Elle réduit son espace de jeu. Si le Roi noir était resté en e5, la Tour aurait joué h5 avec échec !" },
+        { "uci": "c4c3", "comment": "Le Roi noir fuit en c3 pour s'éloigner de la Tour." },
+        { "uci": "h5h4", "comment": "La Tour descend en h4 pour réduire encore l'espace du Roi noir. Elle se rapproche pas à pas." },
+        { "uci": "c3c2", "comment": "Le Roi noir continue de fuir en c2. Il cherche à atteindre le coin." },
+        { "uci": "h4c4", "comment": "La Tour bondit en c4 : ÉCHEC ! Le Roi blanc était à portée pour soutenir cette attaque combinée." },
+        { "uci": "c2b3", "comment": "Le Roi noir fuit en b3 pour échapper à l'échec." },
+        { "uci": "e3d3", "comment": "Le Roi blanc avance en d3. Notez comme il reste toujours proche de sa Tour : il la défend et réduit les cases du Roi ennemi !" },
+        { "uci": "b3b2", "comment": "Le Roi noir recule vers le bord en b2." },
+        { "uci": "c4b4", "comment": "Tour en b4 : ÉCHEC ! Le Roi noir est repoussé vers le bord de l'échiquier." },
+        { "uci": "b2a3", "comment": "Le Roi noir fuit en a3." },
+        { "uci": "d3c3", "comment": "Le Roi blanc avance en c3. Il resserre l'étau autour du Roi noir." },
+        { "uci": "a3a2", "comment": "Le Roi noir est presque coincé en a2. Le coin approche !" },
+        { "uci": "b4a4", "comment": "Tour en a4 : ÉCHEC ! Le Roi noir va être forcé vers le bas." },
+        { "uci": "a2b1", "comment": "Le Roi noir recule en b1. Il est presque dans le coin." },
+        { "uci": "a4a8", "comment": "La Tour remonte en a8 ! Elle se place sur la colonne de mat. Un coup de génie !" },
+        { "uci": "b1c1", "comment": "Le Roi noir tente de fuir en c1, mais c'est sans espoir." },
+        { "uci": "a8a1", "comment": "Tour en a1 : ÉCHEC ET MAT ! Le Roi est pris entre la Tour, le Roi blanc et les bords de l'échiquier. Fin de partie !" }
       ]
     },
     {
       "type": "text",
-      "title": "Principe cle",
+      "title": "Ce qu'il faut retenir",
       "content": [
-        "Le Roi doit aller vers le centre.",
-        "La Tour limite les cases.",
-        "Le Roi aide a construire le mat."
+        "Quand le Roi ennemi est au centre, avance d'abord TON Roi vers le centre pour l'aider.",
+        "Place ton Roi sur le FLANC du Roi ennemi, pas face à lui — c'est plus efficace pour le manœuvrer.",
+        "Le Roi blanc reste toujours proche de sa Tour : il la défend ET réduit les cases du Roi ennemi."
       ]
     },
     {
       "type": "quiz_interactif",
-      "fen": "8/8/8/4k3/8/8/8/4K2R w K - 0 1",
-      "question": "Quiz final en 3 coups : active le Roi puis coupe avec la Tour.",
+      "fen": "8/8/8/4k3/8/8/8/4K2R w - - 0 1",
+      "question": "Le Roi noir est au centre. Quel est le premier coup des Blancs pour commencer à l'encercler ?",
       "steps": [
         {
-          "coups_acceptes": [
-            "e1e2"
-          ],
+          "coups_acceptes": ["e1e2"],
           "reponse": "e5d5",
-          "indice": "Étape 1 : active ton Roi vers le centre.",
+          "indice": "Commence par activer ton Roi ! Il doit avancer vers le centre de l'échiquier.",
           "solution": "e1e2"
         },
         {
-          "coups_acceptes": [
-            "e2e3"
-          ],
+          "coups_acceptes": ["e2e3"],
           "reponse": "d5c4",
-          "indice": "Étape 2 : continue d’avancer ton Roi.",
+          "indice": "Continue d'avancer ton Roi, mais pas face au Roi noir — sur son flanc.",
           "solution": "e2e3"
         },
         {
-          "coups_acceptes": [
-            "h1h5"
-          ],
+          "coups_acceptes": ["h1h5"],
           "reponse": "c4c3",
-          "indice": "Étape 3 : la Tour coupe le Roi noir.",
+          "indice": "Maintenant la Tour peut couper le Roi noir ! Quelle rangée pour limiter ses cases ?",
           "solution": "h1h5"
         }
       ],
       "correct_move": "e1e2",
-      "success_message": "Excellent, tu combines Roi actif et Tour qui coupe.",
-      "error_message": "Suis le plan : Roi vers le centre, puis Tour active."
+      "success_message": "Excellent ! Tu actives ton Roi en premier — c'est le secret pour gagner cette finale.",
+      "error_message": "Suis le plan : d'abord active ton Roi vers le centre, puis utilise la Tour pour couper."
     }
   ]
 }

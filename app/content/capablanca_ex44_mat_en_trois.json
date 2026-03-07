@@ -1,39 +1,40 @@
 {
   "id": "capablanca_ex44_mat_en_trois",
-  "title": "Exemple 44 - Mat en trois coups",
+  "title": "Exemple 44 — Mat en trois coups",
   "sequences": [
     {
       "type": "diagram",
       "fen": "kr2r3/pRp3pp/Q1P5/5R2/Pp1q4/3pp2P/6PK/8 w - - 0 1",
-      "text": "Les Noirs viennent de jouer 1...e3, croyant stopper la menace blanche 2.Ta5 car ils repondaient 2...Df4+ avec echec perpetuel et nulle. Mais les Blancs ont une suite bien plus energique ! Sauras-tu trouver le coup gagnant ?"
+      "text": "Les Noirs viennent de jouer 1...e3, croyant stopper la menace Ta5 des Blancs car ils répondaient Df4+ avec échec perpétuel et partie nulle. Mais les Blancs ont une suite bien plus énergique ! Sauras-tu trouver le coup gagnant ?"
     },
     {
       "type": "animation",
       "fen": "kr2r3/pRp3pp/Q1P5/5R2/Pp1q4/3pp2P/6PK/8 w - - 0 1",
+      "text": "Regardez comment les Blancs matent en seulement 3 coups en forçant la Dame noire à quitter sa case de défense avec un sacrifice de Tour !",
       "moves": [
-        { "uci": "b7a7", "comment": "Txa7+ ! Les Blancs sacrifient la Tour en a7 avec echec. Le Roi noir n a pas de case : Ka7 est couvert par la Dame en a6, Kb8 est occupe par sa propre Tour. La Dame noire est forcee de capturer !" },
-        { "uci": "d4a7", "comment": "Dxa7 : le seul coup legal. La Dame est obligee de quitter sa case d4 pour capturer en a7. L echec Df4+ est maintenant impossible : la Dame est trop loin !" },
-        { "uci": "f5a5", "comment": "Ta5 ! La deuxieme Tour blanche vient en a5. Le Roi noir est en zugzwang total : Ka8 n a aucune case libre. Quel que soit le coup des Noirs, les Blancs materont." },
-        { "uci": "a7a6", "comment": "Les Noirs tentent le sacrifice de Dame : Dxa6 ! Ils esperent echapper au mat en capturant la Dame blanche. Mais le pion blanc en c6 controle la case b7. Le Roi n a nulle part ou aller !" },
-        { "uci": "a5a6", "comment": "Txa6 mat ! La Tour capture la Dame avec echec. Le Roi est pris en etau : Ka7 est couvert par la Tour en a6, Kb7 est couvert par le pion blanc en c6, et Kb8 est bloque par la propre Tour noire. Echec et mat !" }
+        { "uci": "b7a7", "comment": "La Tour blanche sacrifie en a7 avec échec ! Le Roi noir ne peut pas aller en a8 — la Dame blanche en a6 surveille cette case. Et b8 est occupé par la propre Tour noire. La Dame noire est FORCÉE de capturer !" },
+        { "uci": "d4a7", "comment": "La Dame noire est obligée de prendre en a7. C'est le seul coup légal. Mais maintenant la Dame a quitté la case d4 — l'échec perpétuel Df4+ est devenu impossible !" },
+        { "uci": "f5a5", "comment": "La deuxième Tour blanche vient en a5 ! Le Roi noir en a8 est dans un étau total : la Tour menace Ra8 mat. Quelle que soit la réponse des Noirs, les Blancs matent." },
+        { "uci": "a7a6", "comment": "Les Noirs tentent le sacrifice de Dame : Dxa6 ! Ils essaient de capturer la Dame blanche pour survivre. Mais le pion blanc en c6 contrôle b7, et le Roi ne peut fuir nulle part !" },
+        { "uci": "a5a6", "comment": "La Tour prend la Dame en a6 : ÉCHEC ET MAT ! Le Roi en a8 est pris en étau — la Tour en a6 surveille a7, le pion blanc en c6 contrôle b7, et la propre Tour noire bloque b8. Fin de partie !" }
       ]
     },
     {
       "type": "text",
-      "title": "Ce qu il faut retenir",
+      "title": "Ce qu'il faut retenir",
       "content": [
-        "Les Noirs croyaient avoir stoppe le plan blanc avec 1...e3 car 2.Ta5 aurait permis 2...Df4+ avec echec perpetuel et nulle.",
-        "Le coup brillant 2.Txa7+ force la Dame en a7 : c est le seul coup legal. La Dame quitte d4 et l echec Df4+ devient impossible.",
-        "Apres 3.Ta5, meme le sacrifice de Dame 3...Dxa6 ne sauve pas les Noirs : 4.Txa6 mat ! Le pion blanc en c6 controle b7, la Tour controle a7, et la propre Tour noire bloque b8."
+        "Les Noirs croyaient être en sécurité : si les Blancs jouaient Ta5, ils répondaient Df4+ avec échec perpétuel et match nul.",
+        "Le coup brillant Txa7+ force la Dame noire à aller en a7 — c'est le seul coup légal. La menace Df4+ disparaît !",
+        "Après Ta5, même le sacrifice de Dame Dxa6 ne sauve pas les Noirs : Txa6 est mat, car le pion blanc en c6 contrôle b7 et la Tour noire bloque b8."
       ]
     },
     {
       "type": "quiz_interactif",
       "fen": "kr2r3/pRp3pp/Q1P5/5R2/Pp1q4/3pp2P/6PK/8 w - - 0 1",
-      "question": "Les Noirs menacent Df4+ avec echec perpetuel si tu joues Ta5. Trouve le coup energique qui contourne cette defense et mate en 3 !",
+      "question": "Les Noirs menacent Df4+ avec échec perpétuel si tu joues Ta5. Trouve le coup énergique qui contourne cette défense et mate en 3 !",
       "correct_move": "b7a7",
-      "success_message": "Exact ! Txa7+ force la Dame noire en a7 (seul coup legal). L echec Df4+ devient impossible et apres Ta5, le mat est inevitable.",
-      "error_message": "Si tu joues Ta5 directement, les Noirs repondent Df4+ avec echec perpetuel et la partie est nulle. Il faut d abord detourner la Dame de sa case d4 !"
+      "success_message": "Exact ! Txa7+ force la Dame noire à recapturer en a7 — c'est le seul coup légal. L'échec Df4+ devient impossible, et après Ta5, le mat est inévitable !",
+      "error_message": "Si tu joues Ta5 directement, les Noirs répondent Df4+ avec échec perpétuel et la partie est nulle. Il faut d'abord éloigner la Dame noire de d4 avec un sacrifice de Tour !"
     }
   ]
 }

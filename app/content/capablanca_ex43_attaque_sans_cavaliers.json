@@ -5,37 +5,38 @@
     {
       "type": "diagram",
       "fen": "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1",
-      "text": "Les Noirs jouent en premiers. Ils ont un Cavalier et un pion de moins. Mais leur attaque est foudroyante ! Sauras-tu trouver le bon coup ?"
+      "text": "Les Noirs jouent en premiers. Ils ont moins de pièces que les Blancs : un Cavalier et un pion de moins. Mais leur attaque est foudroyante ! Sauras-tu trouver le premier coup gagnant ?"
     },
     {
       "type": "animation",
       "fen": "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1",
+      "text": "Regardez comment les Noirs donnent mat en 7 coups avec les Tours, le Fou et la Dame — sans aucun Cavalier !",
       "moves": [
-        { "uci": "d8g8", "comment": "Les deux Tours noires se doublent sur la colonne g. Elles menacent de capturer en g2 avec echec !" },
-        { "uci": "f1f2", "comment": "Les Blancs defendent le pion g2 avec leur Tour. C est leur seule defense." },
-        { "uci": "g4g2", "comment": "La Tour noire capture en g2 avec echec ! Les Blancs ne peuvent pas reprendre avec la Tour." },
-        { "uci": "g1f1", "comment": "Le Roi blanc est force de fuir en f1." },
-        { "uci": "e6c4", "comment": "Le Fou vient en c4 avec echec en diagonale. Il force le Cavalier blanc a se deplacer." },
-        { "uci": "a3c4", "comment": "Le Cavalier est oblige de capturer le Fou. Mais alors..." },
-        { "uci": "g2g1", "comment": "Tour en g1 : echec et mat ! Le Roi est pris sans aucune case de fuite." }
+        { "uci": "d8g8", "comment": "La Tour noire de d8 vient en g8. Les deux Tours noires sont maintenant sur la colonne g et menacent de prendre le pion g2 avec échec !" },
+        { "uci": "f1f2", "comment": "La Tour blanche monte en f2 pour défendre le pion g2. C'est la seule défense possible des Blancs." },
+        { "uci": "g4g2", "comment": "La Tour noire de g4 prend le pion en g2, échec au Roi ! Les Blancs ne peuvent pas reprendre avec leur Tour car elle protège g2." },
+        { "uci": "g1f1", "comment": "Le Roi blanc est forcé de fuir en f1. Il n'a pas d'autre case disponible." },
+        { "uci": "e6c4", "comment": "Le Fou noir vient en c4, échec en diagonale sur le Roi en f1 ! Il oblige le Cavalier blanc à réagir immédiatement." },
+        { "uci": "a3c4", "comment": "Le Cavalier blanc est obligé de prendre le Fou en c4. Mais la Tour noire en g2 est maintenant libre de frapper !" },
+        { "uci": "g2g1", "comment": "La Tour noire descend en g1 : échec et mat ! Le Roi n'a aucune fuite. La Dame noire surveille les cases e1 et e2, et la Tour de g8 surveille g2." }
       ]
     },
     {
       "type": "text",
-      "title": "Ce qu il faut retenir",
+      "title": "Ce qu'il faut retenir",
       "content": [
-        "Les Noirs avaient moins de pieces, mais leur attaque etait plus forte que le materiel.",
-        "L attaque a ete realisee par les Tours, le Fou et la Dame : aucun Cavalier n a attaque !",
-        "Doubler les Tours sur une colonne ouverte est une arme redoutable."
+        "Les Noirs avaient moins de pièces, mais leur attaque était plus forte que le matériel.",
+        "L'attaque a été réalisée par les Tours, le Fou et la Dame. Aucun Cavalier n'a attaqué !",
+        "Placer deux Tours sur une colonne ouverte est une arme redoutable."
       ]
     },
     {
       "type": "quiz_interactif",
       "fen": "2kr4/ppp1qp2/4bQ2/8/3P2r1/N1P5/PP4P1/R1B2RK1 b - - 0 1",
-      "question": "Les Noirs ont moins de materiel mais une attaque decisive. Trouve leur premier coup brillant !",
+      "question": "Les Noirs ont moins de pièces, mais leur attaque est décisive. Trouve le premier coup gagnant !",
       "correct_move": "d8g8",
-      "success_message": "Exact ! Les deux Tours se doublent sur la colonne g et menacent de capturer en g2 avec echec.",
-      "error_message": "Si tu captures en g2 tout de suite, les Blancs reprennent avec la Tour et l attaque s arrete."
+      "success_message": "Exact ! La Tour noire vient en g8. Les deux Tours noires se retrouvent sur la colonne g et menacent de prendre en g2 avec échec !",
+      "error_message": "Si tu prends en g2 tout de suite, les Blancs reprennent avec leur Tour et l'attaque s'arrête. Il faut d'abord doubler les Tours sur la colonne g."
     }
   ]
 }

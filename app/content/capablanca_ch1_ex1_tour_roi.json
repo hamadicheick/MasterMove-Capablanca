@@ -1,136 +1,74 @@
 {
   "id": "capablanca_ch1_ex1_tour_roi",
-  "title": "Le mat avec la Tour",
+  "title": "Exemple 1 — Mater avec la Tour",
   "sequences": [
     {
       "type": "diagram",
       "fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
-      "text": "Les Blancs doivent mater avec la Tour et le Roi."
+      "text": "Tour et Roi contre Roi seul. La Tour en a1, le Roi blanc en h1, le Roi noir en h8. Pour gagner, les Blancs doivent repousser le Roi noir sur la dernière rangée, puis le coincer dans un coin !"
     },
     {
       "type": "animation",
       "fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
+      "text": "Regardez comment les Blancs matent en 10 coups. La Tour bloque le Roi noir sur la 8e rangée, et le Roi blanc avance pour l'aider à le coincer dans le coin !",
       "moves": [
-        {
-          "uci": "a1a7",
-          "comment": "Coup 1 des Blancs: a1a7."
-        },
-        {
-          "uci": "h8g8",
-          "comment": "Réponse des Noirs: h8g8."
-        },
-        {
-          "uci": "h1g2",
-          "comment": "Coup 2 des Blancs: h1g2."
-        },
-        {
-          "uci": "g8f8",
-          "comment": "Réponse des Noirs: g8f8."
-        },
-        {
-          "uci": "g2f3",
-          "comment": "Coup 3 des Blancs: g2f3."
-        },
-        {
-          "uci": "f8e8",
-          "comment": "Réponse des Noirs: f8e8."
-        },
-        {
-          "uci": "f3e4",
-          "comment": "Coup 4 des Blancs: f3e4."
-        },
-        {
-          "uci": "e8d8",
-          "comment": "Réponse des Noirs: e8d8."
-        },
-        {
-          "uci": "e4d5",
-          "comment": "Coup 5 des Blancs: e4d5."
-        },
-        {
-          "uci": "d8c8",
-          "comment": "Réponse des Noirs: d8c8."
-        },
-        {
-          "uci": "d5d6",
-          "comment": "Coup 6 des Blancs: d5d6."
-        },
-        {
-          "uci": "c8b8",
-          "comment": "Réponse des Noirs: c8b8."
-        },
-        {
-          "uci": "a7c7",
-          "comment": "Coup 7 des Blancs: a7c7."
-        },
-        {
-          "uci": "b8a8",
-          "comment": "Réponse des Noirs: b8a8."
-        },
-        {
-          "uci": "d6c6",
-          "comment": "Coup 8 des Blancs: d6c6."
-        },
-        {
-          "uci": "a8b8",
-          "comment": "Réponse des Noirs: a8b8."
-        },
-        {
-          "uci": "c6b6",
-          "comment": "Coup 9 des Blancs: c6b6."
-        },
-        {
-          "uci": "b8a8",
-          "comment": "Réponse des Noirs: b8a8."
-        },
-        {
-          "uci": "c7c8",
-          "comment": "Coup 10 des Blancs: c7c8."
-        }
+        { "uci": "a1a7", "comment": "La Tour saute en a7 ! Elle coupe le Roi noir sur la dernière rangée. Le Roi noir ne peut plus descendre !" },
+        { "uci": "h8g8", "comment": "Le Roi noir fuit vers g8. Il essaie de s'éloigner du coin." },
+        { "uci": "h1g2", "comment": "Le Roi blanc s'active ! Il avance vers le centre pour aider sa Tour. La Tour seule ne peut pas donner mat, le Roi doit venir aider." },
+        { "uci": "g8f8", "comment": "Le Roi noir recule en f8. Il court, mais le Roi blanc le suit !" },
+        { "uci": "g2f3", "comment": "Le Roi blanc avance en f3. Il se place sur la même colonne que le Roi noir — c'est le principe de Capablanca !" },
+        { "uci": "f8e8", "comment": "Le Roi noir fuit encore en e8." },
+        { "uci": "f3e4", "comment": "Le Roi blanc avance en e4, toujours sur la même colonne que le Roi noir en e8 !" },
+        { "uci": "e8d8", "comment": "Le Roi noir bat en retraite en d8." },
+        { "uci": "e4d5", "comment": "Le Roi blanc avance en d5. Il se rapproche de plus en plus !" },
+        { "uci": "d8c8", "comment": "Le Roi noir recule en c8." },
+        { "uci": "d5d6", "comment": "Le Roi blanc va en d6 et PAS en c6 ! En c6, le Roi noir pourrait fuir en d8. En d6, il contrôle toutes les cases de fuite !" },
+        { "uci": "c8b8", "comment": "Le Roi noir est forcé en b8. Il n'a plus d'autre choix." },
+        { "uci": "a7c7", "comment": "La Tour glisse en c7 ! Elle prend le Roi noir en tenaille contre le bord. Le mat est tout proche." },
+        { "uci": "b8a8", "comment": "Le Roi noir est poussé dans le coin en a8 !" },
+        { "uci": "d6c6", "comment": "Le Roi blanc se rapproche encore. Il fait face au Roi noir de près." },
+        { "uci": "a8b8", "comment": "Le Roi noir tente de remonter en b8." },
+        { "uci": "c6b6", "comment": "Le Roi blanc se met en b6, juste en face du Roi noir en b8 !" },
+        { "uci": "b8a8", "comment": "Le Roi noir est forcé dans le coin a8. Il n'a nulle part où aller." },
+        { "uci": "c7c8", "comment": "Tour en c8 : ÉCHEC ET MAT ! Le Roi noir est pris entre la Tour, le bord et le Roi blanc. La partie est finie !" }
       ]
     },
     {
       "type": "text",
-      "title": "Principe clé",
+      "title": "Ce qu'il faut retenir",
       "content": [
-        "La Tour repousse le Roi au bord.",
-        "Le Roi blanc doit s’approcher.",
-        "Le mat vient quand le Roi noir est bloqué."
+        "La Tour seule ne suffit pas : le Roi blanc DOIT avancer pour aider.",
+        "Le truc : garde ton Roi sur la même colonne que le Roi ennemi pour le suivre vers le bord.",
+        "Quand ton Roi est sur la 6e rangée, place-le sur la colonne VOISINE (côté centre) pour couper les fuites du Roi ennemi."
       ]
     },
     {
       "type": "quiz_interactif",
       "fen": "7k/8/8/8/8/8/8/R6K w - - 0 1",
-      "question": "Joue la méthode en 3 coups : coupe, approche, continue.",
+      "question": "Quel est le premier coup des Blancs pour bloquer le Roi noir sur la dernière rangée ?",
       "steps": [
         {
-          "coups_acceptes": [
-            "a1a7"
-          ],
+          "coups_acceptes": ["a1a7"],
           "reponse": "h8g8",
-          "indice": "Étape 1 : coupe le Roi noir avec la Tour.",
+          "indice": "La Tour doit couper le Roi noir sur la 8e rangée. Quelle case de la 7e rangée ?",
           "solution": "a1a7"
         },
         {
-          "coups_acceptes": [
-            "h1g2"
-          ],
+          "coups_acceptes": ["h1g2"],
           "reponse": "g8f8",
-          "indice": "Étape 2 : active ton Roi.",
+          "indice": "Maintenant active ton Roi ! Il doit avancer vers le centre.",
           "solution": "h1g2"
         },
         {
-          "coups_acceptes": [
-            "g2f3"
-          ],
+          "coups_acceptes": ["g2f3"],
           "reponse": "f8e8",
-          "indice": "Étape 3 : continue à rapprocher ton Roi.",
+          "indice": "Continue d'avancer ton Roi sur la même colonne que le Roi noir.",
           "solution": "g2f3"
         }
       ],
       "correct_move": "a1a7",
-      "success_message": "Parfait, tu appliques bien la méthode.",
-      "error_message": "Reprends la séquence : coupe, puis avance ton Roi."
+      "success_message": "Parfait ! La Tour en a7 coupe le Roi noir sur la dernière rangée. Maintenant active ton Roi !",
+      "error_message": "Cherche le coup qui empêche le Roi noir de descendre en le coupant sur la 7e rangée."
     }
   ]
 }

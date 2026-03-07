@@ -281,6 +281,126 @@
       "file": "capablanca_ex28_diag1a_qd3.json"
     },
     {
+      "id": "capablanca_ex29_deux_cavaliers_roi",
+      "chapter": 2,
+      "titre": "Exemple 29 - Deux Cavaliers contre pion",
+      "description": "Technique de mat avec deux Cavaliers face à un pion adverse.",
+      "order": 29,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex29_deux_cavaliers_roi.json"
+    },
+    {
+      "id": "capablanca_ex30_fou_mauvaise_couleur_nulle",
+      "chapter": 2,
+      "titre": "Exemple 30 - Fou de mauvaise couleur : nulle",
+      "description": "Quand le Fou ne contrôle pas la case de promotion, la partie est nulle.",
+      "order": 30,
+      "level": "intermediaire",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex30_fou_mauvaise_couleur_nulle.json"
+    },
+    {
+      "id": "capablanca_ex31_deux_cavaliers_mat",
+      "chapter": 2,
+      "titre": "Exemple 31 - Cavalier et Roi : mat",
+      "description": "Mater avec deux Cavaliers grâce à un pion adverse.",
+      "order": 31,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex31_deux_cavaliers_mat.json"
+    },
+    {
+      "id": "capablanca_ex32_fou_vs_cavalier_mobilite",
+      "chapter": 2,
+      "titre": "Exemple 32 - Fou contre Cavalier : mobilité",
+      "description": "Le Fou domine le Cavalier dans les positions ouvertes.",
+      "order": 32,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex32_fou_vs_cavalier_mobilite.json"
+    },
+    {
+      "id": "capablanca_ex33_position_bloquee_cavalier",
+      "chapter": 2,
+      "titre": "Exemple 33 - Position bloquée : Cavalier supérieur",
+      "description": "Le Cavalier surpasse le Fou dans les positions fermées.",
+      "order": 33,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex33_position_bloquee_cavalier.json"
+    },
+    {
+      "id": "capablanca_ex34_equilibre_fou_cavalier",
+      "chapter": 2,
+      "titre": "Exemple 34 - Équilibre Fou/Cavalier",
+      "description": "Évaluer quand le Fou et le Cavalier sont équivalents.",
+      "order": 34,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex34_equilibre_fou_cavalier.json"
+    },
+    {
+      "id": "capablanca_ex35_fou_deux_ailes",
+      "chapter": 2,
+      "titre": "Exemple 35 - Fou sur deux ailes",
+      "description": "Le Fou est plus utile quand le jeu se joue sur les deux ailes.",
+      "order": 35,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex35_fou_deux_ailes.json"
+    },
+    {
+      "id": "capablanca_ex36_asymetrie_avantage_fou",
+      "chapter": 2,
+      "titre": "Exemple 36 - Asymétrie : avantage du Fou",
+      "description": "Profiter de l'asymétrie de structure pour valoriser le Fou.",
+      "order": 36,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex36_asymetrie_avantage_fou.json"
+    },
+    {
+      "id": "capablanca_ex37_fou_avantage_pions_passes",
+      "chapter": 2,
+      "titre": "Exemple 37 - Fou et pions passés des deux côtés",
+      "description": "Le Fou excelle quand les pions passés sont sur les deux ailes.",
+      "order": 37,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex37_fou_avantage_pions_passes.json"
+    },
+    {
+      "id": "capablanca_ex38_noirs_difficiles_a_annuler",
+      "chapter": 2,
+      "titre": "Exemple 38 - Défense noire difficile",
+      "description": "Position délicate pour les Noirs face à une finale technique.",
+      "order": 38,
+      "level": "intermediaire",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex38_noirs_difficiles_a_annuler.json"
+    },
+    {
+      "id": "capablanca_ex39_mat_fou_cavalier",
+      "chapter": 2,
+      "titre": "Exemple 39 - Mat avec Fou et Cavalier",
+      "description": "La technique la plus difficile : mater avec Fou et Cavalier.",
+      "order": 39,
+      "level": "avance",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex39_mat_fou_cavalier.json"
+    },
+    {
+      "id": "capablanca_ex40_dame_contre_tour",
+      "chapter": 2,
+      "titre": "Exemple 40 - Dame contre Tour",
+      "description": "Introduction à la supériorité de la Dame contre la Tour.",
+      "order": 40,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex40_dame_contre_tour.json"
+    },
+    {
       "id": "capablanca_ex41_dame_tour_gain",
       "chapter": 2,
       "titre": "Exemple 41 - Dame contre Tour : forcer le gain",

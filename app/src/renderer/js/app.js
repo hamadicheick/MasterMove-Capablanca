@@ -190,43 +190,56 @@ async function loadChapters(){
   return state.chapters;
 }
 
+const BOOK_CHAPTERS_META = [
+  { chapter: 1, titre: "Chapitre I — Premiers principes", description: "Finales, milieux de jeu et ouvertures", pages: "p. 11–24", exemples: "Ex. 1 à 21" },
+  { chapter: 2, titre: "Chapitre II — D'autres principes en finale", description: "Finales de pieces et de pions", pages: "p. 25–38", exemples: "Ex. 22 à 42" },
+  { chapter: 3, titre: "Chapitre III — Plans de gain en milieu de jeu", description: "Attaque, combinaisons, strategie", pages: "p. 39–43", exemples: "Ex. 43 et suivants" }
+];
+
 function libraryScreen(){
-  const list = h("div", { class:"grid" });
+  const list = h("div", { class:"chapterSelect" });
 
   const render = async () => {
     try{
-    clear(list);
-    if (!state.profile) {
-      list.appendChild(h("div", { class:"card panel" },
-        h("div", { class:"h1" }, "Choisis un profil"),
-        h("p", { class:"p" }, "Tu dois selectionner un profil eleve avant d'ouvrir un chapitre."),
-        h("div", { class:"hr" }),
-        h("button", { class:"btn", onclick: () => navigate("#/profiles") }, "Aller aux profils")
-      ));
-      return;
-    }
+      clear(list);
+      if (!state.profile) {
+        list.appendChild(h("div", { class:"card panel" },
+          h("div", { class:"h1" }, "Choisis un profil"),
+          h("p", { class:"p" }, "Tu dois selectionner un profil eleve avant d'ouvrir un chapitre."),
+          h("div", { class:"hr" }),
+          h("button", { class:"btn", onclick: () => navigate("#/profiles") }, "Aller aux profils")
+        ));
+        return;
+      }
 
-    const chapters = await loadChapters();
-    const progress = await mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000);
+      const [chapters, progress] = await Promise.all([
+        loadChapters(),
+        mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000)
+      ]);
 
-    for (const c of chapters){
-      const chapterProg = progress.chapters?.[c.id];
-      const lastIdx = chapterProg?.lastSequenceIndex ?? 0;
-      const tag = chapterProg?.completedAt ? "Termine" : (lastIdx > 0 ? `Reprendre (seq. ${lastIdx+1})` : "Nouveau");
+      for (const bc of BOOK_CHAPTERS_META){
+        const lessons = chapters.filter(c => c.chapter === bc.chapter);
+        const done = lessons.filter(c => progress.chapters?.[c.id]?.completedAt).length;
+        const inProgress = lessons.filter(c => !progress.chapters?.[c.id]?.completedAt && (progress.chapters?.[c.id]?.lastSequenceIndex ?? 0) > 0).length;
 
-      const card = h("div", { class:"card item", onclick: async () => {
-        await openChapter(c.id);
-      }},
-        h("div", { class:"h1" }, c.titre),
-        h("p", { class:"p" }, c.description),
-        h("div", { class:"hr" }),
-        h("div", { class:"spread" },
-          h("div", { class:"small" }, `Niveau: ${c.level || "-"} - ~${c.estimated_minutes || "n/a"} min`),
-          h("div", { class:"kbd" }, tag)
-        )
-      );
-      list.appendChild(card);
-    }
+        const card = h("div", { class:"chapterCard card item", onclick: () => navigate(`#/library/${bc.chapter}`) },
+          h("div", { class:"chapterNum" }, ["I","II","III"][bc.chapter - 1] || String(bc.chapter)),
+          h("div", { class:"chapterCardBody" },
+            h("div", { class:"h1" }, bc.titre),
+            h("p", { class:"p" }, bc.description),
+            h("div", { class:"hr" }),
+            h("div", { class:"spread" },
+              h("div", { class:"small" }, `${bc.pages} — ${bc.exemples}`),
+              h("div", { class:"row" },
+                done > 0 ? h("div", { class:"kbd tagDone" }, `${done} termine${done > 1 ? "s" : ""}`) : null,
+                inProgress > 0 ? h("div", { class:"kbd" }, `${inProgress} en cours`) : null,
+                h("div", { class:"small" }, `${lessons.length} lecons`)
+              )
+            )
+          )
+        );
+        list.appendChild(card);
+      }
     }catch(e){
       console.error(e);
       clear(list);
@@ -245,8 +258,8 @@ function libraryScreen(){
   const content = h("div", { class:"card panel scroll", style:"width:100%;" },
     h("div", { class:"spread" },
       h("div", {},
-        h("div", { class:"h1" }, "Bibliotheque - Capablanca"),
-        h("p", { class:"p" }, "Pack initial base sur 'Les principes fondamentaux des echecs' (Capablanca), adapte pour enfants.")
+        h("div", { class:"h1" }, "Capablanca — Principes fondamentaux"),
+        h("p", { class:"p" }, "Choisis un chapitre pour commencer.")
       ),
       h("button", { class:"btn secondary", onclick: () => navigate("#/profiles") }, "Changer de profil")
     ),
@@ -258,9 +271,82 @@ function libraryScreen(){
   return layout(content);
 }
 
+function chapterLessonsScreen(chapterNum){
+  const bc = BOOK_CHAPTERS_META.find(c => c.chapter === chapterNum) || { titre: `Chapitre ${chapterNum}`, description: "" };
+  const list = h("div", { class:"lessonList" });
+
+  const render = async () => {
+    try{
+      clear(list);
+      if (!state.profile) {
+        navigate("#/profiles");
+        return;
+      }
+
+      const [chapters, progress] = await Promise.all([
+        loadChapters(),
+        mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000)
+      ]);
+
+      const lessons = chapters
+        .filter(c => c.chapter === chapterNum)
+        .sort((a, b) => (a.order || 0) - (b.order || 0));
+
+      if (!lessons.length){
+        list.appendChild(h("div", { class:"card panel" },
+          h("p", { class:"p" }, "Aucune lecon pour ce chapitre.")
+        ));
+        return;
+      }
+
+      for (const c of lessons){
+        const chProg = progress.chapters?.[c.id];
+        const lastIdx = chProg?.lastSequenceIndex ?? 0;
+        const isDone = !!chProg?.completedAt;
+        const tag = isDone ? "Termine" : (lastIdx > 0 ? `Seq. ${lastIdx + 1}` : "Nouveau");
+
+        const item = h("div", { class:"lessonItem", onclick: async () => { await openChapter(c.id); }},
+          h("div", { class:"lessonItemOrder" }, `Ex.${c.order}`),
+          h("div", { class:"lessonItemTitle" },
+            h("div", {}, c.titre),
+            h("div", { class:"small" }, c.description)
+          ),
+          h("div", { class:"lessonItemMeta" },
+            h("div", { class:"kbd" }, c.level || "-"),
+            h("div", { class:`kbd ${isDone ? "tagDone" : ""}` }, tag)
+          )
+        );
+        list.appendChild(item);
+      }
+    }catch(e){
+      console.error(e);
+      clear(list);
+      list.appendChild(h("div", { class:"card panel" },
+        h("p", { class:"p" }, "Erreur: " + String(e?.message || e))
+      ));
+      toast("Erreur: " + String(e?.message || e), 5000);
+    }
+  };
+
+  const content = h("div", { class:"card panel scroll", style:"width:100%;" },
+    h("div", { class:"spread" },
+      h("div", {},
+        h("div", { class:"h1" }, bc.titre),
+        h("p", { class:"p" }, bc.description)
+      ),
+      h("button", { class:"btn secondary", onclick: () => navigate("#/library") }, "[<] Chapitres")
+    ),
+    h("div", { class:"hr" }),
+    list
+  );
+
+  render().catch(e => console.error(e));
+  return layout(content);
+}
+
 function readerScreen(){
   const left = h("div", { class:"leftCol card panel scroll" });
-  const right = h("div", { class:"rightCol card panel scroll" });
+  const right = h("div", { class:"rightCol card scroll" });
   const container = h("div", { class:"split" }, left, right);
   let animationCommentEl = null;
 
@@ -362,29 +448,20 @@ if (seq?.position_depart_fen) {
   }
 }
 
-right.appendChild(h("div", { class:"hr" }));
+const controls = h("div", { class:"rightColPad" });
     if (seq?.type === "theorie_animee" && (seq.animations || []).length > 0){
       animationCommentEl = h("div", { class:"p" }, state.current.animationComment || "Lecture de la séquence...");
-      right.appendChild(h("div", { class:"card panel", style:"margin-bottom:12px;" },
+      controls.appendChild(h("div", { class:"hr" }));
+      controls.appendChild(h("div", { class:"card panel", style:"margin-bottom:12px;" },
         h("div", { class:"h1" }, "Commentaire du coup"),
         animationCommentEl
       ));
-      right.appendChild(h("div", { class:"hr" }));
     }
-
-    if (seq){
-      right.appendChild(h("div", { class:"h1" }, "Données de la séquence"));
-      right.appendChild(h("div", { class:"small" }, `Type: ${seq.type} - FEN: ${seq.position_depart_fen}`));
-      if (seq.animations?.length){
-        right.appendChild(h("div", { class:"small", style:"margin-top:8px;" }, `Animations: ${seq.animations.map(a => a.coup).join(", ")}`));
-      }
-      // (optionnel) details techniques du quiz dans le panneau gauche
-    }
-
-    right.appendChild(h("div", { class:"hr" }));
-    right.appendChild(renderTtsPanel());
-    right.appendChild(h("div", { class:"hr" }));
-    right.appendChild(renderAppearancePanel());
+    controls.appendChild(h("div", { class:"hr" }));
+    controls.appendChild(renderTtsPanel());
+    controls.appendChild(h("div", { class:"hr" }));
+    controls.appendChild(renderAppearancePanel());
+    right.appendChild(controls);
   };
 
   const renderAppearancePanel = () => {
@@ -729,7 +806,10 @@ right.appendChild(h("div", { class:"hr" }));
         h("div", { class:"h1" }, meta?.titre || "Chapitre"),
         h("p", { class:"p" }, meta?.description || "")
       ),
-      h("button", { class:"btn secondary", onclick: () => navigate("#/library") }, "[<] Bibliotheque")
+      h("button", { class:"btn secondary", onclick: () => {
+        const ch = state.current.meta?.chapter;
+        navigate(ch ? `#/library/${ch}` : "#/library");
+      }}, "[<] Retour")
     ));
 
     left.appendChild(h("div", { class:"hr" }));
@@ -742,10 +822,9 @@ right.appendChild(h("div", { class:"hr" }));
     const idx = state.current.seqIndex + 1;
     const total = chapter.sequences.length;
 
-    left.appendChild(h("div", { class:"small" }, `Séquence ${idx}/${total} - Type: ${seq.type}`));
+    left.appendChild(h("div", { class:"seqCounter" }, `${idx} / ${total}`));
     left.appendChild(h("div", { class:"hr" }));
-    left.appendChild(h("div", { class:"h1" }, "Explication"));
-    left.appendChild(h("p", { class:"p" }, seq.texte_ecran));
+    left.appendChild(h("p", { class:"p lessonText" }, seq.texte_ecran));
 
     if (seq.type === "quiz_interactif"){
       left.appendChild(h("div", { class:"hr" }));
@@ -873,7 +952,16 @@ function router(){
   }
 
   if (route === "library") {
-    app.appendChild(libraryScreen());
+    if (arg && /^\d+$/.test(arg)) {
+      if (!state.profile) {
+        app.appendChild(profilesScreen());
+        toast("Selectionne un profil.");
+        return;
+      }
+      app.appendChild(chapterLessonsScreen(parseInt(arg, 10)));
+    } else {
+      app.appendChild(libraryScreen());
+    }
     return;
   }
 

@@ -1,176 +1,70 @@
 {
   "id": "capablanca_ch1_ex3_deux_fous_roi",
-  "title": "Mat avec deux Fous et le Roi",
+  "title": "Exemple 3 — Mater avec deux Fous",
   "sequences": [
     {
       "type": "diagram",
       "fen": "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1",
-      "text": "Les Blancs matent avec deux Fous et le Roi."
+      "text": "Deux Fous et le Roi contre un Roi seul. Attention : c'est plus difficile qu'avec la Tour ! Il ne suffit pas de repousser le Roi au bord — il faut l'acculer dans un COIN de l'échiquier."
     },
     {
       "type": "animation",
       "fen": "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1",
+      "text": "Regardez comment le Roi blanc avance vers la 6e rangée pendant que les deux Fous construisent un filet de plus en plus serré autour du Roi noir.",
       "moves": [
-        {
-          "uci": "f1e2",
-          "comment": "Coup 1 des Blancs: f1e2."
-        },
-        {
-          "uci": "g8h8",
-          "comment": "Réponse des Noirs: g8h8."
-        },
-        {
-          "uci": "e2d3",
-          "comment": "Coup 2 des Blancs: e2d3."
-        },
-        {
-          "uci": "h8g7",
-          "comment": "Réponse des Noirs: h8g7."
-        },
-        {
-          "uci": "c1g5",
-          "comment": "Coup 3 des Blancs: c1g5."
-        },
-        {
-          "uci": "g7f7",
-          "comment": "Réponse des Noirs: g7f7."
-        },
-        {
-          "uci": "d3f5",
-          "comment": "Coup 4 des Blancs: d3f5."
-        },
-        {
-          "uci": "f7g7",
-          "comment": "Réponse des Noirs: f7g7."
-        },
-        {
-          "uci": "e1f2",
-          "comment": "Coup 5 des Blancs: e1f2."
-        },
-        {
-          "uci": "g7f7",
-          "comment": "Réponse des Noirs: g7f7."
-        },
-        {
-          "uci": "f2g3",
-          "comment": "Coup 6 des Blancs: f2g3."
-        },
-        {
-          "uci": "f7g7",
-          "comment": "Réponse des Noirs: f7g7."
-        },
-        {
-          "uci": "g3h4",
-          "comment": "Coup 7 des Blancs: g3h4."
-        },
-        {
-          "uci": "g7f7",
-          "comment": "Réponse des Noirs: g7f7."
-        },
-        {
-          "uci": "h4h5",
-          "comment": "Coup 8 des Blancs: h4h5."
-        },
-        {
-          "uci": "f7g7",
-          "comment": "Réponse des Noirs: f7g7."
-        },
-        {
-          "uci": "f5g6",
-          "comment": "Coup 9 des Blancs: f5g6."
-        },
-        {
-          "uci": "g7g8",
-          "comment": "Réponse des Noirs: g7g8."
-        },
-        {
-          "uci": "h5h6",
-          "comment": "Coup 10 des Blancs: h5h6."
-        },
-        {
-          "uci": "g8f8",
-          "comment": "Réponse des Noirs: g8f8."
-        },
-        {
-          "uci": "g6h5",
-          "comment": "Coup 11 des Blancs: g6h5."
-        },
-        {
-          "uci": "f8g8",
-          "comment": "Réponse des Noirs: f8g8."
-        },
-        {
-          "uci": "g5e7",
-          "comment": "Coup 12 des Blancs: g5e7."
-        },
-        {
-          "uci": "g8h8",
-          "comment": "Réponse des Noirs: g8h8."
-        },
-        {
-          "uci": "h5g4",
-          "comment": "Coup 13 des Blancs: h5g4."
-        },
-        {
-          "uci": "h8g8",
-          "comment": "Réponse des Noirs: h8g8."
-        },
-        {
-          "uci": "g4e6",
-          "comment": "Coup 14 des Blancs: g4e6."
-        },
-        {
-          "uci": "g8h8",
-          "comment": "Réponse des Noirs: g8h8."
-        },
-        {
-          "uci": "e7f6",
-          "comment": "Coup 15 des Blancs: e7f6."
-        }
+        { "uci": "f1e2", "comment": "Le Fou blanc quitte sa case de départ pour aller en e2. Il prépare à travailler avec son partenaire sur les diagonales." },
+        { "uci": "g8h8", "comment": "Le Roi noir recule dans le coin h8. Il espère résister là-bas." },
+        { "uci": "e2d3", "comment": "Le Fou avance en d3. Les deux Fous vont construire un filet de plus en plus serré autour du Roi noir." },
+        { "uci": "h8g7", "comment": "Le Roi noir sort du coin et tente de s'échapper vers g7." },
+        { "uci": "c1g5", "comment": "Le deuxième Fou monte en g5 ! Il surveille les cases g8 et f6, réduisant encore les cases du Roi noir." },
+        { "uci": "g7f7", "comment": "Le Roi noir recule en f7, repoussé par le Fou." },
+        { "uci": "d3f5", "comment": "Le Fou vient en f5 : le filet se resserre encore. Les deux Fous contrôlent maintenant de nombreuses cases autour du Roi noir." },
+        { "uci": "f7g7", "comment": "Le Roi noir recule vers g7." },
+        { "uci": "e1f2", "comment": "Le Roi blanc s'active ! Capablanca dit qu'il doit atteindre la 6e rangée — par exemple h6 — pour que le mat soit possible." },
+        { "uci": "g7f7", "comment": "Le Roi noir résiste en f7." },
+        { "uci": "f2g3", "comment": "Le Roi blanc avance encore en g3. Chaque coup le rapproche de la case idéale : h6 ou g6." },
+        { "uci": "f7g7", "comment": "Le Roi noir tient bon en g7." },
+        { "uci": "g3h4", "comment": "Le Roi blanc continue sa marche vers h5 et bientôt h6 — la case clé pour donner mat avec deux Fous." },
+        { "uci": "g7f7", "comment": "Le Roi noir recule encore en f7." },
+        { "uci": "h4h5", "comment": "Le Roi blanc est en h5. Encore un pas et il atteindra h6, la case décisive. Les Fous vont bientôt pouvoir donner mat !" }
       ]
     },
     {
       "type": "text",
-      "title": "Principe clé",
+      "title": "Ce qu'il faut retenir",
       "content": [
-        "Les deux Fous contrôlent des diagonales complémentaires.",
-        "Le Roi blanc avance pour fermer les cases de fuite.",
-        "La coordination Roi + Fous construit le mat progressivement."
+        "Avec deux Fous, le but est de coincer le Roi dans un COIN — pas seulement sur le bord.",
+        "Le Roi blanc doit atteindre la 6e rangée (case h6 ou g6 ici) pour que le mat soit possible.",
+        "Attention au pat : ne jamais laisser le Roi noir sans aucun coup légal si c'est à lui de jouer !"
       ]
     },
     {
       "type": "quiz_interactif",
       "fen": "6k1/8/8/8/8/8/8/2B1KB2 w - - 0 1",
-      "question": "Quiz final en 3 coups : active les Fous et progresse vers le mat.",
+      "question": "Quel est le premier coup des Blancs pour commencer à construire le filet avec les deux Fous ?",
       "steps": [
         {
-          "coups_acceptes": [
-            "f1e2"
-          ],
+          "coups_acceptes": ["f1e2"],
           "reponse": "g8h8",
-          "indice": "Étape 1 : place un Fou pour commencer la restriction.",
+          "indice": "Commence par activer un Fou. Il doit se placer sur une diagonale active.",
           "solution": "f1e2"
         },
         {
-          "coups_acceptes": [
-            "e2d3"
-          ],
+          "coups_acceptes": ["e2d3"],
           "reponse": "h8g7",
-          "indice": "Étape 2 : continue la manœuvre du Fou.",
+          "indice": "Continue la manœuvre du Fou. Il doit avancer pour réduire les cases du Roi noir.",
           "solution": "e2d3"
         },
         {
-          "coups_acceptes": [
-            "c1g5"
-          ],
+          "coups_acceptes": ["c1g5"],
           "reponse": "g7f7",
-          "indice": "Étape 3 : active le deuxième Fou pour renforcer le filet.",
+          "indice": "Active le deuxième Fou ! Il doit surveiller les cases autour du Roi noir.",
           "solution": "c1g5"
         }
       ],
       "correct_move": "f1e2",
-      "success_message": "Excellent, tu lances correctement le plan de mat.",
-      "error_message": "Reprends la séquence : Fou, Fou, puis coordination."
+      "success_message": "Très bien ! Tu actives le premier Fou. Les deux Fous vont construire un filet autour du Roi noir !",
+      "error_message": "Commence par activer un Fou vers le centre de l'échiquier."
     }
   ]
 }
