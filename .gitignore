@@ -3,6 +3,7 @@ node_modules/
 
 # IDE
 .idea/
+.claude/
 
 # Temp files
 .tmp_userdata/
