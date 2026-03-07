@@ -1,0 +1,42 @@
+{
+  "id": "capablanca_ex49_sacrifice_cavalier",
+  "title": "Exemple 49 — Sacrifice de Cavalier pour gagner un pion",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r4rk1/p3q1pp/1pb5/2pn1p2/8/3BPN2/PP2QPPP/2RR2K1 w - - 0 1",
+      "text": "C'est aux Blancs de jouer. Au premier regard, la position semble équilibrée. Mais Capablanca voit quelque chose de spécial : le Cavalier de f3 peut sauter en d4 pour se sacrifier ! Si les Noirs prennent avec le pion (cxd4), les Blancs reprennent avec la Tour en c6 — et gagnent le Fou noir ! C'est un sacrifice calculé, pas un coup au hasard. Peux-tu le trouver ?"
+    },
+    {
+      "type": "animation",
+      "fen": "r4rk1/p3q1pp/1pb5/2pn1p2/8/3BPN2/PP2QPPP/2RR2K1 w - - 0 1",
+      "text": "Regardez comment Capablanca sacrifie le Cavalier en d4 pour activer ses deux Tours et obtenir un avantage de pion dans une position supérieure !",
+      "moves": [
+        { "uci": "f3d4", "comment": "Le Cavalier saute en d4 — un SACRIFICE ! Si les Noirs ne prennent pas, le Cavalier reste sur d4 : une case centrale fantastique. Et si les Noirs prennent (cxd4), les Blancs jouent Txc6 et gagnent le Fou noir. C'est un sacrifice calculé !" },
+        { "uci": "c5d4", "comment": "Les Noirs prennent le Cavalier avec le pion. Ils ne peuvent pas refuser — le Cavalier en d4 dominait trop le centre. Mais maintenant la Tour blanche de c1 va frapper !" },
+        { "uci": "c1c6", "comment": "La Tour prend le Fou en c6 ! Les Blancs récupèrent une partie du matériel sacrifié en éliminant le Fou noir. Et maintenant la Tour est très active sur la colonne c — en plein milieu du camp adverse !" },
+        { "uci": "d5b4", "comment": "Le Cavalier noir saute en b4 — il menace le Fou blanc en d3. Les Noirs contre-attaquent en menaçant de prendre du matériel. Mais les Blancs ont un plan !" },
+        { "uci": "d1c1", "comment": "La deuxième Tour blanche vient sur la colonne c ! Les deux Tours blanches dominent maintenant la colonne c — une colonne ouverte magnifique. Le Cavalier noir est presque coincé : s'il prend le Fou en d3, la Tour prend en e7 et gagne la Dame !" },
+        { "uci": "g8h8", "comment": "Le Roi noir se met à l'abri en h8. Il pressent le danger — les deux Tours blanches sont très actives, et la Dame menace des fourchettes. Le Roi préfère se cacher !" },
+        { "uci": "c6e6", "comment": "La Tour blanche glisse vers e6 — une position MAGNIFIQUE ! La Tour est au centre de l'échiquier, sur la 6e rangée. Elle surveille la Dame noire en e7 (une case en dessous). Si les Noirs prennent la Tour (Dxe6), la Tour de c1 va en e1 et cloue la Dame. Les Blancs ont un avantage clair !" }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Le sacrifice de pièce (ici le Cavalier en d4) n'est pas de la folie : c'est du calcul. Les Blancs savent qu'en échange, ils vont gagner le Fou adverse (Txc6) et obtenir une meilleure position.",
+        "Après le sacrifice, les deux Tours blanches dominent les colonnes ouvertes. Capablanca dit : 'Toutes les pièces participent à l'action, en masse, une fois que l'opportunité se présente.'",
+        "La Tour en e6 est particulièrement forte car elle menace e7 (la Dame noire). Si les Noirs prennent la Tour, les Blancs jouent Te1 et clouent la Dame noire. C'est la force des pièces coordonnées !"
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r4rk1/p3q1pp/1pb5/2pn1p2/8/3BPN2/PP2QPPP/2RR2K1 w - - 0 1",
+      "question": "Le Cavalier blanc de f3 peut se sacrifier sur une case centrale clé. Si les Noirs prennent avec le pion (cxd4), les Blancs jouent Txc6 et gagnent le Fou noir. Quel est ce coup de Cavalier ?",
+      "correct_move": "f3d4",
+      "success_message": "Bravo ! Cd4! sacrifie le Cavalier. Après cxd4 Txc6, les Blancs ont gagné le Fou pour le Cavalier et leurs Tours dominent les colonnes ouvertes. C'est un échange calculé qui donne un avantage positionnel clair !",
+      "error_message": "Cherche où le Cavalier blanc de f3 peut sauter pour se placer sur une case centrale très forte, tout en menaçant de gagner le Fou adverse. Le Cavalier peut sauter de f3 vers d4 !"
+    }
+  ]
+}

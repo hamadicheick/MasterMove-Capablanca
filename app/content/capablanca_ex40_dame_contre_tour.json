@@ -1,71 +1,70 @@
 {
   "id": "capablanca_ex40_dame_contre_tour",
-  "title": "Exemple 40 - Dame contre Tour",
+  "title": "Exemple 40 — Dame contre Tour",
   "sequences": [
     {
       "type": "diagram",
       "fen": "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
-      "text": "Dans cette position standard de Dame contre Tour, les Blancs doivent forcer la Tour à s'éloigner de son Roi."
+      "text": "Dame contre Tour — l'une des finales les plus difficiles ! Le Roi noir en b8 est protégé par sa Tour en b7. Les Blancs doivent forcer la Tour à s'éloigner de son Roi pour pouvoir la capturer."
     },
     {
       "type": "animation",
       "fen": "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
+      "text": "Regardez comment les Blancs forcent la Tour noire à s'éloigner de son Roi avec des échecs de Dame à grande distance. Attention : il y a un piège sournois qui donne match nul !",
       "moves": [
-        { "uci": "a5e5", "comment": "Échec de Dame à distance : le plan commence." },
-        { "uci": "b8a7", "comment": "Le Roi noir choisit la case la plus tenable." },
-        { "uci": "e5a1", "comment": "La Dame se replace pour obtenir la bonne version de la position-type." },
-        { "uci": "a7b8", "comment": "Le Roi noir revient." },
-        { "uci": "a1a5", "comment": "Position recherchée : la Tour va devoir s'éloigner du Roi." },
-        { "uci": "b7b3", "comment": "La Tour se déplace sur case blanche pour éviter sa perte immédiate." },
-        { "uci": "a5e5", "comment": "Nouveau échec, la pression continue." },
-        { "uci": "b8a8", "comment": "Le Roi noir reste au bord de l'échiquier." },
-        { "uci": "e5h8", "comment": "La Dame gagne du terrain avec échec." },
-        { "uci": "a8a7", "comment": "Le Roi noir cherche la meilleure défense." },
-        { "uci": "h8g7", "comment": "La Dame maintient le filet." },
-        { "uci": "a7a8", "comment": "Le Roi noir n'a presque plus d'espace." },
-        { "uci": "g7g8", "comment": "Dernier échec préparatoire." },
-        { "uci": "b3b8", "comment": "La Tour interpose et s'éloigne du Roi." },
-        { "uci": "g8a2", "comment": "Mat : la configuration de l'exemple est résolue." }
+        { "uci": "a5e5", "comment": "Dame en e5, échec à distance ! Attention : jouer Dame en a6 serait une grosse erreur — la Tour ferait échec en c7, puis Rc6, et ce serait PAT ! Le débutant tombe toujours dans ce piège." },
+        { "uci": "b8a7", "comment": "Le Roi noir fuit en a7. C'est son meilleur coup." },
+        { "uci": "e5a1", "comment": "Dame en a1, échec sur la colonne a ! La Dame se repositionne pour amener la position idéale où ce sera au tour des Noirs de jouer." },
+        { "uci": "a7b8", "comment": "Le Roi noir revient en b8." },
+        { "uci": "a1a5", "comment": "Dame en a5 ! Le but est atteint : maintenant c'est AUX NOIRS de jouer. La Tour doit bouger, et Capablanca dit qu'elle ne peut aller que sur une case blanche — sinon un simple échec de Dame la gagnerait !" },
+        { "uci": "b7b3", "comment": "La Tour noire va en b3, une case blanche. C'est sa seule chance d'éviter d'être gagnée immédiatement par un échec de Dame." },
+        { "uci": "a5e5", "comment": "Nouvel échec de Dame en e5 ! La Dame continue de chasser le Roi noir vers le coin." },
+        { "uci": "b8a8", "comment": "Le Roi noir fuit dans le coin en a8." },
+        { "uci": "e5h8", "comment": "Dame en h8, échec sur la 8e rangée à grande distance ! La Dame attaque de loin en diagonale." },
+        { "uci": "a8a7", "comment": "Le Roi noir fuit en a7." },
+        { "uci": "h8g7", "comment": "Dame en g7, échec en diagonale ! La Dame maintient la pression. Le Roi noir est chassé de case en case." },
+        { "uci": "a7a8", "comment": "Le Roi noir n'a d'autre choix que de retourner en a8." },
+        { "uci": "g7g8", "comment": "Dame en g8, échec sur la 8e rangée ! Le Roi noir est complètement encerclé." },
+        { "uci": "b3b8", "comment": "La Tour noire s'interpose en b8 pour sauver son Roi. Mais c'est un sacrifice désespéré — la Tour est perdue !" },
+        { "uci": "g8a2", "comment": "Dame en a2 : ÉCHEC ET MAT ! Le Roi est pris entre la Dame, le Roi blanc et le bord. La Tour avait tout tenté, mais rien n'y fait !" }
       ]
     },
     {
       "type": "text",
-      "title": "Principe clé",
+      "title": "Ce qu'il faut retenir",
       "content": [
-        "L'idée directrice est de séparer la Tour de son Roi protecteur.",
-        "Les échecs de Dame à distance sur diagonales sont souvent décisifs.",
-        "La précision des cases intermédiaires compte plus qu'une attaque brutale immédiate."
+        "Dame contre Tour : l'idée clé est de forcer la Tour à s'éloigner de son Roi, puis de la capturer.",
+        "PIÈGE : ne jamais jouer Dame en a6 ! La Tour répond Rc7+, puis Rc6, et c'est match nul par pat.",
+        "La Dame donne des échecs à grande distance sur les diagonales — c'est le secret de toutes ces manœuvres gagnantes."
       ]
     },
     {
       "type": "quiz_interactif",
       "fen": "1k6/1r6/2K5/Q7/8/8/8/8 w - - 0 1",
-      "question": "Quiz final en 3 étapes : lance correctement la méthode gagnante.",
+      "question": "Les Blancs doivent forcer la Tour noire à s'éloigner de son Roi. Quel est le bon premier coup ? (Attention au piège !)",
       "steps": [
         {
           "coups_acceptes": ["a5e5"],
           "reponse": "b8a7",
-          "indice": "Étape 1 : commence par l'échec de Dame à distance.",
+          "indice": "La Dame doit donner échec pour chasser le Roi. Mais pas en a6 — c'est le piège du pat ! Cherche un échec à distance.",
           "solution": "a5e5"
         },
         {
-          "fen": "8/kr6/2K5/4Q3/8/8/8/8 w - - 2 2",
           "coups_acceptes": ["e5a1"],
           "reponse": "a7b8",
-          "indice": "Étape 2 : replace la Dame sur la colonne a.",
+          "indice": "La Dame doit se replacer pour que ce soit aux Noirs de jouer dans la position-type. Colonne a !",
           "solution": "e5a1"
         },
         {
-          "fen": "1k6/1r6/2K5/8/8/8/8/Q7 w - - 4 3",
           "coups_acceptes": ["a1a5"],
           "reponse": "b7b3",
-          "indice": "Étape 3 : rejoue la position-type avec la Tour contrainte de bouger.",
+          "indice": "Reviens en a5 ! La Tour noire sera forcée de bouger, et elle ne pourra aller que sur une case blanche.",
           "solution": "a1a5"
         }
       ],
       "correct_move": "a5e5",
-      "success_message": "Exact, tu as enclenché la bonne méthode de Dame contre Tour.",
-      "error_message": "Repars de l'idée centrale : échec à distance puis séparation Roi/Tour."
+      "success_message": "Exact ! Dame en e5 avec échec. Et surtout pas Dame en a6 — c'est le piège du pat que Capablanca signale !",
+      "error_message": "Attention au piège ! Dame en a6 donne pat après Rc7+, Rc6, Rxc6. Il faut un échec à distance — la Dame va en e5 !"
     }
   ]
 }

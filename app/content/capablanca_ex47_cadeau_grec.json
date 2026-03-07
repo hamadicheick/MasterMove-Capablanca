@@ -1,0 +1,43 @@
+{
+  "id": "capablanca_ex47_cadeau_grec",
+  "title": "Exemple 47 — Le Cadeau Grec : sacrifice du Fou sur h7",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bq1rk1/pp2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "text": "Le Roi noir est en g8, derrière ses trois pions (f7, g7, h7). Il semble bien protégé. Mais regardez le Fou blanc en d3 et le Cavalier en f3 : ils visent directement l'aile roi noire ! Le Fou peut sauter en h7 pour commencer une attaque fulgurante. Ce motif s'appelle le 'Cadeau Grec' — tu le reverras des centaines de fois dans ta carrière !"
+    },
+    {
+      "type": "animation",
+      "fen": "r1bq1rk1/pp2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "text": "Regardez le fameux 'Cadeau Grec' : le Fou se sacrifie sur h7, le Cavalier saute en g5, et la Dame entre dans la danse. Le Roi noir se retrouve au milieu de l'échiquier, sans défense !",
+      "moves": [
+        { "uci": "d3h7", "comment": "Le Fou prend le pion en h7 avec ÉCHEC ! C'est le 'Cadeau Grec' — un sacrifice classique qu'on retrouve dans des centaines de parties. Le Roi DOIT prendre le Fou, sinon les Blancs ont simplement gagné un pion pour rien !" },
+        { "uci": "g8h7", "comment": "Le Roi prend le Fou. Il n'a pas le choix — refuser serait perdre un pion. Mais maintenant le Roi est sorti de sa cachette derrière les pions. Il va être chassé à travers tout l'échiquier !" },
+        { "uci": "f3g5", "comment": "Le Cavalier saute en g5 avec ÉCHEC ! C'est la 2e étape du 'Cadeau Grec'. Le Cavalier attaque le Roi depuis g5. Attention aux pièges : si le Roi va en h6, le Cavalier prend en f7+ et gagne la Dame noire ! Si le Roi va en g8, la Dame va en h5 avec une attaque foudroyante !" },
+        { "uci": "h7g6", "comment": "Le Roi noir va en g6 — le meilleur coup selon Capablanca. Le Roi essaie de rester actif, mais il est maintenant en plein milieu de l'échiquier, exposé à toutes les pièces blanches !" },
+        { "uci": "d1g4", "comment": "La Dame blanche entre dans l'attaque en g4 ! Elle vise g7 (le mat) et prépare d'avancer vers h4-h7. Le Roi noir en g6 est pris en étau entre le Cavalier en g5 et la Dame en g4. Sa position est critique !" },
+        { "uci": "f7f5", "comment": "Les Noirs jouent f5 — le meilleur coup pour bloquer la Dame ! Capablanca dit que c'est le seul coup qui résiste un peu. Si les Noirs ne jouent pas f5, la Dame va immédiatement en h5 puis h7 pour mater !" },
+        { "uci": "g4g3", "comment": "La Dame se repositionne en g3 ! Elle continue à surveiller le Roi. La Dame et le Cavalier forment un duo imparable — le Roi ne peut pas s'échapper !" },
+        { "uci": "g6h6", "comment": "Le Roi erre vers h6 — une position désespérée. Le Roi noir est perdu en plein centre, loin de ses pièces qui ne peuvent pas le défendre. Les Blancs vont finalement mater en continuant l'attaque avec toutes leurs pièces !" }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Le 'Cadeau Grec' — à retenir pour toute ta vie !",
+      "content": [
+        "Le 'Cadeau Grec' (Fxh7+ suivi de Cg5+) est un des motifs tactiques les plus courants aux échecs. Tu vas le revoir des centaines de fois dans ta pratique !",
+        "Les trois conditions pour que le sacrifice marche : 1) Le Roi adverse est roqué en g8, 2) Un Fou blanc peut aller en h7, 3) Un Cavalier blanc peut aller en g5 après que le Roi prend le Fou.",
+        "Après 1.Fxh7+ Rxh7 2.Cg5+ Rg6 (le meilleur coup), la Dame doit entrer avec Dg4 ou Dh5. L'attaque gagne car le Roi noir est isolé au centre, loin de ses pièces de défense."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bq1rk1/pp2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "question": "Le Roi noir est en g8 derrière ses pions. Tu reconnais les conditions du 'Cadeau Grec' : Fou en d3, Cavalier en f3. Quel est le coup sacrificiel qui déclenche l'attaque ?",
+      "correct_move": "d3h7",
+      "success_message": "Parfait ! Fxh7+ est le 'Cadeau Grec' ! Après Rxh7, le Cavalier saute en g5+ pour donner échec, la Dame entre en g4, et le Roi noir est chassé en plein centre de l'échiquier. Un motif à retenir pour toujours !",
+      "error_message": "Cherche le sacrifice du Fou sur h7 ! Le Fou blanc en d3 peut aller en h7 pour prendre le pion et donner échec au Roi noir. C'est le 'Cadeau Grec' — un des sacrifices les plus célèbres aux échecs !"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "capablanca_ex46_cavaliers_attaque",
+  "title": "Exemple 46 — Les Cavaliers mènent l'attaque",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "4r3/p1pb1ppk/2ppn2p/1q3N1N/4PPP1/1P2Q3/4R2P/6K1 w - - 0 1",
+      "text": "Les Blancs ont deux pions de moins — ils sont en retard ! Mais regardez leurs Cavaliers : l'un est en f5, l'autre en h5, tous les deux à portée du Roi noir en h7. Les Blancs ont une seule solution : attaquer avant que les Noirs ne consolident leur position. Capablanca joue ici un coup de Cavalier foudroyant. Sauras-tu trouver lequel ?"
+    },
+    {
+      "type": "animation",
+      "fen": "4r3/p1pb1ppk/2ppn2p/1q3N1N/4PPP1/1P2Q3/4R2P/6K1 w - - 0 1",
+      "text": "Regardez comment le Cavalier blanc s'infiltre jusqu'au cœur de la position noire — et capture une Tour en seulement 2 coups !",
+      "moves": [
+        { "uci": "f5g7", "comment": "Le Cavalier de f5 saute en g7 — en plein dans la position du Roi noir ! Une case royale, au centre du camp ennemi. Le Cavalier menace maintenant d'aller en e8 pour prendre la Tour noire. Les Noirs doivent répondre immédiatement !" },
+        { "uci": "b5c5", "comment": "Les Noirs jouent Dame en c5 — une ERREUR ! La Dame s'éloigne du combat. Capablanca note que les Noirs auraient dû prendre le Cavalier avec Cxg7. Mais maintenant, les Blancs peuvent simplement capturer la Tour !" },
+        { "uci": "g7e8", "comment": "Le Cavalier prend la Tour en e8 ! Les Blancs capturent la Tour noire tout en maintenant leur Cavalier bien placé. Même en étant deux pions en retard au départ, les Blancs ont maintenant une pièce de plus. Partie pratiquement gagnée !" }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Quand on est en retard en matériel, il faut attaquer — vite et fort — avant que l'adversaire ne puisse consolider sa position.",
+        "Les Cavaliers sont les pièces idéales pour l'attaque car ils sautent par-dessus les autres pièces. Ici, le Cavalier va de f5 à g7 en un seul coup, en plein milieu du camp ennemi.",
+        "Capablanca note que les Noirs auraient dû jouer 1...Cxg7 pour prendre le Cavalier intrus. Mais même après 2.Cf6+ Rg6 3.Cxd7 — les Blancs auraient encore mieux joué. Parfois, l'attaque est si forte qu'il n'y a pas de bonne défense !"
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "4r3/p1pb1ppk/2ppn2p/1q3N1N/4PPP1/1P2Q3/4R2P/6K1 w - - 0 1",
+      "question": "Le Roi noir est en h7, faiblement protégé. Un des Cavaliers blancs peut sauter sur une case fantastique près du Roi pour menacer de prendre la Tour en e8. Quel coup ?",
+      "correct_move": "f5g7",
+      "success_message": "Excellent ! Cxg7 s'infiltre au cœur de la position noire. Le Cavalier menace immédiatement e8 (la Tour). Si les Noirs font une erreur comme Dame en c5, Cxe8 prend la Tour et les Blancs ont rattrapé leur retard matériel !",
+      "error_message": "Cherche le Cavalier qui peut sauter le plus près du Roi noir en h7 — et qui menace simultanément la Tour noire en e8. Le Cavalier de f5 peut aller en g7 !"
+    }
+  ]
+}
