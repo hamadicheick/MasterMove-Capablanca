@@ -1,4 +1,76 @@
 # PROGRESS - MasterMove Capablanca (MVP v3.3)
+
+## V3.3.34 - EX45-49 CINQ NOUVEAUX EXEMPLES (07/03/2026) OK
+
+### Validation
+- 5 exemples crees depuis le PGN officiel du projet : ex45 (sacrifice Tour h6), ex46 (Cavaliers attaque), ex47 (Cadeau Grec Fxh7+), ex48 (coordination pieces), ex49 (sacrifice Cavalier Cd4).
+- FEN extraites de `les_Principes_Fondamentaux_-_Capablanca_J.pgn` — source canonique pour toutes les positions.
+- Tous les coups UCI verifies par python-chess avant ecriture JSON. Plusieurs erreurs de garbling pdftotext corrigees :
+  - Ex45 : "5...Ke7" illegal → Ke8 ; "6.Qf8" impossible → Qxa7
+  - Ex46 : "1...Nc5" → Qc5 (Dame, pas Cavalier)
+  - Ex48 : "2...Rxd2" → Nxd2 (Cavalier prend Fou) ; "5.Re3" → Qe3 (Dame)
+  - Ex49 : "2.Bxc6" → Rxc6 (Tour prend Fou ; le Fou d3 ne peut pas atteindre c6)
+- Textes adaptes enfants 8-12 ans, ton enthousiaste, principes Capablanca encodes dans chaque bloc text.
+- Format complet : diagram + animation (commentaires coup par coup) + text + quiz_interactif.
+- index.json mis a jour avec 5 nouvelles entrees (chapitre 3, ordres 45-49, niveau intermediaire/avance).
+
+### Sources
+- PGN : `les_Principes_Fondamentaux_-_Capablanca_J.pgn` (Exercices 45-49)
+- Ex45 FEN : `3q1kn1/r5p1/1ppr1pQn/p2ppP2/P3P3/1BPPB3/1P3PK1/7R w - - 0 1`
+- Ex46 FEN : `4r3/p1pb1ppk/2ppn2p/1q3N1N/4PPP1/1P2Q3/4R2P/6K1 w - - 0 1`
+- Ex47 FEN : `r1bq1rk1/pp2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1`
+- Ex48 FEN : `2r1r1k1/2p2pbp/2ppq1p1/8/2n1P3/2N2P2/PP1BQ1PP/1R3RK1 b - - 0 1`
+- Ex49 FEN : `r4rk1/p3q1pp/1pb5/2pn1p2/8/3BPN2/PP2QPPP/2RR2K1 w - - 0 1`
+
+### Fichiers
+- `app/content/capablanca_ex45_sacrifice_tour_h6.json`
+- `app/content/capablanca_ex46_cavaliers_attaque.json`
+- `app/content/capablanca_ex47_cadeau_grec.json`
+- `app/content/capablanca_ex48_coordination_pieces.json`
+- `app/content/capablanca_ex49_sacrifice_cavalier.json`
+- `app/content/index.json`
+
+---
+
+## V3.3.33 - EX41-43 CHAMP TEXT ANIMATION AJOUTE (07/03/2026) OK
+
+### Contexte
+- Les blocs `animation` de ex41, ex42, ex43 n'avaient pas de champ `text` (phrase d'intro narrative avant la sequence de coups).
+- Champ `text` ajoute a chaque bloc animation pour coherence avec le reste du contenu (ex40, ex44, ex45-49 l'avaient deja).
+
+### Fichiers
+- `app/content/capablanca_ex41_dame_tour_gain.json`
+- `app/content/capablanca_ex42_dame_tour_difficile.json`
+- `app/content/capablanca_ex43_attaque_sans_cavaliers.json`
+
+---
+
+## V3.3.32 - EX40 ET EX44 REECRITURE COMPLETE (07/03/2026) OK
+
+### Contexte
+- Ex40 et ex44 réécrits entièrement pour une meilleure pedagogie (textes enfants 8-12 ans).
+- Textes plus engageants, ton enthousiaste, explication des concepts clés de Capablanca.
+- Commentaires coup par coup revises pour etre clairs et motivants.
+
+### Fichiers
+- `app/content/capablanca_ex40_dame_contre_tour.json`
+- `app/content/capablanca_ex44_mat_en_trois.json`
+
+---
+
+## V3.3.31 - CORRECTIFS UI ECHIQUIER ET MISE EN PAGE (07/03/2026) OK
+
+### Contexte
+- Taille adaptative de l'echiquier : `min(100%, calc(100vh - 280px))` — plateau jamais hors ecran sur 1080p.
+- Couleurs Lichess classique : cases claires `#f0d9b5`, cases foncees `#b58863`.
+- Correction `rightColPad` pour meilleur espacement de la colonne droite.
+
+### Fichiers
+- `app/src/renderer/js/app.js`
+- `app/src/renderer/styles/app.css`
+
+---
+
 ## V3.3.30 - EX44 MAT EN TROIS COUPS (06/03/2026) OK
 
 ### Validation
