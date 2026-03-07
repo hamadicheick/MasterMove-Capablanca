@@ -439,6 +439,56 @@
       "level": "intermediaire",
       "estimated_minutes": 12,
       "file": "capablanca_ex44_mat_en_trois.json"
+    },
+    {
+      "id": "capablanca_ex45_sacrifice_tour_h6",
+      "chapter": 3,
+      "titre": "Exemple 45 - Sacrifice de Tour pour chasser le Roi",
+      "description": "Sacrifier la Tour pour éliminer un Cavalier défensif, ouvrir la colonne h et lancer une chasse décisive du Roi.",
+      "order": 45,
+      "level": "intermediaire",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex45_sacrifice_tour_h6.json"
+    },
+    {
+      "id": "capablanca_ex46_cavaliers_attaque",
+      "chapter": 3,
+      "titre": "Exemple 46 - Les Cavaliers mènent l'attaque",
+      "description": "Le Cavalier s'infiltre jusqu'au cœur du camp adverse pour capturer une Tour.",
+      "order": 46,
+      "level": "intermediaire",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex46_cavaliers_attaque.json"
+    },
+    {
+      "id": "capablanca_ex47_cadeau_grec",
+      "chapter": 3,
+      "titre": "Exemple 47 - Le Cadeau Grec : Fxh7+",
+      "description": "Le sacrifice classique du Fou sur h7 suivi du Cavalier en g5, qui chasse le Roi au centre.",
+      "order": 47,
+      "level": "intermediaire",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex47_cadeau_grec.json"
+    },
+    {
+      "id": "capablanca_ex48_coordination_pieces",
+      "chapter": 3,
+      "titre": "Exemple 48 - La coordination des pièces",
+      "description": "Récupérer un pion et obtenir une meilleure position grâce à une coordination parfaite de toutes les pièces.",
+      "order": 48,
+      "level": "avance",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex48_coordination_pieces.json"
+    },
+    {
+      "id": "capablanca_ex49_sacrifice_cavalier",
+      "chapter": 3,
+      "titre": "Exemple 49 - Sacrifice de Cavalier pour un gain positionnel",
+      "description": "Sacrifier le Cavalier en d4 pour activer les deux Tours et gagner un pion avec une meilleure position.",
+      "order": 49,
+      "level": "avance",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex49_sacrifice_cavalier.json"
     }
   ]
 }

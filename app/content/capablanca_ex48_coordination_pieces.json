@@ -1,0 +1,42 @@
+{
+  "id": "capablanca_ex48_coordination_pieces",
+  "title": "Exemple 48 — La coordination des pièces : attaque indirecte",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2r1r1k1/2p2pbp/2ppq1p1/8/2n1P3/2N2P2/PP1BQ1PP/1R3RK1 b - - 0 1",
+      "text": "C'est aux Noirs de jouer. Ils ont un pion de moins — ils sont en retard ! Mais regardez leurs pièces : le Cavalier en c4, la Dame en e6, les deux Tours en c8 et e8 — toutes très bien placées. Capablanca montre ici qu'en coordonnant parfaitement ses pièces, on peut non seulement récupérer le pion, mais aussi obtenir une meilleure position. C'est ça, le jeu positionnel !"
+    },
+    {
+      "type": "animation",
+      "fen": "2r1r1k1/2p2pbp/2ppq1p1/8/2n1P3/2N2P2/PP1BQ1PP/1R3RK1 b - - 0 1",
+      "text": "Regardez comment les Noirs coordonnent leurs pièces avec précision pour récupérer leur pion et obtenir une position supérieure — sans jamais attaquer directement le Roi blanc !",
+      "moves": [
+        { "uci": "c8a8", "comment": "La Tour noire va en a8 ! En apparence, un coup simple. Mais c'est le début d'un plan subtil : la Tour se met en position pour menacer le pion blanc en a2 (ou a4 si les Blancs avancent). C'est la 1ère pièce noire qui entre dans le 'plan de coordination' !" },
+        { "uci": "a2a4", "comment": "Les Blancs avancent le pion en a4 pour 'défendre'. Capablanca note que le meilleur coup était b3 ! Après 2.b3, les Noirs jouaient Cxd2, puis Dxa2 pour gagner le pion a — mais les Blancs auraient résisté. Avec a4, les Blancs facilitent le jeu des Noirs !" },
+        { "uci": "c4d2", "comment": "Le Cavalier noir prend le Fou blanc en d2 ! Un échange forcé — le Cavalier était un peu coincé en c4, autant l'échanger avantageusement. Les Blancs perdent leur Fou de d2 !" },
+        { "uci": "e2d2", "comment": "La Dame blanche reprend en d2. Maintenant la Dame noire va aller en c4 — une case centrale magnifique, libérée par l'échange du Cavalier !" },
+        { "uci": "e6c4", "comment": "La Dame noire vient en c4 — une case forte au centre ! Elle surveille simultanément : le pion a4 (qu'elle peut prendre), la Tour b1 (qu'elle attaque), et elle prépare de futures actions. La coordination des pièces noires est exemplaire !" },
+        { "uci": "f1d1", "comment": "Les Blancs amènent la Tour de f1 en d1 pour défendre la colonne d. Mais les Noirs continuent à augmenter la pression !" },
+        { "uci": "e8b8", "comment": "La deuxième Tour noire vient aussi sur la colonne b ! Les deux Tours noires (a8 et b8) menacent maintenant de prendre le pion b2. La pression est maximale — les Blancs vont devoir se défendre sur toute la largeur de l'échiquier !" }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "La leçon de coordination",
+      "content": [
+        "Quand on est en retard d'un pion, il ne faut pas paniquer ! Si les pièces sont bien coordonnées, on peut souvent le récupérer.",
+        "Capablanca montre ici le principe fondamental : 'Toutes les pièces doivent coordonner leur action comme une machine bien huilée.' Les Noirs utilisent TOUTES leurs pièces ensemble : Tour a8, Cavalier c4 (puis échange), Dame c4, Tour e8 sur la colonne b.",
+        "L'attaque n'est pas directe contre le Roi — elle vise les pions faibles adverses (a4, b2). C'est ce qu'on appelle l'attaque indirecte ou le jeu positionnel. Souvent plus difficile à arrêter qu'une attaque frontale !"
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2r1r1k1/2p2pbp/2ppq1p1/8/2n1P3/2N2P2/PP1BQ1PP/1R3RK1 b - - 0 1",
+      "question": "C'est aux Noirs de jouer. Tu as un pion de moins, mais tes pièces sont bien placées. Quel est le premier coup du plan de coordination pour préparer la pression sur l'aile dame blanche ?",
+      "correct_move": "c8a8",
+      "success_message": "Excellent ! Ta8 est le début du plan de Capablanca ! La Tour se met sur la colonne a pour menacer le pion a4. Ensuite Cxd2, Dxd2, Dc4 — les pièces noires coordonnent leur attaque sur toute la largeur de l'échiquier !",
+      "error_message": "Cherche comment activer ta Tour de c8 pour qu'elle menace les pions blancs sur l'aile dame. La Tour de c8 peut aller en a8 pour viser le pion a4 ou a2. C'est le début du plan de coordination !"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "capablanca_ex45_sacrifice_tour_h6",
+  "title": "Exemple 45 — Sacrifice de Tour pour chasser le Roi",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "3q1kn1/r5p1/1ppr1pQn/p2ppP2/P3P3/1BPPB3/1P3PK1/7R w - - 0 1",
+      "text": "Les Blancs ont une position magnifique : la Dame domine en g6, les Fous visent l'aile roi, et il y a deux Cavaliers noirs mal placés en h6 et g8. Capablanca joue un coup brillant pour ouvrir les lignes contre le Roi noir en f8. Sauras-tu trouver le sacrifice ?"
+    },
+    {
+      "type": "animation",
+      "fen": "3q1kn1/r5p1/1ppr1pQn/p2ppP2/P3P3/1BPPB3/1P3PK1/7R w - - 0 1",
+      "text": "Regardez comment les Blancs sacrifient leur Tour pour déclencher une chasse implacable du Roi noir — et finalement gagner une Tour et un Cavalier !",
+      "moves": [
+        { "uci": "h1h6", "comment": "La Tour saute sur h6 et prend le Cavalier noir ! C'est un sacrifice — les Blancs donnent leur Tour pour ouvrir la colonne h. Si les Noirs refusent de prendre, ils perdent un Cavalier pour rien !" },
+        { "uci": "g7h6", "comment": "Le pion g est obligé de prendre la Tour. Maintenant la colonne h est grande ouverte — et la Dame des Blancs en g6 est prête à passer à l'attaque !" },
+        { "uci": "g6h6", "comment": "La Dame prend le pion en h6 avec ÉCHEC ! Elle prend la place de la Tour sacrifiée. Le Roi noir en f8 est en danger — il doit fuir !" },
+        { "uci": "f8e7", "comment": "Le Roi noir s'enfuit vers e7. C'est sa seule bonne case — la Dame surveille f8 par la diagonale. Mais la Dame n'a pas fini !" },
+        { "uci": "h6h7", "comment": "La Dame avance encore en h7, comme un marteau ! Un autre échec. Le Roi ne peut pas se reposer — il doit encore bouger !" },
+        { "uci": "e7e8", "comment": "Le Roi recule vers e8. Il ne peut pas aller vers le centre — la Dame lui bloque le chemin. Regardez ce qui va se passer ensuite !" },
+        { "uci": "h7g8", "comment": "La Dame capture le Cavalier en g8 avec ÉCHEC ! Les Blancs gagnent du matériel TOUT en poursuivant le Roi. Le sacrifice de Tour est déjà remboursé !" },
+        { "uci": "e8d7", "comment": "Le Roi noir s'enfuit vers d7. Il court aussi vite qu'il peut — mais la Dame est trop rapide !" },
+        { "uci": "g8h7", "comment": "La Dame donne encore un échec depuis h7 ! Elle attaque le Roi sur la 7e rangée. Le Roi ne peut pas aller en e7 — la Dame surveille toute la rangée !" },
+        { "uci": "d7e8", "comment": "Le Roi recule encore vers e8 — il n'a pas le choix. La Dame est trop puissante !" },
+        { "uci": "h7a7", "comment": "La Dame prend la Tour noire en a7 ! Les Blancs ont gagné un Cavalier (en h6) ET une Tour (en a7), tout en conservant leur Dame active. Avec un tel avantage, les Noirs abandonnent !" }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Le sacrifice 1.Txh6! élimine le Cavalier noir sur h6 et ouvre la colonne h pour la Dame. C'est un sacrifice calculé : les Blancs savent qu'ils vont récupérer du matériel.",
+        "La Dame seule peut chasser un Roi à travers tout l'échiquier en donnant des échecs répétés. Ici, elle gagne un Cavalier (g8) et une Tour (a7) en 11 coups !",
+        "Les sacrifices ne sont pas de la magie : il faut calculer à l'avance que les pièces adverses ne peuvent pas se défendre. Ici, le Roi noir n'a jamais de case sûre."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "3q1kn1/r5p1/1ppr1pQn/p2ppP2/P3P3/1BPPB3/1P3PK1/7R w - - 0 1",
+      "question": "Le Roi noir est en f8, faiblement protégé. La Dame blanche est en g6. Quel sacrifice de Tour ouvre la colonne h et déclenche une attaque foudroyante ?",
+      "correct_move": "h1h6",
+      "success_message": "Bravo ! Txh6 sacrifie la Tour pour éliminer le Cavalier noir et ouvrir la colonne h. La Dame entre aussitôt avec Dxh6+ et le Roi noir ne peut plus s'arrêter de fuir !",
+      "error_message": "Cherche où la Tour de h1 peut frapper pour ouvrir une ligne contre le Roi noir en f8. Le Cavalier noir sur h6 est la cible — la Tour peut le capturer !"
+    }
+  ]
+}
