@@ -1,0 +1,91 @@
+{
+  "id": "capablanca_ex61_deux_tours_pions_2",
+  "title": "Exemple 61 \u2014 Deux Tours et des pions (2)",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "1k2r3/1ppr2pp/p1p2p2/5R2/4P3/1P1P3P/P1P3P1/5RK1 w - - 0 1",
+      "text": "Extrait de la partie Capablanca contre Janowski, New York 1913. Les Noirs ont des pions c doubl\u00e9s, ce qui est un d\u00e9savantage : ils ne peuvent pas avancer facilement. Capablanca va exploiter cette faiblesse avec un plan strat\u00e9gique brillant. Le plan : emp\u00eacher les pions noirs d\u2019avancer, puis cr\u00e9er un pion pass\u00e9 sur la colonne e."
+    },
+    {
+      "type": "animation",
+      "fen": "1k2r3/1ppr2pp/p1p2p2/5R2/4P3/1P1P3P/P1P3P1/5RK1 w - - 0 1",
+      "text": "Regarde comment Capablanca ex\u00e9cute son plan strat\u00e9gique \u00e9tape par \u00e9tape pour cr\u00e9er un pion pass\u00e9 d\u00e9cisif !",
+      "moves": [
+        {
+          "uci": "g2g4",
+          "comment": "Le pion blanc avance en g4 ! Ce coup pr\u00e9pare d\u00e9j\u00e0 g5, qui forcera un \u00e9change de pions et permettra de cr\u00e9er un pion pass\u00e9 sur la colonne e."
+        },
+        {
+          "uci": "b7b6",
+          "comment": "Les Noirs jouent b6, ils veulent jouer c5. Mais Capablanca les en emp\u00eachera."
+        },
+        {
+          "uci": "b3b4",
+          "comment": "Excellent coup ! Le pion blanc va en b4 pour bloquer les pions noirs de l\u2019aile dame. Maintenant c5 est impossible pour les Noirs sans perdre du mat\u00e9riel."
+        },
+        {
+          "uci": "b8b7",
+          "comment": "Le Roi noir se place en b7. Il devrait aller \u00e0 l\u2019aile roi o\u00f9 le danger va arriver, mais les Noirs ne voient pas encore le plan blanc."
+        },
+        {
+          "uci": "g1f2",
+          "comment": "Le Roi blanc se rapproche du centre. Dans les finales, le Roi est une pi\u00e8ce importante !"
+        },
+        {
+          "uci": "b6b5",
+          "comment": "Les Noirs poussent b5 dans l\u2019id\u00e9e de jouer a5 et d\u2019ouvrir une colonne pour leurs Tours. Mais les Blancs vont aussi les en emp\u00eacher."
+        },
+        {
+          "uci": "a2a4",
+          "comment": "Le pion blanc va en a4 ! Il bloque l\u2019aile dame noire. Si les Noirs prennent, tous leurs pions de l\u2019aile dame deviennent des \u00eelots isol\u00e9s et faibles."
+        },
+        {
+          "uci": "d7d4",
+          "comment": "La Tour noire va en d4 pour tenter de cr\u00e9er une contre-attaque. Mais les Blancs ont la situation sous contr\u00f4le."
+        },
+        {
+          "uci": "f1b1",
+          "comment": "La Tour blanche va en b1 pour menacer d\u2019attaquer les pions noirs de l\u2019aile dame. Les Noirs sont maintenant sur la d\u00e9fensive sur deux ailes."
+        },
+        {
+          "uci": "e8e5",
+          "comment": "La Tour noire va en e5 pour essayer de tenir la colonne e. Les Noirs luttent pour \u00e9quilibrer."
+        },
+        {
+          "uci": "f2e3",
+          "comment": "Le Roi blanc avance encore au centre. Il soutient ses pions et se pr\u00e9pare \u00e0 jouer d4 au bon moment."
+        },
+        {
+          "uci": "d4d7",
+          "comment": "La Tour noire recule en d7. Les Noirs essaient de d\u00e9fendre tous leurs pions, mais c\u2019est de plus en plus difficile."
+        },
+        {
+          "uci": "a4a5",
+          "comment": "Le pion blanc avance en a5 ! La premi\u00e8re partie du plan est achev\u00e9e : tous les pions noirs de l\u2019aile dame sont fix\u00e9s et ne peuvent plus avancer."
+        },
+        {
+          "uci": "e5e6",
+          "comment": "La Tour noire va en e6 pour essayer de tenir la position. Mais Capablanca va maintenant passer \u00e0 la deuxi\u00e8me partie de son plan : cr\u00e9er un pion pass\u00e9 sur la colonne e."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Capablanca avait un plan strat\u00e9gique clair depuis le d\u00e9but : fixer les pions noirs, puis cr\u00e9er un pion pass\u00e9 sur la colonne e. Chaque coup servait ce plan.",
+        "Ma tactique gagnante dans toutes ces finales a \u00e9t\u00e9 de garder les Tours adverses li\u00e9es \u00e0 la d\u00e9fense de pions, pour laisser mes propres Tours libres d\u2019agir.",
+        "Principe g\u00e9n\u00e9ral de Capablanca : conserve ta libert\u00e9 d\u2019action tout en limitant celle de l\u2019adversaire. Et toujours avoir un plan strat\u00e9gique clair."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "1k2r3/1ppr2pp/p1p2p2/5R2/4P3/1P1P3P/P1P3P1/5RK1 w - - 0 1",
+      "question": "Les Noirs ont des pions c doubl\u00e9s et veulent jouer c5. Quel coup blanc lance le plan pour bloquer l\u2019aile dame noire et pr\u00e9parer un pion pass\u00e9 ?",
+      "correct_move": "g2g4",
+      "success_message": "Bravo ! Le pion avance en g4 pour pr\u00e9parer g5 ! Ce coup lance le plan strat\u00e9gique : bloquer les pions noirs d\u2019un c\u00f4t\u00e9, puis forcer un \u00e9change qui cr\u00e9e un pion pass\u00e9 d\u00e9cisif.",
+      "error_message": "Les Blancs ont besoin de contr\u00f4ler l\u2019espace \u00e0 l\u2019aile roi pour pr\u00e9parer un \u00e9change de pions favorable. Regarde les pions blancs de l\u2019aile roi : l\u2019un d\u2019eux peut avancer pour initier le plan."
+    }
+  ]
+}

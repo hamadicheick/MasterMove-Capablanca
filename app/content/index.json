@@ -22,7 +22,19 @@
       "chapter": 4,
       "titre": "Chapitre IV – Théorie générale",
       "livre_pages": "44-56",
-      "exemples": "Ex50 et suivants"
+      "exemples": "Ex50 à Ex55"
+    },
+    {
+      "chapter": 5,
+      "titre": "Chapitre V – La stratégie en finale",
+      "livre_pages": "57-69",
+      "exemples": "Ex56 à Ex62"
+    },
+    {
+      "chapter": 6,
+      "titre": "Chapitre VI – D'autres ouvertures et milieux de jeu",
+      "livre_pages": "70-74",
+      "exemples": "Ex63 à Ex67"
     }
   ],
   "chapters": [
@@ -555,6 +567,126 @@
       "level": "intermediaire",
       "estimated_minutes": 11,
       "file": "capablanca_ex55_echange_fou_cavalier.json"
+    },
+    {
+      "id": "capablanca_ex56_attaque_autre_aile",
+      "chapter": 5,
+      "titre": "Exemple 56 – L'attaque soudaine depuis une autre aile",
+      "description": "Les Noirs ligotent les Tours blanches à l'aile dame, puis transfèrent l'attaque à l'aile roi. Principe clé : garde ta liberté d'action et limite celle de l'adversaire.",
+      "order": 56,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex56_attaque_autre_aile.json"
+    },
+    {
+      "id": "capablanca_ex57_mobilite_tours",
+      "chapter": 5,
+      "titre": "Exemple 57 – La mobilité des Tours en finale",
+      "description": "Capablanca contre Kupchick, La Havane 1913. Empiler les Tours sur la colonne ouverte pour forcer l'adversaire à la défensive.",
+      "order": 57,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex57_mobilite_tours.json"
+    },
+    {
+      "id": "capablanca_ex58_danger_position_sure",
+      "chapter": 5,
+      "titre": "Exemple 58 – Le danger d'une position sûre",
+      "description": "Marshall contre Kupchick, La Havane 1913. Ne jamais relâcher son attention : en trois coups, une position gagnante peut devenir perdante.",
+      "order": 58,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex58_danger_position_sure.json"
+    },
+    {
+      "id": "capablanca_ex59_tour_et_pion",
+      "chapter": 5,
+      "titre": "Exemple 59 – La finale Tour et pion",
+      "description": "Marshall contre Rosenthal, 1909. Les finales Tour et pion semblent simples mais sont souvent très complexes. Chaque coup doit être joué avec soin.",
+      "order": 59,
+      "level": "intermediaire",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex59_tour_et_pion.json"
+    },
+    {
+      "id": "capablanca_ex60_deux_tours_pions_1",
+      "chapter": 5,
+      "titre": "Exemple 60 – Deux Tours et des pions (1)",
+      "description": "Capablanca contre Kreymborg, 1910. La passivité est toujours sanctionnée : la meilleure défense c'est de prendre l'initiative.",
+      "order": 60,
+      "level": "intermediaire",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex60_deux_tours_pions_1.json"
+    },
+    {
+      "id": "capablanca_ex61_deux_tours_pions_2",
+      "chapter": 5,
+      "titre": "Exemple 61 – Deux Tours et des pions (2)",
+      "description": "Capablanca contre Janowski, New York 1913. Plan stratégique complet : fixer les pions adverses, puis créer un pion passé décisif.",
+      "order": 61,
+      "level": "avance",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex61_deux_tours_pions_2.json"
+    },
+    {
+      "id": "capablanca_ex62_tour_fou_vs_tour_cavalier",
+      "chapter": 5,
+      "titre": "Exemple 62 – Tour et Fou contre Tour et Cavalier",
+      "description": "Lasker contre Marshall, Championnat du Monde 1907. Le Fou domine le Cavalier dans les positions ouvertes. La Tour noire utilise les mêmes principes que dans les finales précédentes.",
+      "order": 62,
+      "level": "avance",
+      "estimated_minutes": 15,
+      "file": "capablanca_ex62_tour_fou_vs_tour_cavalier.json"
+    },
+    {
+      "id": "capablanca_ex63_pions_faibles",
+      "chapter": 6,
+      "titre": "Exemple 63 – Les pions faibles",
+      "description": "Structure de pions horrible pour les Noirs : pion arriéré, case forte pour l'adversaire, trou en f6. Ces formations mènent invariablement au désastre.",
+      "order": 63,
+      "level": "debutant",
+      "estimated_minutes": 8,
+      "file": "capablanca_ex63_pions_faibles.json"
+    },
+    {
+      "id": "capablanca_ex64_pions_centraux",
+      "chapter": 6,
+      "titre": "Exemple 64 – Les pions centraux",
+      "description": "Pions centraux blancs en position attaquante, noirs en position défensive. La Défense Française illustrée. Principe : deux pions côte à côte sont plus forts.",
+      "order": 64,
+      "level": "debutant",
+      "estimated_minutes": 8,
+      "file": "capablanca_ex64_pions_centraux.json"
+    },
+    {
+      "id": "capablanca_ex65_espagnole_trou",
+      "chapter": 6,
+      "titre": "Exemple 65 – L'Espagnole et le trou en e5",
+      "description": "Janowski contre Lasker, Paris 1912. Installer un Cavalier sur une case forte que les pions adverses ne peuvent plus attaquer.",
+      "order": 65,
+      "level": "intermediaire",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex65_espagnole_trou.json"
+    },
+    {
+      "id": "capablanca_ex66_pion_e5_dominant",
+      "chapter": 6,
+      "titre": "Exemple 66 – La domination du pion en e5",
+      "description": "La force écrasante d'un pion central passé. Toutes les manœuvres blanches tournent autour de ce pion dominateur.",
+      "order": 66,
+      "level": "avance",
+      "estimated_minutes": 14,
+      "file": "capablanca_ex66_pion_e5_dominant.json"
+    },
+    {
+      "id": "capablanca_ex67_influence_trou",
+      "chapter": 6,
+      "titre": "Exemple 67 – L'influence d'un trou",
+      "description": "Janowski contre Kupchick, La Havane 1913. Un Cavalier installé sur un trou est une pièce dominatrice. Toutes les pièces blanches convergent pour exploiter cette case forte.",
+      "order": 67,
+      "level": "avance",
+      "estimated_minutes": 16,
+      "file": "capablanca_ex67_influence_trou.json"
     }
   ]
 }

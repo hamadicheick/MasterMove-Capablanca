@@ -193,7 +193,8 @@ async function loadChapters(){
 const BOOK_CHAPTERS_META = [
   { chapter: 1, titre: "Chapitre I — Premiers principes", description: "Finales, milieux de jeu et ouvertures", pages: "p. 11–24", exemples: "Ex. 1 à 21" },
   { chapter: 2, titre: "Chapitre II — D'autres principes en finale", description: "Finales de pieces et de pions", pages: "p. 25–38", exemples: "Ex. 22 à 42" },
-  { chapter: 3, titre: "Chapitre III — Plans de gain en milieu de jeu", description: "Attaque, combinaisons, strategie", pages: "p. 39–43", exemples: "Ex. 43 et suivants" }
+  { chapter: 3, titre: "Chapitre III — Plans de gain en milieu de jeu", description: "Attaque, combinaisons, strategie", pages: "p. 39–43", exemples: "Ex. 43 à 49" },
+  { chapter: 4, titre: "Chapitre IV — Théorie générale", description: "Principes avances : sacrifice, coordination, strategie", pages: "p. 44–56", exemples: "Ex. 50 à 55" }
 ];
 
 function libraryScreen(){

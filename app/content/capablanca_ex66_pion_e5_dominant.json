@@ -1,0 +1,119 @@
+{
+  "id": "capablanca_ex66_pion_e5_dominant",
+  "title": "Exemple 66 \u2014 La domination du pion en e5",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2r3k1/1q5p/p1p1r1p1/1pRpPp2/3P1PP1/Q6P/PP6/2R4K w - - 0 1",
+      "text": "Cette position illustre la puissance \u00e9norme du pion blanc en e5. Il est libre, il avance, il coupe l\u2019\u00e9chiquier en deux. Les pi\u00e8ces noires sont fix\u00e9es \u00e0 le surveiller. Les Blancs vont maintenant ouvrir le jeu avec une prise de pion et lancer une attaque d\u00e9cisive sur l\u2019aile roi."
+    },
+    {
+      "type": "animation",
+      "fen": "2r3k1/1q5p/p1p1r1p1/1pRpPp2/3P1PP1/Q6P/PP6/2R4K w - - 0 1",
+      "text": "Regarde comment les Blancs utilisent la force de leur pion en e5 pour lancer une attaque \u00e9crasante !",
+      "moves": [
+        {
+          "uci": "g4f5",
+          "comment": "Le pion blanc prend en f5 ! Cette prise ouvre la colonne g et cr\u00e9e un pion pass\u00e9 en e5 encore plus fort. L\u2019attaque \u00e0 l\u2019aile roi commence."
+        },
+        {
+          "uci": "g6f5",
+          "comment": "Le pion noir reprend en f5. Maintenant la colonne g est ouverte et les Tours blanches vont l\u2019exploiter."
+        },
+        {
+          "uci": "a3f3",
+          "comment": "La Dame blanche s\u2019\u00e9lance en f3 ! Elle vise le pion f5 et menace de p\u00e9n\u00e9trer dans le camp noir."
+        },
+        {
+          "uci": "b7d7",
+          "comment": "La Dame noire va en d7 pour d\u00e9fendre. Les Noirs menacent une prise sur d5, mais les Blancs ont plus important \u00e0 faire."
+        },
+        {
+          "uci": "c5c2",
+          "comment": "La Tour blanche recule en c2 pour se repositionner sur la colonne g. C\u2019est la cl\u00e9 du plan."
+        },
+        {
+          "uci": "e6g6",
+          "comment": "La Tour noire va en g6 pour tenter de d\u00e9fendre l\u2019aile roi. Mais les Blancs font venir toutes leurs pi\u00e8ces."
+        },
+        {
+          "uci": "c2g2",
+          "comment": "La Tour blanche s\u2019installe en g2 sur la colonne ouverte ! Les Blancs accumulent des forces sur la colonne g."
+        },
+        {
+          "uci": "g8h8",
+          "comment": "Le Roi noir recule en h8 pour \u00e9viter les menaces."
+        },
+        {
+          "uci": "c1g1",
+          "comment": "L\u2019autre Tour blanche vient aussi en g1 ! Les deux Tours blanches sont maintenant sur la colonne g. La pression est maximale."
+        },
+        {
+          "uci": "c8g8",
+          "comment": "Les Noirs am\u00e8nent leur Tour en g8 pour d\u00e9fendre, mais c\u2019est insuffisant."
+        },
+        {
+          "uci": "f3h5",
+          "comment": "La Dame blanche va en h5, mena\u00e7ant mat en h7 et attaquant les Tours noires. Les Noirs ne peuvent plus d\u00e9fendre."
+        },
+        {
+          "uci": "g6g2",
+          "comment": "La Tour noire prend la Tour blanche en g2 pour essayer de simplifier. Mais les Blancs reprennent et gardent l\u2019avantage."
+        },
+        {
+          "uci": "g1g2",
+          "comment": "La Tour blanche reprend en g2."
+        },
+        {
+          "uci": "g8g2",
+          "comment": "L\u2019autre Tour noire prend aussi en g2 pour \u00e9changer les Tours."
+        },
+        {
+          "uci": "h1g2",
+          "comment": "Le Roi blanc prend en g2 ! Il s\u2019active dans la finale."
+        },
+        {
+          "uci": "d7g7",
+          "comment": "La Dame noire va en g7 pour contrer la Dame blanche."
+        },
+        {
+          "uci": "g2h2",
+          "comment": "Le Roi blanc recule en h2 pour \u00e9viter les \u00e9checs."
+        },
+        {
+          "uci": "g7g6",
+          "comment": "Les Dames s\u2019\u00e9changent. Les Blancs ont obtenu une finale gagn\u00e9e gr\u00e2ce \u00e0 la domination de leur pion e5."
+        },
+        {
+          "uci": "h5g6",
+          "comment": "La Dame blanche prend en g6."
+        },
+        {
+          "uci": "h7g6",
+          "comment": "Le pion h noir reprend en g6."
+        },
+        {
+          "uci": "b2b4",
+          "comment": "Le pion blanc avance en b4 ! Les Blancs gagnent la finale gr\u00e2ce \u00e0 leurs pions pass\u00e9s et leur position sup\u00e9rieure."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "La force du pion en e5 \u00e9tait \u00e9norme dans toute cette analyse. Il coupait l\u2019\u00e9chiquier, fixait les pi\u00e8ces noires et \u00e9tait libre d\u2019avancer une fois les pi\u00e8ces \u00e9chang\u00e9es.",
+        "Toutes les manoeuvres des Blancs tournaient autour de ce pion dominateur. Chaque coup \u00e9tait fait pour exploiter sa puissance.",
+        "Capablanca nous dit : quand tu as un pion pass\u00e9 puissant, toutes tes manoeuvres doivent servir \u00e0 l\u2019exploiter. C\u2019est lui qui dicte le plan."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2r3k1/1q5p/p1p1r1p1/1pRpPp2/3P1PP1/Q6P/PP6/2R4K w - - 0 1",
+      "question": "Les Blancs ont un plan d\u2019attaque. La premi\u00e8re \u00e9tape : ouvrir la colonne g en prenant le pion f5 avec le pion g4 !",
+      "correct_move": "g4f5",
+      "success_message": "Bravo ! Le pion blanc prend en f5 et ouvre la colonne g ! Les Tours blanches vont maintenant s\u2019y installer pour lancer une attaque d\u00e9cisive contre le Roi noir.",
+      "error_message": "Les Blancs veulent ouvrir la colonne g pour leurs Tours. Un de leurs pions peut prendre le pion noir en f5 pour ouvrir cette colonne."
+    }
+  ]
+}

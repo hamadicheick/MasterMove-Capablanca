@@ -1,0 +1,63 @@
+{
+  "id": "capablanca_ex56_attaque_autre_aile",
+  "title": "Exemple 56 \u2014 L\u2019attaque soudaine depuis une autre aile",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "6k1/p4p1p/1p4p1/3r4/2r5/P1P4P/2R2PP1/2R1K3 b - - 0 1",
+      "text": "Les Noirs ont deux Tours actives, mais les Blancs semblent tenir. Le secret ? Les Noirs vont d\u2019abord attacher les Tours blanches d\u2019un c\u00f4t\u00e9 de l\u2019\u00e9chiquier, puis transf\u00e9rer leur attaque de l\u2019autre c\u00f4t\u00e9, l\u00e0 o\u00f9 les Blancs ne peuvent plus d\u00e9fendre. C\u2019est le principe de Capablanca : avoir plus de libert\u00e9 que l\u2019adversaire."
+    },
+    {
+      "type": "animation",
+      "fen": "6k1/p4p1p/1p4p1/3r4/2r5/P1P4P/2R2PP1/2R1K3 b - - 0 1",
+      "text": "Regarde comment les Noirs ligotent les deux Tours blanches, puis lancent leur attaque de l\u2019autre c\u00f4t\u00e9 !",
+      "moves": [
+        {
+          "uci": "c4e4",
+          "comment": "La Tour noire avance en e4, echec au Roi blanc ! La Tour blanche est forc\u00e9e de bouger pour prot\u00e9ger son Roi."
+        },
+        {
+          "uci": "c2e2",
+          "comment": "La Tour blanche vient en e2 pour bloquer l\u2019echec. Le Roi est sauv\u00e9, mais les Tours blanches commencent \u00e0 \u00eatre coinc\u00e9es."
+        },
+        {
+          "uci": "e4a4",
+          "comment": "La Tour noire glisse jusqu\u2019en a4 ! Elle menace les pions blancs de l\u2019aile dame. Les Tours blanches doivent se d\u00e9fendre."
+        },
+        {
+          "uci": "e2a2",
+          "comment": "La Tour blanche recule en a2 pour bloquer. Maintenant les deux Tours blanches sont attaches \u00e0 la d\u00e9fense de l\u2019aile dame."
+        },
+        {
+          "uci": "h7h5",
+          "comment": "Le pion noir avance en h5 ! Ce n\u2019est pas un coup au hasard : il fixe les pions blancs de l\u2019aile roi pour pr\u00e9parer l\u2019attaque de ce c\u00f4t\u00e9."
+        },
+        {
+          "uci": "c1d1",
+          "comment": "La Tour blanche essaie de se repositionner en d1, mais il est trop tard pour organiser la d\u00e9fense."
+        },
+        {
+          "uci": "d5a5",
+          "comment": "L\u2019autre Tour noire vient en a5 ! Les deux Tours noires sont sur la colonne a. Les deux Tours blanches sont compl\u00e8tement ligot\u00e9es. Les Noirs peuvent maintenant attaquer \u00e0 l\u2019aile roi en toute libert\u00e9."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Quand tu as plus de mobilit\u00e9 que ton adversaire, attaque d\u2019abord d\u2019un c\u00f4t\u00e9 pour l\u2019obliger \u00e0 d\u00e9fendre, puis transfère ton attaque de l\u2019autre c\u00f4t\u00e9.",
+        "Dans cette finale, les Noirs ont d\u2019abord attach\u00e9 les Tours blanches \u00e0 l\u2019aile dame. Ensuite ils ont attaqu\u00e9 \u00e0 l\u2019aile roi. Les Tours blanches \u00e9taient trop loin pour aider.",
+        "Capablanca nous enseigne : garde ta libert\u00e9 d\u2019action et limite celle de ton adversaire. Une Tour libre vaut beaucoup plus qu\u2019une Tour coinc\u00e9e \u00e0 d\u00e9fendre un pion."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "6k1/p4p1p/1p4p1/3r4/2r5/P1P4P/2R2PP1/2R1K3 b - - 0 1",
+      "question": "C\u2019est aux Noirs de jouer. Quel coup force les Tours blanches \u00e0 se d\u00e9fendre et lance le plan ?",
+      "correct_move": "c4e4",
+      "success_message": "Bravo ! La Tour avance en e4 avec echec ! Le Roi blanc est oblig\u00e9 de se couvrir, les Tours blanches sont coinc\u00e9es \u00e0 l\u2019aile dame, et les Noirs peuvent ensuite attaquer de l\u2019autre c\u00f4t\u00e9 !",
+      "error_message": "Cherche un coup qui menace directement le Roi blanc. Une de tes Tours peut atteindre la ligne du Roi blanc et lui donner echec !"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "capablanca_ex60_deux_tours_pions_1",
+  "title": "Exemple 60 \u2014 Deux Tours et des pions (1)",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r4rk1/p5pp/2p5/3p1p2/2p5/2P1PP2/PPK2P1P/3R1R2 b - - 0 1",
+      "text": "Extrait d\u2019une partie Capablanca contre Kreymborg, 1910. C\u2019est aux Noirs de jouer. Ils pensent que la nulle est facile, mais ils ont tort ! Attendre et ne rien faire dans une finale difficile est toujours une mauvaise id\u00e9e. La meilleure d\u00e9fense, c\u2019est de prendre l\u2019initiative."
+    },
+    {
+      "type": "animation",
+      "fen": "r4rk1/p5pp/2p5/3p1p2/2p5/2P1PP2/PPK2P1P/3R1R2 b - - 0 1",
+      "text": "Regarde comment Capablanca (Blancs) exploite la passivit\u00e9 de son adversaire pour cr\u00e9er une attaque d\u00e9cisive !",
+      "moves": [
+        {
+          "uci": "a8e8",
+          "comment": "Les Noirs am\u00e8nent leur Tour en e8. Ce premier coup est d\u00e9j\u00e0 une erreur ! Les Noirs auraient d\u00fb jouer le pion en a5, puis a4, pour prendre l\u2019initiative \u00e0 l\u2019aile dame."
+        },
+        {
+          "uci": "d1d4",
+          "comment": "La Tour blanche va en d4 ! Ce coup est double : il emp\u00eache le pion noir en f4, et menace b3 suivi d\u2019une attaque sur le pion a noir."
+        },
+        {
+          "uci": "f8f6",
+          "comment": "La Tour noire va en f6. Les Noirs pr\u00e9parent une d\u00e9monstration \u00e0 l\u2019aile roi. Mais c\u2019est trop peu, trop tard."
+        },
+        {
+          "uci": "b2b3",
+          "comment": "Les Blancs jouent b3 pour cr\u00e9er une faiblesse dans le camp noir. Si les Noirs prennent, tous leurs pions de l\u2019aile dame deviennent s\u00e9par\u00e9s et faibles."
+        },
+        {
+          "uci": "c4b3",
+          "comment": "Le pion noir prend en b3, echec au Roi blanc ! Les Noirs doivent prendre, mais cela cr\u00e9e exactement ce que voulaient les Blancs."
+        },
+        {
+          "uci": "a2b3",
+          "comment": "Le pion blanc reprend en b3. Maintenant les pions noirs de l\u2019aile dame sont tous s\u00e9par\u00e9s. Les Blancs ont un plan concret."
+        },
+        {
+          "uci": "g8f7",
+          "comment": "Le Roi noir se rapproche du centre. Principe fondamental des finales : le Roi doit \u00eatre actif !"
+        },
+        {
+          "uci": "c2d3",
+          "comment": "Le Roi blanc se centralise aussi en d3. Les deux Rois rejoignent le champ de bataille."
+        },
+        {
+          "uci": "e8e7",
+          "comment": "La Tour noire va en e7 pour mieux se placer. Les Noirs se d\u00e9brouillent comme ils peuvent."
+        },
+        {
+          "uci": "f1a1",
+          "comment": "La Tour blanche va en a1 pour attaquer le pion a7 noir. C\u2019est le plan : attaquer les pions faibles noirs de l\u2019aile dame."
+        },
+        {
+          "uci": "f7e6",
+          "comment": "Le Roi noir se rapproche des pions en danger pour les prot\u00e9ger."
+        },
+        {
+          "uci": "a1a6",
+          "comment": "La Tour blanche p\u00e9n\u00e8tre en a6 ! Elle s\u2019infiltre tr\u00e8s loin dans le camp noir. Les pions noirs sont maintenant tr\u00e8s menac\u00e9s."
+        },
+        {
+          "uci": "e7c7",
+          "comment": "La Tour noire revient en c7 pour prot\u00e9ger les pions de l\u2019aile dame. Les Noirs n\u2019ont plus de libert\u00e9 d\u2019action."
+        },
+        {
+          "uci": "d4a4",
+          "comment": "L\u2019autre Tour blanche vient aussi en a4 ! Les deux Tours blanches sont sur la colonne a. Les pions noirs sont totalement sous pression. Les Noirs ne peuvent plus d\u00e9fendre."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Dans les finales difficiles, attendre et ne rien faire est toujours une mauvaise id\u00e9e. La meilleure d\u00e9fense, c\u2019est de prendre l\u2019initiative.",
+        "Capablanca forCe les Tour noires \u00e0 d\u00e9fendre des pions faibles, pendant que ses propres Tours sont libres d\u2019agir sur tout l\u2019\u00e9chiquier.",
+        "Le principe gagnant : garde ta libert\u00e9 d\u2019action et limite celle de l\u2019adversaire. Si tu cr\u00e9es une faiblesse, cr\u00e9es-en une autre. La position adverse s\u2019effondrera."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r4rk1/p5pp/2p5/3p1p2/2p5/2P1PP2/PPK2P1P/3R1R2 b - - 0 1",
+      "question": "C\u2019est aux Noirs de jouer. Quelle aurait \u00e9t\u00e9 la meilleure mani\u00e8re de prendre l\u2019initiative ? Am\u00e8ne une Tour sur la colonne e pour contr\u00f4ler la colonne ouverte !",
+      "correct_move": "a8e8",
+      "success_message": "Bien ! La Tour va en e8 pour contr\u00f4ler la colonne e. Mais attention : Capablanca consid\u00e8re que le meilleur coup \u00e9tait de jouer le pion en a5 d\u2019abord pour prendre l\u2019initiative \u00e0 l\u2019aile dame. La Tour en e8 est passable, mais pas id\u00e9ale.",
+      "error_message": "Les Noirs doivent \u00eatre actifs. Regarde la colonne e, elle est ouverte. Une Tour peut s\u2019y installer pour contr\u00f4ler la position."
+    }
+  ]
+}

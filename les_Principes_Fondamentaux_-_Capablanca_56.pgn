@@ -1,0 +1,185 @@
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 56"]
+[Date "2026.03.08"]
+[Round "56"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "6k1/p4p1p/1p4p1/3r4/2r5/P1P4P/2R2PP1/2R1K3 b - - 0 1"]
+[PlyCount "7"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,-88,-87,-87,-87,-84,-86,-106,-88,-87,-71,-87,-71,-86]} 1... Re4+ 2.
+Re2 Ra4 3. Ra2 h5 4. Rd1 Rda5 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 57"]
+[Date "2026.03.08"]
+[Round "57"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "2r2rk1/p1pp1p1p/2p2p2/8/8/2PP4/PP3P1P/R3R1K1 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,9,-16,-24,-37,0,0,0,-25,-12,-44,-8,-25,-13]} 1. Re4 Rfe8 2. Rae1
+Re6 3. R1e3 Rce8 4. Kf1 Kf8 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 58"]
+[Date "2026.03.08"]
+[Round "58"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "2R5/p4p1k/5p1p/6r1/5K2/4P2P/Pr4P1/7R w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,-45,-18,0,0,0,0,4,15,10,10,18,-5,21]} 1. g4 {[%eval -3,0]} Rxa2 2.
+Rd1 Ra4+ 3. Rd4 Raa5 4. Rdd8 Rg7 5. h4 h5 6. Rh8+ *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 59"]
+[Date "2026.03.08"]
+[Round "59"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "8/7R/8/2k2P2/1p6/3r4/5PKP/8 w - - 0 1"]
+[PlyCount "6"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,158,152,134,134,140,140,140,140,144,137,134,129,138]} 1. f6 Rd6 2.
+f7 (2. Rc7+ Kd4 3. f7 Rg6+ 4. Kf1 Rf6 5. Rb7 Kc3) 2... Rd8 3. Rh5+ Kc4 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 60"]
+[Date "2026.03.08"]
+[Round "60"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "r4rk1/p5pp/2p5/3p1p2/2p5/2P1PP2/PPK2P1P/3R1R2 b - - 0 1"]
+[PlyCount "17"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,-26,0,0,0,0,0,0,0,0,0,0,0,0]} 1... Rae8 2. Rd4 Rf6 3. b3 cxb3+ 4.
+axb3 Kf7 5. Kd3 Re7 6. Ra1 Ke6 7. Ra6 Rc7 8. Rda4 g5 9. h4 g4 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 61"]
+[Date "2026.03.08"]
+[Round "61"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "1k2r3/1ppr2pp/p1p2p2/5R2/4P3/1P1P3P/P1P3P1/5RK1 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,42,35,46,21,44,43,52,33,33,32,31,30,30]} 1. g4 b6 2. b4 $1 Kb7 3.
+Kf2 b5 4. a4 Rd4 5. Rb1 Re5 6. Ke3 Rd7 7. a5 Re6 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 62"]
+[Date "2026.03.08"]
+[Round "62"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "r1b3k1/p1p3pp/2p5/8/3pP3/6P1/PPP4P/RN3K2 b - - 0 1"]
+[PlyCount "13"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,-24,-24,-25,-33,-30,-16,-17,-23,-9,-9,-7,-7,-14]} 1... Rb8 2. b3
+Rb5 3. c4 Rh5 4. Kg1 c5 5. Nd2 Kf7 6. Rf1+ Ke7 7. a3 Rh6 *
+
+[Event "les Principes Fondamentaux - Capablanca_56"]
+[Site "Exercice 63"]
+[Date "2026.03.08"]
+[Round "63"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "6k1/2p2p1p/p3p1p1/1p1pP3/1P1P4/1P6/P4PPP/6K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Score: -0.15 } 1... Kg7 2. f4 Kh8 3. Kf2 h6 4. Kf3 Kh7 5. Kg3 Kh8 6. Kf2 Kg7 7. g3 *
+
+[Event "les Principes Fondamentaux - Capablanca_56"]
+[Site "Exercice 64"]
+[Date "2026.03.08"]
+[Round "64"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "6k1/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/6K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Score: +2.00 } 1. Kf1 h5 2. Ke2 Kh7 3. a4 Kg6 4. a5 h4 5. Kd3 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 65"]
+[Date "2026.03.08"]
+[Round "65"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "r2q1rk1/2p1bp1p/p1n1n1p1/1p1pP3/6b1/1NPQ1N2/PPB2PPP/R1B1R1K1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2026.??.??"]
+
+1. Nfd4 {[%eval -127,0] on part d'une espagnole, cette partie est bien connue 
+(Janowski - Lasker, paris 1912)} *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 66"]
+[Date "2026.03.08"]
+[Round "66"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[Annotator "konea"]
+[SetUp "1"]
+[FEN "2r3k1/1q5p/p1p1r1p1/1pRpPp2/3P1PP1/Q6P/PP6/2R4K w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,12,105,127,134,129,110,105,110,124,124,68,69,59,56]} {Score:} 1. gxf5
+{[%eval 190,0]} gxf5 2. Qf3 Qd7 3. R5c2 Rg6 4. Rg2 Kh8 5. Rcg1 Rcg8 6. Qh5 Rxg2
+7. Rxg2 Rxg2 8. Kxg2 Qg7+ 9. Kh2 Qg6 10. Qxg6 hxg6 11. b4 *
+
+[Event "les Principes Fondamentaux - Capablanca_"]
+[Site "Exercice 67"]
+[Date "2026.03.08"]
+[Round "67"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/pppbqppp/1n2p3/3n4/3P4/2NBPN2/PP3PPP/2RQ1RK1 b - - 0 1"]
+[PlyCount "23"]
+[EventDate "2026.??.??"]
+
+{[%evp 0,23,63,80,66,121,115,113,106,131,121,141,141,149,133,141,140,156,159,
+163,157,169,134,140,135,124]} 1... c6 2. Ne4 f5 3. Nc5 Be8 4. Ne5 Rb8 5. Re1
+Rf6 6. Qf3 Rh6 7. Qg3 Rc8 8. f3 Rc7 9. a3 Kh8 10. h3 g5 11. e4 f4 12. Qf2 Ne3 *
+

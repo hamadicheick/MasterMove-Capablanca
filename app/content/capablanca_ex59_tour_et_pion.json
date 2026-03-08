@@ -1,0 +1,59 @@
+{
+  "id": "capablanca_ex59_tour_et_pion",
+  "title": "Exemple 59 \u2014 La finale Tour et pion",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "8/7R/8/2k2P2/1p6/3r4/5PKP/8 w - - 0 1",
+      "text": "Les finales Tour et pion sont parmi les plus courantes aux \u00e9checs. Elles semblent simples, mais elles sont souvent tr\u00e8s complexes ! Ici les Blancs ont un pion pass\u00e9 tr\u00e8s avanc\u00e9 en f5. Les Noirs ont un pion pass\u00e9 en b4 et une Tour active. Qui va gagner ? Capablanca nous montre que la pr\u00e9cision est essentielle."
+    },
+    {
+      "type": "animation",
+      "fen": "8/7R/8/2k2P2/1p6/3r4/5PKP/8 w - - 0 1",
+      "text": "Dans cette finale, chaque coup compte. Regarde la ligne principale qui montre comment le pion blanc fonce vers la promotion !",
+      "moves": [
+        {
+          "uci": "f5f6",
+          "comment": "Le pion blanc avance en f6 ! Attention, le coup le plus simple \u00e9tait Tour en c7, echec. Mais le coup du texte est aussi int\u00e9ressant et les Noirs vont rater leur d\u00e9fense."
+        },
+        {
+          "uci": "d3d6",
+          "comment": "La Tour noire va en d6 pour bloquer l\u2019avance du pion. C\u2019\u00e9tait le bon coup ! Avec Tour en d6, les Noirs pouvaient tenir la nulle."
+        },
+        {
+          "uci": "f6f7",
+          "comment": "Le pion blanc pousse encore en f7 ! Il n\u2019est plus qu\u2019\u00e0 un pas de devenir une Dame. La pression est \u00e9norme."
+        },
+        {
+          "uci": "d6d8",
+          "comment": "La Tour noire va en d8 pour bloquer la promotion. Mais est-ce que c\u2019est suffisant ?"
+        },
+        {
+          "uci": "h7h5",
+          "comment": "La Tour blanche donne echec en h5 pour chasser le Roi noir et lib\u00e9rer la case de promotion du pion."
+        },
+        {
+          "uci": "c5c4",
+          "comment": "Le Roi noir \u00e9chappe en c4. La partie se poursuit avec les Blancs en tr\u00e8s bonne position gr\u00e2ce \u00e0 leur pion tr\u00e8s avanc\u00e9."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Les finales Tour et pion semblent simples mais sont souvent tr\u00e8s complexes. Il faut jouer chaque coup avec beaucoup de soin.",
+        "Pour d\u00e9fendre, il faut souvent placer sa Tour en face du pion pass\u00e9 pour le bloquer, ou utiliser son Roi pour arr\u00eater le pion.",
+        "Capablanca nous dit : une finale qui para\u00eet simple peut m\u00e8ner \u00e0 des positions tr\u00e8s inhabituelles et tr\u00e8s difficiles. Il est imp\u00e9ratif d\u2019\u00eatre \u00e0 l\u2019aise avec ce type de finale."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "8/7R/8/2k2P2/1p6/3r4/5PKP/8 w - - 0 1",
+      "question": "Les Blancs ont un pion pass\u00e9 en f5. Quel coup fait progresser le pion vers la promotion et met les Noirs sous pression ?",
+      "correct_move": "f5f6",
+      "success_message": "Bravo ! Le pion avance en f6, il est de plus en plus dangereux ! Les Noirs doivent trouver la d\u00e9fense exacte, sinon le pion deviendra une Dame.",
+      "error_message": "Regarde le pion blanc en f5. Il est tr\u00e8s avanc\u00e9 et peut avancer encore. Pousse-le vers la promotion !"
+    }
+  ]
+}

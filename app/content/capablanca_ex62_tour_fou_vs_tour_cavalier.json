@@ -1,0 +1,87 @@
+{
+  "id": "capablanca_ex62_tour_fou_vs_tour_cavalier",
+  "title": "Exemple 62 \u2014 Tour et Fou contre Tour et Cavalier",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1b3k1/p1p3pp/2p5/8/3pP3/6P1/PPP4P/RN3K2 b - - 0 1",
+      "text": "Extrait du match pour le Championnat du Monde Lasker contre Marshall, 1907. C\u2019est aux Noirs de jouer. La position peut sembler nulle, mais en r\u00e9alit\u00e9 les Noirs ont de grandes chances de gain. Pourquoi ? Parce qu\u2019ils ont l\u2019initiative, et surtout parce qu\u2019un Fou est meilleur qu\u2019un Cavalier dans ce type de position ouverte."
+    },
+    {
+      "type": "animation",
+      "fen": "r1b3k1/p1p3pp/2p5/8/3pP3/6P1/PPP4P/RN3K2 b - - 0 1",
+      "text": "Regarde comment les Noirs utilisent leur Tour et leur Fou en harmonie pour restreindre compl\u00e8tement le Cavalier blanc !",
+      "moves": [
+        {
+          "uci": "a8b8",
+          "comment": "La Tour noire va en b8 ! Ce coup force les Blancs \u00e0 jouer b3, ce qui \u00f4te la case b3 au Cavalier blanc. Une manoeuvre subtile pour limiter le Cavalier adverse."
+        },
+        {
+          "uci": "b2b3",
+          "comment": "Les Blancs jouent b3 pour prot\u00e9ger leur camp. Mais maintenant le Cavalier ne peut plus aller en b3."
+        },
+        {
+          "uci": "b8b5",
+          "comment": "La Tour noire s\u2019\u00e9lance en b5 ! Elle vise les pions blancs de l\u2019aile roi pour forcer le Roi blanc \u00e0 rester l\u00e0-bas et d\u00e9fendre."
+        },
+        {
+          "uci": "c2c4",
+          "comment": "Les Blancs jouent c4 pour tenter de chasser la Tour noire. Mais les Noirs ont une autre id\u00e9e."
+        },
+        {
+          "uci": "b5h5",
+          "comment": "La Tour noire glisse jusqu\u2019en h5 ! Elle menace les pions de l\u2019aile roi et force le Roi blanc \u00e0 rester d\u00e9fendre. Les pions noirs de l\u2019aile dame sont ainsi s\u00e9curis\u00e9s."
+        },
+        {
+          "uci": "f1g1",
+          "comment": "Le Roi blanc va en g1 pour surveiller son aile roi menac\u00e9e par la Tour noire."
+        },
+        {
+          "uci": "c6c5",
+          "comment": "Le pion noir avance en c5 ! La sph\u00e8re d\u2019action du Cavalier blanc est tr\u00e8s limit\u00e9e : ses propres pions sont dans ses jambes."
+        },
+        {
+          "uci": "b1d2",
+          "comment": "Le Cavalier blanc se d\u00e9place en d2. Mais apr\u00e8s ce coup, ses propres pions le g\u00eanent encore plus."
+        },
+        {
+          "uci": "g8f7",
+          "comment": "Le Roi noir se rapproche du centre. Principe essentiel des finales : le Roi est une pi\u00e8ce active !"
+        },
+        {
+          "uci": "a1f1",
+          "comment": "La Tour blanche donne echec en f1 ! Les Blancs tentent de compliquer la partie."
+        },
+        {
+          "uci": "f7e7",
+          "comment": "Le Roi noir \u00e9chappe en e7. Il n\u2019a pas peur de l\u2019echec."
+        },
+        {
+          "uci": "a2a3",
+          "comment": "Les Blancs jouent a3 pour s\u00e9curiser leurs pions de l\u2019aile dame."
+        },
+        {
+          "uci": "h5h6",
+          "comment": "La Tour noire va en h6 pour \u00eatre pr\u00eate \u00e0 transf\u00e9rer l\u2019attaque \u00e0 l\u2019aile dame, o\u00f9 les Noirs ont un avantage de mat\u00e9riel et de position. Une magnifique d\u00e9monstration de contr\u00f4le de la partie."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Dans les positions ouvertes, le Fou est plus fort que le Cavalier car il peut contr\u00f4ler les deux ailes en m\u00eame temps. Le Cavalier ne peut aller que d\u2019un c\u00f4t\u00e9 \u00e0 la fois.",
+        "La Tour noire utilise exactement le m\u00eame plan que dans les finales pr\u00e9c\u00e9dentes : forcer les pi\u00e8ces blanches \u00e0 se d\u00e9fendre, puis transf\u00e9rer l\u2019attaque d\u2019une aile \u00e0 l\u2019autre.",
+        "Capablanca nous montre : les m\u00eames principes s\u2019appliquent dans tous les types de finales. Garde ta libert\u00e9 d\u2019action, restreins celle de l\u2019adversaire."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1b3k1/p1p3pp/2p5/8/3pP3/6P1/PPP4P/RN3K2 b - - 0 1",
+      "question": "Les Noirs veulent restreindre le Cavalier blanc. Quel coup force les Blancs \u00e0 jouer b3, \u00f4tant ainsi une case importante au Cavalier ?",
+      "correct_move": "a8b8",
+      "success_message": "Bravo ! La Tour va en b8 et force les Blancs \u00e0 jouer b3. Ce petit coup subtil restreint d\u00e9j\u00e0 le Cavalier blanc. Ensuite la Tour pourra s\u2019\u00e9lancer vers b5 et h5 pour attaquer l\u2019aile roi !",
+      "error_message": "Les Noirs veulent limiter le Cavalier blanc. Regarde : si la Tour noire va en b8, les Blancs seront forc\u00e9s de jouer b3 pour se d\u00e9fendre, ce qui g\u00eane leur propre Cavalier."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "capablanca_ex67_influence_trou",
+  "title": "Exemple 67 \u2014 L\u2019influence d\u2019un trou",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r4rk1/pppbqppp/1n2p3/3n4/3P4/2NBPN2/PP3PPP/2RQ1RK1 b - - 0 1",
+      "text": "Partie Janowski contre Kupchik, La Havane 1913. Regarde la case e5 : aucun pion noir ne peut aller l\u00e0. C\u2019est un trou dans la position noire ! Les Blancs vont en profiter pour y installer un Cavalier de fa\u00e7on permanente. Ce Cavalier sera une vraie pi\u00e8ce dominatrice."
+    },
+    {
+      "type": "animation",
+      "fen": "r4rk1/pppbqppp/1n2p3/3n4/3P4/2NBPN2/PP3PPP/2RQ1RK1 b - - 0 1",
+      "text": "Regarde comment les Blancs manoeuvrent pour installer leur Cavalier sur le trou en e5 et comment les Noirs tentent en vain de s\u2019y opposer !",
+      "moves": [
+        {
+          "uci": "c7c6",
+          "comment": "Les Noirs avancent le pion en c6 pour tenter de contr\u00f4ler la case d5. Mais cela affaiblit encore leur structure."
+        },
+        {
+          "uci": "c3e4",
+          "comment": "Le Cavalier blanc va en e4 ! Il se dirige vers e5, le trou dans la position noire. Le plan est tr\u00e8s clair."
+        },
+        {
+          "uci": "f7f5",
+          "comment": "Les Noirs avancent le pion en f5 pour essayer de chasser le Cavalier. Mais ce coup affaiblit leur aile roi."
+        },
+        {
+          "uci": "e4c5",
+          "comment": "Le Cavalier blanc va en c5 ! Il met la pression sur les pions noirs de l\u2019aile dame. De c5, il peut aussi aller en e6 ou en d7."
+        },
+        {
+          "uci": "d7e8",
+          "comment": "Le Fou noir recule en e8 pour se d\u00e9gager. Les Noirs cherchent une meilleure configuration."
+        },
+        {
+          "uci": "c5e5",
+          "comment": "Le Cavalier blanc s\u2019installe enfin en e5, sur le trou ! Il est au coeur du camp noir et ne peut pas \u00eatre attaqu\u00e9 par un pion. C\u2019est un avant-poste parfait."
+        },
+        {
+          "uci": "a8b8",
+          "comment": "La Tour noire va en b8 pour tenter une contre-attaque \u00e0 l\u2019aile dame. Les Noirs n\u2019ont pas de bonne d\u00e9fense."
+        },
+        {
+          "uci": "f1e1",
+          "comment": "La Tour blanche vient en e1 pour soutenir le Cavalier en e5 et pr\u00e9parer une pouss\u00e9e centrale."
+        },
+        {
+          "uci": "f8f6",
+          "comment": "La Tour noire va en f6 pour d\u00e9fendre l\u2019aile roi. Les Noirs tentent de r\u00e9sister."
+        },
+        {
+          "uci": "d1f3",
+          "comment": "La Dame blanche va en f3 pour attaquer les pions noirs de l\u2019aile roi. Toutes les pi\u00e8ces blanches convergent vers le Roi noir."
+        },
+        {
+          "uci": "f6h6",
+          "comment": "La Tour noire d\u00e9fend en h6. Les Noirs n\u2019ont que des d\u00e9fenses passives."
+        },
+        {
+          "uci": "f3g3",
+          "comment": "La Dame blanche va en g3 pour menacer le pion g7 et augmenter la pression."
+        },
+        {
+          "uci": "b8c8",
+          "comment": "La Tour noire revient d\u00e9fendre. Les Noirs sont sur la d\u00e9fensive sur toute la partie."
+        },
+        {
+          "uci": "f2f3",
+          "comment": "Le pion blanc avance en f3 pour soutenir le centre et pr\u00e9parer l\u2019avance e4 quand les conditions seront favorables."
+        },
+        {
+          "uci": "c8c7",
+          "comment": "La Tour noire manoeuvre en c7. Les Noirs essaient de trouver un plan de d\u00e9fense actif."
+        },
+        {
+          "uci": "a2a3",
+          "comment": "Les Blancs s\u00e9curisent leurs pions de l\u2019aile dame. Chaque coup blanc renforce la position."
+        },
+        {
+          "uci": "g8h8",
+          "comment": "Le Roi noir recule en h8. La situation est de plus en plus difficile pour les Noirs."
+        },
+        {
+          "uci": "h2h3",
+          "comment": "Le pion blanc avance en h3 pour s\u00e9curiser le Roi et \u00e9viter des \u00e9checs inattendus."
+        },
+        {
+          "uci": "g7g5",
+          "comment": "Les Noirs tentent une pouss\u00e9e d\u00e9sesp\u00e9r\u00e9e en g5 pour cr\u00e9er du jeu \u00e0 l\u2019aile roi."
+        },
+        {
+          "uci": "e3e4",
+          "comment": "Le pion blanc avance en e4 ! Il ouvre des lignes pour ses pi\u00e8ces. La pression est maximale."
+        },
+        {
+          "uci": "f5f4",
+          "comment": "Les Noirs avancent en f4 pour fermer le centre. Mais le Cavalier en e5 reste dominant."
+        },
+        {
+          "uci": "g3f2",
+          "comment": "La Dame blanche manoeuvre. Les Blancs ont une position \u00e9crasante gr\u00e2ce au Cavalier contr\u00f4lant le trou en e5."
+        },
+        {
+          "uci": "d5e3",
+          "comment": "Le Cavalier noir s\u2019infiltre en e3 pour tenter une contre-attaque d\u00e9sesp\u00e9r\u00e9e. Les Noirs sont perdus mais se battent jusqu\u2019au bout."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Un trou dans la position adverse est une opportunit\u00e9 pr\u00e9cieuse. Installe-y une pi\u00e8ce et elle sera tr\u00e8s puissante car l\u2019adversaire ne peut pas la chasser avec un pion.",
+        "Dans toute cette partie, le Cavalier blanc en e5 \u00e9tait la pi\u00e8ce cl\u00e9. Toutes les autres pi\u00e8ces blanches travaillaient pour le soutenir et exploiter sa position dominante.",
+        "Capablanca nous enseigne : comprends la structure de pions et tu comprendras o\u00f9 placer tes pi\u00e8ces. Les trous dans la position adverse sont des cadeaux \u00e0 exploiter."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r4rk1/pppbqppp/1n2p3/3n4/3P4/2NBPN2/PP3PPP/2RQ1RK1 b - - 0 1",
+      "question": "Les Blancs veulent installer un Cavalier sur le trou en e5. Mais c\u2019est aux Noirs de jouer. Joue le coup noir qui tente de contester le centre, mais qui affaiblit quand m\u00eame la position noire.",
+      "correct_move": "c7c6",
+      "success_message": "Oui ! Le pion va en c6, mais cela affaiblit la case d6 et la structure noire. Les Blancs vont r\u00e9pondre en menant leur Cavalier vers le trou en e5 via e4 et c5.",
+      "error_message": "Les Noirs tentent de contr\u00f4ler le centre. Le pion c7 peut avancer en c6 pour soutenir d5. Essaie ce coup."
+    }
+  ]
+}

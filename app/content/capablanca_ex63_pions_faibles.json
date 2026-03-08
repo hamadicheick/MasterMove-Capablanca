@@ -1,0 +1,30 @@
+{
+  "id": "capablanca_ex63_pions_faibles",
+  "title": "Exemple 63 \u2014 Les pions faibles",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "6k1/2p2p1p/p3p1p1/1p1pP3/1P1P4/1P6/P4PPP/6K1 w - - 0 1",
+      "text": "Regarde la structure de pions noirs : elle est absolument horrible ! Le pion c noir est un pion arri\u00e8re, il ne peut pas avancer car les cases devant lui sont contr\u00f4l\u00e9es ou bloqu\u00e9es. On dit qu\u2019un pion arri\u00e8re est faible parce qu\u2019il ne peut pas avancer pour se d\u00e9fendre."
+    },
+    {
+      "type": "diagram",
+      "fen": "6k1/2p2p1p/p3p1p1/1p1pP3/1P1P4/1P6/P4PPP/6K1 w - - 0 1",
+      "text": "Les Blancs contr\u00f4lent la case c5 : une de leurs pi\u00e8ces pourrait s\u2019y installer et ne pourrait jamais en \u00eatre d\u00e9log\u00e9e sans faire un \u00e9change. On appelle \u00e7a un avant-poste ou une case forte."
+    },
+    {
+      "type": "diagram",
+      "fen": "6k1/2p2p1p/p3p1p1/1p1pP3/1P1P4/1P6/P4PPP/6K1 w - - 0 1",
+      "text": "Regarde aussi les pions f, g et h noirs : ils forment ce qu\u2019on appelle un trou en f6. Une case f6 sans pion pour la d\u00e9fendre ! Une pi\u00e8ce adverse pourrait s\u2019y installer durablement. Ce type de structure de pions m\u00e8ne invariablement au d\u00e9sastre."
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Un pion arri\u00e8re est un pion qui ne peut pas avancer car les cases devant lui sont tenues par l\u2019adversaire. Il est faible car il doit \u00eatre d\u00e9fendu par des pi\u00e8ces.",
+        "Une case forte, c\u2019est une case que l\u2019adversaire ne peut pas attaquer avec un pion. Si tu peux y installer une pi\u00e8ce, elle sera tr\u00e8s puissante.",
+        "Capablanca nous dit : \u00e9vite les pions arri\u00e8res et les trous dans ta structure de pions. Ces faiblesses m\u00e8nent invariablement au d\u00e9sastre contre un bon joueur."
+      ]
+    }
+  ]
+}
