@@ -986,9 +986,17 @@ async function openChapter(chapterId){
  */
 function sanToFr(san) {
   if (!san) return "";
-  const s = String(san).replace(/[+#!?]/g, "").trim();
-  if (s === "0-0-0") return "grand roque";
-  if (s === "0-0")   return "petit roque";
+  const raw = String(san).trim();
+
+  // Extraire le suffixe d'échec avant de nettoyer (ordre important : ++ avant +)
+  let suffix = "";
+  if (raw.endsWith("#"))       suffix = ", échec et mat";
+  else if (raw.endsWith("++")) suffix = ", échec double";
+  else if (raw.endsWith("+"))  suffix = ", échec";
+
+  const s = raw.replace(/[+#!?]/g, "").trim();
+  if (s === "0-0-0") return "grand roque" + suffix;
+  if (s === "0-0")   return "petit roque" + suffix;
 
   const pieces = { C: "cavalier", F: "fou", T: "tour", D: "dame", R: "roi" };
   const pieceChar = pieces[s[0]] ? s[0] : null;
@@ -1010,7 +1018,7 @@ function sanToFr(san) {
   let result = pieceName;
   if (disambiguation) result += " " + disambiguation;
   result += isCapture ? " prend " + target : " en " + target;
-  return result;
+  return result + suffix;
 }
 
 /**
