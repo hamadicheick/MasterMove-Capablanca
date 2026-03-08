@@ -1,0 +1,59 @@
+{
+  "id": "capablanca_ex52_cavalier_e5",
+  "title": "Exemple 52 — Chasser le Cavalier du centre",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bqkb1r/ppp2ppp/4pn2/4N3/3P4/8/PPP2PPP/R1BQKB1R b - - 0 1",
+      "text": "Partie Capablanca contre Blanco, La Havane 1913. Les Blancs viennent de placer leur Cavalier en e5 — une case centrale très puissante ! Le Cavalier contrôle beaucoup de cases importantes. Les Noirs jouent. Comment réagir face à cette pièce imposante ?"
+    },
+    {
+      "type": "animation",
+      "fen": "r1bqkb1r/ppp2ppp/4pn2/4N3/3P4/8/PPP2PPP/R1BQKB1R b - - 0 1",
+      "text": "La bonne réaction : attaquer le Cavalier tout de suite avec l'autre Cavalier !",
+      "moves": [
+        {
+          "uci": "f6d7",
+          "comment": "Le Cavalier noir va en d7 et attaque le Cavalier blanc en e5 ! Il faut toujours contester une pièce puissante au centre. On ne la laisse pas s'installer tranquillement."
+        },
+        {
+          "uci": "e5c4",
+          "comment": "Le Cavalier blanc recule en c4 pour éviter d'être pris. Il reste actif mais abandonne sa case e5."
+        },
+        {
+          "uci": "d7b6",
+          "comment": "Le Cavalier noir n'abandonne pas ! Il attaque maintenant le Cavalier blanc en c4. Les Noirs continuent la pression."
+        },
+        {
+          "uci": "c2c3",
+          "comment": "Le Blanc joue le pion en c3 pour soutenir son Cavalier en c4. Il résiste à l'échange."
+        },
+        {
+          "uci": "b6c4",
+          "comment": "Le Cavalier noir prend en c4 ! L'échange est forcé. Les Noirs ont réussi à simplifier la position."
+        },
+        {
+          "uci": "f1c4",
+          "comment": "Le Fou blanc prend en c4. Les Blancs ont récupéré leur pièce, mais le Cavalier puissant de e5 a disparu. La position est plus équilibrée."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Quand l'adversaire place une pièce puissante au centre, il faut l'attaquer immédiatement. Ne la laisse pas s'installer !",
+        "Capablanca utilise son Cavalier en e5 pour dominer le centre. Les Noirs doivent réagir avec leur propre Cavalier pour chasser cet intrus.",
+        "Principe fondamental : une pièce forte au centre doit être contestée ou échangée. Si tu la laisses, elle va te gêner pendant toute la partie."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bqkb1r/ppp2ppp/4pn2/4N3/3P4/8/PPP2PPP/R1BQKB1R b - - 0 1",
+      "question": "Le Cavalier blanc est très puissant en e5. Trouve le coup des Noirs pour l'attaquer directement !",
+      "correct_move": "f6d7",
+      "success_message": "Bravo ! Le Cavalier va en d7 et attaque le Cavalier blanc en e5. C'est exactement la bonne réaction : contester une pièce puissante au centre tout de suite !",
+      "error_message": "Cherche un Cavalier noir qui peut attaquer la case e5 directement. Regarde bien — quel Cavalier peut sauter vers le centre ?"
+    }
+  ]
+}

@@ -26,8 +26,9 @@ Regle: tant que le renderer n'est pas migre, toute lecon doit etre testee en exe
 
 ## 4) Encodage et narration
 - JSON en UTF-8 sans BOM.
-- Textes TTS en ASCII simple recommande (pas de caracteres corrompus).
 - Toute corruption d'encodage bloque la validation de contenu.
+- Le texte narratif doit etre ecrit directement en francais parlable : pas de notation brute (Cxf2, Fb4+), pas de symboles (x, +, #), pas d'abreviations de pieces.
+- Reference : `CONVENTIONS_NARRATION.md`
 
 ## 5) Definition de Done (DoD) d'une lecon
 1. Chargement du chapitre sans erreur IPC/JSON.

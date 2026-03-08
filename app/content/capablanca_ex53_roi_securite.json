@@ -1,0 +1,55 @@
+{
+  "id": "capablanca_ex53_roi_securite",
+  "title": "Exemple 53 — Mettre son Roi en sécurité avant d'attaquer",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "1rb3k1/p1p2p1p/3b2p1/2p1p3/2PnP2N/1P2N3/P2R1PPP/R2Q2K1 w - - 0 1",
+      "text": "Les Blancs ont un grand avantage. Mais le Cavalier noir en d4 est très fort — il occupe une case centrale magnifique entre les pions blancs. Les Blancs veulent attaquer ce Cavalier avec leur Tour. Quelle est la première chose à faire avant de lancer l'attaque ?"
+    },
+    {
+      "type": "animation",
+      "fen": "1rb3k1/p1p2p1p/3b2p1/2p1p3/2PnP2N/1P2N3/P2R1PPP/R2Q2K1 w - - 0 1",
+      "text": "Avant d'attaquer, les Blancs mettent leur Roi en sécurité, puis ils mobilisent leurs Tours contre le Cavalier adverse.",
+      "moves": [
+        {
+          "uci": "g1h1",
+          "comment": "Le Roi se glisse en h1 ! Première règle : avant de lancer une opération, mets ton Roi à l'abri. Ici le Roi quitte la grande diagonale et évite les éventuelles menaces."
+        },
+        {
+          "uci": "g8g7",
+          "comment": "Le Roi noir se centralise en g7 pour participer à la défense."
+        },
+        {
+          "uci": "d2d3",
+          "comment": "La Tour attaque le Cavalier en d4 ! Maintenant le Cavalier fort des Noirs est sous pression. Les Blancs ont d'abord sécurisé leur Roi, ensuite ils attaquent."
+        },
+        {
+          "uci": "h7h5",
+          "comment": "Les Noirs poussent le pion en h5 pour créer du jeu sur l'aile roi."
+        },
+        {
+          "uci": "d3c3",
+          "comment": "La Tour glisse en c3 — les Blancs continuent de repositionner leurs pièces pour encercler le Cavalier noir."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Avant de lancer une attaque, assure-toi que ton Roi est en sécurité. Un Roi vulnérable peut coûter la partie même quand tu as l'avantage.",
+        "Le Cavalier noir en d4 est fort, mais il est seul. Les Blancs utilisent leurs Tours pour le cibler méthodiquement.",
+        "Principe de Capablanca : quand tu as l'avantage, améliore ta position tranquillement. Pas besoin de se précipiter."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "1rb3k1/p1p2p1p/3b2p1/2p1p3/2PnP2N/1P2N3/P2R1PPP/R2Q2K1 w - - 0 1",
+      "question": "Les Blancs veulent attaquer le Cavalier noir en d4. Mais d'abord, quelle est la première chose à faire avec le Roi blanc ?",
+      "correct_move": "g1h1",
+      "success_message": "Très bien ! Le Roi se met en sécurité en h1 avant tout. Ensuite les Blancs peuvent attaquer le Cavalier avec la Tour en d3 sans craindre de surprise !",
+      "error_message": "Pense d'abord à la sécurité du Roi blanc. Il est sur la première rangée — peut-il se glisser dans un coin pour être mieux protégé ?"
+    }
+  ]
+}

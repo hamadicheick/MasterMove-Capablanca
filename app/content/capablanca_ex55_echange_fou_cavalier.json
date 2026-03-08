@@ -1,0 +1,59 @@
+{
+  "id": "capablanca_ex55_echange_fou_cavalier",
+  "title": "Exemple 55 — Échanger pour créer des faiblesses",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1b1kb1r/p2n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w - - 0 1",
+      "text": "Le Fou blanc en g5 surveille le Cavalier noir en f6. Les Blancs peuvent l'échanger. Pourquoi serait-ce intéressant ? En éliminant ce Cavalier, les Blancs ouvrent des possibilités d'avancer leurs pions au centre et d'affaiblir le camp noir. Quel est le bon moment pour agir ?"
+    },
+    {
+      "type": "animation",
+      "fen": "r1b1kb1r/p2n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w - - 0 1",
+      "text": "Le Fou prend le Cavalier pour affaiblir la position noire, puis le pion avance pour gagner de l'espace !",
+      "moves": [
+        {
+          "uci": "g5f6",
+          "comment": "Le Fou prend en f6 ! Le Cavalier défenseur noir est éliminé. Les Noirs ont maintenant des pions doublés sur la colonne f si ils reprennent avec le pion, ou perdent le contrôle du centre."
+        },
+        {
+          "uci": "a8b8",
+          "comment": "Les Noirs jouent la Tour en b8 pour protéger le pion b7. Ils font attention à leurs faiblesses."
+        },
+        {
+          "uci": "c4c5",
+          "comment": "Le pion avance en c5 ! Les Blancs gagnent de l'espace et bloquent les pièces noires. C'était le plan depuis le début — l'échange du Fou préparait cette avance."
+        },
+        {
+          "uci": "d7f6",
+          "comment": "L'autre Cavalier noir reprend en f6. Il est bien placé, mais les Blancs ont gagné de l'espace et une structure plus solide."
+        },
+        {
+          "uci": "d1d2",
+          "comment": "La Dame blanche va en d2 pour coordonner avec la Tour en a1 et préparer la suite de l'attaque."
+        },
+        {
+          "uci": "a5c7",
+          "comment": "La Dame noire recule en c7 pour défendre. La pression blanche se fait sentir sur toute la position."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Parfois il faut échanger une pièce non pas pour gagner du matériel, mais pour créer des faiblesses dans le camp adverse ou préparer un plan.",
+        "Ici le Fou s'échange contre le Cavalier pour permettre l'avance du pion en c5. L'échange et l'avance du pion font partie du même plan.",
+        "Capablanca nous enseigne : chaque coup doit avoir un but. L'échange du Fou prépare l'avance en c5 — les deux coups forment un plan cohérent."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1b1kb1r/p2n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w - - 0 1",
+      "question": "Le Fou blanc surveille le Cavalier noir en f6. Fais l'échange qui affaiblit la position noire et prépare l'avance du pion !",
+      "correct_move": "g5f6",
+      "success_message": "Bravo ! Le Fou prend le Cavalier en f6 pour éliminer un défenseur important. Ensuite le pion avance en c5 pour gagner de l'espace. L'échange et l'avance forment un plan en deux coups !",
+      "error_message": "Regarde le Fou blanc en g5. Il peut prendre quelque chose directement sur la case d'à côté. Quelle pièce noire est dans sa diagonale ?"
+    }
+  ]
+}

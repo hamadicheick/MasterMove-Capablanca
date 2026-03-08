@@ -16,7 +16,13 @@
       "chapter": 3,
       "titre": "Chapitre III – Les plans de gain en milieu de jeu",
       "livre_pages": "39-43",
-      "exemples": "Ex43 et suivants"
+      "exemples": "Ex43 à Ex49"
+    },
+    {
+      "chapter": 4,
+      "titre": "Chapitre IV – Théorie générale",
+      "livre_pages": "44-56",
+      "exemples": "Ex50 et suivants"
     }
   ],
   "chapters": [
@@ -489,6 +495,66 @@
       "level": "avance",
       "estimated_minutes": 14,
       "file": "capablanca_ex49_sacrifice_cavalier.json"
+    },
+    {
+      "id": "capablanca_ex50_cadeau_grec",
+      "chapter": 4,
+      "titre": "Exemple 50 – Le cadeau empoisonné",
+      "description": "Sacrifice du Fou en h7 pour exposer le Roi noir, suivi du Cavalier en g5 et de la Dame. Le cadeau grec classique.",
+      "order": 50,
+      "level": "intermediaire",
+      "estimated_minutes": 12,
+      "file": "capablanca_ex50_cadeau_grec.json"
+    },
+    {
+      "id": "capablanca_ex51_fou_prend_e5",
+      "chapter": 4,
+      "titre": "Exemple 51 – Attaquer avec toutes ses pièces",
+      "description": "Le coup simple gagne : le Fou prend en e5, avec Tour et Cavalier déjà profondément installés dans le camp noir.",
+      "order": 51,
+      "level": "intermediaire",
+      "estimated_minutes": 8,
+      "file": "capablanca_ex51_fou_prend_e5.json"
+    },
+    {
+      "id": "capablanca_ex52_cavalier_e5",
+      "chapter": 4,
+      "titre": "Exemple 52 – Chasser le Cavalier du centre",
+      "description": "Défense Française, La Havane 1913. Le Cavalier blanc s'installe en e5 — les Noirs doivent l'attaquer immédiatement avec leur propre Cavalier.",
+      "order": 52,
+      "level": "debutant",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex52_cavalier_e5.json"
+    },
+    {
+      "id": "capablanca_ex53_roi_securite",
+      "chapter": 4,
+      "titre": "Exemple 53 – Mettre son Roi en sécurité avant d'attaquer",
+      "description": "Avant de cibler le puissant Cavalier noir en d4, les Blancs glissent leur Roi en h1. Sécurité du Roi avant tout.",
+      "order": 53,
+      "level": "debutant",
+      "estimated_minutes": 10,
+      "file": "capablanca_ex53_roi_securite.json"
+    },
+    {
+      "id": "capablanca_ex54_dame_centre",
+      "chapter": 4,
+      "titre": "Exemple 54 – La Dame prend position au centre",
+      "description": "Jeu positionnel : la Dame va en e2 pour coordonner les pièces, puis le Cavalier se repositionne en c4 pour attaquer.",
+      "order": 54,
+      "level": "intermediaire",
+      "estimated_minutes": 11,
+      "file": "capablanca_ex54_dame_centre.json"
+    },
+    {
+      "id": "capablanca_ex55_echange_fou_cavalier",
+      "chapter": 4,
+      "titre": "Exemple 55 – Échanger pour créer des faiblesses",
+      "description": "Le Fou prend le Cavalier en f6 pour affaiblir la position noire et préparer l'avance du pion en c5.",
+      "order": 55,
+      "level": "intermediaire",
+      "estimated_minutes": 11,
+      "file": "capablanca_ex55_echange_fou_cavalier.json"
     }
   ]
 }
