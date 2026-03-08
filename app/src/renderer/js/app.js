@@ -234,7 +234,7 @@ function libraryScreen(){
             h("p", { class:"p" }, bc.description),
             h("div", { class:"hr" }),
             h("div", { class:"spread" },
-              h("div", { class:"small" }, `${bc.pages} — ${bc.exemples}`),
+              h("div", { class:"small" }, `${bc.pages} — ${bc.exemples || bc.parties || ""}`),
               h("div", { class:"row" },
                 done > 0 ? h("div", { class:"kbd tagDone" }, `${done} termine${done > 1 ? "s" : ""}`) : null,
                 inProgress > 0 ? h("div", { class:"kbd" }, `${inProgress} en cours`) : null,
@@ -311,20 +311,25 @@ function chapterLessonsScreen(chapterNum){
       }
 
       for (const c of lessons){
+        const isGame = c.type === "game";
         const chProg = progress.chapters?.[c.id];
         const lastIdx = chProg?.lastSequenceIndex ?? 0;
         const isDone = !!chProg?.completedAt;
-        const tag = isDone ? "Termine" : (lastIdx > 0 ? `Seq. ${lastIdx + 1}` : "Nouveau");
+        const tag = isGame ? "Partie" : (isDone ? "Termine" : (lastIdx > 0 ? `Seq. ${lastIdx + 1}` : "Nouveau"));
+        const orderLabel = isGame ? `P.${c.order}` : `Ex.${c.order}`;
 
-        const item = h("div", { class:"lessonItem", onclick: async () => { await openChapter(c.id); }},
-          h("div", { class:"lessonItemOrder" }, `Ex.${c.order}`),
+        const item = h("div", { class:"lessonItem", onclick: async () => {
+          if (isGame) await openGame(c.id);
+          else await openChapter(c.id);
+        }},
+          h("div", { class:"lessonItemOrder" }, orderLabel),
           h("div", { class:"lessonItemTitle" },
             h("div", {}, c.titre),
             h("div", { class:"small" }, c.description)
           ),
           h("div", { class:"lessonItemMeta" },
-            h("div", { class:"kbd" }, c.level || "-"),
-            h("div", { class:`kbd ${isDone ? "tagDone" : ""}` }, tag)
+            h("div", { class:"kbd" }, isGame ? "jeu complet" : (c.level || "-")),
+            h("div", { class:`kbd ${isDone && !isGame ? "tagDone" : ""}` }, tag)
           )
         );
         list.appendChild(item);
@@ -971,6 +976,152 @@ async function openChapter(chapterId){
   }
 }
 
+async function openGame(gameId){
+  if (!state.profile) return toast("Selectionne un profil.");
+  try{
+    const { meta, chapter } = await mmCall(mm => mm.content.loadChapter(gameId), "content:loadChapter");
+    state.current.meta = meta;
+    state.current.chapter = chapter;
+    navigate(`#/partie/${encodeURIComponent(gameId)}`);
+  }catch(e){
+    toast(String(e?.message || e));
+  }
+}
+
+function partieScreen(){
+  const game = state.current.chapter;
+  if (!game || game.type !== "game") {
+    navigate("#/library");
+    return h("div", {});
+  }
+
+  const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+  let moveIndex = -1;
+
+  // DOM elements
+  const commentEl  = h("div", { class: "partieComment" });
+  const counterEl  = h("div", { class: "partieCounter" });
+  const moveListEl = h("div", { class: "moveList" });
+  const btnPrev    = h("button", { class: "btn secondary" }, "← Précédent");
+  const btnNext    = h("button", { class: "btn" }, "Suivant →");
+  const boardHost  = h("div", { id: "boardHost" });
+
+  // Board widget (singleton, locked = lecture seule)
+  if (!state.board) {
+    state.board = new BoardWidget({ onMove: () => {} });
+  }
+  if (!boardHost.__mounted) {
+    state.board.mount(boardHost);
+    boardHost.__mounted = true;
+  }
+  state.board.setLocked(true);
+
+  // Build move list (paires 1.d4 d5  2.c4 e6 ...)
+  const moveSpans = [];
+  for (let i = 0; i < game.moves.length; i++){
+    const move    = game.moves[i];
+    const isWhite = i % 2 === 0;
+    const moveNum = Math.floor(i / 2) + 1;
+
+    if (isWhite){
+      moveListEl.appendChild(h("span", { class: "moveNum" }, `${moveNum}.`));
+    }
+    const span = h("span", {
+      class: "moveToken" + (move.comment ? " hasComment" : ""),
+      onclick: () => goTo(i)
+    }, move.san);
+    moveSpans.push(span);
+    moveListEl.appendChild(span);
+  }
+
+  const goTo = (idx) => {
+    const clamped = Math.max(-1, Math.min(game.moves.length - 1, idx));
+    moveIndex = clamped;
+
+    // Replay position from start
+    state.board.setPositionFromFen(STARTING_FEN);
+    for (let i = 0; i <= clamped; i++){
+      state.board.applyUci(game.moves[i].uci, { ignoreTurn: true, silent: true });
+    }
+
+    // Commentaire + TTS
+    const comment = clamped >= 0 ? (game.moves[clamped].comment || "") : "";
+    commentEl.textContent = comment;
+    if (comment) state.tts.speak(comment);
+
+    // Compteur
+    if (clamped === -1){
+      counterEl.textContent = "Position initiale";
+    } else {
+      const moveNum = Math.floor(clamped / 2) + 1;
+      const side    = clamped % 2 === 0 ? "Blancs" : "Noirs";
+      counterEl.textContent = `Coup ${moveNum} — ${side}`;
+    }
+
+    // Surlignage dans la liste
+    moveSpans.forEach((span, i) => {
+      span.className = "moveToken"
+        + (game.moves[i].comment ? " hasComment" : "")
+        + (i === clamped ? " activeMove" : "");
+    });
+
+    btnPrev.disabled = clamped <= -1;
+    btnNext.disabled = clamped >= game.moves.length - 1;
+
+    // Scroll coup actif
+    if (clamped >= 0 && moveSpans[clamped]){
+      moveSpans[clamped].scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
+  };
+
+  btnPrev.onclick = () => goTo(moveIndex - 1);
+  btnNext.onclick = () => goTo(moveIndex + 1);
+
+  // Navigation clavier
+  const onKey = (e) => {
+    if (e.key === "ArrowLeft")  { e.preventDefault(); goTo(moveIndex - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); goTo(moveIndex + 1); }
+  };
+  document.addEventListener("keydown", onKey);
+  const cleanup = () => {
+    document.removeEventListener("keydown", onKey);
+    window.removeEventListener("hashchange", cleanup);
+  };
+  window.addEventListener("hashchange", cleanup);
+
+  // Position initiale
+  goTo(-1);
+
+  // En-tête
+  const headerEl = h("div", { class: "partieHeader" },
+    h("div", { class: "partieTitle" }, `Partie n°${game.number}`),
+    h("div", { class: "partieVs" }, `${game.white}  –  ${game.black}`),
+    h("div", { class: "partieMeta" }, `${game.event}, ${game.year}  ·  ${game.opening}`)
+  );
+
+  const left = h("div", { class: "leftCol card panel scroll" },
+    h("div", { class: "spread" },
+      headerEl,
+      h("button", { class: "btn secondary", onclick: () => {
+        const ch = state.current.meta?.chapter;
+        navigate(ch ? `#/library/${ch}` : "#/library");
+      }}, "[<] Retour")
+    ),
+    h("div", { class: "hr" }),
+    counterEl,
+    h("div", { class: "hr" }),
+    moveListEl,
+    h("div", { class: "hr" }),
+    commentEl,
+    h("div", { class: "hr" }),
+    h("div", { class: "controls" }, btnPrev, btnNext)
+  );
+
+  const right = h("div", { class: "rightCol card scroll" }, boardHost);
+
+  return layout(h("div", { class: "split" }, left, right));
+}
+
 function router(){
   try{
   const app = document.getElementById("app");
@@ -1014,6 +1165,21 @@ function router(){
       return;
     }
     app.appendChild(readerScreen());
+    return;
+  }
+
+  if (route === "partie") {
+    if (!state.profile) {
+      app.appendChild(profilesScreen());
+      toast("Selectionne un profil.");
+      return;
+    }
+    if (!state.current.chapter || state.current.chapter.type !== "game" || decodeURIComponent(arg || "") !== state.current.meta?.id) {
+      app.appendChild(libraryScreen());
+      toast("Ouvre une partie depuis la bibliotheque.");
+      return;
+    }
+    app.appendChild(partieScreen());
     return;
   }
 

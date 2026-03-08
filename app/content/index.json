@@ -41,6 +41,13 @@
       "description": "Structure de pions, cases fortes, trous et pions centraux",
       "pages": "p. 70–74",
       "exemples": "Ex. 63 à 67"
+    },
+    {
+      "chapter": 7,
+      "titre": "Deuxième partie — Parties commentées",
+      "description": "Un échantillon de parties gagnées et perdues, illustrant les principes énoncés dans la première partie.",
+      "pages": "p. 78–fin",
+      "parties": "Partie 1 à …"
     }
   ],
   "chapters": [
@@ -693,6 +700,15 @@
       "level": "avance",
       "estimated_minutes": 16,
       "file": "capablanca_ex67_influence_trou.json"
+    },
+    {
+      "id": "capablanca_partie1",
+      "chapter": 7,
+      "titre": "Partie n°1 — Marshall–Capablanca",
+      "description": "Gambit-Dame refusé, Match New York 1909",
+      "order": 1,
+      "type": "game",
+      "file": "capablanca_partie1.json"
     }
   ]
 }
