@@ -1,0 +1,67 @@
+{
+  "id": "capablanca_ex57_mobilite_tours",
+  "title": "Exemple 57 \u2014 La mobilit\u00e9 des Tours en finale",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2r2rk1/p1pp1p1p/2p2p2/8/8/2PP4/PP3P1P/R3R1K1 w - - 0 1",
+      "text": "Les Blancs ont une colonne ouverte et c\u2019est leur tour. Leur petit avantage : une structure de pions intact\u00e9e \u00e0 l\u2019aile dame et le droit de jouer. Le plan ? Emp\u00ealer les Tours sur la colonne e pour qu\u2019une d\u2019elles puisse voyager d\u2019une aile \u00e0 l\u2019autre, pendant que les Tours noires sont coinc\u00e9es \u00e0 d\u00e9fendre des pions faibles."
+    },
+    {
+      "type": "animation",
+      "fen": "2r2rk1/p1pp1p1p/2p2p2/8/8/2PP4/PP3P1P/R3R1K1 w - - 0 1",
+      "text": "Regarde comment les Blancs empilent leurs Tours pour contr\u00f4ler la colonne ouverte et harceler les Noirs !",
+      "moves": [
+        {
+          "uci": "e1e4",
+          "comment": "La Tour va en e4 ! Elle prend position au centre de l\u2019\u00e9chiquier, pr\u00eate \u00e0 aller \u00e0 gauche ou \u00e0 droite selon les besoins."
+        },
+        {
+          "uci": "f8e8",
+          "comment": "Les Noirs copient la manoeuvre et vont en e8 pour contr\u00f4ler aussi la colonne e. Ils essaient de ne pas laisser les Blancs prendre le contr\u00f4le complet."
+        },
+        {
+          "uci": "a1e1",
+          "comment": "L\u2019autre Tour blanche arrive aussi en e1 ! Les deux Tours blanches occupent la colonne ouverte. Les Noirs ne pourront pas y p\u00e9n\u00e9trer."
+        },
+        {
+          "uci": "e8e6",
+          "comment": "La Tour noire avance en e6 pour disputer la colonne. Mais les Blancs ont d\u00e9j\u00e0 l\u2019avantage de position."
+        },
+        {
+          "uci": "e1e3",
+          "comment": "La Tour blanche vient en e3 pour doubler les Tours sur la colonne e. Maintenant les deux Tours blanches sont \u00e9chel\u00f4nn\u00e9es et contr\u00f4lent toute la colonne."
+        },
+        {
+          "uci": "c8e8",
+          "comment": "L\u2019autre Tour noire vient aussi en e8 pour essayer de tenir la colonne. Les Noirs sont forc\u00e9s de r\u00e9agir aux menaces blanches."
+        },
+        {
+          "uci": "g1f1",
+          "comment": "Le Roi blanc se rapproche du centre. Dans les finales, le Roi est une pi\u00e8ce active ! Il faut l\u2019amener au centre pour soutenir ses pions et aider ses Tours."
+        },
+        {
+          "uci": "g8f8",
+          "comment": "Le Roi noir suit l\u2019exemple et se centralise aussi. Principe fondamental des finales : le Roi doit aller au centre."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Dans les finales, le plan gagnant c\u2019est souvent de forcer l\u2019adversaire \u00e0 d\u00e9fendre des pions faibles, pendant que toi tu restes libre d\u2019agir.",
+        "Emp\u00ealer les Tours sur une colonne ouverte est tr\u00e8s puissant : l\u2019une peut d\u00e9fendre, l\u2019autre peut attaquer. Ton adversaire ne peut pas d\u00e9fendre les deux ailes en m\u00eame temps.",
+        "Capablanca nous dit : continue \u00e0 harceler l\u2019adversaire. Si tu cr\u00e9es une faiblesse, cr\u00e9es-en une autre ailleurs. Sa position s\u2019effondrera tot ou tard."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2r2rk1/p1pp1p1p/2p2p2/8/8/2PP4/PP3P1P/R3R1K1 w - - 0 1",
+      "question": "Les Blancs ont une colonne ouverte. Quel est le premier coup pour la contr\u00f4ler et prendre l\u2019avantage ?",
+      "correct_move": "e1e4",
+      "success_message": "Bravo ! La Tour va en e4 pour prendre position au centre ! De l\u00e0 elle peut aller sur n\u2019importe quelle aile. Ensuite l\u2019autre Tour viendra renforcer en empilant sur la m\u00eame colonne.",
+      "error_message": "Regarde la colonne e : elle est compl\u00e8tement ouverte ! Quelle Tour peux-tu y envoyer pour contr\u00f4ler ce couloir important ?"
+    }
+  ]
+}

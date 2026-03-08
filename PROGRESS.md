@@ -1,4 +1,38 @@
 # PROGRESS - MasterMove Capablanca (MVP v3.3)
+## V3.3.32 - EX56 A EX67 - CHAPITRES V ET VI (08/03/2026) A TESTER
+
+### Contexte
+- PGN de reference : `les_Principes_Fondamentaux_-_Capablanca_56.pgn`
+- Source livre : Chapitre V (p.57-69) et Chapitre VI (p.70-74)
+- Note operationnelle : les exemples 63 et 64 n'ont pas de coups, ils illustrent la structure de pions uniquement.
+
+### Exemples produits
+- Ex56 : L'attaque soudaine depuis une autre aile — FEN `6k1/p4p1p/1p4p1/3r4/2r5/P1P4P/2R2PP1/2R1K3 b - - 0 1` — Ligne UCI : c4e4 c2e2 e4a4 e2a2 h7h5 c1d1 d5a5
+- Ex57 : La mobilite des Tours en finale — FEN `2r2rk1/p1pp1p1p/2p2p2/8/8/2PP4/PP3P1P/R3R1K1 w - - 0 1` — Ligne UCI : e1e4 f8e8 a1e1 e8e6 e1e3 c8e8 g1f1 g8f8
+- Ex58 : Le danger d'une position sure — FEN `2R5/p4p1k/5p1p/6r1/5K2/4P2P/Pr4P1/7R w - - 0 1` — Ligne UCI : g2g4 b2a2 h1d1 a2a4 d1d4 a4a5 d4d8 g5g7 h3h4 h6h5 c8h8
+- Ex59 : La finale Tour et pion — FEN `8/7R/8/2k2P2/1p6/3r4/5PKP/8 w - - 0 1` — Ligne UCI : f5f6 d3d6 f6f7 d6d8 h7h5 c5c4
+- Ex60 : Deux Tours et pions 1 — FEN `r4rk1/p5pp/2p5/3p1p2/2p5/2P1PP2/PPK2P1P/3R1R2 b - - 0 1` — Ligne UCI : a8e8 d1d4 f8f6 b2b3 c4b3 a2b3 g8f7 c2d3 e8e7 f1a1 f7e6 a1a6 e7c7 d4a4
+- Ex61 : Deux Tours et pions 2 — FEN `1k2r3/1ppr2pp/p1p2p2/5R2/4P3/1P1P3P/P1P3P1/5RK1 w - - 0 1` — Ligne UCI : g2g4 b7b6 b3b4 b8b7 g1f2 b6b5 a2a4 d7d4 f1b1 e8e5 f2e3 d4d7 a4a5 e5e6
+- Ex62 : Tour Fou vs Tour Cavalier — FEN `r1b3k1/p1p3pp/2p5/8/3pP3/6P1/PPP4P/RN3K2 b - - 0 1` — Ligne UCI : a8b8 b2b3 b8b5 c2c4 b5h5 f1g1 c6c5 b1d2 g8f7 a1f1 f7e7 a2a3 h5h6
+- Ex63 : Les pions faibles (no moves) — FEN `6k1/2p2p1p/p3p1p1/1p1pP3/1P1P4/1P6/P4PPP/6K1 w - - 0 1`
+- Ex64 : Les pions centraux (no moves) — FEN `6k1/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/6K1 w - - 0 1`
+- Ex65 : L'Espagnole et le trou en e5 — FEN `r2q1rk1/2p1bp1p/p1n1n1p1/1p1pP3/6b1/1NPQ1N2/PPB2PPP/R1B1R1K1 w - - 0 1` — Ligne UCI : f3d4
+- Ex66 : La domination du pion en e5 — FEN `2r3k1/1q5p/p1p1r1p1/1pRpPp2/3P1PP1/Q6P/PP6/2R4K w - - 0 1` — Ligne UCI : g4f5 g6f5 a3f3 b7d7 c5c2 e6g6 c2g2 g8h8 c1g1 c8g8 f3h5 g6g2 g1g2 g8g2 h1g2 d7g7 g2h2 g7g6 h5g6 h7g6 b2b4
+- Ex67 : L'influence d'un trou — FEN `r4rk1/pppbqppp/1n2p3/3n4/3P4/2NBPN2/PP3PPP/2RQ1RK1 b - - 0 1` — Ligne UCI : c7c6 c3e4 f7f5 e4c5 d7e8 c5e5 a8b8 f1e1 f8f6 d1f3 f6h6 f3g3 b8c8 f2f3 c8c7 a2a3 g8h8 h2h3 g7g5 e3e4 f5f4 g3f2 d5e3
+
+### index.json mis a jour
+- Chapitre V et VI ajoutes dans book_chapters
+- Entrees ex56 a ex67 ajoutees dans chapters
+
+### A valider (DoD)
+- Chargement JSON sans erreur IPC
+- Echiquier visible sur toutes les sequences
+- Animation rejouable de bout en bout
+- Quiz final valide avec coups UCI attendus
+- Narration lisible (pas de texte corrompu)
+
+---
+
 ## V3.3.31 - DIRECTIVE TTS / NORMALISATION DES EXEMPLES (07/03/2026) OK
 
 ### Contexte

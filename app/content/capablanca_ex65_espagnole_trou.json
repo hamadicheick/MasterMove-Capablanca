@@ -1,0 +1,39 @@
+{
+  "id": "capablanca_ex65_espagnole_trou",
+  "title": "Exemple 65 \u2014 L\u2019Espagnole et le trou en e5",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r2q1rk1/2p1bp1p/p1n1n1p1/1p1pP3/6b1/1NPQ1N2/PPB2PPP/R1B1R1K1 w - - 0 1",
+      "text": "Partie Janowski contre Lasker, Paris 1912. On part d\u2019une Espagnole dans une variante connue. Regarde la case e5 : elle est tr\u00e8s importante. Les Blancs vont tenter d\u2019y installer un Cavalier de fa\u00e7on permanente, car les Noirs ne pourront pas l\u2019en d\u00e9loger facilement."
+    },
+    {
+      "type": "animation",
+      "fen": "r2q1rk1/2p1bp1p/p1n1n1p1/1p1pP3/6b1/1NPQ1N2/PPB2PPP/R1B1R1K1 w - - 0 1",
+      "text": "Les Blancs installent leur Cavalier sur la case forte en d4. C\u2019est le premier coup du plan strat\u00e9gique.",
+      "moves": [
+        {
+          "uci": "f3d4",
+          "comment": "Le Cavalier blanc s\u2019installe en d4, la case forte ! De l\u00e0, il vise la case e6 et contr\u00f4le le centre. Les Noirs devront \u00e9ventuellement l\u2019\u00e9changer, ce qui ouvrira des lignes pour les Blancs."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Un trou, c\u2019est une case que les pions adverses ne peuvent plus d\u00e9fendre. Si tu peux y installer une pi\u00e8ce, elle sera tr\u00e8s puissante et difficile \u00e0 d\u00e9loger.",
+        "La case e5 dans la D\u00e9fense Fran\u00e7aise est un exemple classique de case forte pour les Blancs. Le Cavalier blanc y est intouchable si les Noirs n\u2019ont plus de pion pour l\u2019attaquer.",
+        "Capablanca nous montre que les principes de la structure de pions s\u2019appliquent directement \u00e0 l\u2019ouverture et au milieu de jeu. Comprendre les pions, c\u2019est comprendre les plans."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r2q1rk1/2p1bp1p/p1n1n1p1/1p1pP3/6b1/1NPQ1N2/PPB2PPP/R1B1R1K1 w - - 0 1",
+      "question": "Les Blancs ont une case forte \u00e0 occuper. Installe le Cavalier sur la case d4 pour dominer le centre !",
+      "correct_move": "f3d4",
+      "success_message": "Bravo ! Le Cavalier s\u2019installe en d4 sur la case forte ! De l\u00e0, il contr\u00f4le des cases importantes et les Noirs auront du mal \u00e0 l\u2019en d\u00e9loger sans faire des concessions.",
+      "error_message": "Cherche la case forte du centre. Le Cavalier blanc en f3 peut sauter sur une case du centre que les pions noirs ne peuvent pas attaquer."
+    }
+  ]
+}

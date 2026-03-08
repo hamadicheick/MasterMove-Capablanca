@@ -1,0 +1,30 @@
+{
+  "id": "capablanca_ex64_pions_centraux",
+  "title": "Exemple 64 \u2014 Les pions centraux",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "6k1/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/6K1 w - - 0 1",
+      "text": "Regarde cette structure de pions. Le pion blanc en e5 avance et attaque. Le pion noir en d5 est bloqu\u00e9 et d\u00e9fend. On peut dire que les pions centraux blancs ont une position attaquante, tandis que les pions centraux noirs ont une position d\u00e9fensive."
+    },
+    {
+      "type": "diagram",
+      "fen": "6k1/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/6K1 w - - 0 1",
+      "text": "Cette structure se retrouve dans la D\u00e9fense Fran\u00e7aise. Les Blancs essaient souvent d\u2019obtenir une attaque \u00e9crasante contre le Roi noir par f4 et f5. Pour emp\u00eacher \u00e7a, les Noirs doivent contre-attaquer au centre par c5, suivi de la prise sur d4. C\u2019est une attaque contre le centre blanc pour paralyser l\u2019attaque adverse."
+    },
+    {
+      "type": "diagram",
+      "fen": "6k1/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/6K1 w - - 0 1",
+      "text": "Principe important : deux pions c\u00f4te \u00e0 c\u00f4te sur la m\u00eame rang\u00e9e sont plus forts que des pions avanc\u00e9s. Les pions en d4 et e4 ensemble sont plus forts que d4 et e5 s\u00e9par\u00e9s. D\u2019autre part, la force d\u2019un pion pass\u00e9 augmente au fur et \u00e0 mesure que le nombre de pi\u00e8ces sur l\u2019\u00e9chiquier diminue."
+    },
+    {
+      "type": "text",
+      "title": "Ce qu\u2019il faut retenir",
+      "content": [
+        "Les pions centraux blancs attaquent, les pions centraux noirs d\u00e9fendent. Pour inverser la tendance, les Noirs doivent contre-attaquer le centre par c5.",
+        "Le contr\u00f4le du centre est une condition essentielle \u00e0 une attaque victorieuse contre le Roi. Si l\u2019adversaire contr\u00f4le le centre, son attaque sera plus puissante.",
+        "Deux pions c\u00f4te \u00e0 c\u00f4te sur la m\u00eame rang\u00e9e sont plus forts que deux pions sur des rang\u00e9es diff\u00e9rentes. Et un pion pass\u00e9 devient plus fort quand il reste moins de pi\u00e8ces sur l\u2019\u00e9chiquier."
+      ]
+    }
+  ]
+}
