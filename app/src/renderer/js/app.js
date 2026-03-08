@@ -1013,6 +1013,59 @@ function sanToFr(san) {
   return result;
 }
 
+/**
+ * Prépare un commentaire pour la narration TTS :
+ * traduit les notations algébriques françaises en texte parlé.
+ *
+ * "7.cxd5"  → "coup 7 des Blancs, pion c prend d5"
+ * "8...Cf6" → "coup 8 des Noirs, cavalier en f6"
+ * "...Fb7"  → "les Noirs jouent fou en b7"
+ * "Tb1+"    → "tour en b1"
+ * "9...b6"  → "coup 9 des Noirs, pion en b6"
+ */
+function commentToSpeech(text) {
+  if (!text) return "";
+  let s = String(text);
+
+  // Motif d'un coup : pièces (CFTDR), captures de pion (cxd5), pions simples (b6), roques
+  const mv = "(?:0-0-0|0-0|[CFTDR][a-h]?[1-8]?x?[a-h][1-8][+#!?]*|[a-h]x[a-h][1-8][+#!?]*|[a-h][1-8][+#]?)";
+
+  // 1. Coup des Noirs avec numéro — 3 points : "8...Cf6", "9...b6"
+  //    Traiter avant le 1 point pour éviter que "8." absorbe "8..."
+  s = s.replace(
+    new RegExp("(\\d+)\\.{3}\\s*(" + mv + ")", "g"),
+    (_, num, move) => `coup ${num} des Noirs, ${sanToFr(move)}`
+  );
+
+  // 2. Coup des Blancs avec numéro — 1 point : "7.cxd5", "12.Ce5"
+  s = s.replace(
+    new RegExp("(\\d+)\\.\\s*(" + mv + ")", "g"),
+    (_, num, move) => `coup ${num} des Blancs, ${sanToFr(move)}`
+  );
+
+  // 3. Points de suspension seuls sans numéro : "...Fb7"
+  s = s.replace(
+    new RegExp("\\.{3}\\s*(" + mv + ")", "g"),
+    (_, move) => `les Noirs jouent ${sanToFr(move)}`
+  );
+
+  // 4. Pièces seules restantes (sans numéro) : "Tb1+", "Ce5"
+  //    (?!\w) au lieu de \b final pour inclure les suffixes +#!? dans la correspondance
+  s = s.replace(
+    /\b([CFTDR][a-h]?[1-8]?x?[a-h][1-8][+#!?]*)(?!\w)/g,
+    (_, move) => sanToFr(move)
+  );
+
+  // 5. Pions seuls : "b6", "d5" — évite les faux positifs après "en " ou "prend "
+  //    (ce sont des cibles de pièces déjà traduites, pas des coups de pion autonomes)
+  s = s.replace(
+    /(?<!(?:en|prend) )(?<![a-zA-Z0-9])([a-h][1-8])(?![a-zA-Z0-9])/g,
+    (_, sq) => `pion en ${sq}`
+  );
+
+  return s;
+}
+
 async function openGame(gameId){
   if (!state.profile) return toast("Selectionne un profil.");
   try{
@@ -1082,10 +1135,10 @@ function partieScreen(){
       state.board.applyUci(game.moves[i].uci, { ignoreTurn: true, silent: true });
     }
 
-    // Commentaire + TTS
+    // Commentaire + TTS (affiché tel quel, parlé avec notation traduite)
     const comment = clamped >= 0 ? (game.moves[clamped].comment || "") : "";
     commentEl.textContent = comment;
-    if (comment) state.tts.speak(comment);
+    if (comment) state.tts.speak(commentToSpeech(comment));
 
     // Compteur
     if (clamped === -1){
