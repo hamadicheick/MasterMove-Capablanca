@@ -5,7 +5,7 @@ const crypto = require("crypto");
 const fs = require("fs/promises");
 
 const { ensureDir, readJson, writeJsonAtomic } = require("./storage");
-const { listChapters, loadChapter, listPieceSets } = require("./content");
+const { listChapters, listBookChapters, loadChapter, listPieceSets } = require("./content");
 const { PiperNarrationService } = require("./narration_piper");
 
 function createId() {
@@ -159,6 +159,10 @@ app.whenReady().then(async () => {
   // IPC: content
   ipcMain.handle("content:listChapters", async () => {
     return await listChapters();
+  });
+
+  ipcMain.handle("content:listBookChapters", async () => {
+    return await listBookChapters();
   });
 
   ipcMain.handle("content:loadChapter", async (_evt, chapterId) => {

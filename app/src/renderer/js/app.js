@@ -190,12 +190,15 @@ async function loadChapters(){
   return state.chapters;
 }
 
-const BOOK_CHAPTERS_META = [
-  { chapter: 1, titre: "Chapitre I — Premiers principes", description: "Finales, milieux de jeu et ouvertures", pages: "p. 11–24", exemples: "Ex. 1 à 21" },
-  { chapter: 2, titre: "Chapitre II — D'autres principes en finale", description: "Finales de pieces et de pions", pages: "p. 25–38", exemples: "Ex. 22 à 42" },
-  { chapter: 3, titre: "Chapitre III — Plans de gain en milieu de jeu", description: "Attaque, combinaisons, strategie", pages: "p. 39–43", exemples: "Ex. 43 à 49" },
-  { chapter: 4, titre: "Chapitre IV — Théorie générale", description: "Principes avances : sacrifice, coordination, strategie", pages: "p. 44–56", exemples: "Ex. 50 à 55" }
-];
+const ROMAN = ["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+function toRoman(n){ return ROMAN[n - 1] || String(n); }
+
+async function loadBookChapters(){
+  if (!state.bookChapters){
+    state.bookChapters = await mmCall(mm => mm.content.listBookChapters(), "content:listBookChapters");
+  }
+  return state.bookChapters;
+}
 
 function libraryScreen(){
   const list = h("div", { class:"chapterSelect" });
@@ -213,18 +216,19 @@ function libraryScreen(){
         return;
       }
 
-      const [chapters, progress] = await Promise.all([
+      const [chapters, progress, bookChapters] = await Promise.all([
         loadChapters(),
-        mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000)
+        mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000),
+        loadBookChapters()
       ]);
 
-      for (const bc of BOOK_CHAPTERS_META){
+      for (const bc of bookChapters){
         const lessons = chapters.filter(c => c.chapter === bc.chapter);
         const done = lessons.filter(c => progress.chapters?.[c.id]?.completedAt).length;
         const inProgress = lessons.filter(c => !progress.chapters?.[c.id]?.completedAt && (progress.chapters?.[c.id]?.lastSequenceIndex ?? 0) > 0).length;
 
         const card = h("div", { class:"chapterCard card item", onclick: () => navigate(`#/library/${bc.chapter}`) },
-          h("div", { class:"chapterNum" }, ["I","II","III"][bc.chapter - 1] || String(bc.chapter)),
+          h("div", { class:"chapterNum" }, toRoman(bc.chapter)),
           h("div", { class:"chapterCardBody" },
             h("div", { class:"h1" }, bc.titre),
             h("p", { class:"p" }, bc.description),
@@ -273,8 +277,9 @@ function libraryScreen(){
 }
 
 function chapterLessonsScreen(chapterNum){
-  const bc = BOOK_CHAPTERS_META.find(c => c.chapter === chapterNum) || { titre: `Chapitre ${chapterNum}`, description: "" };
   const list = h("div", { class:"lessonList" });
+  const titleEl = h("div", { class:"h1" }, `Chapitre ${toRoman(chapterNum)}`);
+  const descEl  = h("p",   { class:"p"  }, "");
 
   const render = async () => {
     try{
@@ -284,10 +289,15 @@ function chapterLessonsScreen(chapterNum){
         return;
       }
 
-      const [chapters, progress] = await Promise.all([
+      const [chapters, progress, bookChapters] = await Promise.all([
         loadChapters(),
-        mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000)
+        mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000),
+        loadBookChapters()
       ]);
+
+      const bc = bookChapters.find(c => c.chapter === chapterNum) || {};
+      if (bc.titre)       titleEl.textContent = bc.titre;
+      if (bc.description !== undefined) descEl.textContent = bc.description;
 
       const lessons = chapters
         .filter(c => c.chapter === chapterNum)
@@ -332,8 +342,8 @@ function chapterLessonsScreen(chapterNum){
   const content = h("div", { class:"card panel scroll", style:"width:100%;" },
     h("div", { class:"spread" },
       h("div", {},
-        h("div", { class:"h1" }, bc.titre),
-        h("p", { class:"p" }, bc.description)
+        titleEl,
+        descEl
       ),
       h("button", { class:"btn secondary", onclick: () => navigate("#/library") }, "[<] Chapitres")
     ),

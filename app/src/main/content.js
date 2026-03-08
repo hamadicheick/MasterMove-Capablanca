@@ -286,6 +286,14 @@ async function listChapters() {
   return index.chapters || [];
 }
 
+async function listBookChapters() {
+  const indexPath = path.join(getContentDir(), "index.json");
+  const raw = await fs.readFile(indexPath, "utf-8");
+  const safeRaw = String(raw || "").replace(/^\uFEFF/, "");
+  const index = normalizeTextDeep(JSON.parse(safeRaw));
+  return index.book_chapters || [];
+}
+
 async function loadChapter(chapterId) {
   const chapters = await listChapters();
   const meta = chapters.find(c => c.id === chapterId);
@@ -359,6 +367,7 @@ async function listPieceSets(){
 
 module.exports = {
   listChapters,
+  listBookChapters,
   loadChapter,
   listPieceSets
 };
