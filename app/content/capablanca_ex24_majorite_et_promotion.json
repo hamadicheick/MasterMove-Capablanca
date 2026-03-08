@@ -1,63 +1,109 @@
-﻿{
-  "id": "capablanca_ex24_majorite_et_promotion",
-  "title": "Exemple 24 - Majorité de pions et promotion",
+{
+  "chapitre_id": "capablanca_ex24_majorite_et_promotion",
+  "titre": "La majorité de pions : percée et promotion !",
+  "description": "Utiliser une majorite de pions pour forcer une percee et promouvoir en Dame.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
-      "text": "Les Blancs exploitent leur majorité de pions passés pour forcer une promotion."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Qu'est-ce qu'une majorité de pions ?",
+      "texte_audio": "Regarde cette position. Les Blancs ont trois pions contre trois pions noirs. Mais les pions blancs sont sur les colonnes a, b et c, face aux pions noirs sur a, b et c. Une majorite de pions, c'est quand tu as plus de pions sur une aile que ton adversaire. Ici, les Blancs vont utiliser leur agencement de pions pour forcer une percee et promouvoir en Dame !",
+      "position_depart_fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
-      "moves": [
-        { "uci": "b5b6", "comment": "Le pion b avance pour créer une menace de percée." },
-        { "uci": "c7b6", "comment": "Les Noirs capturent pour réduire la majorité blanche." },
-        { "uci": "a5a6", "comment": "Les Blancs activent un second pion passé." },
-        { "uci": "b6c5", "comment": "Les Noirs capturent sur c5 et cherchent le contre-jeu." },
-        { "uci": "a6b7", "comment": "Le pion blanc capture et se rapproche de la promotion." },
-        { "uci": "c5c4", "comment": "Les Noirs poussent leur pion pour gagner un tempo." },
-        { "uci": "b7b8q", "comment": "Promotion en Dame : avantage décisif des Blancs." }
-      ]
-    },
-    {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Une majorité de pions peut créer plusieurs menaces simultanées.",
-        "Le bon ordre des poussées décide souvent de la course.",
-        "Promouvoir en premier suffit généralement à gagner."
-      ]
-    },
-    {
-      "type": "quiz_interactif",
-      "fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
-      "question": "Quiz final en 3 coups : lance le plan gagnant de promotion.",
-      "steps": [
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le pion b avance pour créer la percée !",
+      "texte_audio": "Le pion blanc b avance en b6 ! C'est le debut de la percee. Le pion b6 menace d'aller en b7 et de promouvoir. Les Noirs prennent le pion b avec le pion c — ils echangent pour reduire la majorite blanche. Mais les Blancs ont prevu ca : le pion a va maintenant activer une deuxieme percee !",
+      "position_depart_fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
+      "animations": [
         {
-          "coups_acceptes": ["b5b6"],
-          "reponse": "c7b6",
-          "indice": "Étape 1 : démarre la percée avec le pion b.",
-          "solution": "b5b6"
+          "coup": "b5b6",
+          "acteur": "blanc",
+          "commentaire": "Le pion b avance en b6 ! La percee commence. Les Noirs doivent reagir."
         },
         {
-          "fen": "8/pp5k/1p6/P1P5/8/8/8/7K w - - 0 2",
-          "coups_acceptes": ["a5a6"],
-          "reponse": "b6c5",
-          "indice": "Étape 2 : active le pion a pour créer une deuxième menace.",
-          "solution": "a5a6"
-        },
-        {
-          "fen": "8/pp5k/P7/2p5/8/8/8/7K w - - 0 3",
-          "coups_acceptes": ["a6b7"],
-          "reponse": "c5c4",
-          "indice": "Étape 3 : rapproche ton pion de la case de promotion.",
-          "solution": "a6b7"
+          "coup": "c7b6",
+          "acteur": "noir",
+          "commentaire": "Le pion noir c prend en b6. Les Noirs essaient de reduire la majorite blanche."
         }
-      ],
-      "correct_move": "b5b6",
-      "success_message": "Excellent, tu as lancé le plan de promotion gagnant.",
-      "error_message": "Reprends le plan : percée sur b, puis relais du pion a."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le pion a active la deuxième percée !",
+      "texte_audio": "Le pion blanc a avance en a6 ! Maintenant les Blancs ont un pion passe potentiel sur la colonne a. Le pion noir b essaie de bloquer en allant en c5, mais les Blancs avancent encore. Le pion a prend le pion b et s'approche de la promotion. Chaque coup des Blancs cree une nouvelle menace !",
+      "position_depart_fen": "8/pp5k/1p6/P1P5/8/8/8/7K w - - 0 2",
+      "animations": [
+        {
+          "coup": "a5a6",
+          "acteur": "blanc",
+          "commentaire": "Le pion a avance en a6 ! Une deuxieme menace est creee."
+        },
+        {
+          "coup": "b6c5",
+          "acteur": "noir",
+          "commentaire": "Le pion noir b prend en c5. Les Noirs cherchent du contre-jeu."
+        },
+        {
+          "coup": "a6b7",
+          "acteur": "blanc",
+          "commentaire": "Le pion blanc prend en b7 ! Il est a un pas de la promotion !"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Promotion en Dame !",
+      "texte_audio": "Le pion noir pousse son pion c en c4 pour gagner un tempo, mais c'est trop tard. Le pion blanc b arrive en b8 et devient Dame ! La promotion est reussie. Les Blancs ont utilise leur majorite de pions de facon tres precise : d'abord b6 pour forcer l'echange, puis a6 pour creer un pion passe, puis la percee finale jusqu'a la promotion.",
+      "position_depart_fen": "8/pp5k/P7/2p5/8/8/8/7K w - - 0 3",
+      "animations": [
+        {
+          "coup": "c5c4",
+          "acteur": "noir",
+          "commentaire": "Les Noirs poussent c4 pour gagner un tempo. Mais c'est trop tard !"
+        },
+        {
+          "coup": "b7b8q",
+          "acteur": "blanc",
+          "commentaire": "Promotion en Dame ! Les Blancs ont gagne la finale !"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "quiz_interactif",
+      "texte_ecran": "À toi ! Lance le plan de percée.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Tu as trois pions sur a5, b5, c5 contre les pions noirs a7, b7, c7. Lance la percee gagnante ! Quel est le premier coup ?",
+      "position_depart_fen": "8/ppp4k/8/PPP5/8/8/8/7K w - - 0 1",
+      "validation": {
+        "indice": "Lance la percee en poussant un pion au bon endroit pour forcer un echange, puis activer le deuxieme pion.",
+        "steps": [
+          {
+            "coups_acceptes": ["b5b6"],
+            "reponse": "c7b6",
+            "indice": "Etape 1 : avance le pion b en b6 pour lancer la percee !",
+            "solution": "b5b6"
+          },
+          {
+            "coups_acceptes": ["a5a6"],
+            "reponse": "b6c5",
+            "indice": "Etape 2 : active le pion a pour creer une deuxieme menace.",
+            "solution": "a5a6"
+          },
+          {
+            "coups_acceptes": ["a6b7"],
+            "reponse": "c5c4",
+            "indice": "Etape 3 : prends en b7 et avance vers la promotion !",
+            "solution": "a6b7"
+          }
+        ],
+        "feedback_succes": "Excellent, tu as lance le plan de promotion gagnant ! b6 force l'echange, a6 cree le pion passe, puis promotion en b8 !",
+        "feedback_erreur": "Reprends le plan : percee en b6, puis relais du pion a6, puis promotion."
+      }
     }
   ]
 }

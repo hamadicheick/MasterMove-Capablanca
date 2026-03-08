@@ -1,77 +1,92 @@
-﻿{
-  "id": "capablanca_ex19_initiative_ouverture",
-  "title": "Exemple 19 - Initiative en ouverture",
+{
+  "chapitre_id": "capablanca_ex19_initiative_ouverture",
+  "titre": "L'initiative : profite du meilleur développement !",
+  "description": "Quand l'adversaire joue un coup passif ou trop actif, punissez-le avec le centre.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "rnbqkbnr/pppp1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 3",
-      "text": "Les Blancs utilisent le développement actif pour garder l'initiative."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Les Noirs clouent le Cavalier blanc !",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Cavalier en f3 et les Noirs viennent de jouer le Fou en g4 pour clouer ce Cavalier ! Un clou est quand une piece ne peut pas bouger parce qu'elle protege quelque chose de plus important derriere elle. Ici, le Cavalier f3 ne peut pas bouger car ca exposerait la Dame blanche. Les Blancs doivent reagir !",
+      "position_depart_fen": "rnbqk1nr/pppp1ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "moves": [
-        { "uci": "e2e4", "comment": "Les Blancs occupent le centre." },
-        { "uci": "e7e5", "comment": "Réponse symétrique des Noirs." },
-        { "uci": "g1f3", "comment": "Développement naturel avec attaque sur e5." },
-        { "uci": "d7d6", "comment": "Les Noirs soutiennent leur pion central." },
-        { "uci": "d2d4", "comment": "Les Blancs ouvrent le centre." },
-        { "uci": "c8g4", "comment": "Les Noirs clouent le Cavalier f3." },
-        { "uci": "d4e5", "comment": "Les Blancs capturent au centre." },
-        { "uci": "g4f3", "comment": "Les Noirs éliminent le Cavalier." },
-        { "uci": "d1f3", "comment": "La Dame reprend et reste active." },
-        { "uci": "d6e5", "comment": "Les Noirs récupèrent le pion." },
-        { "uci": "f1c4", "comment": "Le Fou vise la diagonale du Roi noir." },
-        { "uci": "d8f6", "comment": "La Dame noire défend et contre-attaque." },
-        { "uci": "f3b3", "comment": "La Dame blanche met une pression latérale." },
-        { "uci": "b7b6", "comment": "Les Noirs consolident leur aile Dame." },
-        { "uci": "b1c3", "comment": "Nouvelle pièce blanche développée." },
-        { "uci": "c7c6", "comment": "Les Noirs construisent une structure solide." },
-        { "uci": "c3d5", "comment": "Le Cavalier occupe une case forte." },
-        { "uci": "c6d5", "comment": "Les Noirs échangent le Cavalier avancé." },
-        { "uci": "c4b5", "comment": "Échec intermédiaire utile." },
-        { "uci": "b8c6", "comment": "Les Noirs bloquent l'échec." },
-        { "uci": "c1g5", "comment": "Les Blancs finissent leur développement avec initiative." }
-      ]
-    },
-    {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "L'initiative vient du développement rapide et coordonné.",
-        "Occuper les cases fortes force des concessions adverses.",
-        "Les coups avec tempo gardent la pression dans l'ouverture."
-      ]
-    },
-    {
-      "type": "quiz_interactif",
-      "fen": "rnbqkbnr/pppp1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 3",
-      "question": "Quiz final en 3 coups : lance le plan actif des Blancs.",
-      "steps": [
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Les Blancs ouvrent le centre !",
+      "texte_audio": "Les Blancs ne s'inquietent pas du clou ! Au lieu de cela, ils ouvrent le centre avec d4 prend en e5 ! Maintenant le Fou noir en g4 prend le Cavalier blanc en f3. Mais les Blancs reprennent avec la Dame ! La Dame en f3 est maintenant tres active. Elle attaque le Fou noir en g4, et les Noirs doivent le bouger.",
+      "position_depart_fen": "rnbqk1nr/pppp1ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "animations": [
         {
-          "coups_acceptes": ["d2d4"],
-          "reponse": "c8g4",
-          "indice": "Étape 1 : ouvre le centre immédiatement.",
-          "solution": "d2d4"
+          "coup": "d4e5",
+          "acteur": "blanc",
+          "commentaire": "Les Blancs ouvrent le centre ! Prise en e5 — les Blancs profitent de leur meilleur developpement."
         },
         {
-          "fen": "rnbqk1nr/pppp1ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
-          "coups_acceptes": ["d4e5"],
-          "reponse": "g4f3",
-          "indice": "Étape 2 : gagne de l'espace au centre.",
-          "solution": "d4e5"
+          "coup": "g4f3",
+          "acteur": "noir",
+          "commentaire": "Le Fou noir prend le Cavalier. Mais maintenant la Dame blanche reprend et devient tres active !"
         },
         {
-          "fen": "rnbqk1nr/pppp1ppp/3p4/4p3/4P3/5b2/PPP2PPP/RNBQKB1R w KQkq - 0 5",
-          "coups_acceptes": ["d1f3"],
-          "reponse": "d6e5",
-          "indice": "Étape 3 : reprends en gardant une Dame active.",
-          "solution": "d1f3"
+          "coup": "d1f3",
+          "acteur": "blanc",
+          "commentaire": "La Dame reprend en f3 ! Elle est tres active et attaque plusieurs cases."
         }
-      ],
-      "correct_move": "d2d4",
-      "success_message": "Excellent, ton plan garde l'initiative dès l'ouverture.",
-      "error_message": "Reprends le plan : centre actif, reprise dynamique, développement rapide."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou vise le Roi noir !",
+      "texte_audio": "Maintenant les Noirs recuperent le pion en e5. Les Blancs developpent le Fou en c4 — il vise directement le camp du Roi noir ! La Dame blanche en f3 et le Fou en c4 forment une equipe dangereuse. Les Noirs doivent constamment defendre.",
+      "position_depart_fen": "rnbqk1nr/pppp1ppp/3p4/4P3/6b1/5Q2/PPP2PPP/RNB1KB1R b KQkq - 1 5",
+      "animations": [
+        {
+          "coup": "d6e5",
+          "acteur": "noir",
+          "commentaire": "Les Noirs recuperent le pion central."
+        },
+        {
+          "coup": "f1c4",
+          "acteur": "blanc",
+          "commentaire": "Le Fou va en c4 ! Il vise f7 et cree une forte pression sur le camp noir."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : punir le coup passif par le centre ouvert",
+      "texte_audio": "Voici la lecon importante de cet exemple. Les Noirs ont joue le Fou en g4 pour clouer le Cavalier blanc. C'est un coup trop actif quand on n'est pas encore bien developpe. Les Blancs ont repondu en ouvrant le centre avec d4 prend e5. Quand tu es mieux developpe que ton adversaire, ouvrir le centre est souvent la meilleure strategie ! Les pieces actives profitent des lignes ouvertes.",
+      "position_depart_fen": "rnbqk1nr/pppp1ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "animations": []
+    },
+    {
+      "id": 5,
+      "type": "quiz_interactif",
+      "texte_ecran": "Le Fou noir te cloue. Comment réagis-tu ?",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Fou noir est en g4 et cloue ton Cavalier en f3. Mais tu as une belle opportunite : tu peux ouvrir le centre ! Quel coup joues-tu ?",
+      "position_depart_fen": "rnbqk1nr/pppp1ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "validation": {
+        "coups_acceptes": ["d4e5"],
+        "indice": "Tu peux ouvrir le centre en prenant le pion noir en e5 avec ton pion en d4 ! Profite de ton meilleur developpement.",
+        "feedback_succes": "Bravo ! Prise en e5 ! Apres que le Fou prend le Cavalier, ta Dame reprend en f3 et devient tres active. C'est comme ca qu'on profite d'un meilleur developpement !",
+        "feedback_erreur": "Ne t'inquiete pas du clou ! Regarde si tu peux ouvrir le centre. Le pion d4 peut-il prendre quelque chose ?"
+      }
+    },
+    {
+      "id": 6,
+      "type": "quiz_interactif",
+      "texte_ecran": "Le Fou noir a pris ton Cavalier. Que reprends-tu ?",
+      "texte_audio": "Le Fou noir vient de prendre ton Cavalier en f3. Tu peux reprendre avec le pion g2 ou avec ta Dame. Quelle reprise te donne la piece la plus active ?",
+      "position_depart_fen": "rnbqk1nr/pppp1ppp/3p4/4P3/4P3/5b2/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+      "validation": {
+        "coups_acceptes": ["d1f3"],
+        "indice": "La Dame peut reprendre en f3. Elle sera tres active et attaquera plusieurs cases importantes !",
+        "feedback_succes": "Parfait ! La Dame reprend en f3 — elle est tres active ! Elle attaque f7 et controle le centre. C'est bien mieux que de reprendre avec le pion g2 !",
+        "feedback_erreur": "Plutot que de reprendre avec le pion, reflechis si la Dame peut reprendre en f3 de facon avantageuse !"
+      }
     }
   ]
 }

@@ -1,39 +1,93 @@
-﻿{
-  "id": "capablanca_ex16_combinaison_e7",
-  "title": "Combinaison sur e7",
+{
+  "chapitre_id": "capablanca_ex16_combinaison_e7",
+  "titre": "La déviation : forcer des reprises pour gagner du terrain",
+  "description": "Utiliser des captures successives pour derouter les defenseurs et lancer une attaque decisive.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
-      "text": "Les Blancs utilisent un motif de déviation pour gagner du matériel."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Observe les pièces actives des Blancs.",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Cavalier en f5 bien place, une Tour en e2 sur la colonne e, et un Fou en d3 visant la diagonale vers h7. Les Noirs ont un Cavalier en e7 qui defend le Roi noir. Les Blancs vont lancer une combinaison pour eliminer ce defenseur et attaquer le Roi !",
+      "position_depart_fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
-      "moves": [
-        { "uci": "f5e7", "comment": "Le Cavalier capture en e7 avec échec." },
-        { "uci": "d8e7", "comment": "Le Fou noir reprend." },
-        { "uci": "e2e7", "comment": "La Tour blanche reprend à son tour." },
-        { "uci": "c8e7", "comment": "Le Cavalier noir capture la Tour." },
-        { "uci": "d3h7", "comment": "Le Fou blanc finit la combinaison avec échec." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier saute sur e7, échec !",
+      "texte_audio": "Le Cavalier blanc saute en e7 avec echec ! Le Roi noir en g8 est en echec par le Cavalier. On ne peut pas bloquer un echec de Cavalier. Le Fou noir en d8 doit prendre le Cavalier en e7. C'est une capture forcee : le Fou degage la colonne e pour la prochaine etape.",
+      "position_depart_fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "animations": [
+        {
+          "coup": "f5e7",
+          "acteur": "blanc",
+          "commentaire": "Cavalier en e7, echec ! Le Roi noir est en echec. Le Fou noir doit prendre."
+        },
+        {
+          "coup": "d8e7",
+          "acteur": "noir",
+          "commentaire": "Le Fou noir prend le Cavalier blanc en e7. La colonne e est maintenant ouverte pour la Tour blanche !"
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Dévier un défenseur ouvre des tactiques cachées.",
-        "Les reprises successives peuvent favoriser l'attaquant.",
-        "Il faut toujours vérifier les échecs intermédiaires."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "La Tour prend le Fou, le Cavalier reprend la Tour.",
+      "texte_audio": "La Tour blanche prend le Fou noir en e7 ! Le Cavalier noir en c8 reprend la Tour blanche en e7. Les echanges continuent, mais chaque coup ouvre un peu plus le camp noir. Regarde maintenant ce que le Fou blanc en d3 peut faire : la diagonale vers h7 est ouverte !",
+      "position_depart_fen": "2nb1rk1/1pqBnppp/p2p4/2pQ4/6P1/1P3N1P/P3RP2/3R2K1 w - - 0 2",
+      "animations": [
+        {
+          "coup": "e2e7",
+          "acteur": "blanc",
+          "commentaire": "La Tour prend le Fou en e7 ! Les echanges continuent sur la colonne e."
+        },
+        {
+          "coup": "c8e7",
+          "acteur": "noir",
+          "commentaire": "Le Cavalier noir prend la Tour blanche en e7. Mais maintenant le Fou blanc vise h7 !"
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou attaque sur h7, le Roi est sous pression !",
+      "texte_audio": "Le Fou blanc va en h7 avec echec ! Le Roi noir en g8 est en echec. Le Roi doit se repositionner. La Dame blanche en d5 est toujours tres active et peut continuer l'attaque. Les echanges successifs ont permis d'ouvrir le Roi noir aux attaques du Fou et de la Dame.",
+      "position_depart_fen": "5rk1/1pqnpppB/p2p4/2pQ4/6P1/1P3N1P/P4P2/3R2K1 w - - 0 3",
+      "animations": [
+        {
+          "coup": "d3h7",
+          "acteur": "blanc",
+          "commentaire": "Le Fou va en h7, echec ! Le Roi noir est maintenant sous forte pression."
+        },
+        {
+          "coup": "g8h7",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir est force de prendre le Fou. La position devient dangereuse pour les Noirs !"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : forcer les captures pour ouvrir le Roi",
+      "texte_audio": "Voici ce qu'on a appris. Chaque capture forcee a un but : eliminer un defenseur du Roi. Le Cavalier en e7 a force le Fou noir a se deplacer. La Tour en e7 a force le Cavalier noir a se deplacer. Chaque echange a reduit les defenseurs du Roi noir. Ensuite le Fou a pu attaquer directement le Roi noir. C'est la technique de la deviation : forcer les pieces adverses a quitter leurs bonnes cases.",
+      "position_depart_fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 6,
       "type": "quiz_interactif",
-      "fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
-      "question": "Quiz final : trouve le coup tactique initial.",
-      "correct_move": "f5e7",
-      "success_message": "Parfait, la combinaison commence bien sur e7.",
-      "error_message": "Cherche une capture avec échec qui force les reprises."
+      "texte_ecran": "À toi ! Trouve le premier coup de la combinaison.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Cavalier blanc est en f5, pres du Roi noir en g8. Quel coup donnes-tu avec le Cavalier pour lancer la combinaison ?",
+      "position_depart_fen": "2nb1rk1/1pqrnppp/p2p4/2pQ1N2/6P1/1P1B1N1P/P3RP2/3R2K1 w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["f5e7"],
+        "indice": "Le Cavalier blanc en f5 peut aller en e7 pour donner echec au Roi noir en g8 !",
+        "feedback_succes": "Bravo ! Cavalier en e7, echec ! Le Fou noir doit prendre, puis la Tour prend en e7, le Cavalier reprend, et le Fou blanc attaque en h7. La deviation a fonctionne !",
+        "feedback_erreur": "Le Cavalier blanc en f5 peut bondir en e7 pour donner echec. Cela forcera des captures qui ouvriront le Roi noir !"
+      }
     }
   ]
 }

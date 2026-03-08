@@ -1,35 +1,79 @@
-﻿{
-  "id": "capablanca_ex22_pion_passe_lointain",
-  "title": "Exemple 22 - Pion passé lointain",
+{
+  "chapitre_id": "capablanca_ex22_pion_passe_lointain",
+  "titre": "Le pion passé lointain : divise l'attention du Roi ennemi !",
+  "description": "Creer un pion passe sur une aile pour forcer le Roi adverse a s'eloigner et gagner de l'autre cote.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
-      "text": "Les Blancs créent un pion passé lointain pour étirer la défense noire."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Qu'est-ce qu'un pion passé lointain ?",
+      "texte_audio": "Regarde cette position. Les Blancs ont deux pions en a2 et b2, plus un pion en h2. Le Roi noir est en g5. Un pion passe est un pion que les pions adverses ne peuvent pas bloquer. Un pion passe lointain est un pion passe qui est tres loin du Roi ennemi. Pourquoi est-ce si fort ? Parce qu'il force le Roi adverse a s'eloigner pour l'arreter !",
+      "position_depart_fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
-      "moves": [
-        { "uci": "b2b4", "comment": "Le pion b avance et lance le plan de pion passé lointain." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Les Blancs créent un pion passé sur l'aile Dame !",
+      "texte_audio": "Les Blancs avancent le pion b en b4 ! C'est le debut du plan. Les Blancs vont pousser b4-b5-b6 ou utiliser une percee combinee a et b pour creer un pion passe tres loin du Roi noir. Le Roi noir est en g5, loin de l'aile Dame. Il ne peut pas etre partout a la fois !",
+      "position_depart_fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
+      "animations": [
+        {
+          "coup": "b2b4",
+          "acteur": "blanc",
+          "commentaire": "Le pion b avance en b4 ! Le plan de pion passe lointain commence."
+        },
+        {
+          "coup": "g5f5",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir cherche a se rapprocher pour bloquer le pion."
+        },
+        {
+          "coup": "b4b5",
+          "acteur": "blanc",
+          "commentaire": "Le pion b continue ! Il se rapproche de plus en plus."
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Un pion passé lointain force souvent le Roi adverse à se déplacer.",
-        "Même un seul coup de pion peut changer tout le plan de finale.",
-        "Le bon timing de poussée est essentiel."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le pion passe force le Roi noir à partir !",
+      "texte_audio": "Le Roi noir est oblige d'aller vers l'aile Dame pour bloquer le pion passe. Mais pendant ce temps, le Roi blanc va prendre les pions noirs sur l'aile Roi ! C'est la force du pion passe lointain : il divise l'attention du Roi adverse. Le Roi noir ne peut pas etre a la fois en aile Dame pour bloquer le pion ET en aile Roi pour defendre ses pions.",
+      "position_depart_fen": "8/p5p1/7p/1P4k1/8/7K/P6P/8 b - - 0 2",
+      "animations": [
+        {
+          "coup": "g5f4",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir doit aller vers l'aile Dame pour bloquer le pion. Il abandonne ses pions !"
+        },
+        {
+          "coup": "h3g4",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc va vers les pions noirs ! Il va les prendre pendant que le Roi noir est loin."
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Le plan en résumé",
+      "texte_audio": "Voici la lecon de Capablanca. En finale de pions, si tu peux creer un pion passe lointain, c'est souvent gagnant. Le Roi adverse est force de choisir : soit il court apres le pion passe et abandonne ses pions, soit il defend ses pions et le pion passe avance. De toutes facons, tu gagnes ! C'est une technique fondamentale des finales.",
+      "position_depart_fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
-      "question": "Quiz final : quel coup lance le bon plan de finale ?",
-      "correct_move": "b2b4",
-      "success_message": "Exact, tu crées le pion passé lointain au bon moment.",
-      "error_message": "Cherche la poussée de pion qui crée une menace sur l'aile Dame."
+      "texte_ecran": "À toi ! Lance le plan du pion passé lointain.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Roi noir est en g5, loin de l'aile Dame. Tu peux creer un pion passe lointain. Quel est le premier coup ?",
+      "position_depart_fen": "8/p5p1/7p/6k1/8/7K/PP5P/8 w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["b2b4", "a2a4"],
+        "indice": "Lance la percee de pions sur l'aile Dame ! Le pion a ou b peut avancer pour creer un pion passe loin du Roi noir.",
+        "feedback_succes": "Bravo ! Le plan du pion passe lointain est lance ! Le Roi noir va devoir courir pour bloquer le pion, pendant que ton Roi prend ses pions. C'est la technique de Capablanca !",
+        "feedback_erreur": "Pense a l'aile Dame ! Tes pions a2 et b2 peuvent creer un pion passe tres loin du Roi noir en g5."
+      }
     }
   ]
 }

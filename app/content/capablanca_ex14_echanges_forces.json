@@ -1,39 +1,93 @@
-﻿{
-  "id": "capablanca_ex14_echanges_forces",
-  "title": "Échanges forcés gagnants",
+{
+  "chapitre_id": "capablanca_ex14_echanges_forces",
+  "titre": "Le Fou voyage et prend la Dame !",
+  "description": "Utiliser un coup intermediaire pour ignorer une menace et prendre une piece plus precieuse.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
-      "text": "Les Blancs enchaînent des échanges forcés pour gagner la qualité et simplifier."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Les Blancs ont une idée audacieuse !",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Fou en b5 qui peut prendre le Cavalier noir en d7. Mais si les Blancs prennent le Cavalier, la Tour noire en e8 va attaquer le Cavalier blanc en e4. Est-ce que les Blancs doivent s'inquieter ? Non ! Ils ont une idee bien meilleure.",
+      "position_depart_fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
-      "moves": [
-        { "uci": "b5d7", "comment": "Le Fou capture le défenseur central." },
-        { "uci": "e8e4", "comment": "La Tour noire contre-attaque le Cavalier." },
-        { "uci": "d7c8", "comment": "Le Fou blanc prend la Dame noire." },
-        { "uci": "e4e3", "comment": "La Tour noire capture en e3." },
-        { "uci": "d3e3", "comment": "La Dame blanche reprend et garde l'avantage." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou prend le Cavalier en d7.",
+      "texte_audio": "Le Fou blanc va en d7 et prend le Cavalier noir ! Maintenant la Tour noire en e8 attaque le Cavalier blanc en e4. Les Noirs pensent gagner un Cavalier. Mais les Blancs ont un coup intermediaire fantastique — ils vont ignorer cette attaque !",
+      "position_depart_fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
+      "animations": [
+        {
+          "coup": "b5d7",
+          "acteur": "blanc",
+          "commentaire": "Le Fou prend le Cavalier en d7 ! La Tour noire va attaquer le Cavalier blanc en e4."
+        },
+        {
+          "coup": "e8e4",
+          "acteur": "noir",
+          "commentaire": "La Tour noire prend le Cavalier blanc en e4 ! Les Noirs pensent avoir gagne."
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Éliminer un défenseur peut déclencher une cascade tactique.",
-        "Les échanges forcés doivent être calculés jusqu'au bout.",
-        "Simplifier avec avantage matériel est souvent le bon plan."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou continue en c8 et prend la Dame !",
+      "texte_audio": "Les Blancs ignorent completement la prise du Cavalier ! Le Fou continue son chemin depuis d7 jusqu'en c8 — et il prend la Dame noire ! C'est le coup intermediaire : au lieu de reprendre la Tour, les Blancs prennent quelque chose de bien plus precieux. La Dame vaut 9 points, le Cavalier vaut seulement 3 !",
+      "position_depart_fen": "2q2rk1/1bpB1ppp/pp1p4/8/4r3/1P1QR3/PBP2PPP/6K1 w - - 0 2",
+      "animations": [
+        {
+          "coup": "d7c8",
+          "acteur": "blanc",
+          "commentaire": "Le Fou va en c8 et prend la Dame noire ! Les Blancs ignorent la Tour pour prendre quelque chose de plus precieux !"
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Les échanges se terminent à l'avantage des Blancs.",
+      "texte_audio": "Les Noirs prennent la Tour blanche en e3. Les Blancs reprennent avec la Dame. Faisons le bilan : les Blancs ont donne un Cavalier et une Tour, mais ils ont gagne un Cavalier, une Dame et une Tour. Le gain net est enorme — une Dame complete en plus ! C'est une combinaison fantastique grace au coup intermediaire !",
+      "position_depart_fen": "2B2rk1/1bp2ppp/pp1p4/8/4r3/1P1QR3/PBP2PPP/6K1 b - - 0 2",
+      "animations": [
+        {
+          "coup": "e4e3",
+          "acteur": "noir",
+          "commentaire": "La Tour noire prend la Tour blanche en e3."
+        },
+        {
+          "coup": "d3e3",
+          "acteur": "blanc",
+          "commentaire": "La Dame reprend la Tour. Les Blancs ont un enorme avantage materiel !"
+        }
+      ]
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
-      "question": "Quiz final : trouve le premier échange forcé.",
-      "correct_move": "b5d7",
-      "success_message": "Exact, tu déclenches la séquence gagnante.",
-      "error_message": "Cherche une capture de Fou qui enlève le défenseur clé."
+      "texte_ecran": "À toi ! Trouve le premier coup.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Fou blanc est en b5, le Cavalier noir est en d7. Quel est le premier coup de cette combinaison gagnante ?",
+      "position_depart_fen": "2q1rrk1/1bpn1ppp/pp1p4/1B6/4N3/1P1QR3/PBP2PPP/6K1 w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["b5d7"],
+        "indice": "Le Fou blanc en b5 peut prendre le Cavalier noir en d7. C'est le debut de la combinaison !",
+        "feedback_succes": "Bravo ! Le Fou prend en d7. Meme si la Tour noire prend ton Cavalier, tu joues Fou en c8 pour prendre la Dame noire. C'est le coup intermediaire !",
+        "feedback_erreur": "Le Fou blanc en b5 peut aller en d7 pour prendre le Cavalier noir. Essaie !"
+      }
+    },
+    {
+      "id": 6,
+      "type": "quiz_interactif",
+      "texte_ecran": "La Tour noire vient de prendre ton Cavalier. Que fais-tu ?",
+      "texte_audio": "La Tour noire vient de prendre ton Cavalier en e4. Ton Fou blanc est en d7. Est-ce que tu reprends la Tour ? Non ! Le Fou en d7 peut aller en c8 pour prendre la Dame noire. C'est le coup intermediaire !",
+      "position_depart_fen": "2q2rk1/1bpB1ppp/pp1p4/8/4r3/1P1QR3/PBP2PPP/6K1 w - - 0 2",
+      "validation": {
+        "coups_acceptes": ["d7c8"],
+        "indice": "Le Fou en d7 peut aller en c8 pour prendre la Dame noire ! Ignore la Tour !",
+        "feedback_succes": "Excellent ! Coup intermediaire : Fou en c8 prend la Dame noire. Tu as ignore la Tour pour prendre quelque chose de bien plus precieux !",
+        "feedback_erreur": "Ne reprends pas la Tour tout de suite ! Le Fou en d7 peut aller en c8 pour prendre la Dame noire. C'est beaucoup mieux !"
+      }
     }
   ]
 }

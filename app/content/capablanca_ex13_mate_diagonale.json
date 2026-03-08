@@ -1,39 +1,101 @@
-﻿{
-  "id": "capablanca_ex13_mate_diagonale",
-  "title": "Mat par diagonale et Dame",
+{
+  "chapitre_id": "capablanca_ex13_mate_diagonale",
+  "titre": "Le Cavalier se sacrifie, le Fou donne mat !",
+  "description": "Sacrifice de Cavalier pour ouvrir le Roi, puis mat coordonne par la Dame et le Fou.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
-      "text": "Les Blancs utilisent un saut de Cavalier pour ouvrir une attaque de mat."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Observe la position du Roi noir.",
+      "texte_audio": "Regarde cette position. Le Roi noir est en g8, avec les pions g7 et h7 devant lui. Les Blancs ont un Cavalier en e4, une Dame en d3 et un Fou en b2. Le Roi noir semble protege par ses pions. Mais les Blancs ont une combinaison en 3 coups pour donner mat !",
+      "position_depart_fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
-      "moves": [
-        { "uci": "e4f6", "comment": "Le Cavalier donne échec en f6." },
-        { "uci": "g7f6", "comment": "Les Noirs capturent le Cavalier." },
-        { "uci": "d3g3", "comment": "La Dame donne échec sur la diagonale." },
-        { "uci": "g8h8", "comment": "Le Roi noir se réfugie en h8." },
-        { "uci": "b2f6", "comment": "Le Fou conclut par un mat net." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier se sacrifie sur f6 !",
+      "texte_audio": "Le Cavalier blanc saute en f6, echec ! C'est un sacrifice. Le pion noir en g7 est force de prendre le Cavalier. Pourquoi le Cavalier se sacrifie-t-il ? Parce qu'en prenant le pion en g7, le Roi noir perd son bouclier. La case h7 n'est plus protegee, et la diagonale b2-h8 s'ouvre pour le Fou blanc !",
+      "position_depart_fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "animations": [
+        {
+          "coup": "e4f6",
+          "acteur": "blanc",
+          "commentaire": "Cavalier en f6, echec ! Le Cavalier se sacrifie pour ouvrir le Roi noir."
+        },
+        {
+          "coup": "g7f6",
+          "acteur": "noir",
+          "commentaire": "Le pion noir capture le Cavalier. Le pion g7 n'est plus la pour proteger le Roi !"
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Un sacrifice de Cavalier peut ouvrir le Roi adverse.",
-        "La Dame et le Fou coopèrent pour un mat géométrique.",
-        "Les cases de fuite doivent être toutes contrôlées."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "La Dame donne échec sur la diagonale !",
+      "texte_audio": "La Dame blanche glisse en g3, echec sur la diagonale ! Le Roi noir en g8 est en echec par la Dame. Il doit aller en h8 — c'est la seule case disponible. Le pion en f6 bloque le chemin vers f7, et le pion en h7 bloque h7. Le Roi n'a qu'une seule case : h8.",
+      "position_depart_fen": "2q2rk1/1b3p1p/pp3p2/2p5/2P5/1P1Q4/1B3PPP/6K1 w - - 0 2",
+      "animations": [
+        {
+          "coup": "d3g3",
+          "acteur": "blanc",
+          "commentaire": "Dame en g3, echec ! La Dame attaque sur la diagonale. Le Roi noir doit fuir en h8."
+        },
+        {
+          "coup": "g8h8",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir se refugie en h8. C'est sa seule case !"
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou donne mat sur f6 !",
+      "texte_audio": "Le Fou blanc va en f6, echec et mat ! Regardons pourquoi c'est mat. La Dame blanche en g3 surveille g8 et g7. Le Fou en f6 donne echec depuis la grande diagonale et surveille g7 aussi. Le Roi noir est en h8 : il ne peut pas aller en g8 car la Dame le surveille, ni en g7 car la Dame et le Fou le surveillent. C'est le mat !",
+      "position_depart_fen": "2q4k/1b3p1p/pp3p2/2p5/2P5/1B4Q1/1B3PPP/6K1 w - - 1 3",
+      "animations": [
+        {
+          "coup": "b2f6",
+          "acteur": "blanc",
+          "commentaire": "Fou en f6, echec et mat ! La cooperation Dame-Fou est parfaite !"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "theorie_animee",
+      "texte_ecran": "Le plan en 3 coups",
+      "texte_audio": "Voici le plan complet. Coup 1 : Cavalier en f6, echec — pour ouvrir le pion g7 et detruire le bouclier du Roi noir. Coup 2 : Dame en g3, echec — pour repousser le Roi en h8. Coup 3 : Fou en f6, mat ! La Dame et le Fou cooperent parfaitement sur les diagonales. Ce motif s'appelle mat de Fou et Dame coordonnes.",
+      "position_depart_fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 6,
       "type": "quiz_interactif",
-      "fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
-      "question": "Quiz final : quel coup force l'attaque décisive ?",
-      "correct_move": "e4f6",
-      "success_message": "Excellent, le sacrifice ouvre la position du Roi noir.",
-      "error_message": "Cherche un échec de Cavalier qui force une capture."
+      "texte_ecran": "À toi ! Trouve le sacrifice de Cavalier.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Cavalier blanc est en e4, la Dame est en d3, le Fou est en b2. Le Roi noir est en g8 derriere ses pions. Quel est le premier coup du mat en 3 coups ?",
+      "position_depart_fen": "2q2rk1/1b3ppp/pp6/2p5/2P1N3/1P1Q4/1B3PPP/6K1 w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["e4f6"],
+        "indice": "Le Cavalier peut aller en f6 pour donner echec et forcer le pion g7 a prendre. Ca ouvre le Roi noir !",
+        "feedback_succes": "Bravo ! Cavalier en f6, echec ! Le pion g7 prend le Cavalier, puis Dame en g3 echec, puis Fou en f6 mat. Tu as trouve le sacrifice !",
+        "feedback_erreur": "Le Cavalier blanc en e4 peut sauter en f6 pour donner echec avec sacrifice. Essaie !"
+      }
+    },
+    {
+      "id": 7,
+      "type": "quiz_interactif",
+      "texte_ecran": "Après gxf6, quel coup donne l'échec décisif ?",
+      "texte_audio": "Le pion g7 vient de prendre le Cavalier en f6. Le Roi noir est en g8. La Dame blanche est en d3. Quel coup donnes-tu avec la Dame pour repousser le Roi vers h8 ?",
+      "position_depart_fen": "2q2rk1/1b3p1p/pp3p2/2p5/2P5/1P1Q4/1B3PPP/6K1 w - - 0 2",
+      "validation": {
+        "coups_acceptes": ["d3g3"],
+        "indice": "La Dame peut aller en g3 pour donner echec sur la diagonale. Le Roi noir sera pousse en h8 !",
+        "feedback_succes": "Parfait ! Dame en g3, echec ! Le Roi noir va en h8, et tu peux jouer Fou en f6 pour le mat final !",
+        "feedback_erreur": "La Dame doit donner echec sur la diagonale vers g8. Elle peut aller en g3 !"
+      }
     }
   ]
 }
