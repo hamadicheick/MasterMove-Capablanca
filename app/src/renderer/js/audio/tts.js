@@ -1,5 +1,4 @@
 import { Store } from "../infra/store.js";
-import { EDGE_FR_VOICES, synthesizeEdge } from "./tts_edge.js";
 
 function listVoicesSafe() {
   try { return window.speechSynthesis?.getVoices?.() || []; } catch { return []; }
@@ -20,7 +19,6 @@ export class TTS {
     this.providerManual = Store.get("tts.providerManual", false);
     this.voiceURI = Store.get("tts.voiceURI", null);
     this.piperVoiceId = Store.get("tts.piperVoiceId", null);
-    this.edgeVoiceId = Store.get("tts.edgeVoiceId", "fr-FR-DeniseNeural");
     this.rate = Store.get("tts.rate", 1.0);
     this.volume = Store.get("tts.volume", 1.0);
 
@@ -31,7 +29,6 @@ export class TTS {
     this._onState = () => {};
     this._speakTimer = null;
     this._audio = null;
-    this._edgeBlobUrl = null;
     this._lastText = "";
     this._lastAt = 0;
     this._token = 0;
@@ -56,7 +53,6 @@ export class TTS {
     this._onState({
       voices: this._voices,
       piperVoices: this._piperVoices,
-      edgeVoices: EDGE_FR_VOICES,
       providers: this._providers,
       provider: this.provider
     });
@@ -67,11 +63,6 @@ export class TTS {
       const list = await window.mm?.narration?.listProviders?.();
       if (Array.isArray(list) && list.length) this._providers = list;
     } catch (_) {}
-
-    // Edge TTS est toujours disponible (internet requis) — on l'ajoute s'il n'est pas déjà là
-    if (!this._providers.find(p => p.id === "edge")) {
-      this._providers.push({ id: "edge", label: "Edge TTS (en ligne, Neural)", available: true });
-    }
 
     try {
       const voices = await window.mm?.narration?.listPiperVoices?.();
@@ -120,11 +111,6 @@ export class TTS {
     Store.set("tts.piperVoiceId", this.piperVoiceId);
   }
 
-  setEdgeVoiceId(id){
-    this.edgeVoiceId = id || "fr-FR-DeniseNeural";
-    Store.set("tts.edgeVoiceId", this.edgeVoiceId);
-  }
-
   setRate(rate){
     const r = Math.max(0.5, Math.min(1.5, Number(rate) || 1.0));
     this.rate = r;
@@ -151,10 +137,6 @@ export class TTS {
       }
     } catch (_) {}
     this._audio = null;
-    if (this._edgeBlobUrl) {
-      URL.revokeObjectURL(this._edgeBlobUrl);
-      this._edgeBlobUrl = null;
-    }
   }
 
   estimateSpeakMs(text){
@@ -164,8 +146,7 @@ export class TTS {
     const perWord = this.provider === "piper"
       ? 800 / Math.max(0.5, Number(this.rate) || 1)
       : 650 / Math.max(0.5, Number(this.rate) || 1);
-    // Edge TTS : latence réseau + synthèse + lecture (~3000ms de base)
-    const base = this.provider === "piper" ? 2600 : (this.provider === "edge" ? 3000 : 2200);
+    const base = this.provider === "piper" ? 2600 : 2200;
     const ms = base + (words * perWord);
     return Math.max(1800, Math.min(20000, Math.round(ms)));
   }
@@ -217,43 +198,6 @@ export class TTS {
     }
   }
 
-  async _speakEdge(text, tokenAtStart){
-    let blobUrl = null;
-    try {
-      blobUrl = await synthesizeEdge({
-        text,
-        voiceId: this.edgeVoiceId || "fr-FR-DeniseNeural",
-        rate: this.rate
-      });
-    } catch (e) {
-      console.warn("Edge TTS échoué, fallback WebSpeech:", e?.message || e);
-      if (tokenAtStart === this._token) this._speakWebSpeech(text);
-      return;
-    }
-    if (tokenAtStart !== this._token) {
-      URL.revokeObjectURL(blobUrl);
-      return;
-    }
-    const audio = new Audio(blobUrl);
-    audio.volume = this.volume;
-    this._audio = audio;
-    this._edgeBlobUrl = blobUrl;
-    audio.onended = () => {
-      if (this._edgeBlobUrl === blobUrl) {
-        URL.revokeObjectURL(blobUrl);
-        this._edgeBlobUrl = null;
-      }
-    };
-    try {
-      await audio.play();
-    } catch (e) {
-      console.warn("Lecture Edge TTS impossible, fallback WebSpeech:", e?.message || e);
-      URL.revokeObjectURL(blobUrl);
-      this._edgeBlobUrl = null;
-      if (tokenAtStart === this._token) this._speakWebSpeech(text);
-    }
-  }
-
   speak(text){
     if (!this.enabled) return;
     const t = String(text || "").trim();
@@ -274,17 +218,10 @@ export class TTS {
       });
       return;
     }
-    if (this.provider === "edge") {
-      this._speakEdge(t, tokenAtStart).catch((e) => {
-        console.warn("Erreur Edge TTS:", e?.message || e);
-      });
-      return;
-    }
     this._speakWebSpeech(t);
   }
 
   get voices(){ return this._voices; }
   get piperVoices(){ return this._piperVoices; }
-  get edgeVoices(){ return EDGE_FR_VOICES; }
   get providers(){ return this._providers; }
 }
