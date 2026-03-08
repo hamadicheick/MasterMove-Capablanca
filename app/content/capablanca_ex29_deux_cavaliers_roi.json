@@ -1,65 +1,82 @@
 {
-  "id": "capablanca_ex29_deux_cavaliers_roi",
-  "title": "Exemple 29 - Deux Cavaliers contre pion",
+  "chapitre_id": "capablanca_ex29_deux_cavaliers_roi",
+  "titre": "Deux Cavaliers et un pion : le mat qui semble impossible !",
+  "description": "Comprendre comment un pion adverse fournit les tempos necessaires pour mater avec deux Cavaliers.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
-      "text": "Les Blancs gagnent malgré le pion noir grâce à la coordination du Roi et des deux Cavaliers."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Deux Cavaliers ne peuvent pas mater seuls… sauf si !",
+      "texte_audio": "Regarde cette position. Les Blancs ont deux Cavaliers et le Roi en b6. Les Noirs ont seulement le Roi en a8 et un pion en h5. Normalement, deux Cavaliers seuls ne peuvent pas mater un Roi nu ! C'est une regle fondamentale aux echecs. Mais ici, il y a un pion noir — et ce pion change tout. Il va forcer des tempos qui permettront aux Cavaliers de construire le filet de mat !",
+      "position_depart_fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
-      "moves": [
-        { "uci": "h4g6", "comment": "Le Cavalier commence la manœuvre de contrôle." },
-        { "uci": "h5h4", "comment": "Le pion noir avance pour éviter le pat." },
-        { "uci": "g6e5", "comment": "Le Cavalier se recentre et garde les cases clés." },
-        { "uci": "h4h3", "comment": "Les Noirs poursuivent la poussée du pion." },
-        { "uci": "e5c6", "comment": "Le Cavalier rejoint son partenaire pour fermer l'étau." },
-        { "uci": "h3h2", "comment": "Le pion noir arrive en h2." },
-        { "uci": "d6b5", "comment": "Le second Cavalier prépare le mat final." },
-        { "uci": "h2h1q", "comment": "Promotion noire en Dame, mais trop tard." },
-        { "uci": "b5c7", "comment": "Mat : les deux Cavaliers et le Roi contrôlent toutes les fuites." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Les Cavaliers construisent le filet de mat !",
+      "texte_audio": "Le Cavalier h4 bondit en g6 pour prendre le controle ! Le pion noir avance en h4 — il veut promouvoir, mais il donne aussi des tempos aux Blancs ! Le Cavalier g6 glisse en e5 pour se recentraliser. Le pion continue en h3. Maintenant le Cavalier e5 va en c6 — les deux Cavaliers verrouillent l'echiquier. Le Roi noir en a8 est encercle !",
+      "position_depart_fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
+      "animations": [
+        {"coup": "h4g6", "acteur": "blanc", "commentaire": "Le Cavalier bondit en g6 — il commence le filet !"},
+        {"coup": "h5h4", "acteur": "noir", "commentaire": "Le pion noir avance. Il croit pouvoir promouvoir, mais il donne du temps aux Blancs."},
+        {"coup": "g6e5", "acteur": "blanc", "commentaire": "Le Cavalier se recentralise en e5 — tres fort !"},
+        {"coup": "h4h3", "acteur": "noir", "commentaire": "Le pion continue sa course vers la promotion."},
+        {"coup": "e5c6", "acteur": "blanc", "commentaire": "Le Cavalier verrouille ! Les deux Cavaliers encerclent le Roi noir en a8."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Deux Cavaliers seuls ne matent pas un Roi nu, mais un pion adverse peut changer le verdict.",
-        "Le pion noir force des tempos qui permettent la construction du réseau de mat.",
-        "La coordination précise du Roi et des Cavaliers reste indispensable jusqu'au coup final."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le pion promeut... mais les Blancs matent quand même !",
+      "texte_audio": "Le pion noir avance encore en h2. Le Cavalier d6 glisse en b5 pour le coup final. Le pion noir promeut en Dame — une Dame toute neuve ! Mais il est trop tard : le Cavalier b5 va en c7 et c'est le mat ! Le Cavalier c7 attaque le Roi noir en a8. Les cases a7 et b8 sont controlees par les autres pieces. Le Roi noir n'a nulle part ou aller. Les Blancs ignorent completement la nouvelle Dame noire !",
+      "position_depart_fen": "k7/8/1KNN4/8/8/7p/8/8 b - - 0 5",
+      "animations": [
+        {"coup": "h3h2", "acteur": "noir", "commentaire": "Le pion noir fonce vers la promotion."},
+        {"coup": "d6b5", "acteur": "blanc", "commentaire": "Le second Cavalier se repositionne pour le coup de grace !"},
+        {"coup": "h2h1q", "acteur": "noir", "commentaire": "Promotion en Dame ! Mais c'est trop tard pour les Noirs..."},
+        {"coup": "b5c7", "acteur": "blanc", "commentaire": "Mat ! Le Cavalier c7 cloue le Roi noir en a8. Aucune fuite possible !"}
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Pourquoi le pion aide les Blancs à mater ?",
+      "texte_audio": "Voici le secret. Deux Cavaliers seuls ne peuvent pas mater parce que quand ils construisent le filet, le Roi adverse a toujours un coup pour echapper — on ne peut pas le forcer a rester. Mais avec un pion sur l'echiquier, ce pion DOIT avancer ! Et en avancant, il donne du temps aux Cavaliers pour se repositionner et verrouiller les cases. Le pion contraint les Noirs — il joue contre son propre camp. C'est la beaute de cette finale !",
+      "position_depart_fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
-      "question": "Quiz final en 3 étapes : rejoue le plan gagnant des Blancs.",
-      "steps": [
-        {
-          "coups_acceptes": ["h4g6"],
-          "reponse": "h5h4",
-          "indice": "Étape 1 : trouve le premier saut de Cavalier du livre.",
-          "solution": "h4g6"
-        },
-        {
-          "fen": "k7/8/1K1N2N1/8/7p/8/8/8 w - - 0 2",
-          "coups_acceptes": ["g6e5"],
-          "reponse": "h4h3",
-          "indice": "Étape 2 : recentre le Cavalier actif.",
-          "solution": "g6e5"
-        },
-        {
-          "fen": "k7/8/1K1N4/4N3/8/7p/8/8 w - - 0 3",
-          "coups_acceptes": ["e5c6"],
-          "reponse": "h3h2",
-          "indice": "Étape 3 : place le Cavalier sur la case qui verrouille l'échiquier.",
-          "solution": "e5c6"
-        }
-      ],
-      "correct_move": "h4g6",
-      "success_message": "Exact, tu suis le plan gagnant de l'exemple 29.",
-      "error_message": "Repars de la séquence du livre : Cavalier actif, recentrage, puis verrouillage."
+      "texte_ecran": "À toi ! Lance le plan gagnant des Cavaliers.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Tu as deux Cavaliers et le Roi en b6. Le Roi noir est en a8, son pion est en h5. Lance la manoeuvre gagnante en trois etapes. Quel est le premier bond du Cavalier h4 ?",
+      "position_depart_fen": "k7/8/1K1N4/7p/7N/8/8/8 w - - 0 1",
+      "validation": {
+        "indice": "Le Cavalier h4 doit bondir pour commencer le filet de mat autour du Roi noir.",
+        "steps": [
+          {
+            "coups_acceptes": ["h4g6"],
+            "reponse": "h5h4",
+            "indice": "Etape 1 : le Cavalier h4 bondit en g6 pour prendre le controle !",
+            "solution": "h4g6"
+          },
+          {
+            "coups_acceptes": ["g6e5"],
+            "reponse": "h4h3",
+            "indice": "Etape 2 : recentralise le Cavalier vers e5 — la case ideale.",
+            "solution": "g6e5"
+          },
+          {
+            "coups_acceptes": ["e5c6"],
+            "reponse": "h3h2",
+            "indice": "Etape 3 : le Cavalier en c6 verrouille ! Les deux Cavaliers encerclent le Roi noir.",
+            "solution": "e5c6"
+          }
+        ],
+        "feedback_succes": "Excellent ! Le filet de mat est construit ! Apres h2, le Cavalier d6 glisse en b5, le pion promeut en Dame... et Cavalier c7 est le mat ! Le pion noir a aide les Blancs en fournissant les tempos necessaires.",
+        "feedback_erreur": "Suis le plan : Cavalier h4 vers g6, puis e5, puis c6 pour verrouiller le Roi noir en a8."
+      }
     }
   ]
 }

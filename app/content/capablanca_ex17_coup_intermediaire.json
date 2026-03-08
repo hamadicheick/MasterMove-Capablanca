@@ -1,35 +1,58 @@
-﻿{
-  "id": "capablanca_ex17_coup_intermediaire",
-  "title": "Coup intermédiaire en ouverture",
+{
+  "chapitre_id": "capablanca_ex17_coup_intermediaire",
+  "titre": "Le Cavalier bondit au centre avec tempo !",
+  "description": "Trouver le coup intermediaire qui cree une menace plus forte que celle de l'adversaire.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
-      "text": "Les Blancs trouvent un coup intermédiaire fort qui améliore instantanément leur jeu."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou noir menace le Cavalier blanc !",
+      "texte_audio": "Regarde cette position. Le Fou noir est en b4 et il attaque le Cavalier blanc en c3. Normalement, quand une piece est attaquee, tu dois la defendre ou la reculer. Mais les Blancs ont un coup bien plus fort ! Au lieu de s'occuper du Cavalier, ils vont faire quelque chose d'imprevoyable.",
+      "position_depart_fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
-      "moves": [
-        { "uci": "c3d5", "comment": "Le Cavalier centralise avec tempo et pression tactique." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier saute au centre sur d5 !",
+      "texte_audio": "Le Cavalier blanc va en d5 — au centre de l'echiquier ! C'est le coup intermediaire. Plutot que de defendre le Cavalier en c3 attaque par le Fou noir, les Blancs font quelque chose de plus fort. Le Cavalier en d5 attaque le Cavalier noir en f6 ET le Fou noir en b4. Double attaque ! Les Noirs ne peuvent pas prendre les deux a la fois !",
+      "position_depart_fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1G1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "animations": [
+        {
+          "coup": "c3d5",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier saute en d5 ! Il attaque le Cavalier noir en f6 ET le Fou noir en b4 en meme temps !"
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Un coup intermédiaire peut changer l'évaluation d'une position.",
-        "Centraliser une pièce active augmente la pression globale.",
-        "Cherche toujours les coups dynamiques avant de simplifier."
-      ]
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Pourquoi d5 est une case si forte ?",
+      "texte_audio": "Le Cavalier en d5 est sur une case ideale. Premierement, il est au centre de l'echiquier ou il domine beaucoup de cases. Deuxiemement, les pions noirs ne peuvent pas le chasser — il n'y a pas de pion noir sur c6 ou e6 pour le deloger. Troisiemement, il fait une double attaque sur f6 et b4. C'est ce qu'on appelle une case forte ou un avant-poste pour le Cavalier.",
+      "position_depart_fen": "r1bq1rk1/ppp2ppp/2np1n2/1B1Np1G1/1b2P3/3P1N2/PPP2PPP/R2Q1RK1 w - - 1 2",
+      "animations": []
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Le principe du coup intermédiaire",
+      "texte_audio": "Le coup intermediaire est un concept tres important aux echecs. Quand ton adversaire te menace, au lieu de defendre directement, tu poses une menace encore plus forte ! Ton adversaire est alors oblige de repondre a ta menace, et le probleme initial disparait. Ici, le Fou noir menaçait le Cavalier blanc en c3. Mais le Cavalier a bondi en d5 avec une double attaque — une menace plus forte ! Les Noirs doivent s'en occuper.",
+      "position_depart_fen": "r1bq1rk1/ppp2ppp/2np1n2/1B1Np1G1/1b2P3/3P1N2/PPP2PPP/R2Q1RK1 w - - 1 2",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
-      "question": "Quiz final : trouve le coup intermédiaire fort des Blancs.",
-      "correct_move": "c3d5",
-      "success_message": "Exact, ce coup centralise et crée des menaces immédiates.",
-      "error_message": "Cherche un coup de Cavalier qui saute au centre avec initiative."
+      "texte_ecran": "À toi ! Trouve le coup intermédiaire.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Fou noir en b4 attaque ton Cavalier en c3. Plutot que de defendre, tu peux jouer un coup intermediaire plus fort. Le Cavalier en c3 peut aller quelque part au centre avec une double attaque. Ou va le Cavalier ?",
+      "position_depart_fen": "r1bq1rk1/ppp2ppp/2np1n2/1B2p1B1/1b2P3/2NP1N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["c3d5"],
+        "indice": "Le Cavalier en c3 peut bondir en d5 au centre. De la, il attaque le Cavalier noir en f6 ET le Fou noir en b4 !",
+        "feedback_succes": "Excellent ! Cavalier en d5 — le coup intermediaire ! Il fait une double attaque sur le Cavalier noir en f6 et le Fou noir en b4. Les Noirs ne peuvent pas repondre aux deux menaces a la fois !",
+        "feedback_erreur": "Plutot que de defendre le Cavalier, cherche un coup plus fort au centre. Le Cavalier en c3 peut-il aller en d5 ?"
+      }
     }
   ]
 }

@@ -1,67 +1,129 @@
-﻿{
-  "id": "capablanca_ex25_percee_aile_dame",
-  "title": "Exemple 25 - Percée sur l'aile Dame",
+{
+  "chapitre_id": "capablanca_ex25_percee_aile_dame",
+  "titre": "Percée sur l'aile Dame : la promotion d'abord !",
+  "description": "Forcer la promotion par une percee de pions sur l'aile Dame, plus rapide que le contre-jeu adverse.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
-      "text": "Les Blancs forcent la promotion par une percée de pions sur l'aile Dame."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Une course de pions sur des ailes opposées !",
+      "texte_audio": "Regarde cette position. Les Blancs ont deux pions sur a2 et b5, le Roi blanc est en b3. Les Noirs ont des pions sur a7 et h7, le Roi noir est en g7. Les deux camps peuvent pousser leurs pions vers la promotion. Qui arrive en Dame le premier ? Les Blancs sur l'aile Dame, les Noirs sur l'aile Roi. La vitesse est decisive !",
+      "position_depart_fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
-      "moves": [
-        { "uci": "a2a4", "comment": "Le pion a démarre la course vers la promotion." },
-        { "uci": "h7h5", "comment": "Les Noirs avancent leur pion h en contre-jeu." },
-        { "uci": "a4a5", "comment": "Les Blancs poursuivent la percée." },
-        { "uci": "h5h4", "comment": "Les Noirs continuent leur plan de course." },
-        { "uci": "b5b6", "comment": "Le pion b soutient la rupture décisive." },
-        { "uci": "a7b6", "comment": "Les Noirs capturent pour freiner l'aile Dame." },
-        { "uci": "a5a6", "comment": "Le pion a devient extrêmement dangereux." },
-        { "uci": "h4h3", "comment": "Les Noirs n'ont plus assez de temps." },
-        { "uci": "a6a7", "comment": "Le pion blanc atteint la 7e rangée." },
-        { "uci": "h3h2", "comment": "Dernière poussée noire, trop lente." },
-        { "uci": "a7a8q", "comment": "Promotion en Dame : gain décisif." }
-      ]
-    },
-    {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Créer un pion passé éloigné peut neutraliser le contre-jeu adverse.",
-        "Le soutien d'un second pion rend la percée plus robuste.",
-        "En finale, la vitesse de promotion est souvent le facteur principal."
-      ]
-    },
-    {
-      "type": "quiz_interactif",
-      "fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
-      "question": "Quiz final en 3 coups : lance le plan gagnant sur l'aile Dame.",
-      "steps": [
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le pion a démarre la course !",
+      "texte_audio": "Le pion blanc a avance en a4 ! Les Blancs lancent leur course de pions sur l'aile Dame. Les Noirs lancent leur contre-jeu avec le pion h en h5. La course est engagee ! Les deux camps poussent leurs pions aussi vite que possible. Chaque tempo est precieux.",
+      "position_depart_fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
+      "animations": [
         {
-          "coups_acceptes": ["a2a4"],
-          "reponse": "h7h5",
-          "indice": "Étape 1 : démarre la course de ton pion a.",
-          "solution": "a2a4"
+          "coup": "a2a4",
+          "acteur": "blanc",
+          "commentaire": "Le pion a lance la course ! Les Blancs avancent vite sur l'aile Dame."
         },
         {
-          "fen": "8/p5k1/8/1P5p/P7/1K6/8/8 w - - 0 2",
-          "coups_acceptes": ["a4a5"],
-          "reponse": "h5h4",
-          "indice": "Étape 2 : continue la poussée sans perdre de tempo.",
-          "solution": "a4a5"
+          "coup": "h7h5",
+          "acteur": "noir",
+          "commentaire": "Les Noirs lancent leur contre-jeu avec le pion h. La course est engagee !"
         },
         {
-          "fen": "8/p5k1/8/P6p/7p/1K6/8/8 w - - 0 3",
-          "coups_acceptes": ["b5b6"],
-          "reponse": "a7b6",
-          "indice": "Étape 3 : ouvre la voie décisive pour le pion a.",
-          "solution": "b5b6"
+          "coup": "a4a5",
+          "acteur": "blanc",
+          "commentaire": "Le pion a continue en a5 ! Il est bien soutenu par le pion b5."
+        },
+        {
+          "coup": "h5h4",
+          "acteur": "noir",
+          "commentaire": "Le pion noir h avance en h4. Mais les Blancs ont l'avance sur l'aile Dame !"
         }
-      ],
-      "correct_move": "a2a4",
-      "success_message": "Excellent, ton plan de percée est correct.",
-      "error_message": "Reprends le plan : vitesse, soutien du pion b, puis promotion."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le pion b cree la percée décisive !",
+      "texte_audio": "Le pion blanc b avance en b6 ! C'est le coup decisive. Le pion noir a prend en b6. Mais maintenant le pion blanc a6 est libre de continuer. Les Noirs n'ont pas le temps d'arreter les deux pions blancs. Le pion blanc va promouvoir avant que le pion noir h n'arrive !",
+      "position_depart_fen": "8/p5k1/8/PP5p/7p/1K6/8/8 w - - 0 3",
+      "animations": [
+        {
+          "coup": "b5b6",
+          "acteur": "blanc",
+          "commentaire": "Le pion b avance en b6 — la percee decisive ! Les Noirs doivent prendre."
+        },
+        {
+          "coup": "a7b6",
+          "acteur": "noir",
+          "commentaire": "Le pion noir prend en b6. Mais le pion blanc a5 devient libre !"
+        },
+        {
+          "coup": "a5a6",
+          "acteur": "blanc",
+          "commentaire": "Le pion blanc file vers la promotion ! Il est extremement dangereux."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Promotion ! Les Blancs gagnent la course.",
+      "texte_audio": "Le pion noir pousse h3, mais c'est trop tard. Le pion blanc avance en a7, puis en a8 ou il devient Dame ! Les Blancs ont gagne la course de pions. La cle etait que le pion b5 soutenait la percee du pion a. Sans le pion b5, la percee n'aurait pas ete possible. Le soutien d'un deuxieme pion est souvent la difference entre gagner et ne pas gagner une course de pions !",
+      "position_depart_fen": "8/p5k1/P7/8/7p/7p/8/1K6 w - - 0 5",
+      "animations": [
+        {
+          "coup": "h4h3",
+          "acteur": "noir",
+          "commentaire": "Le pion noir continue, mais il est trop lent !"
+        },
+        {
+          "coup": "a6a7",
+          "acteur": "blanc",
+          "commentaire": "Le pion blanc est en a7 — un seul coup de la promotion !"
+        },
+        {
+          "coup": "h3h2",
+          "acteur": "noir",
+          "commentaire": "Derniere poussee noire, mais trop tard."
+        },
+        {
+          "coup": "a7a8q",
+          "acteur": "blanc",
+          "commentaire": "Promotion en Dame ! Les Blancs ont gagne la course !"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "quiz_interactif",
+      "texte_ecran": "À toi ! Lance la percée sur l'aile Dame.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Tu as des pions sur a2 et b5. Le Roi noir est loin en g7. Lance la percee de pions ! Quel est le premier coup ?",
+      "position_depart_fen": "8/p5kp/8/1P6/8/1K6/P7/8 w - - 0 1",
+      "validation": {
+        "indice": "Lance la course de pions sur l'aile Dame ! Le pion a doit avancer pour creer la menace de percee.",
+        "steps": [
+          {
+            "coups_acceptes": ["a2a4"],
+            "reponse": "h7h5",
+            "indice": "Etape 1 : avance le pion a pour lancer la course !",
+            "solution": "a2a4"
+          },
+          {
+            "coups_acceptes": ["a4a5"],
+            "reponse": "h5h4",
+            "indice": "Etape 2 : continue la poussee sans perdre de tempo.",
+            "solution": "a4a5"
+          },
+          {
+            "coups_acceptes": ["b5b6"],
+            "reponse": "a7b6",
+            "indice": "Etape 3 : avance le pion b pour ouvrir la voie au pion a !",
+            "solution": "b5b6"
+          }
+        ],
+        "feedback_succes": "Excellent, ton plan de percee est correct ! Le pion b6 force l'echange, puis le pion a avance vers la promotion avant que le pion noir n'arrive !",
+        "feedback_erreur": "Reprends le plan : avance le pion a vite, puis le pion b pour la percee decisive."
+      }
     }
   ]
 }

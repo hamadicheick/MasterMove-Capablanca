@@ -1,45 +1,124 @@
-﻿{
-  "id": "capablanca_ex20_centre_et_developpement",
-  "title": "Exemple 20 - Centre et développement",
+{
+  "chapitre_id": "capablanca_ex20_centre_et_developpement",
+  "titre": "Ouvre le centre quand tu es bien développé !",
+  "description": "Apprendre a ouvrir le centre au bon moment pour profiter d'un meilleur developpement.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "rnbqkbnr/pppp1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 3",
-      "text": "Les Blancs développent rapidement leurs pièces et contestent le centre noir."
-    },
-    {
-      "type": "animation",
-      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      "moves": [
-        { "uci": "e2e4", "comment": "Les Blancs prennent le centre." },
-        { "uci": "e7e5", "comment": "Réponse symétrique des Noirs." },
-        { "uci": "g1f3", "comment": "Le Cavalier attaque e5 et se développe." },
-        { "uci": "d7d6", "comment": "Les Noirs soutiennent leur pion central." },
-        { "uci": "f1c4", "comment": "Le Fou vise la diagonale active vers f7." },
-        { "uci": "b8c6", "comment": "Les Noirs développent leur Cavalier." },
-        { "uci": "d2d4", "comment": "Les Blancs ouvrent le centre au bon moment." },
-        { "uci": "c8g4", "comment": "Les Noirs clouent le Cavalier f3." },
-        { "uci": "b1c3", "comment": "Les Blancs renforcent le centre." },
-        { "uci": "h7h6", "comment": "Les Noirs jouent un coup d'attente à l'aile Roi." },
-        { "uci": "d4e5", "comment": "Les Blancs gagnent de l'espace central." }
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Les pions centraux, premier moteur de l'ouverture.",
+      "texte_audio": "L'ouverture aux echecs commence par le centre. Pourquoi ? Parce que les pieces qui controlent le centre controlent tout l'echiquier. Les pions e4 et d4 pour les Blancs, et e5 et d5 pour les Noirs, sont les rois du centre. On commence toujours par avancer ces pions centraux !",
+      "position_depart_fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "animations": [
+        {
+          "coup": "e2e4",
+          "acteur": "blanc",
+          "commentaire": "Le pion e4 occupe le centre ! C'est le premier coup ideal pour les Blancs."
+        },
+        {
+          "coup": "e7e5",
+          "acteur": "noir",
+          "commentaire": "Les Noirs repondent symetriquement. Ils controlent aussi le centre."
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Développement et contrôle du centre vont ensemble.",
-        "Les coups de pions d'aile trop tôt peuvent coûter du temps.",
-        "Ouvrir le centre favorise le camp le mieux développé."
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Développe tes pièces mineures rapidement !",
+      "texte_audio": "Maintenant que les pions centraux sont places, on developpe les pieces mineures. Le Cavalier va en f3 — il attaque e5 et se developpe vers le centre. Les Noirs jouent d6 pour soutenir le pion e5. Puis le Fou blanc va en c4 sur une belle diagonale active. Le Cavalier noir sort en c6.",
+      "position_depart_fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "animations": [
+        {
+          "coup": "g1f3",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier se developpe en f3 et attaque le centre."
+        },
+        {
+          "coup": "d7d6",
+          "acteur": "noir",
+          "commentaire": "Les Noirs soutiennent le pion e5 avec d6."
+        },
+        {
+          "coup": "f1c4",
+          "acteur": "blanc",
+          "commentaire": "Le Fou sort en c4 sur la grande diagonale. Il vise f7 !"
+        },
+        {
+          "coup": "b8c6",
+          "acteur": "noir",
+          "commentaire": "Le Cavalier noir se developpe en c6 et defend e5."
+        }
       ]
     },
     {
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou noir cloue — les Blancs ouvrent le centre !",
+      "texte_audio": "Les Blancs jouent d4 — ils ouvrent le centre encore plus ! Les Noirs jouent le Fou en g4 pour clouer le Cavalier f3. Les Blancs jouent le Cavalier en c3 pour soutenir d4. Les Noirs jouent h6 — un coup lent. Maintenant les Blancs sont beaucoup mieux developpes. Ils doivent ouvrir le jeu !",
+      "position_depart_fen": "r1bqkbnr/ppp2ppp/2np4/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+      "animations": [
+        {
+          "coup": "d2d4",
+          "acteur": "blanc",
+          "commentaire": "Les Blancs ouvrent le centre avec d4 ! Ils ont l'avantage en developpement."
+        },
+        {
+          "coup": "c8g4",
+          "acteur": "noir",
+          "commentaire": "Le Fou noir cloue le Cavalier f3. Mais les Blancs repondent bien."
+        },
+        {
+          "coup": "b1c3",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier renforce le centre. Les Blancs sont tres bien developpes."
+        },
+        {
+          "coup": "h7h6",
+          "acteur": "noir",
+          "commentaire": "Les Noirs jouent h6 — un coup lent. Les Blancs doivent profiter de leur avance de developpement !"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Ouvre le centre quand tu es mieux développé !",
+      "texte_audio": "Quand tu es mieux developpe que ton adversaire, c'est le moment d'ouvrir le centre ! Les Blancs prennent en e5 avec d4 prend e5. Apres les echanges, les Blancs ont des pieces actives sur des colonnes ouvertes. Les Fous et les Tours adorent les lignes ouvertes. C'est le principe fondamental : un meilleur developpement est recompense quand le centre est ouvert.",
+      "position_depart_fen": "r1bqkbnr/ppp2pp1/2np3p/4p3/2BPP1b1/2N2N2/PPP2PPP/R1BQK2R w KQkq - 0 6",
+      "animations": [
+        {
+          "coup": "d4e5",
+          "acteur": "blanc",
+          "commentaire": "Les Blancs ouvrent le centre ! Prise en e5 — les pieces actives vont dominer !"
+        }
+      ]
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "r1bqkbnr/ppp2pp1/2np3p/4p3/2BPP1b1/2N2N2/PPP2PPP/R1BQK2R w KQkq - 0 6",
-      "question": "Quiz final : quel coup blanc exploite le mieux l'avance de développement ?",
-      "correct_move": "d4e5",
-      "success_message": "Exact, l'ouverture du centre favorise les Blancs.",
-      "error_message": "Cherche la capture centrale qui profite des pièces actives."
+      "texte_ecran": "À toi ! Lance le développement.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent apres e4 e5 Cf3 d6 Fc4 Cc6. Le Cavalier noir en c6 defend le pion e5. Tu veux ouvrir le centre. Quel coup joues-tu ?",
+      "position_depart_fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 4",
+      "validation": {
+        "coups_acceptes": ["d2d4"],
+        "indice": "Tu peux ouvrir le centre avec le pion en d4 ! C'est le moment ideal — tu es bien developpe.",
+        "feedback_succes": "Bravo ! d4 ouvre le centre. Si les Noirs prennent en d4, tu reprends avec le Cavalier ou la Dame. Tes pieces actives vont dominer le jeu !",
+        "feedback_erreur": "Pense a ouvrir le centre ! Le pion blanc en d2 peut avancer en d4 pour contester le pion noir en e5."
+      }
+    },
+    {
+      "id": 6,
+      "type": "quiz_interactif",
+      "texte_ecran": "Mieux développé ? Ouvre le centre !",
+      "texte_audio": "Tu es mieux developpe que les Noirs. Les Noirs viennent de jouer h6 — un coup lent. C'est le moment d'ouvrir le centre et de profiter de ton avance ! Quel coup joues-tu ?",
+      "position_depart_fen": "r1bqkbnr/ppp2pp1/2np3p/4p3/2BPP1b1/2N2N2/PPP2PPP/R1BQK2R w KQkq - 0 6",
+      "validation": {
+        "coups_acceptes": ["d4e5"],
+        "indice": "Prends le pion noir en e5 avec ton pion d4 ! Tu ouvres le centre et tes pieces actives vont en profiter.",
+        "feedback_succes": "Parfait ! Prise en e5 — tu ouvres le centre au moment ideal. Tes pieces actives vont dominer les lignes ouvertes !",
+        "feedback_erreur": "C'est le moment d'ouvrir le centre ! Le pion blanc en d4 peut prendre le pion noir en e5."
+      }
     }
   ]
 }

@@ -1,0 +1,48 @@
+[Event "les Principes Fondamentaux - Capablanca_52"]
+[Site "Exercice 52"]
+[Date "2026.03.07"]
+[Round "52"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r1bqkb1r/ppp2ppp/4pn2/4N3/3P4/8/PPP2PPP/R1BQKB1R b - - 0 1"]
+[SetUp "1"]
+
+{ Score: -0.54 } 1... Nd7 2. Nc4 Nb6 3. c3 Nxc4 4. Bxc4 Bd7 5. h4 Bc6 6. Kf1 h5 7. Qe2 *
+
+[Event "les Principes Fondamentaux - Capablanca_52"]
+[Site "Exercice 53"]
+[Date "2026.03.07"]
+[Round "53"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "1rb3k1/p1p2p1p/3b2p1/2p1p3/2PnP2N/1P2N3/P2R1PPP/R2Q2K1 w - - 0 1"]
+[SetUp "1"]
+
+{ Score: +6.65 } 1. Kh1 Kg7 2. Rd3 h5 3. Rc3 Be6 4. Rcc1 Be7 5. Nf3 Bg4 6. Rcb1 f6 *
+
+[Event "les Principes Fondamentaux - Capablanca_52"]
+[Site "Exercice 54"]
+[Date "2026.03.07"]
+[Round "54"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r1bq1rk1/p1p3p1/3b1n1p/2p1p3/4P2B/2N2N2/PPP2PPP/R2Q1RK1 w - - 0 1"]
+[SetUp "1"]
+
+{ Score: +1.85 } 1. Qe2 a5 2. Nd2 Ba6 3. Nc4 g5 4. Bg3 h5 5. f3 h4 6. Bf2 Rf7 *
+
+[Event "les Principes Fondamentaux - Capablanca_52"]
+[Site "Exercice 55"]
+[Date "2026.03.07"]
+[Round "55"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r1b1kb1r/p2n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w - - 0 1"]
+[SetUp "1"]
+
+{ Score: +1.94 } 1. Bxf6 Rb8 2. c5 Nxf6 3. Qd2 Qc7 4. Rb1 Ne4 5. Nxe4 dxe4 6. Ng5 f5 *
+

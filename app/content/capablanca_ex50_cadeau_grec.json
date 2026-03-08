@@ -1,0 +1,63 @@
+{
+  "id": "capablanca_ex50_cadeau_grec",
+  "title": "Exemple 50 — Le cadeau empoisonné",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bq1rk1/1p2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "text": "Le Roi noir croit être en sécurité derrière ses pions. Les Blancs ont déjà une bonne position, mais ils voient quelque chose de plus fort : une attaque directe ! Un sacrifice va tout changer. Sauras-tu trouver le coup surprenant ?"
+    },
+    {
+      "type": "animation",
+      "fen": "r1bq1rk1/1p2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "text": "Regarde comment le Fou se sacrifie pour briser l'abri du Roi noir !",
+      "moves": [
+        {
+          "uci": "d3h7",
+          "comment": "Le Fou se sacrifie en h7 avec echec ! C'est un cadeau empoisonné — le Roi noir est obligé de prendre. Il n'a pas le choix !"
+        },
+        {
+          "uci": "g8h7",
+          "comment": "Le Roi prend le Fou en h7. Il sort de son abri. C'était exactement le piège des Blancs !"
+        },
+        {
+          "uci": "f3g5",
+          "comment": "Le Cavalier bondit en g5 avec echec ! Le Roi exposé ne peut plus se cacher. Cavalier et Dame vont maintenant travailler ensemble."
+        },
+        {
+          "uci": "h7g8",
+          "comment": "Le Roi recule en g8. C'est la seule case disponible. Mais l'attaque blanche continue !"
+        },
+        {
+          "uci": "d1g4",
+          "comment": "La Dame entre en g4 ! Elle menace de venir en h5 puis h7 pour donner mat. Le Roi noir est en grand danger."
+        },
+        {
+          "uci": "f7f5",
+          "comment": "Les Noirs jouent le pion en f5 pour bloquer la Dame. C'est leur meilleure défense — mais ce n'est pas suffisant !"
+        },
+        {
+          "uci": "g4g3",
+          "comment": "La Dame se repositionne en g3. Elle cherche un autre chemin. Le Roi noir reste sous pression permanente."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Le sacrifice du Fou en h7 force le Roi à sortir de son abri. Capablanca appelle ce coup un cadeau empoisonné : il semble généreux, mais il mène à la catastrophe pour les Noirs.",
+        "Le Cavalier en g5 complète l'attaque en donnant echec. Fou, Cavalier et Dame forment une équipe redoutable contre le Roi exposé.",
+        "Capablanca nous enseigne : une attaque directe contre le Roi doit être menée avec toutes les pièces disponibles, en masse."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bq1rk1/1p2nppp/4p3/2n5/8/2NBPN2/PP3PPP/R2Q1RK1 w - - 0 1",
+      "question": "Le Roi noir croit être en sécurité. Trouve le coup sacrificiel qui brise sa défense !",
+      "correct_move": "d3h7",
+      "success_message": "Excellent ! Le Fou se sacrifie en h7 pour forcer le Roi à sortir. Après le Cavalier en g5 et la Dame en g4, l'attaque devient imparable !",
+      "error_message": "Cherche une pièce qui peut aller directement sur h7 pour attaquer le Roi. Regarde bien la diagonale !"
+    }
+  ]
+}

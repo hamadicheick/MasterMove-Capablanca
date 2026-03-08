@@ -1,39 +1,101 @@
-﻿{
-  "id": "capablanca_ex11_motif_tour_h8",
-  "title": "Motif tactique : sacrifice et mat en h8",
+{
+  "chapitre_id": "capablanca_ex11_motif_tour_h8",
+  "titre": "Le sacrifice de Dame pour un mat de Tour",
+  "description": "Reconnaitre le motif du mat de Tour sur h8 apres un sacrifice de Dame.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
-      "text": "Les Blancs déclenchent un sacrifice de Dame pour forcer un mat de Tour."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Trouve le mat en 3 coups !",
+      "texte_audio": "Regarde cette position. Les Blancs ont une Dame en h3 et une Tour en f3. Le Roi noir est en g8. Est-ce que tu vois un plan pour mater en seulement 3 coups ? La colonne h est presque vide — c'est une piste !",
+      "position_depart_fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
-      "moves": [
-        { "uci": "h3h7", "comment": "Sacrifice de Dame avec échec." },
-        { "uci": "g8h7", "comment": "Le Roi noir est forcé de capturer." },
-        { "uci": "f3h3", "comment": "La Tour arrive avec échec." },
-        { "uci": "h7g8", "comment": "Le Roi noir revient en g8." },
-        { "uci": "h3h8", "comment": "Mat final sur la 8e rangée." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "La Dame se sacrifie en h7 !",
+      "texte_audio": "Le premier coup est un sacrifice ! La Dame va en h7, echec ! Les Blancs donnent leur Dame expres. Pourquoi ? Parce que le Roi noir est force de prendre la Dame. La Tour en f8 ne peut pas interposer car elle ne peut pas aller en h7. Et le Roi ne peut pas aller en h8 car la Dame le surveille depuis h7.",
+      "position_depart_fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
+      "animations": [
+        {
+          "coup": "h3h7",
+          "acteur": "blanc",
+          "commentaire": "Dame en h7, echec ! La Dame se sacrifie pour attirer le Roi noir."
+        },
+        {
+          "coup": "g8h7",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir est force de prendre la Dame. Il n'a pas le choix !"
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Un sacrifice peut ouvrir la ligne de mat.",
-        "La coordination Dame+Tour crée des menaces forcées.",
-        "Quand les coups sont forcés, le calcul devient fiable."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "La Tour donne échec sur la colonne h !",
+      "texte_audio": "Maintenant la Tour bondit de f3 en h3, echec ! Le Roi noir est en h7 et doit fuir. Il ne peut pas aller en h8 car la Tour surveille toute la colonne h. Il ne peut pas aller en g7 car il serait en echec de la Tour. Le Roi revient donc en g8 — c'est la seule case disponible.",
+      "position_depart_fen": "5r2/1b3p1k/ppq3p1/2p5/8/1P1P1R2/PBP3PP/7K w - - 0 2",
+      "animations": [
+        {
+          "coup": "f3h3",
+          "acteur": "blanc",
+          "commentaire": "Tour en h3, echec ! Le Roi noir est chasse de h7."
+        },
+        {
+          "coup": "h7g8",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir revient en g8. Il est dans le piege !"
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Échec et mat en h8 !",
+      "texte_audio": "Tour en h8, echec et mat ! Pourquoi est-ce mat ? La Tour noire en f8 ne peut pas prendre en h8 car son propre Roi en g8 lui bloque le chemin ! Le Fou blanc en b2 surveille la case g7. Le pion noir en f7 bloque la case f7 pour le Roi. Le Roi noir est completement pris au piege — il ne peut aller nulle part !",
+      "position_depart_fen": "5rk1/1b3p2/ppq3p1/2p5/8/1P1P3R/PBP3PP/7K w - - 2 3",
+      "animations": [
+        {
+          "coup": "h3h8",
+          "acteur": "blanc",
+          "commentaire": "Tour en h8, echec et mat ! Le Roi noir ne peut aller nulle part !"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "theorie_animee",
+      "texte_ecran": "Pourquoi la Tour noire ne peut pas sauver le Roi ?",
+      "texte_audio": "Voici le detail cle : la Tour noire est en f8. Pour aller en h8, elle devrait passer par g8. Mais g8 est occupe par le Roi noir ! Une Tour ne peut pas traverser son propre Roi. C'est pour ca que le mat fonctionne. On appelle ce motif le mat de Tour sur la huitieme rangee.",
+      "position_depart_fen": "5rk1/1b3p2/ppq3p1/2p5/8/1P1P3R/PBP3PP/7K w - - 2 3",
+      "animations": []
+    },
+    {
+      "id": 6,
       "type": "quiz_interactif",
-      "fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
-      "question": "Quiz final : trouve le coup forcé qui lance le mat.",
-      "correct_move": "h3h7",
-      "success_message": "Exact, le sacrifice de Dame force le mat.",
-      "error_message": "Cherche un sacrifice avec échec pour forcer la suite."
+      "texte_ecran": "À toi ! Trouve le sacrifice de Dame.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. La Dame blanche est en h3, la Tour est en f3, le Roi noir est en g8. Quel est le premier coup pour forcer le mat en 3 coups ?",
+      "position_depart_fen": "5rk1/1b3p1p/ppq3p1/2p5/8/1P1P1R1Q/PBP3PP/7K w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["h3h7"],
+        "indice": "La Dame peut se sacrifier sur h7 avec echec. Le Roi noir sera force de la prendre !",
+        "feedback_succes": "Bravo ! Dame en h7, echec et sacrifice ! Le Roi prend la Dame, Tour en h3, Tour en h8 pour le mat. Tu as vu le motif !",
+        "feedback_erreur": "Cherche un echec avec la Dame sur la colonne h. La Dame peut aller directement en h7 — c'est un sacrifice !"
+      }
+    },
+    {
+      "id": 7,
+      "type": "quiz_interactif",
+      "texte_ecran": "Deuxième coup : joue la Tour !",
+      "texte_audio": "Le Roi noir vient de prendre la Dame en h7. Il est maintenant en h7. C'est le moment d'attaquer avec la Tour ! Quel coup joues-tu pour chasser le Roi vers g8 ?",
+      "position_depart_fen": "5r2/1b3p1k/ppq3p1/2p5/8/1P1P1R2/PBP3PP/7K w - - 0 2",
+      "validation": {
+        "coups_acceptes": ["f3h3"],
+        "indice": "La Tour doit donner echec sur la colonne h pour chasser le Roi noir.",
+        "feedback_succes": "Parfait ! Tour en h3, echec ! Le Roi noir revient en g8, et tu joues Tour en h8 pour le mat final !",
+        "feedback_erreur": "La Tour doit donner echec sur la colonne h. Elle va de f3 en h3 !"
+      }
     }
   ]
 }

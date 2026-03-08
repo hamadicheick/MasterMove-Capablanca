@@ -1,43 +1,122 @@
-﻿{
-  "id": "capablanca_ex12_combinaison_colonne_e",
-  "title": "Combinaison tactique sur la colonne e",
+{
+  "chapitre_id": "capablanca_ex12_combinaison_colonne_e",
+  "titre": "La combinaison sur la colonne e",
+  "description": "Enchaîner les echanges forces pour gagner du materiel sur la colonne centrale.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
-      "text": "Les Blancs gagnent du matériel par une séquence forcée sur la colonne e."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Les Blancs ont une combinaison tactique !",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Cavalier en d4, une Tour en e3 et une Dame en h3. Le Cavalier noir est en c6. Les Blancs peuvent lancer une combinaison pour gagner du materiel. Le secret : utiliser le Cavalier pour declencher une cascade de captures forcees !",
+      "position_depart_fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
-      "moves": [
-        { "uci": "d4c6", "comment": "Le Cavalier capture en c6." },
-        { "uci": "e7g5", "comment": "Le Fou noir contre-attaque." },
-        { "uci": "c6e7", "comment": "Le Cavalier arrive en e7 avec échec." },
-        { "uci": "c7e7", "comment": "La Dame noire capture le Cavalier." },
-        { "uci": "e3e7", "comment": "La Tour blanche reprend la Dame." },
-        { "uci": "g5e7", "comment": "Le Fou noir reprend la Tour." },
-        { "uci": "h3d7", "comment": "La Dame blanche entre dans le camp noir." },
-        { "uci": "f7f6", "comment": "Les Noirs tentent de se défendre." },
-        { "uci": "d7b7", "comment": "Les Blancs gagnent une pièce supplémentaire." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier saute sur c6 !",
+      "texte_audio": "Le Cavalier blanc saute en c6 et prend le Cavalier noir ! C'est le coup de depart. En echangeant les Cavaliers, les Blancs ouvrent le chemin pour la suite. Le Cavalier blanc est maintenant bien place en c6, tout pres du Roi noir. Le Fou noir contre-attaque en g5 pour chasser la Dame blanche — mais les Blancs ont une reponse foudroyante !",
+      "position_depart_fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
+      "animations": [
+        {
+          "coup": "d4c6",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier prend en c6 ! Les Blancs echangent les Cavaliers et le Cavalier blanc prend position."
+        },
+        {
+          "coup": "e7g5",
+          "acteur": "noir",
+          "commentaire": "Le Fou noir contre-attaque en g5 pour pousser la Dame. Mais les Blancs ont une reponse foudroyante !"
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "La tactique exploite l'alignement des pièces lourdes.",
-        "Chaque reprise prépare la suivante.",
-        "Le calcul précis transforme l'initiative en gain matériel."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier bondit sur e7, échec !",
+      "texte_audio": "Le Cavalier blanc va en e7, echec ! Le Roi noir en g8 est en echec par le Cavalier. On ne peut pas bloquer un echec de Cavalier — les Noirs doivent prendre ou bouger le Roi. La Dame noire en c7 prend le Cavalier en e7. Elle est maintenant exposee sur la colonne e — exactement ce que les Blancs voulaient !",
+      "position_depart_fen": "5rk1/1bq2p1p/p1N3p1/1p4b1/8/1P1PR2Q/PBP3P1/7K w - - 0 2",
+      "animations": [
+        {
+          "coup": "c6e7",
+          "acteur": "blanc",
+          "commentaire": "Cavalier en e7, echec ! Le Roi noir est en echec. La Dame noire doit prendre."
+        },
+        {
+          "coup": "c7e7",
+          "acteur": "noir",
+          "commentaire": "La Dame noire prend le Cavalier en e7. Elle est maintenant exposee sur la colonne e !"
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La Tour prend la Dame noire !",
+      "texte_audio": "La Tour blanche prend la Dame noire en e7 ! C'est un gain enorme. On donne un Cavalier pour prendre une Dame. Les Noirs reprennent avec le Fou en g5. Les Blancs ont perdu une Tour, mais ils ont gagne une Dame. C'est tres avantageux !",
+      "position_depart_fen": "5rk1/1b2qp1p/p5p1/1p4b1/8/1P1PR2Q/PBP3P1/7K w - - 0 3",
+      "animations": [
+        {
+          "coup": "e3e7",
+          "acteur": "blanc",
+          "commentaire": "La Tour prend la Dame noire ! Gain de materiel important."
+        },
+        {
+          "coup": "g5e7",
+          "acteur": "noir",
+          "commentaire": "Le Fou noir prend la Tour en e7. Les Noirs recuperent un peu."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "theorie_animee",
+      "texte_ecran": "La Dame blanche entre décisivement !",
+      "texte_audio": "La Dame blanche va en d7 — elle attaque le Fou noir en e7 et menace aussi de prendre le Fou en b7. Les Noirs jouent le pion en f6 pour defendre le Fou en e7. Mais le Fou en b7 reste sans defense ! La Dame prend le Fou en b7 et les Blancs ont gagne du materiel supplementaire.",
+      "position_depart_fen": "5rk1/1b2bp1p/p5p1/1p6/8/1P1P3Q/PBP3P1/7K w - - 0 4",
+      "animations": [
+        {
+          "coup": "h3d7",
+          "acteur": "blanc",
+          "commentaire": "La Dame entre en d7 ! Elle attaque le Fou en e7 et menace de prendre en b7."
+        },
+        {
+          "coup": "f7f6",
+          "acteur": "noir",
+          "commentaire": "Les Noirs protegent le Fou en e7 avec le pion. Mais le Fou en b7 est sans defense !"
+        },
+        {
+          "coup": "d7b7",
+          "acteur": "blanc",
+          "commentaire": "La Dame prend le Fou en b7 ! Les Blancs ont gagne du materiel supplementaire."
+        }
+      ]
+    },
+    {
+      "id": 6,
       "type": "quiz_interactif",
-      "fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
-      "question": "Quiz final : trouve le premier coup tactique.",
-      "correct_move": "d4c6",
-      "success_message": "Parfait, tu lances correctement la combinaison.",
-      "error_message": "Cherche une capture de Cavalier qui ouvre la colonne e."
+      "texte_ecran": "À toi ! Quel est le premier coup de la combinaison ?",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Cavalier blanc est en d4, le Cavalier noir est en c6. Quel est le premier coup de la combinaison gagnante ?",
+      "position_depart_fen": "5rk1/1bq1bp1p/p1n3p1/1p6/3N4/1P1PR2Q/PBP3P1/7K w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["d4c6"],
+        "indice": "Le Cavalier blanc en d4 peut prendre le Cavalier noir en c6. C'est le debut de la combinaison !",
+        "feedback_succes": "Bravo ! Le Cavalier prend en c6 ! Ensuite Cavalier en e7 echec, Dame prend, Tour prend Dame, Fou prend Tour, Dame blanche en d7 puis b7. Les Blancs gagnent beaucoup de materiel !",
+        "feedback_erreur": "Cherche une prise de Cavalier. Le Cavalier blanc en d4 peut-il aller en c6 ou se trouve le Cavalier noir ?"
+      }
+    },
+    {
+      "id": 7,
+      "type": "quiz_interactif",
+      "texte_ecran": "Après le Fou noir en g5, quel est le coup décisif ?",
+      "texte_audio": "Le Fou noir vient d'aller en g5 apres que ton Cavalier a pris en c6. Maintenant quel est le coup decisif des Blancs ? Le Cavalier est bien place en c6. Cherche un echec !",
+      "position_depart_fen": "5rk1/1bq2p1p/p1N3p1/1p4b1/8/1P1PR2Q/PBP3P1/7K w - - 0 2",
+      "validation": {
+        "coups_acceptes": ["c6e7"],
+        "indice": "Le Cavalier blanc en c6 peut bondir en e7 avec echec au Roi noir en g8 !",
+        "feedback_succes": "Excellent ! Cavalier en e7, echec ! La Dame noire doit prendre, puis la Tour prend la Dame. Belle combinaison !",
+        "feedback_erreur": "Le Cavalier blanc en c6 peut bondir en e7 pour donner echec au Roi noir. Essaie !"
+      }
     }
   ]
 }

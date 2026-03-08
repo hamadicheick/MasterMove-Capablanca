@@ -1,40 +1,59 @@
 {
-  "id": "capablanca_ex36_asymetrie_avantage_fou",
-  "title": "Exemple 36 - Asymétrie : avantage du Fou",
+  "chapitre_id": "capablanca_ex36_asymetrie_avantage_fou",
+  "titre": "Structure asymétrique : le Fou crée des menaces concrètes !",
+  "description": "En structure asymetrique, la mobilite du Fou devient un avantage concret et plus difficile a contrer.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
-      "text": "Avec une structure de pions asymétrique, le Fou offre des chances pratiques supérieures."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Structure asymétrique : le Fou a des cibles !",
+      "texte_audio": "Regarde cette position. Les pions blancs sont sur b, c, f, g, h. Les pions noirs sur a, b, c, f, g — il manque le pion h noir ! Cette asymetrie est importante. Le Fou blanc peut exploiter les cases affaiblies sur l'aile Roi noir. Le Cavalier noir doit se concentrer sur des cases precises, mais le Fou blanc a beaucoup plus de cibles a attaquer !",
+      "position_depart_fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
-      "moves": [
-        { "uci": "d7f6", "comment": "Le Cavalier noir se place activement, mais reste dépendant de cases fixes." },
-        { "uci": "c1f4", "comment": "Le Fou blanc se centralise et garde un rayon d'action large." },
-        { "uci": "e8d7", "comment": "Le Roi noir se rapproche de la majorité de l'aile Dame." },
-        { "uci": "e1e2", "comment": "Le Roi blanc soutient l'aile Roi et prépare la flexibilité." },
-        { "uci": "f6d5", "comment": "Le Cavalier tient le centre, mais son redéploiement reste plus lent." },
-        { "uci": "f4d2", "comment": "Le Fou peut changer d'axe rapidement selon le front de jeu." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou bascule d'une aile à l'autre avec précision !",
+      "texte_audio": "Le Cavalier noir avance en f6. Le Fou blanc se centralise en f4. Les Rois avancent. Le Cavalier trouve d5 comme case forte. Et le Fou fait une manoeuvre cle : il va en d2 ! En un coup, le Fou change de diagonale et vise l'aile Dame. Il peut maintenant menacer les pions noirs en a5 ou b7. Le Cavalier en d5 ne peut pas faire ca — il est ancre sur une seule case.",
+      "position_depart_fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
+      "animations": [
+        {"coup": "d7f6", "acteur": "noir", "commentaire": "Le Cavalier se centralise. Il cherche sa case forte."},
+        {"coup": "c1f4", "acteur": "blanc", "commentaire": "Le Fou se centralise en f4 — grand rayon d'action sur les deux ailes."},
+        {"coup": "e8d7", "acteur": "noir", "commentaire": "Le Roi noir avance vers le centre."},
+        {"coup": "e1e2", "acteur": "blanc", "commentaire": "Le Roi blanc fait de meme pour soutenir ses pions."},
+        {"coup": "f6d5", "acteur": "noir", "commentaire": "Le Cavalier trouve la case forte d5. Il semble bien installe."},
+        {"coup": "f4d2", "acteur": "blanc", "commentaire": "Le Fou change d'axe en d2 ! Il vise les pions noirs sur l'aile Dame. L'asymetrie profite aux Blancs."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "En structure asymétrique, la mobilité du Fou devient un avantage concret.",
-        "Le Cavalier peut être solide, mais il bascule moins vite d'une aile à l'autre.",
-        "Le livre indique que la nulle reste probable avec un jeu précis, malgré de meilleures chances blanches."
-      ]
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "L'asymétrie crée des cibles que le Cavalier ne peut défendre !",
+      "texte_audio": "Voila la difference fondamentale. Le Cavalier noir en d5 est fort — mais il est fixe. Pour attaquer un pion sur l'aile Roi, il doit faire plusieurs sauts. Pour attaquer l'aile Dame, il fait d'autres sauts. Il ne peut pas etre partout ! Le Fou blanc, lui, peut viser les deux fronts en meme temps. L'asymetrie de la structure donne au Fou des cibles concretes que le Cavalier ne peut pas toutes defendre. C'est la force pratique superieure du Fou !",
+      "position_depart_fen": "3k4/ppp2pp1/8/3n4/8/8/1PP1BP1P/3K4 w - - 8 5",
+      "animations": []
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : l'asymétrie amplifie l'avantage du Fou !",
+      "texte_audio": "Capablanca le montre dans son livre : l'asymetrie de la structure cree des faiblesse concretes. Ici, le pion h manquant chez les Noirs cree une faiblesse sur l'aile Roi. Le Fou blanc peut exploiter cette faiblesse car il change de diagonale en un coup. La nulle reste possible avec une defense tres precise — Capablanca le reconnait — mais les chances pratiques sont clairement en faveur des Blancs. C'est la force du Fou dans une structure asymetrique.",
+      "position_depart_fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "4k3/pppn1pp1/8/8/8/8/1PP2PPP/2B1K3 b - - 0 1",
-      "question": "Quiz final : quel coup noir active naturellement le Cavalier ?",
-      "correct_move": "d7f6",
-      "success_message": "Exact, c'est le développement logique du Cavalier dans cette structure.",
-      "error_message": "Cherche le saut central du Cavalier depuis d7."
+      "texte_ecran": "À toi ! Montre le changement de diagonale du Fou.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Fou est en f4. Le Cavalier noir vient de s'installer en d5. Joue le coup du Fou qui change de diagonale vers l'aile Dame pour creer de nouvelles menaces !",
+      "position_depart_fen": "3k4/ppp2pp1/8/3n4/5B2/8/1PP2PPP/3K4 w - - 6 4",
+      "validation": {
+        "coups_acceptes": ["f4d2", "f4c1", "f4e3", "f4g3", "f4h2"],
+        "indice": "Le Fou peut changer de diagonale en un seul coup vers l'aile Dame. La case d2 est ideale — de la, il vise les pions noirs a gauche.",
+        "feedback_succes": "Bravo ! Le Fou change de diagonale en un seul coup. Depuis d2, il vise maintenant les pions noirs sur l'aile Dame. Le Cavalier noir ne peut pas defendre les deux ailes a la fois — c'est l'avantage du Fou en structure asymetrique !",
+        "feedback_erreur": "Le Fou peut basculer vers l'aile Dame en un coup. Essaie d2 ou e3 pour viser les pions noirs a gauche."
+      }
     }
   ]
 }

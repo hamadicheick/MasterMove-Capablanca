@@ -1,4 +1,26 @@
 # PROGRESS - MasterMove Capablanca (MVP v3.3)
+## V3.3.31 - DIRECTIVE TTS / NORMALISATION DES EXEMPLES (07/03/2026) OK
+
+### Contexte
+- Le projet n'est pas encore a mi-parcours ; le rythme de travail doit etre clarifie pour eviter les allers-retours.
+- Pour les exemples du livre, la meilleure approche consiste a traiter chaque exemple au moment de son integration, et non a normaliser tout le livre en masse.
+- Le TTS Piper doit recevoir un texte prepare, pas du SAN brut ou des figurines OCR corrompues.
+
+### Decision operative
+- Pipeline officiel : `texte source -> normalisation OCR/encodage -> notation francaise de reference -> version parlable Piper -> correction manuelle legere -> integration app`.
+- Separation explicite entre **version affichee** et **version parlee**.
+- Regle de cadence : **1 exemple / sequence a la fois**, avec test audio reel avant de passer au suivant.
+- Pour les coups, la priorite reste : **PGN avec coups**, sinon **FEN + ligne principale**, PDF/OCR en dernier recours.
+
+### Fichiers de reference
+- `.bmad/GUIDE_NORMALISATION_TTS_ECHECS.md`
+- `.bmad/PRINCIPES_OPERATIONNELS.md`
+- `.bmad/PIPER_SETUP.md`
+- `.bmad/PLAN_PRODUCTION_CONTENU.md`
+- `.bmad/decisions.md`
+
+---
+
 ## V3.3.30 - EX44 MAT EN TROIS COUPS (06/03/2026) OK
 
 ### Validation

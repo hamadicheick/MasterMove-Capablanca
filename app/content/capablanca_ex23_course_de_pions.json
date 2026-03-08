@@ -1,66 +1,124 @@
-﻿{
-  "id": "capablanca_ex23_course_de_pions",
-  "title": "Exemple 23 - Course de pions",
+{
+  "chapitre_id": "capablanca_ex23_course_de_pions",
+  "titre": "La course de pions : qui arrive en Dame le premier ?",
+  "description": "Apprendre a calculer une course de pions et a utiliser le Roi pour soutenir le bon pion.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
-      "text": "Les deux camps lancent une course de pions vers la promotion."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Une course de pions ! Qui gagne ?",
+      "texte_audio": "Regarde cette position. Chaque camp a un pion qui veut promouvoir en Dame. Les Blancs ont un pion en h2 et un Roi en g1. Les Noirs ont un pion en h4 et un Roi en h3 — ils semblent avoir de l'avance ! Mais les Blancs peuvent jouer tres precisement pour creer une situation d'egalite ou meme gagner. Chaque tempo compte dans une course de pions !",
+      "position_depart_fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
-      "moves": [
-        { "uci": "g1h1", "comment": "Le Roi blanc se place pour soutenir son pion h." },
-        { "uci": "g7g5", "comment": "Les Noirs poussent leur pion g." },
-        { "uci": "h1g1", "comment": "Le Roi blanc revient pour garder l'opposition utile." },
-        { "uci": "g5g4", "comment": "Les Noirs continuent la course." },
-        { "uci": "g1h1", "comment": "Les Blancs temporisent et contrôlent les cases clés." },
-        { "uci": "g4g3", "comment": "Le pion noir approche de la promotion." },
-        { "uci": "h2g3", "comment": "Les Blancs capturent et ouvrent la colonne h." },
-        { "uci": "h4g3", "comment": "Les Noirs reprennent immédiatement." },
-        { "uci": "h1g1", "comment": "Le Roi blanc reste actif contre le pion passé." },
-        { "uci": "g3g2", "comment": "Le pion noir atteint la 2e rangée et gagne la course." }
-      ]
-    },
-    {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "En course de pions, chaque tempo compte.",
-        "Le Roi doit soutenir son pion tout en freinant celui de l'adversaire.",
-        "Calculer la promotion finale évite les erreurs de timing."
-      ]
-    },
-    {
-      "type": "quiz_interactif",
-      "fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
-      "question": "Quiz final en 3 coups : lance correctement la course de pions.",
-      "steps": [
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Roi blanc se place sur h1 !",
+      "texte_audio": "Le Roi blanc va en h1 ! Pourquoi h1 et pas h2 ? Parce que si le Roi va en h2 immediatement, le pion noir en h4 n'a qu'un seul coup jusqu'a la promotion et le Roi blanc bloque son propre pion ! En allant en h1, le Roi blanc laisse le pion h2 libre de monter quand il le faut. Les Noirs poussent leur pion en g5 pour creer un deuxieme pion passe.",
+      "position_depart_fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
+      "animations": [
         {
-          "coups_acceptes": ["g1h1"],
-          "reponse": "g7g5",
-          "indice": "Étape 1 : place ton Roi pour soutenir le pion h.",
-          "solution": "g1h1"
+          "coup": "g1h1",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc va en h1 — la case d'attente precise pour cette position !"
         },
         {
-          "fen": "8/8/8/6p1/7p/7k/7P/7K w - - 0 2",
-          "coups_acceptes": ["h1g1"],
-          "reponse": "g5g4",
-          "indice": "Étape 2 : conserve l'activité du Roi blanc.",
-          "solution": "h1g1"
-        },
-        {
-          "fen": "8/8/8/8/6pp/7k/7P/6K1 w - - 0 3",
-          "coups_acceptes": ["g1h1"],
-          "reponse": "g4g3",
-          "indice": "Étape 3 : garde la bonne case d'attente avant les captures.",
-          "solution": "g1h1"
+          "coup": "g7g5",
+          "acteur": "noir",
+          "commentaire": "Les Noirs poussent le pion g pour creer une deuxieme menace."
         }
-      ],
-      "correct_move": "g1h1",
-      "success_message": "Excellent, tu as bien lancé la course de pions.",
-      "error_message": "Reprends le plan : précision des tempos et activité du Roi."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Roi blanc revient en g1 !",
+      "texte_audio": "Le Roi blanc revient en g1 ! Il doit surveiller le pion g noir qui avance. Pendant ce temps, le pion noir h4 continue vers h3. Les deux camps avancent leurs pions. Chaque coup est crucial — un tempo de trop et la course est perdue !",
+      "position_depart_fen": "8/8/8/6p1/7p/7k/7P/7K w - - 0 2",
+      "animations": [
+        {
+          "coup": "h1g1",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc revient en g1 pour surveiller le pion g noir."
+        },
+        {
+          "coup": "g5g4",
+          "acteur": "noir",
+          "commentaire": "Le pion g noir continue sa course. La tension monte !"
+        },
+        {
+          "coup": "g1h1",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc garde la case h1 — c'est important pour la suite."
+        },
+        {
+          "coup": "g4g3",
+          "acteur": "noir",
+          "commentaire": "Le pion noir g arrive en g3 — il va bientot se changer en Dame !"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Les pions s'échangent — mais le résultat est null !",
+      "texte_audio": "Le pion blanc h prend le pion noir g en g3. Le pion noir h reprend en g3. Maintenant les Noirs ont un pion en g3 qui va promouvoir, et les Blancs n'ont plus de pion. Le Roi blanc essaie de bloquer le pion noir g. C'est une finale Roi contre pion — le resultat depend de la position du Roi. Ici, c'est nul si les deux cotes jouent correctement !",
+      "position_depart_fen": "8/8/8/8/6pp/7k/7P/7K w - - 0 3",
+      "animations": [
+        {
+          "coup": "h2g3",
+          "acteur": "blanc",
+          "commentaire": "Le pion blanc prend le pion noir g3 ! La colonne h s'ouvre."
+        },
+        {
+          "coup": "h4g3",
+          "acteur": "noir",
+          "commentaire": "Le pion noir h reprend en g3. Il va vers la promotion !"
+        },
+        {
+          "coup": "h1g1",
+          "acteur": "blanc",
+          "commentaire": "Le Roi blanc essaie de bloquer le pion noir. La finale sera nulle !"
+        },
+        {
+          "coup": "g3g2",
+          "acteur": "noir",
+          "commentaire": "Le pion noir arrive en g2. Le Roi blanc ne peut pas l'empecher de promouvoir, mais la position est nulle avec une bonne defense."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "quiz_interactif",
+      "texte_ecran": "À toi ! Lance la course de pions.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Roi blanc est en g1. La position est critique — chaque tempo compte. Quel est le premier coup precis pour les Blancs ?",
+      "position_depart_fen": "8/6p1/8/8/7p/7k/7P/6K1 w - - 0 1",
+      "validation": {
+        "indice": "Le Roi blanc doit se placer sur la case d'attente precise. Pas h2 (bloque le pion) mais h1 !",
+        "steps": [
+          {
+            "coups_acceptes": ["g1h1"],
+            "reponse": "g7g5",
+            "indice": "Place ton Roi sur la case d'attente la plus precise : h1 !",
+            "solution": "g1h1"
+          },
+          {
+            "coups_acceptes": ["h1g1"],
+            "reponse": "g5g4",
+            "indice": "Le Roi blanc doit revenir en g1 pour surveiller le pion g noir.",
+            "solution": "h1g1"
+          },
+          {
+            "coups_acceptes": ["g1h1"],
+            "reponse": "g4g3",
+            "indice": "Le Roi retourne en h1 — il garde le controle des tempos.",
+            "solution": "g1h1"
+          }
+        ],
+        "feedback_succes": "Excellent, tu as lance la course de pions correctement ! Chaque coup de Roi est precis. Les tempos sont parfaits !",
+        "feedback_erreur": "Reprends le plan : le Roi blanc se place en h1 (pas h2), puis g1, puis h1. Chaque tempo compte !"
+      }
     }
   ]
 }

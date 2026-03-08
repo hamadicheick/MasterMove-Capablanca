@@ -1,290 +1,86 @@
 {
-  "id": "capablanca_ex39_mat_fou_cavalier",
-  "title": "Exemple 39 - Mat avec Fou et Cavalier",
+  "chapitre_id": "capablanca_ex39_mat_fou_cavalier",
+  "titre": "Le mat Fou + Cavalier : la finale la plus difficile !",
+  "description": "Apprendre a mater avec Fou et Cavalier en conduisant le Roi adverse dans le bon coin.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
-      "text": "Objectif : mater dans un coin de la couleur du Fou (a1 ou h8)."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Le mat Fou + Cavalier : difficile mais possible !",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Fou en c1 et un Cavalier en g1. Le Roi noir est en e8. Cette finale est la plus difficile de toute la theorie ! Contrairement au mat avec la Tour ou la Dame, mater avec Fou et Cavalier demande au moins 30 coups et une technique tres precise. Le secret : tu dois conduire le Roi adverse dans un coin de la meme couleur que ton Fou. Le Fou est sur les cases noires — donc le Roi doit aller en a1 ou en h8 !",
+      "position_depart_fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
-      "moves": [
-        {
-          "uci": "e1e2",
-          "comment": "Le Roi blanc avance vers le centre, principe de base."
-        },
-        {
-          "uci": "e8d7",
-          "comment": ""
-        },
-        {
-          "uci": "e2d3",
-          "comment": ""
-        },
-        {
-          "uci": "d7c6",
-          "comment": ""
-        },
-        {
-          "uci": "c1f4",
-          "comment": ""
-        },
-        {
-          "uci": "c6d5",
-          "comment": ""
-        },
-        {
-          "uci": "g1e2",
-          "comment": ""
-        },
-        {
-          "uci": "d5c5",
-          "comment": ""
-        },
-        {
-          "uci": "e2c3",
-          "comment": ""
-        },
-        {
-          "uci": "c5b4",
-          "comment": ""
-        },
-        {
-          "uci": "d3d4",
-          "comment": ""
-        },
-        {
-          "uci": "b4a5",
-          "comment": ""
-        },
-        {
-          "uci": "d4c5",
-          "comment": ""
-        },
-        {
-          "uci": "a5a6",
-          "comment": ""
-        },
-        {
-          "uci": "c5c6",
-          "comment": ""
-        },
-        {
-          "uci": "a6a7",
-          "comment": ""
-        },
-        {
-          "uci": "c3d5",
-          "comment": "Le Cavalier participe au confinement du Roi noir."
-        },
-        {
-          "uci": "a7a8",
-          "comment": ""
-        },
-        {
-          "uci": "d5b6",
-          "comment": ""
-        },
-        {
-          "uci": "a8a7",
-          "comment": ""
-        },
-        {
-          "uci": "f4c7",
-          "comment": "Le Fou restreint les cases blanches et maintient l'étau."
-        },
-        {
-          "uci": "a7a6",
-          "comment": ""
-        },
-        {
-          "uci": "c7b8",
-          "comment": ""
-        },
-        {
-          "uci": "a6a5",
-          "comment": ""
-        },
-        {
-          "uci": "b6d5",
-          "comment": "Les Blancs préparent la bascule du Roi noir vers le coin a1."
-        },
-        {
-          "uci": "a5a4",
-          "comment": ""
-        },
-        {
-          "uci": "c6c5",
-          "comment": "Début de la phase méthodique de transfert vers a1."
-        },
-        {
-          "uci": "a4b3",
-          "comment": ""
-        },
-        {
-          "uci": "d5b4",
-          "comment": ""
-        },
-        {
-          "uci": "b3c3",
-          "comment": ""
-        },
-        {
-          "uci": "b8f4",
-          "comment": ""
-        },
-        {
-          "uci": "c3b3",
-          "comment": ""
-        },
-        {
-          "uci": "f4e5",
-          "comment": ""
-        },
-        {
-          "uci": "b3a4",
-          "comment": ""
-        },
-        {
-          "uci": "c5c4",
-          "comment": ""
-        },
-        {
-          "uci": "a4a5",
-          "comment": ""
-        },
-        {
-          "uci": "e5c7",
-          "comment": ""
-        },
-        {
-          "uci": "a5a4",
-          "comment": ""
-        },
-        {
-          "uci": "b4d3",
-          "comment": ""
-        },
-        {
-          "uci": "a4a3",
-          "comment": ""
-        },
-        {
-          "uci": "c7b6",
-          "comment": ""
-        },
-        {
-          "uci": "a3a4",
-          "comment": ""
-        },
-        {
-          "uci": "d3b2",
-          "comment": ""
-        },
-        {
-          "uci": "a4a3",
-          "comment": ""
-        },
-        {
-          "uci": "c4c3",
-          "comment": "Le Roi blanc complète le confinement sur la colonne a."
-        },
-        {
-          "uci": "a3a2",
-          "comment": ""
-        },
-        {
-          "uci": "c3c2",
-          "comment": ""
-        },
-        {
-          "uci": "a2a3",
-          "comment": ""
-        },
-        {
-          "uci": "b6c5",
-          "comment": ""
-        },
-        {
-          "uci": "a3a2",
-          "comment": ""
-        },
-        {
-          "uci": "b2d3",
-          "comment": ""
-        },
-        {
-          "uci": "a2a1",
-          "comment": ""
-        },
-        {
-          "uci": "c5b4",
-          "comment": ""
-        },
-        {
-          "uci": "a1a2",
-          "comment": ""
-        },
-        {
-          "uci": "d3c1",
-          "comment": "Dernière coordination Fou+Cavalier avant le mat."
-        },
-        {
-          "uci": "a2a1",
-          "comment": ""
-        },
-        {
-          "uci": "b4c3",
-          "comment": "Mat : le Roi noir est enfermé dans le coin de la couleur du Fou."
-        }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Phase 1 : activez toutes vos pièces !",
+      "texte_audio": "Premiere etape : activer le Roi et les pieces vers le centre. Le Roi blanc avance en e2. Le Roi noir recule en d7. Le Roi blanc avance encore en d3. Le Roi noir va en c6. Le Fou blanc prend la grande diagonale en f4. Et le Cavalier glisse en e2 pour se rapprocher. Chaque piece doit participer ! Le Roi, le Fou et le Cavalier forment une equipe unie. Ne laisse jamais une piece inactive dans cette finale.",
+      "position_depart_fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "animations": [
+        {"coup": "e1e2", "acteur": "blanc", "commentaire": "Le Roi blanc s'active vers le centre !"},
+        {"coup": "e8d7", "acteur": "noir", "commentaire": "Le Roi noir recule."},
+        {"coup": "e2d3", "acteur": "blanc", "commentaire": "Le Roi continue son approche methodique."},
+        {"coup": "d7c6", "acteur": "noir", "commentaire": "Le Roi noir essaie de rester actif."},
+        {"coup": "c1f4", "acteur": "blanc", "commentaire": "Le Fou prend une grande diagonale — il commence a confiner le Roi."},
+        {"coup": "c6d5", "acteur": "noir", "commentaire": "Le Roi noir reste au centre."},
+        {"coup": "g1e2", "acteur": "blanc", "commentaire": "Le Cavalier s'active en e2 — toutes les pieces blanches collaborent !"}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Cette finale se joue en deux temps : confiner le Roi adverse à la bande, puis le conduire vers le bon coin.",
-        "Le Roi blanc est une pièce active : il doit participer au filet de mat avec le Fou et le Cavalier.",
-        "La méthode est exigeante mais stable si les cases de fuite sont contrôlées avec précision."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Phase 2 : conduire le Roi vers le bon coin !",
+      "texte_audio": "La partie la plus delicate : conduire le Roi noir vers le coin a1 ou h8. Attention — si le Roi noir va en a8 ou en h1, c'est un coin de la mauvaise couleur ! Le Fou ne peut pas l'y mater. Il faut l'obliger a aller dans le bon coin. Les Blancs utilisent le Cavalier pour couper les fuites et le Fou pour couvrir les grandes diagonales. Le Roi blanc pousse le Roi noir de case en case, methodiquement, vers le coin a1.",
+      "position_depart_fen": "k7/8/1N6/2K5/8/8/8/2B5 w - - 14 8",
+      "animations": [
+        {"coup": "b6d5", "acteur": "blanc", "commentaire": "Le Cavalier se repositionne pour couper les fuites."},
+        {"coup": "a8a7", "acteur": "noir", "commentaire": "Le Roi noir essaie de fuir."},
+        {"coup": "c5c4", "acteur": "blanc", "commentaire": "Le Roi blanc avance pour encercler."},
+        {"coup": "a7b6", "acteur": "noir", "commentaire": "Le Roi noir cherche une issue."},
+        {"coup": "d5b4", "acteur": "blanc", "commentaire": "Le Cavalier bloque ! Le Roi noir est repousse."},
+        {"coup": "b6a5", "acteur": "noir", "commentaire": "Le Roi noir est pousse vers le coin a1."}
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : le bon coin = même couleur que le Fou !",
+      "texte_audio": "Voici la regle d'or de la finale Fou plus Cavalier. Le Fou couvre les cases d'une seule couleur. Pour mater, le Roi adverse doit aller dans un coin de cette meme couleur. Le Fou blanc est sur les cases noires : les bons coins sont a1 et h8. Si le Roi adverse va en a8 ou en h1, ce sont des coins blancs — le Fou ne peut pas les controler ! Les Blancs doivent alors effectuer une manoeuvre supplementaire pour faire passer le Roi dans le bon coin. C'est pourquoi cette finale est si difficile !",
+      "position_depart_fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
-      "question": "Quiz final en 3 étapes : démarre la méthode de mat correctement.",
-      "steps": [
-        {
-          "coups_acceptes": [
-            "e1e2"
-          ],
-          "reponse": "e8d7",
-          "indice": "Étape 1 : active le Roi blanc vers le centre.",
-          "solution": "e1e2"
-        },
-        {
-          "fen": "8/3k4/8/8/8/8/4K3/2B3N1 w - - 2 2",
-          "coups_acceptes": [
-            "e2d3"
-          ],
-          "reponse": "d7c6",
-          "indice": "Étape 2 : continue l'approche méthodique du Roi.",
-          "solution": "e2d3"
-        },
-        {
-          "fen": "8/8/2k5/8/8/3K4/8/2B3N1 w - - 4 3",
-          "coups_acceptes": [
-            "c1f4"
-          ],
-          "reponse": "c6d5",
-          "indice": "Étape 3 : place le Fou sur une diagonale de contrôle.",
-          "solution": "c1f4"
-        }
-      ],
-      "correct_move": "e1e2",
-      "success_message": "Exact, la méthode démarre correctement.",
-      "error_message": "Reprends la logique : Roi actif d'abord, puis coordination des pièces."
+      "texte_ecran": "À toi ! Lance la méthode : Roi actif, pièces coordonnées.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Lance la bonne methode de mat Fou plus Cavalier en trois etapes. Le Roi d'abord, puis l'approche, puis le Fou sur sa grande diagonale.",
+      "position_depart_fen": "4k3/8/8/8/8/8/8/2B1K1N1 w - - 0 1",
+      "validation": {
+        "indice": "Commence par activer le Roi blanc vers le centre. La methode : Roi e2, Roi d3, puis Fou sur une grande diagonale.",
+        "steps": [
+          {
+            "coups_acceptes": ["e1e2"],
+            "reponse": "e8d7",
+            "indice": "Etape 1 : le Roi blanc s'active en e2 — premiere regle, toujours centraliser le Roi !",
+            "solution": "e1e2"
+          },
+          {
+            "coups_acceptes": ["e2d3"],
+            "reponse": "d7c6",
+            "indice": "Etape 2 : le Roi continue son approche en d3. Methodique et perseverant !",
+            "solution": "e2d3"
+          },
+          {
+            "coups_acceptes": ["c1f4"],
+            "reponse": "c6d5",
+            "indice": "Etape 3 : place le Fou sur la grande diagonale en f4. Il commence a limiter les fuites du Roi noir.",
+            "solution": "c1f4"
+          }
+        ],
+        "feedback_succes": "Excellent ! Roi e2, Roi d3, Fou f4 — le debut de la methode correcte ! Toutes les pieces s'activent en meme temps. Le Cavalier ira ensuite en e2 puis c3, et les trois pieces chasseront le Roi noir vers le bon coin. Cette finale demande de la patience, mais la methode est solide et toujours gagnante !",
+        "feedback_erreur": "Suis la methode : Roi e2, puis Roi d3, puis Fou f4. Toutes les pieces doivent collaborer pour mater avec Fou et Cavalier !"
+      }
     }
   ]
 }

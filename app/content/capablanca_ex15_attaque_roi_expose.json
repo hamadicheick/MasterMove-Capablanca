@@ -1,45 +1,132 @@
-﻿{
-  "id": "capablanca_ex15_attaque_roi_expose",
-  "title": "Attaque sur Roi exposé",
+{
+  "chapitre_id": "capablanca_ex15_attaque_roi_expose",
+  "titre": "Le cadeau grec : le Fou se sacrifie sur h7 !",
+  "description": "Le sacrifice classique du Fou en h7 pour ouvrir le Roi noir, suivi de Dame et Cavalier.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
-      "text": "Les Blancs combinent sacrifice, échecs et pièce active pour mater le Roi noir."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Roi noir est en danger !",
+      "texte_audio": "Regarde cette position. Le Roi noir est en g8 derriere ses pions. Les Blancs ont un Fou en d3, une Dame en d5 et un Cavalier en f3. Il y a un motif classique possible ici : le sacrifice du Fou en h7, aussi appele le cadeau grec. Quand le Roi ennemi est derriere ses pions g7 et h7, et que tu as un Fou qui peut aller en h7, cherche cette combinaison !",
+      "position_depart_fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
-      "moves": [
-        { "uci": "d3h7", "comment": "Sacrifice du Fou avec échec." },
-        { "uci": "g8h7", "comment": "Le Roi noir accepte le sacrifice." },
-        { "uci": "d5h5", "comment": "La Dame blanche arrive avec échec." },
-        { "uci": "h7g8", "comment": "Le Roi noir recule." },
-        { "uci": "f3g5", "comment": "Le Cavalier rejoint l'attaque." },
-        { "uci": "e8e4", "comment": "La Dame noire cherche du contre-jeu." },
-        { "uci": "g5e4", "comment": "Le Cavalier capture la Dame noire." },
-        { "uci": "f8e8", "comment": "La Tour noire se replace." },
-        { "uci": "e4g5", "comment": "Le Cavalier revient vers le Roi noir." },
-        { "uci": "g8f8", "comment": "Le Roi noir tente de fuir." },
-        { "uci": "h5f7", "comment": "Mat : la Dame contrôle toutes les fuites." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou se sacrifie sur h7, échec !",
+      "texte_audio": "Le Fou blanc va en h7 avec echec ! Le Roi noir en g8 est force de prendre le Fou. Pourquoi est-ce une bonne idee ? Parce que le pion h7 etait le bouclier du Roi noir. En le detruisant, les Blancs ouvrent le Roi noir a des attaques de Dame et de Cavalier.",
+      "position_depart_fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
+      "animations": [
+        {
+          "coup": "d3h7",
+          "acteur": "blanc",
+          "commentaire": "Le Fou se sacrifie en h7, echec ! Le Roi noir doit prendre."
+        },
+        {
+          "coup": "g8h7",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir accepte le sacrifice. Son bouclier est detruit !"
+        }
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "L'initiative vaut souvent plus que le matériel.",
-        "Les échecs successifs réduisent les options défensives.",
-        "La coordination Dame+Cavalier est redoutable contre un Roi exposé."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "La Dame donne échec sur h5 !",
+      "texte_audio": "La Dame blanche arrive en h5 avec echec ! Le Roi noir est en h7, en echec par la Dame. Il n'a qu'une seule case : il doit rentrer en g8. La Dame est maintenant parfaitement placee pour attaquer le Roi avec l'aide du Cavalier.",
+      "position_depart_fen": "r3qr2/1pp2ppk/p1np4/3Q4/8/P4N2/1PP2PPP/3R2K1 w - - 0 2",
+      "animations": [
+        {
+          "coup": "d5h5",
+          "acteur": "blanc",
+          "commentaire": "La Dame arrive en h5, echec ! Le Roi noir doit rentrer en g8."
+        },
+        {
+          "coup": "h7g8",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir revient en g8. Il fuit, mais le danger continue !"
+        }
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier rejoint l'attaque !",
+      "texte_audio": "Le Cavalier blanc va en g5 ! Il menace de mater en h7 et surveille de nombreuses cases autour du Roi noir. La Dame noire tente du contre-jeu en allant en e4 pour attaquer le Cavalier. Mais le Cavalier prend la Dame noire ! Les Blancs donnent du materiel mais l'attaque continue.",
+      "position_depart_fen": "r3qrk1/1pp2pp1/p1np4/6NQ/8/P7/1PP2PPP/3R2K1 b - - 2 3",
+      "animations": [
+        {
+          "coup": "f3g5",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier va en g5 ! Il renforce l'attaque sur le Roi noir."
+        },
+        {
+          "coup": "e8e4",
+          "acteur": "noir",
+          "commentaire": "La Dame noire tente du contre-jeu en attaquant le Cavalier."
+        },
+        {
+          "coup": "g5e4",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier prend la Dame noire ! L'attaque prime sur le materiel."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "theorie_animee",
+      "texte_ecran": "La Dame donne mat en f7 !",
+      "texte_audio": "Apres que la Tour noire se repositionne, le Cavalier revient en g5 pour menacer. Le Roi noir fuit en f8. Et la Dame blanche va en f7 pour le mat ! La Dame en f7 et le Cavalier en g5 cooperent parfaitement pour controler toutes les cases de fuite du Roi. C'est la force de la combinaison Dame et Cavalier !",
+      "position_depart_fen": "r4rk1/1pp2pp1/p1np4/6NQ/4N3/P7/1PP2PPP/3R2K1 b - - 4 4",
+      "animations": [
+        {
+          "coup": "f8e8",
+          "acteur": "noir",
+          "commentaire": "La Tour noire se repositionne en e8."
+        },
+        {
+          "coup": "e4g5",
+          "acteur": "blanc",
+          "commentaire": "Le Cavalier revient en g5, menaçant encore le Roi noir."
+        },
+        {
+          "coup": "g8f8",
+          "acteur": "noir",
+          "commentaire": "Le Roi noir tente de fuir en f8."
+        },
+        {
+          "coup": "h5f7",
+          "acteur": "blanc",
+          "commentaire": "La Dame en f7, echec et mat ! La coopération Dame-Cavalier est parfaite !"
+        }
+      ]
+    },
+    {
+      "id": 6,
       "type": "quiz_interactif",
-      "fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
-      "question": "Quiz final : quel sacrifice lance l'attaque gagnante ?",
-      "correct_move": "d3h7",
-      "success_message": "Très bien, c'est le bon déclencheur tactique.",
-      "error_message": "Cherche un sacrifice du Fou avec échec sur le Roi noir."
+      "texte_ecran": "À toi ! Reconnais le cadeau grec.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Fou blanc est en d3. Le Roi noir est en g8 derriere ses pions. Tu reconnais le motif du cadeau grec ? Quel est le premier coup ?",
+      "position_depart_fen": "r3qrk1/1pp2ppp/p1np4/3Q4/8/P2B1N2/1PP2PPP/3R2K1 w - - 0 1",
+      "validation": {
+        "coups_acceptes": ["d3h7"],
+        "indice": "Le Fou blanc en d3 peut se sacrifier en h7 pour ouvrir le Roi noir. C'est le cadeau grec !",
+        "feedback_succes": "Bravo ! Le cadeau grec ! Le Fou se sacrifie en h7, puis la Dame va en h5 echec, puis le Cavalier en g5 et la Dame mate en f7. Tu as reconnu le motif !",
+        "feedback_erreur": "Le Fou blanc en d3 peut aller en h7 avec echec. Le Roi noir sera force de prendre et son bouclier sera detruit !"
+      }
+    },
+    {
+      "id": 7,
+      "type": "quiz_interactif",
+      "texte_ecran": "Après Kxh7, quel coup donnes-tu avec la Dame ?",
+      "texte_audio": "Le Roi noir vient de prendre le Fou en h7. Il est maintenant en h7. La Dame blanche est en d5. Quel coup donnes-tu avec la Dame pour donner echec et repousser le Roi vers g8 ?",
+      "position_depart_fen": "r3qr2/1pp2ppk/p1np4/3Q4/8/P4N2/1PP2PPP/3R2K1 w - - 0 2",
+      "validation": {
+        "coups_acceptes": ["d5h5"],
+        "indice": "La Dame peut aller en h5 pour donner echec au Roi noir en h7 !",
+        "feedback_succes": "Parfait ! Dame en h5, echec ! Le Roi recule en g8, puis le Cavalier va en g5 pour renforcer l'attaque !",
+        "feedback_erreur": "La Dame doit donner echec au Roi noir en h7. Elle peut aller en h5 !"
+      }
     }
   ]
 }

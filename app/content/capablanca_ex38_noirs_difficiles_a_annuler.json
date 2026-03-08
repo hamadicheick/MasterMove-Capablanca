@@ -1,40 +1,59 @@
 {
-  "id": "capablanca_ex38_noirs_difficiles_a_annuler",
-  "title": "Exemple 38 - Défense noire difficile",
+  "chapitre_id": "capablanca_ex38_noirs_difficiles_a_annuler",
+  "titre": "Défense noire difficile : le Fou active tous ses pions !",
+  "description": "Avec des pions noirs eparpilles sur deux ailes et un Fou blanc actif, la defense est tres difficile.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
-      "text": "Le livre indique que les Noirs auraient une nouvelle fois beaucoup de mal à annuler cette finale."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Les pions noirs sont dispersés — le Fou attaque partout !",
+      "texte_audio": "Regarde cette position. Les pions noirs sont tres disperses : un pion en a7, un en c7, un en f7. Ils sont sur trois colonnes differentes ! Le Fou blanc peut les menacer les uns apres les autres depuis le centre. Le Cavalier noir a enormement de travail a faire — il doit courir de gauche a droite pour proteger chaque pion menace. C'est une position tres difficile a defendre pour les Noirs.",
+      "position_depart_fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
-      "moves": [
-        { "uci": "d7f6", "comment": "Le Cavalier noir se centralise pour organiser la défense." },
-        { "uci": "c1f4", "comment": "Le Fou blanc prend une diagonale active sur les deux ailes." },
-        { "uci": "e8d7", "comment": "Le Roi noir s'oriente vers le centre." },
-        { "uci": "e1e2", "comment": "Le Roi blanc suit le principe du livre : avancer vers le centre." },
-        { "uci": "f6d5", "comment": "Les Noirs cherchent des cases de blocage." },
-        { "uci": "f4g3", "comment": "Le Fou garde sa flexibilité pour soutenir les pions passés." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou menace tous les pions noirs l'un après l'autre !",
+      "texte_audio": "Le Cavalier noir avance en f6 pour se centraliser et tenter de coordonner la defense. Le Fou blanc prend une grande diagonale en f4 — il vise deja le pion c7 a travers le centre ! Les Rois avancent. Le Cavalier va en d5 pour bloquer. Mais le Fou glisse en g3 — un autre coup, une autre diagonale ! Maintenant il surveille h2 et menace de s'activer encore. Le Cavalier noir est epuise de defendre.",
+      "position_depart_fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
+      "animations": [
+        {"coup": "d7f6", "acteur": "noir", "commentaire": "Le Cavalier se centralise pour tenter d'organiser la defense."},
+        {"coup": "c1f4", "acteur": "blanc", "commentaire": "Le Fou en f4 vise le pion c7 a travers le centre. Deja une pression !"},
+        {"coup": "e8d7", "acteur": "noir", "commentaire": "Le Roi noir avance pour aider a defendre."},
+        {"coup": "e1e2", "acteur": "blanc", "commentaire": "Le Roi blanc avance aussi — le plan blanc est long mais methotique."},
+        {"coup": "f6d5", "acteur": "noir", "commentaire": "Le Cavalier se place en d5 pour bloquer la pression du Fou."},
+        {"coup": "f4g3", "acteur": "blanc", "commentaire": "Le Fou glisse en g3 ! Il change de diagonale et cree une nouvelle menace. Le Cavalier noir est deborde."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Dans ces finales, il faut activer le Roi vers le centre ou vers les pions faibles.",
-        "Les pions passés doivent avancer vite, mais sans perdre leur sécurité.",
-        "Le livre insiste sur un point : pas de recette unique, seulement calcul et visualisation."
-      ]
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier court d'un pion à l'autre — mais le Fou est plus rapide !",
+      "texte_audio": "Voila le probleme fondamental des Noirs. Le Cavalier doit defendre trois pions disperses — a7, c7 et f7. Chaque fois qu'il va en defendre un, le Fou menace un autre. Et le Cavalier a besoin de plusieurs sauts pour changer d'aile. Le Fou, lui, change de diagonale en un seul coup. C'est une course asymetrique — le Fou gagne toujours un tempo. Capablanca dit que cette defense est tres difficile pour les Noirs, meme avec un jeu tres precis.",
+      "position_depart_fen": "8/p1p2p2/3k4/3n4/6B1/8/2P2P1P/3K4 w - - 8 5",
+      "animations": []
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : ne laissez pas vos pions se disperser !",
+      "texte_audio": "Voici la lecon strategique. Si vous avez le Cavalier contre le Fou adverse, gardez vos pions groupes ! Des pions disperses sur deux ailes sont des pions faibles — et le Fou peut les menacer tous en meme temps. Essayez de regrouper vos pions sur une seule aile quand vous avez le Cavalier. Cela reduit les cibles du Fou et lui enleve ses diagonales actives. La structure des pions determine souvent si le Fou ou le Cavalier sera superieur.",
+      "position_depart_fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "4k3/p1pn1p2/8/8/8/8/2P2P1P/2B1K3 b - - 0 1",
-      "question": "Quiz final : quel coup noir active d'abord le Cavalier pour défendre ?",
-      "correct_move": "d7f6",
-      "success_message": "Exact, c'est la centralisation défensive naturelle du Cavalier.",
-      "error_message": "Cherche le premier saut actif du Cavalier noir."
+      "texte_ecran": "À toi ! Active le Fou sur la bonne diagonale.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Cavalier noir vient d'aller en f6. Ton Fou est en c1. Quel coup place le Fou sur une grande diagonale pour menacer immediatement le pion c7 des Noirs ?",
+      "position_depart_fen": "4k3/p1p2p2/5n2/8/8/8/2P2P1P/2B1K3 w - - 1 2",
+      "validation": {
+        "coups_acceptes": ["c1f4", "c1g5"],
+        "indice": "Le Fou doit viser la diagonale qui touche le pion c7 des Noirs. La case f4 est ideale — depuis la, le Fou vise directement le pion c7 !",
+        "feedback_succes": "Parfait ! Le Fou en f4 vise directement le pion c7 sur la diagonale. Les Noirs doivent defendre ce pion. Mais des que le Cavalier va en d5 pour bloquer, le Fou change de diagonale et menace autre chose. C'est le cauchemar defensif face au Fou actif !",
+        "feedback_erreur": "Cherche la diagonale qui touche le pion c7 des Noirs. Le Fou en f4 est la bonne reponse — il menace directement c7."
+      }
     }
   ]
 }

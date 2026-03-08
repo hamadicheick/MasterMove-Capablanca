@@ -1,0 +1,55 @@
+{
+  "id": "capablanca_ex54_dame_centre",
+  "title": "Exemple 54 — La Dame prend position au centre",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bq1rk1/p1p3p1/3b1n1p/2p1p3/4P2B/2N2N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "text": "Les deux camps ont des pièces actives. Les Blancs ont un pion solide en e4 et un Fou en h4 qui surveille le Cavalier noir en f6. Comment les Blancs peuvent-ils améliorer leur coordination ? La Dame est encore en d1 — elle peut faire beaucoup mieux !"
+    },
+    {
+      "type": "animation",
+      "fen": "r1bq1rk1/p1p3p1/3b1n1p/2p1p3/4P2B/2N2N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "text": "La Dame rejoint le centre, puis le Cavalier va s'installer sur une case active pour mettre pression sur le camp noir.",
+      "moves": [
+        {
+          "uci": "d1e2",
+          "comment": "La Dame va en e2 ! Elle soutient le pion en e4, coordonne avec les Tours, et prépare le Cavalier à avancer. Une Dame active au centre vaut bien plus qu'une Dame passive en arrière."
+        },
+        {
+          "uci": "a7a5",
+          "comment": "Les Noirs poussent le pion en a5 pour préparer de l'espace sur l'aile dame."
+        },
+        {
+          "uci": "c3d2",
+          "comment": "Le Cavalier recule en d2 pour se repositionner. Il se prépare à sauter en c4 où il sera très actif."
+        },
+        {
+          "uci": "c8a6",
+          "comment": "Le Fou noir tente d'aller en a6 pour bloquer le plan blanc. Mais les Blancs ont une réponse !"
+        },
+        {
+          "uci": "d2c4",
+          "comment": "Le Cavalier bondit en c4 ! Il attaque le Fou noir en d6 et occupe une case centrale excellente. Le repositionnement Dame + Cavalier a permis d'activer toutes les pièces blanches."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Une Dame placée au centre coordonne toutes les pièces. En e2, elle soutient le pion en e4 et aide les Cavaliers à se repositionner.",
+        "Le Cavalier a fait un voyage : d2 puis c4. C'est du jeu positionnel — améliorer ses pièces pas à pas pour trouver les meilleures cases.",
+        "Capablanca dit : il faut améliorer sa position tranquillement quand il n'y a pas d'attaque directe possible."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bq1rk1/p1p3p1/3b1n1p/2p1p3/4P2B/2N2N2/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "question": "La Dame blanche en d1 n'est pas très active. Où peut-elle aller pour soutenir le pion en e4 et mieux coordonner les pièces ?",
+      "correct_move": "d1e2",
+      "success_message": "Exactement ! La Dame en e2 soutient le centre, coordonne avec les Tours et prépare le Cavalier à s'activer. C'est le jeu positionnel de Capablanca !",
+      "error_message": "Cherche une case centrale pour la Dame. Elle doit soutenir le pion blanc en e4 — quelle case juste à côté de ce pion convient ?"
+    }
+  ]
+}

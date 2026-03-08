@@ -1,0 +1,39 @@
+{
+  "id": "capablanca_ex51_fou_prend_e5",
+  "title": "Exemple 51 — Attaquer avec toutes ses pièces",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "r1bq1k1r/b5pp/1nRN4/4p3/1P2P1n1/5NB1/P4PPP/3Q1RK1 w - - 0 1",
+      "text": "Les Blancs ont déjà deux pièces profondément installées dans le camp noir : la Tour en c6 et le Cavalier en d6. Le pion noir en e5 est vulnérable. Trouve le coup simple qui gagne du matériel !"
+    },
+    {
+      "type": "animation",
+      "fen": "r1bq1k1r/b5pp/1nRN4/4p3/1P2P1n1/5NB1/P4PPP/3Q1RK1 w - - 0 1",
+      "text": "Regarde comment le Fou capture le pion pour accentuer encore l'avantage blanc !",
+      "moves": [
+        {
+          "uci": "g3e5",
+          "comment": "Le Fou prend en e5 ! Il capture un pion et prend une case centrale magnifique. La Tour en c6 et le Cavalier en d6 restent en place — l'étau se resserre autour du Roi noir."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Capablanca nous montre que parfois le coup simple est le meilleur. Pas besoin de chercher une combinaison spectaculaire quand on peut gagner du matériel directement.",
+        "Les pièces blanches travaillent ensemble : la Tour en c6, le Cavalier en d6, et maintenant le Fou en e5 forment un réseau de pièces très actives.",
+        "Principe de Capablanca : mener l'attaque avec toutes ses pièces disponibles. Chaque pièce doit contribuer à l'effort commun."
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "r1bq1k1r/b5pp/1nRN4/4p3/1P2P1n1/5NB1/P4PPP/3Q1RK1 w - - 0 1",
+      "question": "Le pion noir en e5 est sans défense. Quelle pièce blanche peut le capturer pour renforcer encore l'avantage ?",
+      "correct_move": "g3e5",
+      "success_message": "Exactement ! Le Fou prend en e5 et gagne un pion en occupant une case centrale parfaite. Les Blancs ont maintenant trois pièces actives dans le camp noir !",
+      "error_message": "Regarde le Fou blanc en g3. Peut-il atteindre le pion en e5 en diagonale ?"
+    }
+  ]
+}

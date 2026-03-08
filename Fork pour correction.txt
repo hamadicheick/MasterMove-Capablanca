@@ -1,0 +1,29 @@
+
+
+dis moi dans que fichier sont inscrits les textes pour la narration, je vais faire un fork du repo pour essayer de corriger quelques mots, ne pas chaque t'embêter avec ces détails
+
+
+
+Les textes de narration sont tous dans les fichiers JSON du dossier :
+
+app/content/
+
+Plus précisément, dans chaque fichier JSON d'exemple, les textes se trouvent dans ces champs :
+
+"text" sur les blocs "type": "diagram" → texte d'introduction de la position
+"comment" sur chaque coup dans les blocs "type": "animation" → narration coup par coup
+"text" sur le bloc "type": "animation" → phrase lue au lancement de l'animation
+"content" (tableau de strings) sur les blocs "type": "text" → points pédagogiques à retenir
+"question", "success_message", "error_message" sur les blocs "type": "quiz_interactif" → textes du quiz
+Les fichiers les plus importants (exemples 40-49) :
+
+capablanca_ex40_dame_contre_tour.json
+capablanca_ex41_dame_tour_gain.json
+capablanca_ex42_dame_tour_difficile.json
+capablanca_ex43_attaque_sans_cavaliers.json
+capablanca_ex44_mat_en_trois.json
+capablanca_ex45_sacrifice_tour_h6.json
+capablanca_ex46_cavaliers_attaque.json
+capablanca_ex47_cadeau_grec.json
+capablanca_ex48_coordination_pieces.json
+capablanca_ex49_sacrifice_cavalier.json
