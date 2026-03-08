@@ -304,6 +304,10 @@ async function loadChapter(chapterId) {
   const raw = await fs.readFile(filePath, "utf-8");
   const safeRaw = String(raw || "").replace(/^\uFEFF/, "");
   const parsed = normalizeTextDeep(JSON.parse(safeRaw));
+  // Pass-through for annotated games — no conversion needed
+  if (parsed.type === "game") {
+    return { meta, chapter: parsed };
+  }
   return { meta, chapter: toLegacyChapter(meta, parsed) };
 }
 

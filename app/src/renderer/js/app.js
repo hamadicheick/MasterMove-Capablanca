@@ -234,7 +234,7 @@ function libraryScreen(){
             h("p", { class:"p" }, bc.description),
             h("div", { class:"hr" }),
             h("div", { class:"spread" },
-              h("div", { class:"small" }, `${bc.pages} — ${bc.exemples}`),
+              h("div", { class:"small" }, `${bc.pages} — ${bc.exemples || bc.parties || ""}`),
               h("div", { class:"row" },
                 done > 0 ? h("div", { class:"kbd tagDone" }, `${done} termine${done > 1 ? "s" : ""}`) : null,
                 inProgress > 0 ? h("div", { class:"kbd" }, `${inProgress} en cours`) : null,
@@ -311,20 +311,25 @@ function chapterLessonsScreen(chapterNum){
       }
 
       for (const c of lessons){
+        const isGame = c.type === "game";
         const chProg = progress.chapters?.[c.id];
         const lastIdx = chProg?.lastSequenceIndex ?? 0;
         const isDone = !!chProg?.completedAt;
-        const tag = isDone ? "Termine" : (lastIdx > 0 ? `Seq. ${lastIdx + 1}` : "Nouveau");
+        const tag = isGame ? "Partie" : (isDone ? "Termine" : (lastIdx > 0 ? `Seq. ${lastIdx + 1}` : "Nouveau"));
+        const orderLabel = isGame ? `P.${c.order}` : `Ex.${c.order}`;
 
-        const item = h("div", { class:"lessonItem", onclick: async () => { await openChapter(c.id); }},
-          h("div", { class:"lessonItemOrder" }, `Ex.${c.order}`),
+        const item = h("div", { class:"lessonItem", onclick: async () => {
+          if (isGame) await openGame(c.id);
+          else await openChapter(c.id);
+        }},
+          h("div", { class:"lessonItemOrder" }, orderLabel),
           h("div", { class:"lessonItemTitle" },
             h("div", {}, c.titre),
             h("div", { class:"small" }, c.description)
           ),
           h("div", { class:"lessonItemMeta" },
-            h("div", { class:"kbd" }, c.level || "-"),
-            h("div", { class:`kbd ${isDone ? "tagDone" : ""}` }, tag)
+            h("div", { class:"kbd" }, isGame ? "jeu complet" : (c.level || "-")),
+            h("div", { class:`kbd ${isDone && !isGame ? "tagDone" : ""}` }, tag)
           )
         );
         list.appendChild(item);
@@ -971,6 +976,262 @@ async function openChapter(chapterId){
   }
 }
 
+/**
+ * Convertit un coup en notation algébrique française (SAN) en texte lisible.
+ * Exemples : "Cxf3" → "cavalier prend f3"
+ *            "Fd3"  → "fou en d3"
+ *            "Tab8" → "tour a en b8"
+ *            "exd5" → "pion e prend d5"
+ *            "0-0"  → "petit roque"
+ */
+function sanToFr(san) {
+  if (!san) return "";
+  let s = String(san).trim();
+
+  // 1. Annotation en dernier dans la notation (2 chars avant 1 char)
+  let annotation = "";
+  if      (s.endsWith("!!")) { annotation = ", très bon coup";    s = s.slice(0, -2); }
+  else if (s.endsWith("!?")) { annotation = ", coup intéressant"; s = s.slice(0, -2); }
+  else if (s.endsWith("?!")) { annotation = ", coup douteux";     s = s.slice(0, -2); }
+  else if (s.endsWith("??")) { annotation = ", grave erreur";     s = s.slice(0, -2); }
+  else if (s.endsWith("!"))  { annotation = ", bon coup";         s = s.slice(0, -1); }
+  else if (s.endsWith("?"))  { annotation = ", mauvais coup";     s = s.slice(0, -1); }
+
+  // 2. Suffixe d'échec avant l'annotation (++ avant +)
+  let check = "";
+  if      (s.endsWith("#"))  { check = ", échec et mat"; s = s.slice(0, -1); }
+  else if (s.endsWith("++")) { check = ", échec double"; s = s.slice(0, -2); }
+  else if (s.endsWith("+"))  { check = ", échec";        s = s.slice(0, -1); }
+
+  const suffix = check + annotation;
+
+  if (s === "0-0-0") return "grand roque" + suffix;
+  if (s === "0-0")   return "petit roque" + suffix;
+
+  const pieces = { C: "cavalier", F: "fou", T: "tour", D: "dame", R: "roi" };
+  const pieceChar = pieces[s[0]] ? s[0] : null;
+  const pieceName = pieceChar ? pieces[pieceChar] : "pion";
+  const rest      = pieceChar ? s.slice(1) : s;
+
+  const xIdx      = rest.indexOf("x");
+  const isCapture = xIdx !== -1;
+
+  let disambiguation, target;
+  if (isCapture) {
+    disambiguation = rest.slice(0, xIdx);
+    target         = rest.slice(xIdx + 1, xIdx + 3);
+  } else {
+    target         = rest.slice(-2);
+    disambiguation = rest.slice(0, -2);
+  }
+
+  let result = pieceName;
+  if (disambiguation) result += " " + disambiguation;
+  result += isCapture ? " prend " + target : " en " + target;
+  return result + suffix;
+}
+
+/**
+ * Prépare un commentaire pour la narration TTS :
+ * traduit les notations algébriques françaises en texte parlé.
+ *
+ * "7.cxd5"  → "coup 7 des Blancs, pion c prend d5"
+ * "8...Cf6" → "coup 8 des Noirs, cavalier en f6"
+ * "...Fb7"  → "les Noirs jouent fou en b7"
+ * "Tb1+"    → "tour en b1"
+ * "9...b6"  → "coup 9 des Noirs, pion en b6"
+ */
+function commentToSpeech(text) {
+  if (!text) return "";
+  let s = String(text);
+
+  // Motif d'un coup : pièces (CFTDR), captures de pion (cxd5), pions simples (b6), roques
+  const mv = "(?:0-0-0|0-0|[CFTDR][a-h]?[1-8]?x?[a-h][1-8][+#!?]*|[a-h]x[a-h][1-8][+#!?]*|[a-h][1-8][+#!?]*)";
+
+  // 1. Coup des Noirs avec numéro — 3 points : "8...Cf6", "9...b6"
+  //    Traiter avant le 1 point pour éviter que "8." absorbe "8..."
+  s = s.replace(
+    new RegExp("(\\d+)\\.{3}\\s*(" + mv + ")", "g"),
+    (_, num, move) => `coup ${num} des Noirs, ${sanToFr(move)}`
+  );
+
+  // 2. Coup des Blancs avec numéro — 1 point : "7.cxd5", "12.Ce5"
+  s = s.replace(
+    new RegExp("(\\d+)\\.\\s*(" + mv + ")", "g"),
+    (_, num, move) => `coup ${num} des Blancs, ${sanToFr(move)}`
+  );
+
+  // 3. Points de suspension seuls sans numéro : "...Fb7"
+  s = s.replace(
+    new RegExp("\\.{3}\\s*(" + mv + ")", "g"),
+    (_, move) => `les Noirs jouent ${sanToFr(move)}`
+  );
+
+  // 4. Pièces seules restantes (sans numéro) : "Tb1+", "Ce5"
+  //    (?!\w) au lieu de \b final pour inclure les suffixes +#!? dans la correspondance
+  s = s.replace(
+    /\b([CFTDR][a-h]?[1-8]?x?[a-h][1-8][+#!?]*)(?!\w)/g,
+    (_, move) => sanToFr(move)
+  );
+
+  // 5. Pions seuls : "b6", "d5" — évite les faux positifs après "en " ou "prend "
+  //    (ce sont des cibles de pièces déjà traduites, pas des coups de pion autonomes)
+  s = s.replace(
+    /(?<!(?:en|prend) )(?<![a-zA-Z0-9])([a-h][1-8])(?![a-zA-Z0-9])/g,
+    (_, sq) => `pion en ${sq}`
+  );
+
+  return s;
+}
+
+async function openGame(gameId){
+  if (!state.profile) return toast("Selectionne un profil.");
+  try{
+    const { meta, chapter } = await mmCall(mm => mm.content.loadChapter(gameId), "content:loadChapter");
+    state.current.meta = meta;
+    state.current.chapter = chapter;
+    navigate(`#/partie/${encodeURIComponent(gameId)}`);
+  }catch(e){
+    toast(String(e?.message || e));
+  }
+}
+
+function partieScreen(){
+  const game = state.current.chapter;
+  if (!game || game.type !== "game") {
+    navigate("#/library");
+    return h("div", {});
+  }
+
+  const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+  let moveIndex = -1;
+
+  // DOM elements
+  const commentEl  = h("div", { class: "partieComment" });
+  const counterEl  = h("div", { class: "partieCounter" });
+  const moveListEl = h("div", { class: "moveList" });
+  const btnPrev    = h("button", { class: "btn secondary" }, "← Précédent");
+  const btnNext    = h("button", { class: "btn" }, "Suivant →");
+  const boardHost  = h("div", { id: "boardHost" });
+
+  // Board widget (singleton, locked = lecture seule)
+  if (!state.board) {
+    state.board = new BoardWidget({ onMove: () => {} });
+  }
+  if (!boardHost.__mounted) {
+    state.board.mount(boardHost);
+    boardHost.__mounted = true;
+  }
+  state.board.setLocked(true);
+
+  // Build move list (paires 1.d4 d5  2.c4 e6 ...)
+  const moveSpans = [];
+  for (let i = 0; i < game.moves.length; i++){
+    const move    = game.moves[i];
+    const isWhite = i % 2 === 0;
+    const moveNum = Math.floor(i / 2) + 1;
+
+    if (isWhite){
+      moveListEl.appendChild(h("span", { class: "moveNum" }, `${moveNum}.`));
+    }
+    const span = h("span", {
+      class: "moveToken" + (move.comment ? " hasComment" : ""),
+      onclick: () => goTo(i),
+      title: move.san  // notation compacte en tooltip
+    }, sanToFr(move.san));
+    moveSpans.push(span);
+    moveListEl.appendChild(span);
+  }
+
+  const goTo = (idx) => {
+    const clamped = Math.max(-1, Math.min(game.moves.length - 1, idx));
+    moveIndex = clamped;
+
+    // Replay position from start
+    state.board.setPositionFromFen(STARTING_FEN);
+    for (let i = 0; i <= clamped; i++){
+      state.board.applyUci(game.moves[i].uci, { ignoreTurn: true, silent: true });
+    }
+
+    // Commentaire + TTS (affiché tel quel, parlé avec notation traduite)
+    const comment = clamped >= 0 ? (game.moves[clamped].comment || "") : "";
+    commentEl.textContent = comment;
+    if (comment) state.tts.speak(commentToSpeech(comment));
+
+    // Compteur
+    if (clamped === -1){
+      counterEl.textContent = "Position initiale";
+    } else {
+      const moveNum   = Math.floor(clamped / 2) + 1;
+      const side      = clamped % 2 === 0 ? "Blancs" : "Noirs";
+      const moveFr    = sanToFr(game.moves[clamped].san);
+      counterEl.textContent = `Coup ${moveNum} — ${side} : ${moveFr}`;
+    }
+
+    // Surlignage dans la liste
+    moveSpans.forEach((span, i) => {
+      span.className = "moveToken"
+        + (game.moves[i].comment ? " hasComment" : "")
+        + (i === clamped ? " activeMove" : "");
+    });
+
+    btnPrev.disabled = clamped <= -1;
+    btnNext.disabled = clamped >= game.moves.length - 1;
+
+    // Scroll coup actif
+    if (clamped >= 0 && moveSpans[clamped]){
+      moveSpans[clamped].scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
+  };
+
+  btnPrev.onclick = () => goTo(moveIndex - 1);
+  btnNext.onclick = () => goTo(moveIndex + 1);
+
+  // Navigation clavier
+  const onKey = (e) => {
+    if (e.key === "ArrowLeft")  { e.preventDefault(); goTo(moveIndex - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); goTo(moveIndex + 1); }
+  };
+  document.addEventListener("keydown", onKey);
+  const cleanup = () => {
+    document.removeEventListener("keydown", onKey);
+    window.removeEventListener("hashchange", cleanup);
+  };
+  window.addEventListener("hashchange", cleanup);
+
+  // Position initiale
+  goTo(-1);
+
+  // En-tête
+  const headerEl = h("div", { class: "partieHeader" },
+    h("div", { class: "partieTitle" }, `Partie n°${game.number}`),
+    h("div", { class: "partieVs" }, `${game.white}  –  ${game.black}`),
+    h("div", { class: "partieMeta" }, `${game.event}, ${game.year}  ·  ${game.opening}`)
+  );
+
+  const left = h("div", { class: "leftCol card panel scroll" },
+    h("div", { class: "spread" },
+      headerEl,
+      h("button", { class: "btn secondary", onclick: () => {
+        const ch = state.current.meta?.chapter;
+        navigate(ch ? `#/library/${ch}` : "#/library");
+      }}, "[<] Retour")
+    ),
+    h("div", { class: "hr" }),
+    counterEl,
+    h("div", { class: "hr" }),
+    moveListEl,
+    h("div", { class: "hr" }),
+    commentEl,
+    h("div", { class: "hr" }),
+    h("div", { class: "controls" }, btnPrev, btnNext)
+  );
+
+  const right = h("div", { class: "rightCol card scroll" }, boardHost);
+
+  return layout(h("div", { class: "split" }, left, right));
+}
+
 function router(){
   try{
   const app = document.getElementById("app");
@@ -1014,6 +1275,21 @@ function router(){
       return;
     }
     app.appendChild(readerScreen());
+    return;
+  }
+
+  if (route === "partie") {
+    if (!state.profile) {
+      app.appendChild(profilesScreen());
+      toast("Selectionne un profil.");
+      return;
+    }
+    if (!state.current.chapter || state.current.chapter.type !== "game" || decodeURIComponent(arg || "") !== state.current.meta?.id) {
+      app.appendChild(libraryScreen());
+      toast("Ouvre une partie depuis la bibliotheque.");
+      return;
+    }
+    app.appendChild(partieScreen());
     return;
   }
 
