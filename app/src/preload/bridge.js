@@ -13,6 +13,7 @@ contextBridge.exposeInMainWorld("mm", {
   },
   content: {
     listChapters: () => ipcRenderer.invoke("content:listChapters"),
+    listBookChapters: () => ipcRenderer.invoke("content:listBookChapters"),
     loadChapter: (chapterId) => ipcRenderer.invoke("content:loadChapter", chapterId),
     listPieceSets: () => ipcRenderer.invoke("content:listPieceSets"),
     openPieceSetFolder: (rootName, setId) => ipcRenderer.invoke("content:openPieceSetFolder", rootName, setId),
