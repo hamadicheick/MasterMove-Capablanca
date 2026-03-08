@@ -650,8 +650,9 @@ const controls = h("div", { class:"rightColPad" });
       h("option", { value:"piper" }, "Piper (local)")
     );
 
-    const voicesSelect = h("select", { class:"input" });
+    const voicesSelect      = h("select", { class:"input" });
     const piperVoicesSelect = h("select", { class:"input" });
+    const edgeVoicesSelect  = h("select", { class:"input" });
 
     const fillVoices = (voices) => {
       clear(voicesSelect);
@@ -703,10 +704,21 @@ const controls = h("div", { class:"rightColPad" });
       }
     };
 
+    const fillEdgeVoices = (voices) => {
+      clear(edgeVoicesSelect);
+      for (const v of (voices || [])) {
+        const opt = h("option", { value: v.id }, v.label);
+        if ((tts.edgeVoiceId || "fr-FR-DeniseNeural") === v.id) opt.selected = true;
+        edgeVoicesSelect.appendChild(opt);
+      }
+    };
+
     const syncProviderVisibility = () => {
       const isPiper = tts.provider === "piper";
-      voicesSelect.disabled = isPiper;
+      const isEdge  = tts.provider === "edge";
+      voicesSelect.disabled      = isPiper || isEdge;
       piperVoicesSelect.disabled = !isPiper;
+      edgeVoicesSelect.disabled  = !isEdge;
     };
 
     providerSelect.addEventListener("change", async () => {
@@ -725,6 +737,10 @@ const controls = h("div", { class:"rightColPad" });
       tts.setPiperVoiceId(piperVoicesSelect.value || null);
     });
 
+    edgeVoicesSelect.addEventListener("change", () => {
+      tts.setEdgeVoiceId(edgeVoicesSelect.value || null);
+    });
+
     const rate = h("input", { type:"range", min:"0.5", max:"1.5", step:"0.05" });
     rate.value = String(tts.rate);
     rate.addEventListener("input", () => tts.setRate(rate.value));
@@ -733,9 +749,10 @@ const controls = h("div", { class:"rightColPad" });
     volume.value = String(tts.volume);
     volume.addEventListener("input", () => tts.setVolume(volume.value));
 
-    const onTtsState = ({ voices, piperVoices, providers, provider } = {}) => {
+    const onTtsState = ({ voices, piperVoices, edgeVoices, providers, provider } = {}) => {
       fillVoices(voices || []);
       fillPiperVoices(piperVoices || []);
+      fillEdgeVoices(edgeVoices || []);
       providerSelect.innerHTML = "";
       for (const p of (providers || [])) {
         const suffix = p.available ? "" : " (indisponible)";
@@ -750,6 +767,7 @@ const controls = h("div", { class:"rightColPad" });
     onTtsState({
       voices: tts.voices,
       piperVoices: tts.piperVoices,
+      edgeVoices: tts.edgeVoices,
       providers: tts.providers,
       provider: tts.provider
     });
@@ -762,16 +780,18 @@ const controls = h("div", { class:"rightColPad" });
     const stopBtn = h("button", { class:"btn secondary", onclick: () => tts.stop() }, "Stop");
 
     return h("div", {},
-      h("div", { class:"h1" }, "Audio (Web Speech API)"),
+      h("div", { class:"h1" }, "Audio / Narration"),
       h("div", { class:"row" }, enabled, h("div", { class:"small" }, "Lecture automatique a chaque sequence")),
       h("div", { class:"hr" }),
       h("div", { class:"label" }, "Provider"),
       providerSelect,
       h("div", { class:"hr" }),
-      h("div", { class:"label" }, "Voix"),
+      h("div", { class:"label" }, "Voix Web Speech"),
       voicesSelect,
       h("div", { class:"label", style:"margin-top:8px;" }, "Voix Piper (10 affichees)"),
       piperVoicesSelect,
+      h("div", { class:"label", style:"margin-top:8px;" }, "Voix Edge TTS (Neural, en ligne)"),
+      edgeVoicesSelect,
       h("div", { class:"hr" }),
       h("div", { class:"sliderRow" },
         h("div", {},
@@ -786,7 +806,7 @@ const controls = h("div", { class:"rightColPad" });
       h("div", { class:"hr" }),
       h("div", { class:"controls" }, playBtn, stopBtn),
       h("div", { class:"small", style:"margin-top:10px;" },
-        "Remarque: Piper est actif si `app/resources/piper/piper.exe` et des modeles `.onnx` sont presents."
+        "Edge TTS : connexion internet requise. Piper : actif si piper.exe + modeles .onnx presents."
       )
     );
   };
