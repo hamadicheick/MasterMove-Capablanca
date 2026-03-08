@@ -19,11 +19,13 @@ export class TTS {
     this.providerManual = Store.get("tts.providerManual", false);
     this.voiceURI = Store.get("tts.voiceURI", null);
     this.piperVoiceId = Store.get("tts.piperVoiceId", null);
+    this.edgeVoiceId  = Store.get("tts.edgeVoiceId", "fr-FR-DeniseNeural");
     this.rate = Store.get("tts.rate", 1.0);
     this.volume = Store.get("tts.volume", 1.0);
 
     this._voices = [];
     this._piperVoices = [];
+    this._edgeVoices  = [];
     this._providers = [{ id: "webspeech", label: "Web Speech (systeme)", available: true }];
 
     this._onState = () => {};
@@ -53,6 +55,7 @@ export class TTS {
     this._onState({
       voices: this._voices,
       piperVoices: this._piperVoices,
+      edgeVoices: this._edgeVoices,
       providers: this._providers,
       provider: this.provider
     });
@@ -73,6 +76,13 @@ export class TTS {
       }
     } catch (_) {
       this._piperVoices = [];
+    }
+
+    try {
+      const ev = await window.mm?.narration?.edgeListVoices?.();
+      if (Array.isArray(ev)) this._edgeVoices = ev;
+    } catch (_) {
+      this._edgeVoices = [];
     }
 
     const piperProvider = this._providers.find((p) => p.id === "piper");
@@ -109,6 +119,11 @@ export class TTS {
   setPiperVoiceId(id){
     this.piperVoiceId = id || null;
     Store.set("tts.piperVoiceId", this.piperVoiceId);
+  }
+
+  setEdgeVoiceId(id){
+    this.edgeVoiceId = id || "fr-FR-DeniseNeural";
+    Store.set("tts.edgeVoiceId", this.edgeVoiceId);
   }
 
   setRate(rate){
@@ -198,6 +213,33 @@ export class TTS {
     }
   }
 
+  async _speakEdge(text, tokenAtStart){
+    const fn = window.mm?.narration?.edgeSpeak;
+    if (!fn) { this._speakWebSpeech(text); return; }
+    const res = await fn({
+      text:    String(text || ""),
+      voiceId: this.edgeVoiceId || "fr-FR-DeniseNeural",
+      rate:    this.rate
+    });
+    if (tokenAtStart !== this._token) return;
+    if (!res?.ok || !res?.path) {
+      console.warn("Edge TTS indisponible:", res?.error || "unknown");
+      this.setProvider("webspeech");
+      this._speakWebSpeech(text);
+      return;
+    }
+    const audio = new Audio(toFileUrl(res.path));
+    audio.volume = this.volume;
+    this._audio = audio;
+    try {
+      await audio.play();
+    } catch (e) {
+      console.warn("Lecture Edge TTS impossible, fallback WebSpeech:", e?.message || e);
+      this.setProvider("webspeech");
+      this._speakWebSpeech(text);
+    }
+  }
+
   speak(text){
     if (!this.enabled) return;
     const t = String(text || "").trim();
@@ -218,10 +260,19 @@ export class TTS {
       });
       return;
     }
+    if (this.provider === "edge") {
+      this._speakEdge(t, tokenAtStart).catch((e) => {
+        console.warn("Erreur Edge TTS:", e?.message || e);
+        this.setProvider("webspeech");
+        this._speakWebSpeech(t);
+      });
+      return;
+    }
     this._speakWebSpeech(t);
   }
 
   get voices(){ return this._voices; }
   get piperVoices(){ return this._piperVoices; }
+  get edgeVoices(){ return this._edgeVoices; }
   get providers(){ return this._providers; }
 }

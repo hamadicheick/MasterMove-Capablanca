@@ -7,6 +7,7 @@ const fs = require("fs/promises");
 const { ensureDir, readJson, writeJsonAtomic } = require("./storage");
 const { listChapters, listBookChapters, loadChapter, listPieceSets } = require("./content");
 const { PiperNarrationService } = require("./narration_piper");
+const { EdgeNarrationService } = require("./narration_edge");
 
 function createId() {
   if (crypto.randomUUID) return crypto.randomUUID();
@@ -100,6 +101,7 @@ app.whenReady().then(async () => {
   await resolveDataRoot();
   console.info("[storage] dataRoot:", dataRootDir);
   const piper = new PiperNarrationService(app);
+  const edge  = new EdgeNarrationService(app);
 
   // IPC: profiles
   ipcMain.handle("profiles:list", async () => {
@@ -189,8 +191,9 @@ app.whenReady().then(async () => {
   // IPC: narration
   ipcMain.handle("narration:listProviders", async () => {
     const providers = [{ id: "webspeech", label: "Web Speech (systeme)", available: true }];
-    const piperAvailable = await piper.isAvailable();
+    const [piperAvailable, edgeAvailable] = await Promise.all([piper.isAvailable(), edge.isAvailable()]);
     providers.push({ id: "piper", label: "Piper (local)", available: piperAvailable });
+    providers.push({ id: "edge", label: "Edge TTS (en ligne, Neural)", available: edgeAvailable });
     return providers;
   });
 
@@ -203,6 +206,17 @@ app.whenReady().then(async () => {
     const voiceId = payload?.voiceId ? String(payload.voiceId) : null;
     const rate = Number(payload?.rate || 1);
     return await piper.synthesize({ text, voiceId, rate });
+  });
+
+  ipcMain.handle("narration:edge:listVoices", () => {
+    return edge.listVoices();
+  });
+
+  ipcMain.handle("narration:edge:speak", async (_evt, payload) => {
+    const text    = String(payload?.text || "");
+    const voiceId = payload?.voiceId ? String(payload.voiceId) : "fr-FR-DeniseNeural";
+    const rate    = Number(payload?.rate || 1);
+    return await edge.synthesize({ text, voiceId, rate });
   });
 
   createWindow();
