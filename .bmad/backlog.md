@@ -71,5 +71,25 @@ Contenu :
 - [x] Ajouter structure chapitres (book_chapters + champ chapter) dans index.json
 - [x] Produire Ex43 (attaque sans Cavaliers, mat en 4) a partir du PGN source
 - [x] Ajouter Ex43 dans `app/content/index.json`
+- [x] Réviser Ex29 (deux Cavaliers vs pion) au format CORRIGE — 5 sequences, quiz 3 etapes
+- [x] Réviser Ex30 (Fou mauvaise couleur, nulle) au format CORRIGE — 5 sequences, forteresse h8
+- [x] Réviser Ex31 (Cavalier+Roi vs pions) au format CORRIGE — 5 sequences, quiz 3 etapes
+- [x] Réviser Ex32 (Fou vs Cavalier mobilite) au format CORRIGE — 5 sequences enrichies
+- [x] Réviser Ex33 (position bloquee Cavalier superieur) au format CORRIGE — 5 sequences, quiz 3 etapes
+- [x] Réviser Ex34 (equilibre Fou/Cavalier) au format CORRIGE — 5 sequences
+- [x] Réviser Ex35 (Fou sur deux ailes) au format CORRIGE — 5 sequences
+- [x] Réviser Ex36 (asymetrie avantage Fou) au format CORRIGE — 5 sequences
+- [x] Réviser Ex37 (Fou pions passes deux ailes) au format CORRIGE — 5 sequences
+- [x] Réviser Ex38 (defense noire difficile face au Fou) au format CORRIGE — 5 sequences
+- [x] Réviser Ex39 (mat Fou+Cavalier) au format CORRIGE — 5 sequences, methode en phases
+- [x] Produire Ex50 (cadeau empoisonne / sacrifice Fou h7) au format CORRIGE
+- [x] Produire Ex51 (attaquer avec toutes ses pieces) au format CORRIGE
+- [x] Produire Ex52 (chasser le Cavalier du centre) au format CORRIGE
+- [x] Produire Ex53 (Roi en securite avant d'attaquer) au format CORRIGE
+- [x] Produire Ex54 (la Dame prend position) au format CORRIGE
+- [x] Produire Ex55 (echanger pour creer des faiblesses) au format CORRIGE
+- [x] Ajouter Ex50-Ex55 dans index.json (chapitre 4)
+- [x] fix(ui): ajouter Chapitre IV dans BOOK_CHAPTERS_META (app.js) — ex50-55 invisibles sans cette entree
+- [ ] Réviser Ex40-Ex49 au format CORRIGE (Dame contre Tour, attaques, sacrifices, Cadeau Grec)
 - [ ] Refactor Chapitre 1
 - [ ] Produire Chapitre 2
