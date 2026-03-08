@@ -986,15 +986,25 @@ async function openChapter(chapterId){
  */
 function sanToFr(san) {
   if (!san) return "";
-  const raw = String(san).trim();
+  let s = String(san).trim();
 
-  // Extraire le suffixe d'échec avant de nettoyer (ordre important : ++ avant +)
-  let suffix = "";
-  if (raw.endsWith("#"))       suffix = ", échec et mat";
-  else if (raw.endsWith("++")) suffix = ", échec double";
-  else if (raw.endsWith("+"))  suffix = ", échec";
+  // 1. Annotation en dernier dans la notation (2 chars avant 1 char)
+  let annotation = "";
+  if      (s.endsWith("!!")) { annotation = ", très bon coup";    s = s.slice(0, -2); }
+  else if (s.endsWith("!?")) { annotation = ", coup intéressant"; s = s.slice(0, -2); }
+  else if (s.endsWith("?!")) { annotation = ", coup douteux";     s = s.slice(0, -2); }
+  else if (s.endsWith("??")) { annotation = ", grave erreur";     s = s.slice(0, -2); }
+  else if (s.endsWith("!"))  { annotation = ", bon coup";         s = s.slice(0, -1); }
+  else if (s.endsWith("?"))  { annotation = ", mauvais coup";     s = s.slice(0, -1); }
 
-  const s = raw.replace(/[+#!?]/g, "").trim();
+  // 2. Suffixe d'échec avant l'annotation (++ avant +)
+  let check = "";
+  if      (s.endsWith("#"))  { check = ", échec et mat"; s = s.slice(0, -1); }
+  else if (s.endsWith("++")) { check = ", échec double"; s = s.slice(0, -2); }
+  else if (s.endsWith("+"))  { check = ", échec";        s = s.slice(0, -1); }
+
+  const suffix = check + annotation;
+
   if (s === "0-0-0") return "grand roque" + suffix;
   if (s === "0-0")   return "petit roque" + suffix;
 
@@ -1036,7 +1046,7 @@ function commentToSpeech(text) {
   let s = String(text);
 
   // Motif d'un coup : pièces (CFTDR), captures de pion (cxd5), pions simples (b6), roques
-  const mv = "(?:0-0-0|0-0|[CFTDR][a-h]?[1-8]?x?[a-h][1-8][+#!?]*|[a-h]x[a-h][1-8][+#!?]*|[a-h][1-8][+#]?)";
+  const mv = "(?:0-0-0|0-0|[CFTDR][a-h]?[1-8]?x?[a-h][1-8][+#!?]*|[a-h]x[a-h][1-8][+#!?]*|[a-h][1-8][+#!?]*)";
 
   // 1. Coup des Noirs avec numéro — 3 points : "8...Cf6", "9...b6"
   //    Traiter avant le 1 point pour éviter que "8." absorbe "8..."
