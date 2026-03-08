@@ -976,6 +976,43 @@ async function openChapter(chapterId){
   }
 }
 
+/**
+ * Convertit un coup en notation algébrique française (SAN) en texte lisible.
+ * Exemples : "Cxf3" → "cavalier prend f3"
+ *            "Fd3"  → "fou en d3"
+ *            "Tab8" → "tour a en b8"
+ *            "exd5" → "pion e prend d5"
+ *            "0-0"  → "petit roque"
+ */
+function sanToFr(san) {
+  if (!san) return "";
+  const s = String(san).replace(/[+#!?]/g, "").trim();
+  if (s === "0-0-0") return "grand roque";
+  if (s === "0-0")   return "petit roque";
+
+  const pieces = { C: "cavalier", F: "fou", T: "tour", D: "dame", R: "roi" };
+  const pieceChar = pieces[s[0]] ? s[0] : null;
+  const pieceName = pieceChar ? pieces[pieceChar] : "pion";
+  const rest      = pieceChar ? s.slice(1) : s;
+
+  const xIdx      = rest.indexOf("x");
+  const isCapture = xIdx !== -1;
+
+  let disambiguation, target;
+  if (isCapture) {
+    disambiguation = rest.slice(0, xIdx);
+    target         = rest.slice(xIdx + 1, xIdx + 3);
+  } else {
+    target         = rest.slice(-2);
+    disambiguation = rest.slice(0, -2);
+  }
+
+  let result = pieceName;
+  if (disambiguation) result += " " + disambiguation;
+  result += isCapture ? " prend " + target : " en " + target;
+  return result;
+}
+
 async function openGame(gameId){
   if (!state.profile) return toast("Selectionne un profil.");
   try{
@@ -1028,8 +1065,9 @@ function partieScreen(){
     }
     const span = h("span", {
       class: "moveToken" + (move.comment ? " hasComment" : ""),
-      onclick: () => goTo(i)
-    }, move.san);
+      onclick: () => goTo(i),
+      title: move.san  // notation compacte en tooltip
+    }, sanToFr(move.san));
     moveSpans.push(span);
     moveListEl.appendChild(span);
   }
@@ -1053,9 +1091,10 @@ function partieScreen(){
     if (clamped === -1){
       counterEl.textContent = "Position initiale";
     } else {
-      const moveNum = Math.floor(clamped / 2) + 1;
-      const side    = clamped % 2 === 0 ? "Blancs" : "Noirs";
-      counterEl.textContent = `Coup ${moveNum} — ${side}`;
+      const moveNum   = Math.floor(clamped / 2) + 1;
+      const side      = clamped % 2 === 0 ? "Blancs" : "Noirs";
+      const moveFr    = sanToFr(game.moves[clamped].san);
+      counterEl.textContent = `Coup ${moveNum} — ${side} : ${moveFr}`;
     }
 
     // Surlignage dans la liste
