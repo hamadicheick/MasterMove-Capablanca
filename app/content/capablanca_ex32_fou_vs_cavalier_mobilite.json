@@ -1,36 +1,58 @@
 {
-  "id": "capablanca_ex32_fou_vs_cavalier_mobilite",
-  "title": "Exemple 32 - Fou contre Cavalier : mobilité",
+  "chapitre_id": "capablanca_ex32_fou_vs_cavalier_mobilite",
+  "titre": "Fou contre Cavalier : la mobilité du Fou sur les grandes diagonales !",
+  "description": "Comparer la portee du Fou sur les grandes diagonales avec les deplacements plus courts du Cavalier.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
-      "text": "Position d'illustration : le livre compare la portée du Fou à la mobilité plus limitée du Cavalier."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Fou contre Cavalier : qui est plus mobile ?",
+      "texte_audio": "En position ouverte, le Fou est souvent plus fort que le Cavalier. Pourquoi ? Parce que le Fou peut traverser tout l'echiquier en un seul coup ! Depuis d5, le Fou noir peut aller en a8, ou en h1, ou en g2 — il couvre les deux grandes diagonales a la fois. Le Cavalier blanc en a5, lui, doit faire plusieurs sauts pour traverser l'echiquier. Il est plus lent dans les positions ouvertes.",
+      "position_depart_fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
-      "moves": [
-        { "uci": "d5e6", "comment": "Le Fou change rapidement d'axe tout en restant actif sur les deux diagonales." },
-        { "uci": "a5b7", "comment": "Le Cavalier progresse, mais son trajet reste plus lent et plus contraint." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Fou couvre deux diagonales en un coup !",
+      "texte_audio": "Regarde : le Fou noir va de d5 en e6. En un seul coup, il change de diagonale et couvre de nouvelles cases. Depuis e6, il vise a2 en bas a gauche ET f7, g8 en haut a droite. Maintenant le Cavalier blanc essaie de progresser depuis a5 — il va en b7. Mais pour traverser l'echiquier, le Cavalier devra faire encore plusieurs sauts. Le Fou est deja actif sur deux grandes diagonales !",
+      "position_depart_fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "animations": [
+        {"coup": "d5e6", "acteur": "noir", "commentaire": "Le Fou glisse en e6 — il change de diagonale instantanement et couvre de nouvelles cases !"},
+        {"coup": "a5b7", "acteur": "blanc", "commentaire": "Le Cavalier tente de progresser en b7. Mais son trajet est bien plus lent que celui du Fou."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Le Fou traverse l'échiquier plus vite que le Cavalier.",
-        "Le Cavalier alterne les couleurs et ne peut contrôler qu'un nombre limité de cases à chaque coup.",
-        "Cet exemple est un diagramme de comparaison, pas une ligne forcée de mat."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier alterne les couleurs à chaque coup !",
+      "texte_audio": "Voila une autre difference importante. Le Cavalier change toujours de couleur a chaque coup : il saute d'une case blanche a une case noire, puis d'une case noire a une case blanche. Cela signifie qu'il ne peut jamais attaquer une case de la meme couleur deux fois de suite. Le Fou, lui, reste toujours sur la meme couleur. Dans une position ouverte avec de la place, le Fou est generalement superieur.",
+      "position_depart_fen": "7K/8/1N6/4b3/8/8/8/6k1 b - - 2 2",
+      "animations": [
+        {"coup": "e6c4", "acteur": "noir", "commentaire": "Le Fou change encore de diagonale en un seul coup — il est desormais sur la grande diagonale a2-g8 !"},
+        {"coup": "b7d6", "acteur": "blanc", "commentaire": "Le Cavalier progresse en d6. Chaque saut est court, le chemin est long."}
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "Quand le Fou est supérieur au Cavalier ?",
+      "texte_audio": "Le Fou est generalement superieur dans les positions ouvertes ou il peut exploiter ses longues diagonales. Il est aussi meilleur quand les pions sont repartis sur les deux ailes — car le Fou peut rapidement passer d'une aile a l'autre. En revanche, le Cavalier est meilleur dans les positions bloquees, pres du Roi adverse, ou dans les finales avec des pions sur une seule aile. Reconnaitre ca, c'est comprendre la strategie !",
+      "position_depart_fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
-      "question": "Quiz final : quel coup de Fou illustre la mobilité diagonale immédiate ?",
-      "correct_move": "d5e6",
-      "success_message": "Exact, le Fou se redéploie immédiatement sur une nouvelle diagonale.",
-      "error_message": "Cherche le déplacement simple du Fou qui maintient une activité centrale."
+      "texte_ecran": "À toi ! Montre la mobilité du Fou sur les diagonales.",
+      "texte_audio": "C'est ton tour ! Tu joues les Noirs avec le Fou en d5. Joue le coup qui montre la mobilite du Fou — un coup qui change sa diagonale et l'active sur de nouvelles cases.",
+      "position_depart_fen": "7K/8/8/N2b4/8/8/8/6k1 b - - 0 1",
+      "validation": {
+        "coups_acceptes": ["d5e6", "d5c4", "d5f3", "d5g2", "d5h1", "d5e4", "d5c6", "d5b7", "d5a8"],
+        "indice": "Le Fou peut aller sur n'importe quelle case de ses deux diagonales ! Il couvre une grande distance en un seul coup.",
+        "feedback_succes": "Bravo ! Le Fou se deplace instantanement sur une nouvelle case — c'est sa force ! En position ouverte, le Fou peut traverser tout l'echiquier la ou le Cavalier doit faire plusieurs sauts. C'est la superiorite du Fou dans les positions ouvertes.",
+        "feedback_erreur": "Essaie de deplacer le Fou — il peut aller sur n'importe quelle case de ses deux grandes diagonales !"
+      }
     }
   ]
 }

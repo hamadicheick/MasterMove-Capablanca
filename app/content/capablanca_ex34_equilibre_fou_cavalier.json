@@ -1,38 +1,57 @@
 {
-  "id": "capablanca_ex34_equilibre_fou_cavalier",
-  "title": "Exemple 34 - Équilibre Fou/Cavalier",
+  "chapitre_id": "capablanca_ex34_equilibre_fou_cavalier",
+  "titre": "L'équilibre Fou/Cavalier : ni l'un ni l'autre ne domine !",
+  "description": "Quand les pions sont sur une seule aile dans une structure symetrique, Fou et Cavalier se valent souvent.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
-      "text": "Quand les pions sont sur une seule aile et la structure reste symétrique, Fou et Cavalier s'équilibrent souvent."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Quand Fou et Cavalier se valent !",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Fou en c1 et des pions g2 et h2. Les Noirs ont un Cavalier en d7 et des pions f7, g7 et h7. Tous les pions sont sur l'aile Roi — une seule aile. Quand les pions sont regroupes sur une seule aile et que la structure est symetrique, le Fou et le Cavalier ont souvent des ressources comparables. Aucun des deux ne domine clairement !",
+      "position_depart_fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
-      "moves": [
-        { "uci": "d7f6", "comment": "Le Cavalier s'active sans créer de déséquilibre décisif." },
-        { "uci": "c1f4", "comment": "Le Fou répond par une centralisation équivalente." },
-        { "uci": "e8d7", "comment": "Le Roi noir se rapproche, plan classique de finale." },
-        { "uci": "e1e2", "comment": "Le Roi blanc fait de même : la position reste proche de l'égalité." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Les deux pièces s'activent en parallèle !",
+      "texte_audio": "Le Cavalier noir se centralise en f6. Le Fou blanc repond par une centralisation equivalente en f4. Les deux pieces sont maintenant actives. Le Roi noir avance en d7 — plan classique en finale. Le Roi blanc fait de meme en e2. Chaque coup est bien equilibre. Le Cavalier en f6 vise des cases comme e4 et g4, mais le Fou en f4 contr ole d6 et c7. Ils se neutralisent mutuellement !",
+      "position_depart_fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "animations": [
+        {"coup": "d7f6", "acteur": "noir", "commentaire": "Le Cavalier se centralise en f6 — actif et bien place."},
+        {"coup": "c1f4", "acteur": "blanc", "commentaire": "Le Fou repond par une centralisation equivalente. L'equilibre est maintenu."},
+        {"coup": "e8d7", "acteur": "noir", "commentaire": "Le Roi noir avance — plan classique de finale."},
+        {"coup": "e1e2", "acteur": "blanc", "commentaire": "Le Roi blanc fait de meme. La position reste parfaitement equilibree."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Dans cette structure, aucun camp ne possède d'avantage de pièce évident.",
-        "Le Fou et le Cavalier ont des ressources comparables quand le jeu reste fermé et symétrique.",
-        "Avec un jeu précis des deux côtés, la nulle est le résultat le plus probable."
-      ]
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Pourquoi c'est l'équilibre ici ?",
+      "texte_audio": "Dans cette position, ni le Fou ni le Cavalier n'a d'avantage decisif. Le Fou voudrait exploiter les grandes diagonales, mais les pions sont tous sur une seule aile — il n'y a pas de longues diagonales a exploiter. Le Cavalier voudrait une case forte au centre, mais il n'y a pas de structure bloquee qui lui donnerait un avant-poste permanent. Les deux pieces sont limitees de la meme facon. Resultat : la nulle est probable avec un jeu precis des deux cotes.",
+      "position_depart_fen": "3k4/5ppp/5n2/8/5B2/8/4KPP1/8 b - - 4 3",
+      "animations": []
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : connais les forces et faiblesses de chaque pièce !",
+      "texte_audio": "Voici la lecon strategique. Le Fou est superieur dans les positions ouvertes avec des pions sur les deux ailes. Le Cavalier est superieur dans les positions bloquees avec des cases fortes. Quand les pions sont sur une seule aile et la structure est symetrique, les deux pieces se valent souvent. Reconnaitre ces situations, c'est la base de la strategie des finales selon Capablanca. Analyse toujours la structure des pions avant de comparer tes pieces !",
+      "position_depart_fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
-      "question": "Quiz final : quel coup noir active le Cavalier sans rompre l'équilibre ?",
-      "correct_move": "d7f6",
-      "success_message": "Exact, le Cavalier s'active mais la position reste équilibrée.",
-      "error_message": "Cherche la centralisation naturelle du Cavalier noir."
+      "texte_ecran": "À toi ! Active ton Cavalier sans rompre l'équilibre.",
+      "texte_audio": "C'est ton tour — tu joues les Noirs ! Le Cavalier est en d7. Lance la centralisation naturelle du Cavalier qui maintient l'equilibre de la position.",
+      "position_depart_fen": "4k3/3n1ppp/8/8/8/8/6PP/2B1K3 b - - 0 1",
+      "validation": {
+        "coups_acceptes": ["d7f6"],
+        "indice": "Le Cavalier doit se centraliser vers une bonne case. La case f6 est la plus naturelle — il vise le centre.",
+        "feedback_succes": "Bien joue ! Le Cavalier s'active en f6 sans casser l'equilibre. Le Fou blanc repondra par Bf4 avec une centralisation equivalente. Dans cette structure avec des pions sur une seule aile, les deux pieces se valent. La nulle est le resultat le plus probable avec un jeu precis !",
+        "feedback_erreur": "Le Cavalier doit se centraliser naturellement. La case f6 est son meilleur poste dans cette structure."
+      }
     }
   ]
 }

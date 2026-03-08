@@ -1,62 +1,79 @@
 {
-  "id": "capablanca_ex33_position_bloquee_cavalier",
-  "title": "Exemple 33 - Position bloquée : Cavalier supérieur",
+  "chapitre_id": "capablanca_ex33_position_bloquee_cavalier",
+  "titre": "Position bloquée : le Cavalier domine le Fou !",
+  "description": "Dans une position bloquee sur une seule aile, le Cavalier est souvent superieur au Fou.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
-      "text": "Dans cette position bloquée sur une seule aile, le Cavalier noir a de meilleures perspectives que le Fou blanc."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Quand le Cavalier est meilleur que le Fou !",
+      "texte_audio": "Regarde cette position. Tous les pions sont bloques — aucun ne peut avancer facilement. Le Cavalier noir est en d7 et le Fou blanc est en c1. Dans une position aussi bloquee, le Cavalier est souvent MEILLEUR que le Fou. Pourquoi ? Parce que le Fou est limite par ses propres pions et par la structure bloquee. Le Cavalier, lui, peut sauter par-dessus les pions et atteindre des cases fortes !",
+      "position_depart_fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
-      "moves": [
-        { "uci": "d7f6", "comment": "Le Cavalier se centralise et vise plusieurs points d'appui." },
-        { "uci": "c1f4", "comment": "Le Fou blanc cherche de l'activité, mais sa portée reste limitée." },
-        { "uci": "f6e4", "comment": "Le Cavalier occupe une case forte au cœur de la structure." },
-        { "uci": "f4e5", "comment": "Le Fou se réorganise sans créer de menace directe." },
-        { "uci": "e4g3", "comment": "Le Cavalier change d'aile rapidement et continue d'améliorer sa portée." },
-        { "uci": "e1f2", "comment": "Le Roi blanc doit rester prudent face aux sauts du Cavalier." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier se centralise sur une case forte !",
+      "texte_audio": "Le Cavalier noir avance en f6. Le Fou blanc essaie de s'activer en f4. Mais le Cavalier continue et s'installe en e4 — une case forte au coeur de la position ! Le Fou blanc se reorganise en e5, mais il ne peut pas faire grand chose car ses propres pions blancs bloquent ses diagonales. Le Cavalier en e4 est intouchable — aucun pion noir ne peut le chasser de cette case ideale.",
+      "position_depart_fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "animations": [
+        {"coup": "d7f6", "acteur": "noir", "commentaire": "Le Cavalier se centralise en f6 — il vise des cases fortes."},
+        {"coup": "c1f4", "acteur": "blanc", "commentaire": "Le Fou cherche de l'activite en f4, mais sa portee reste limitee."},
+        {"coup": "f6e4", "acteur": "noir", "commentaire": "Le Cavalier s'installe en e4 — une case forte absolue ! Aucun pion ne peut le chasser."},
+        {"coup": "f4e5", "acteur": "blanc", "commentaire": "Le Fou se reorganise, mais ses diagonales sont bloquees par ses propres pions."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Dans les positions bloquées sur une seule aile, le Cavalier peut devenir plus fort que le Fou.",
-        "Des pions placés sur la couleur de son propre Fou réduisent souvent l'efficacité de ce dernier.",
-        "Le Cavalier profite mieux des cases fortes et des trajets courts dans les structures fermées."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier bascule vers l'aile Roi !",
+      "texte_audio": "Maintenant le Cavalier noir effectue une manoeuvre remarquable : il glisse de e4 vers g3 ! En quelques sauts, il passe de l'aile Dame a l'aile Roi. Le Roi blanc doit reagir en f2 pour proteger ses pions. C'est la force du Cavalier dans une position bloquee : il peut changer d'aile rapidement et creer des menaces partout, pendant que le Fou est paralyse par ses propres pions.",
+      "position_depart_fen": "4k3/8/2p5/1pPpB3/pP1Pn3/P7/8/4K3 b - - 4 3",
+      "animations": [
+        {"coup": "e4g3", "acteur": "noir", "commentaire": "Le Cavalier bascule en g3 — il change d'aile en un saut ! Le Fou blanc ne peut pas en faire autant."},
+        {"coup": "e1f2", "acteur": "blanc", "commentaire": "Le Roi blanc doit se rapprocher face aux menaces du Cavalier."}
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : reconnais la position favorable au Cavalier !",
+      "texte_audio": "Voici la lecon strategique. Le Cavalier est superieur au Fou quand la position est bloquee — surtout si les pions sont sur une seule aile et sur la meme couleur que le Fou. Regarde les pions blancs : a3, b4, c5, d4. Beaucoup sont sur des cases blanches, ce qui reduit la portee du Fou blanc ! Le Cavalier noir n'a pas ce probleme — il saute librement par-dessus tous les pions. Reconnaitre ca, c'est comprendre la strategie des finales !",
+      "position_depart_fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
-      "question": "Quiz final en 3 étapes : rejoue le plan d'amélioration du Cavalier noir.",
-      "steps": [
-        {
-          "coups_acceptes": ["d7f6"],
-          "reponse": "c1f4",
-          "indice": "Étape 1 : centralise le Cavalier noir.",
-          "solution": "d7f6"
-        },
-        {
-          "fen": "4k3/8/2p2n2/1pPp4/pP1P1B2/P7/8/4K3 b - - 2 2",
-          "coups_acceptes": ["f6e4"],
-          "reponse": "f4e5",
-          "indice": "Étape 2 : place le Cavalier sur une case forte.",
-          "solution": "f6e4"
-        },
-        {
-          "fen": "4k3/8/2p5/1pPpB3/pP1Pn3/P7/8/4K3 b - - 4 3",
-          "coups_acceptes": ["e4g3"],
-          "reponse": "e1f2",
-          "indice": "Étape 3 : bascule le Cavalier vers l'aile Roi.",
-          "solution": "e4g3"
-        }
-      ],
-      "correct_move": "d7f6",
-      "success_message": "Exact, le Cavalier noir suit le bon plan d'amélioration.",
-      "error_message": "Repars du principe : case forte centrale puis redéploiement du Cavalier."
+      "texte_ecran": "À toi ! Lance le plan du Cavalier noir.",
+      "texte_audio": "C'est ton tour — tu joues les Noirs ! La position est bloquee. Ton Cavalier est en d7. Lance le plan d'amelioration du Cavalier en trois etapes. Premier coup : ou va le Cavalier pour se centraliser ?",
+      "position_depart_fen": "4k3/3n4/2p5/1pPp4/pP1P4/P7/8/2B1K3 b - - 0 1",
+      "validation": {
+        "indice": "Le Cavalier doit se centraliser vers une case forte. Il ne craint pas les pions — il peut sauter par-dessus !",
+        "steps": [
+          {
+            "coups_acceptes": ["d7f6"],
+            "reponse": "c1f4",
+            "indice": "Etape 1 : le Cavalier va en f6 pour se centraliser et viser des cases fortes.",
+            "solution": "d7f6"
+          },
+          {
+            "coups_acceptes": ["f6e4"],
+            "reponse": "f4e5",
+            "indice": "Etape 2 : le Cavalier s'installe en e4 — la case forte ideale ! Aucun pion ne peut le chasser.",
+            "solution": "f6e4"
+          },
+          {
+            "coups_acceptes": ["e4g3"],
+            "reponse": "e1f2",
+            "indice": "Etape 3 : le Cavalier bascule vers l'aile Roi en g3 — il change d'aile en un saut !",
+            "solution": "e4g3"
+          }
+        ],
+        "feedback_succes": "Excellent ! Le Cavalier noir domine ! f6, puis e4 sur la case forte, puis g3 pour changer d'aile. Dans une position bloquee, le Cavalier est superieur au Fou qui est paralyse par ses propres pions. C'est la strategique de Capablanca !",
+        "feedback_erreur": "Suis le plan : Cavalier f6 pour se centraliser, puis e4 sur la case forte, puis g3 vers l'aile Roi."
+      }
     }
   ]
 }

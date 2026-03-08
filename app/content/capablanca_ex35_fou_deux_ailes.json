@@ -1,40 +1,59 @@
 {
-  "id": "capablanca_ex35_fou_deux_ailes",
-  "title": "Exemple 35 - Fou plus utile sur deux ailes",
+  "chapitre_id": "capablanca_ex35_fou_deux_ailes",
+  "titre": "Le Fou règne sur deux ailes : traversée éclair !",
+  "description": "Quand les pions sont sur les deux ailes, le Fou change de front bien plus vite que le Cavalier.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
-      "text": "Avec des pions sur les deux ailes, le Fou devient généralement plus pratique que le Cavalier."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Pions sur deux ailes : le Fou peut aller partout !",
+      "texte_audio": "Regarde cette position. Les pions blancs sont sur les colonnes a, b, c ET sur les colonnes f et h — les deux ailes ! Les pions noirs sont pareils. Dans ce type de structure, le Fou blanc a un gros avantage sur le Cavalier noir. Pourquoi ? Parce que le Fou peut surveiller les deux ailes en meme temps depuis le centre, pendant que le Cavalier doit choisir entre l'une ou l'autre !",
+      "position_depart_fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
-      "moves": [
-        { "uci": "d7f6", "comment": "Le Cavalier noir s'active, mais son rayon d'action reste local." },
-        { "uci": "c1f4", "comment": "Le Fou blanc se centralise et contrôle rapidement les deux ailes." },
-        { "uci": "e8d7", "comment": "Le Roi noir se rapproche en finale." },
-        { "uci": "e1e2", "comment": "Le Roi blanc fait de même, en soutenant ses pions." },
-        { "uci": "f6d5", "comment": "Le Cavalier cherche une case forte centrale." },
-        { "uci": "f4g3", "comment": "Le Fou bascule d'une aile à l'autre sans perdre de temps." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier cherche sa case — le Fou vole partout !",
+      "texte_audio": "Le Cavalier noir avance en f6 pour se centraliser. Le Fou blanc repond immediatement en f4 — une diagonale centrale qui surveille les deux ailes. Les Rois avancent. Le Cavalier trouve la case forte d5. Et maintenant le Fou blanc effectue un coup magnifique : il va en g3 ! En un seul coup, le Fou bascule de l'aile Dame a l'aile Roi. Le Cavalier aurait besoin de plusieurs sauts pour faire la meme chose.",
+      "position_depart_fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
+      "animations": [
+        {"coup": "d7f6", "acteur": "noir", "commentaire": "Le Cavalier se centralise en f6 — sa meilleure case."},
+        {"coup": "c1f4", "acteur": "blanc", "commentaire": "Le Fou se place en f4 — il surveille les deux ailes depuis le centre !"},
+        {"coup": "e8d7", "acteur": "noir", "commentaire": "Le Roi noir s'approche — plan classique de finale."},
+        {"coup": "e1e2", "acteur": "blanc", "commentaire": "Le Roi blanc fait de meme."},
+        {"coup": "f6d5", "acteur": "noir", "commentaire": "Le Cavalier cherche la case forte d5."},
+        {"coup": "f4g3", "acteur": "blanc", "commentaire": "Le Fou glisse en g3 en un coup ! Il bascule vers l'aile Roi. Le Cavalier ne peut pas faire ca !"}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "Sur deux ailes, le Fou peut changer de front plus vite que le Cavalier.",
-        "Cet avantage est souvent pratique plutôt que tactique immédiat.",
-        "Même avec cet avantage, une défense précise peut conduire à la nulle."
-      ]
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Un coup suffit pour traverser l'échiquier !",
+      "texte_audio": "Voila le secret : depuis le centre, le Fou peut viser n'importe quelle partie de l'echiquier en un seul coup. Depuis f4, il surveille c7 et b8 a gauche. Il peut aussi aller en g3 ou h2 pour viser l'aile Roi. Pendant ce temps, le Cavalier doit faire deux ou trois sauts pour changer d'aile. Dans une finale avec des pions sur deux ailes, chaque tempo compte. Le Fou gagne du temps a chaque coup !",
+      "position_depart_fen": "3k4/ppp5/3n4/6B1/8/8/PPP2P1P/3K4 w - - 8 5",
+      "animations": []
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La règle de Capablanca : deux ailes = Fou favorisé !",
+      "texte_audio": "Capablanca l'explique clairement. Quand les pions sont sur deux ailes, preferez avoir le Fou plutot que le Cavalier. Le Fou peut defendre un pion sur l'aile Dame tout en attaquant un pion sur l'aile Roi — en meme temps ! Le Cavalier doit choisir. La nulle reste possible avec une defense precise, mais les chances pratiques sont clairement en faveur du camp qui a le Fou.",
+      "position_depart_fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "4k3/pppn1ppp/8/8/8/8/PPP2P1P/2B1K3 b - - 0 1",
-      "question": "Quiz final : quel coup noir centralise naturellement le Cavalier ?",
-      "correct_move": "d7f6",
-      "success_message": "Exact, c'est la centralisation naturelle du Cavalier.",
-      "error_message": "Cherche le saut du Cavalier vers une case active au centre."
+      "texte_ecran": "À toi ! Place le Fou sur la diagonale centrale.",
+      "texte_audio": "C'est ton tour ! Les Blancs jouent. Le Cavalier noir vient d'aller en f6. Ou dois-tu placer ton Fou pour qu'il surveille les deux ailes a la fois depuis une grande diagonale centrale ?",
+      "position_depart_fen": "4k3/ppp2ppp/5n2/8/8/8/PPP2P1P/2B1K3 w - - 1 2",
+      "validation": {
+        "coups_acceptes": ["c1f4", "c1g5", "c1b2", "c1d2", "c1e3"],
+        "indice": "Le Fou doit aller sur une grande diagonale pour surveiller les deux cotes de l'echiquier. La case f4 est ideale — elle couvre a la fois l'aile Dame et l'aile Roi !",
+        "feedback_succes": "Excellent ! Le Fou est bien place sur une grande diagonale. Depuis la, il surveille les deux ailes simultanement. C'est l'avantage du Fou dans une finale avec des pions sur deux ailes — il peut changer de front en un seul coup, la ou le Cavalier noir aurait besoin de plusieurs sauts !",
+        "feedback_erreur": "Le Fou doit se placer sur une grande diagonale centrale — comme f4 ou g5 — pour couvrir les deux ailes en meme temps."
+      }
     }
   ]
 }

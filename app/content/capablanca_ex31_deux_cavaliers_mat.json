@@ -1,68 +1,85 @@
 {
-  "id": "capablanca_ex31_deux_cavaliers_mat",
-  "title": "Exemple 31 - Cavalier et Roi : mat",
+  "chapitre_id": "capablanca_ex31_deux_cavaliers_mat",
+  "titre": "Cavalier et Roi contre pions : la coordination gagnante !",
+  "description": "Apprendre comment le Cavalier coordonne avec le Roi pour mater malgre la course des pions adverses.",
   "sequences": [
     {
-      "type": "diagram",
-      "fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
-      "text": "Dans cette position, les Blancs gagnent grâce à la coordination du Cavalier et du Roi."
+      "id": 1,
+      "type": "theorie_animee",
+      "texte_ecran": "Cavalier + Roi contre pions : qui gagne ?",
+      "texte_audio": "Regarde cette position. Les Blancs ont un Cavalier en f6 et le Roi en f2. Les Noirs ont deux pions dangereux en g6 et h3, et le Roi en h1. Les pions noirs menacent de promouvoir ! Mais les Blancs peuvent gagner. Le secret : le Cavalier va donner des echecs pour gagner des tempos pendant que le Roi blanc s'approche pour construire le mat.",
+      "position_depart_fen": "8/8/5Np1/8/8/7p/5K2/7k w - - 0 1",
+      "animations": []
     },
     {
-      "type": "animation",
-      "fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
-      "moves": [
-        { "uci": "h1h2", "comment": "Les Noirs choisissent la défense la plus résistante." },
-        { "uci": "f6g4", "comment": "Échec : le Cavalier active le réseau de mat." },
-        { "uci": "h2h1", "comment": "Le Roi noir revient en h1." },
-        { "uci": "f2f1", "comment": "Le Roi blanc se rapproche pour soutenir le Cavalier." },
-        { "uci": "g6g5", "comment": "Le pion noir avance pour créer une case de fuite potentielle." },
-        { "uci": "f1f2", "comment": "Le Roi blanc garde le contrôle des cases critiques." },
-        { "uci": "h3h2", "comment": "Le pion noir continue sa course." },
-        { "uci": "g4e3", "comment": "Le Cavalier se repositionne et coupe les sorties." },
-        { "uci": "g5g4", "comment": "Dernière tentative noire." },
-        { "uci": "e3f1", "comment": "Le Cavalier revient pour forcer le mat." },
-        { "uci": "g4g3", "comment": "Échec noir intermédiaire." },
-        { "uci": "f1g3", "comment": "Mat : le Cavalier capture et ferme toutes les cases." }
+      "id": 2,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier donne échec et gagne du temps !",
+      "texte_audio": "Le Roi noir va en h2 — sa defense la plus resistante. Le Cavalier blanc saute en g4 et donne echec ! Le Roi noir doit reculer en h1. Le Roi blanc avance en f1 pour se rapprocher. Le pion noir g avance en g5 pour essayer de promouvoir. Mais le Roi blanc continue en f2 pour garder le controle. Chaque coup noir qui avance un pion donne un tempo aux Blancs pour ameliorer leurs pieces !",
+      "position_depart_fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
+      "animations": [
+        {"coup": "h1h2", "acteur": "noir", "commentaire": "Le Roi noir choisit sa defense la plus resistante."},
+        {"coup": "f6g4", "acteur": "blanc", "commentaire": "Echec du Cavalier en g4 ! Le Roi noir doit reculer."},
+        {"coup": "h2h1", "acteur": "noir", "commentaire": "Le Roi noir revient en h1."},
+        {"coup": "f2f1", "acteur": "blanc", "commentaire": "Le Roi blanc avance en f1 pour se rapprocher du Roi noir !"},
+        {"coup": "g6g5", "acteur": "noir", "commentaire": "Le pion noir essaie de creer une case de fuite."},
+        {"coup": "f1f2", "acteur": "blanc", "commentaire": "Le Roi blanc maintient le controle des cases cles."}
       ]
     },
     {
-      "type": "text",
-      "title": "Principe clé",
-      "content": [
-        "La coordination du Cavalier avec le Roi permet de construire un filet de mat précis.",
-        "Les tempos gagnés sur les poussées du pion noir sont utilisés pour améliorer les pièces blanches.",
-        "Le coup final montre l'importance de calculer jusqu'au mat, même en finale réduite."
+      "id": 3,
+      "type": "theorie_animee",
+      "texte_ecran": "Le Cavalier se repositionne pour le mat !",
+      "texte_audio": "Le pion noir h avance en h2 — il est tres proche de la promotion. Mais le Cavalier blanc se repositionne en e3 pour couper les fuites du Roi noir. Le pion g continue en g4. Le Cavalier glisse en f1 pour se rapprocher encore. Le pion g prend en g3 pour creer une distraction. Le Cavalier prend en g3 — et c'est le mat ! Le Roi noir en h1 n'a plus aucune fuite.",
+      "position_depart_fen": "8/8/8/6p1/6N1/7p/5K2/7k b - - 4 4",
+      "animations": [
+        {"coup": "h3h2", "acteur": "noir", "commentaire": "Le pion noir h avance dangereusement en h2."},
+        {"coup": "g4e3", "acteur": "blanc", "commentaire": "Le Cavalier se repositionne en e3 — il coupe les fuites du Roi noir."},
+        {"coup": "g5g4", "acteur": "noir", "commentaire": "Le pion g avance — derniere tentative des Noirs."},
+        {"coup": "e3f1", "acteur": "blanc", "commentaire": "Le Cavalier vient en f1 — il encercle le Roi noir !"},
+        {"coup": "g4g3", "acteur": "noir", "commentaire": "Le pion avance en g3 — mais c'est le dernier coup des Noirs."},
+        {"coup": "f1g3", "acteur": "blanc", "commentaire": "Mat ! Le Cavalier prend en g3 et le Roi noir en h1 est mat. Aucune fuite !"}
       ]
     },
     {
+      "id": 4,
+      "type": "theorie_animee",
+      "texte_ecran": "La leçon : Cavalier + Roi, une équipe redoutable !",
+      "texte_audio": "Voici la lecon de cet exemple. Le Cavalier est une piece fantastique pour donner des echecs et gagner des tempos. Chaque echec force le Roi noir a reculer et donne au Roi blanc le temps de s'approcher. Quand le Roi et le Cavalier travaillent ensemble, ils peuvent construire un reseau de mat meme contre des pions avances. La coordination est la cle — ne laisse jamais le Cavalier seul !",
+      "position_depart_fen": "8/8/5Np1/8/8/7p/5K2/7k w - - 0 1",
+      "animations": []
+    },
+    {
+      "id": 5,
       "type": "quiz_interactif",
-      "fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
-      "question": "Quiz final en 3 étapes : rejoue le plan gagnant des Blancs.",
-      "steps": [
-        {
-          "coups_acceptes": ["h1h2"],
-          "reponse": "f6g4",
-          "indice": "Étape 1 : joue la défense noire indiquée par le livre.",
-          "solution": "h1h2"
-        },
-        {
-          "fen": "8/8/6p1/8/6N1/7p/5K1k/8 b - - 1 2",
-          "coups_acceptes": ["h2h1"],
-          "reponse": "f2f1",
-          "indice": "Étape 2 : le Roi noir revient, puis le Roi blanc progresse.",
-          "solution": "h2h1"
-        },
-        {
-          "fen": "8/8/6p1/8/6N1/7p/8/5K1k b - - 4 3",
-          "coups_acceptes": ["g6g5"],
-          "reponse": "f1f2",
-          "indice": "Étape 3 : pousse le pion noir, puis observe la coordination blanche.",
-          "solution": "g6g5"
-        }
-      ],
-      "correct_move": "h1h2",
-      "success_message": "Exact, tu as bien relancé la variante de référence.",
-      "error_message": "Reprends la séquence du livre : défense noire, puis activation blanche."
+      "texte_ecran": "À toi ! Rejoue le plan de résistance des Noirs.",
+      "texte_audio": "C'est ton tour — tu joues les Noirs ! Pour comprendre la defense, rejoue les coups noirs de la variante. Le Roi noir est en h1 face au Cavalier blanc en f6. Quel est le premier coup defensif des Noirs ?",
+      "position_depart_fen": "8/8/5Np1/8/8/7p/5K2/7k b - - 0 1",
+      "validation": {
+        "indice": "Le Roi noir doit jouer sa defense la plus resistante. Il doit avancer vers h2 pour tenter de fuir.",
+        "steps": [
+          {
+            "coups_acceptes": ["h1h2"],
+            "reponse": "f6g4",
+            "indice": "Etape 1 : le Roi noir va en h2 — sa defense la plus resistante. Le Cavalier blanc repond par echec !",
+            "solution": "h1h2"
+          },
+          {
+            "coups_acceptes": ["h2h1"],
+            "reponse": "f2f1",
+            "indice": "Etape 2 : le Roi noir doit reculer en h1 apres l'echec du Cavalier. Le Roi blanc avance alors en f1.",
+            "solution": "h2h1"
+          },
+          {
+            "coups_acceptes": ["g6g5"],
+            "reponse": "f1f2",
+            "indice": "Etape 3 : le pion g avance pour creer une fuite — mais le Roi blanc garde le controle.",
+            "solution": "g6g5"
+          }
+        ],
+        "feedback_succes": "Tres bien ! Tu as rejoue la variante de reference. En jouant ces coups, tu comprends comment les Noirs essaient de resister — et pourquoi les Blancs gagnent quand meme grace a la coordination Cavalier-Roi !",
+        "feedback_erreur": "Suis la variante du livre : Roi h2, puis apres l'echec du Cavalier, Roi h1, puis pion g5."
+      }
     }
   ]
 }
