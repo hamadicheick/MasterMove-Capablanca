@@ -13,13 +13,16 @@ contextBridge.exposeInMainWorld("mm", {
   },
   content: {
     listChapters: () => ipcRenderer.invoke("content:listChapters"),
+    listBookChapters: () => ipcRenderer.invoke("content:listBookChapters"),
     loadChapter: (chapterId) => ipcRenderer.invoke("content:loadChapter", chapterId),
     listPieceSets: () => ipcRenderer.invoke("content:listPieceSets"),
     openPieceSetFolder: (rootName, setId) => ipcRenderer.invoke("content:openPieceSetFolder", rootName, setId),
   },
   narration: {
-    listProviders: () => ipcRenderer.invoke("narration:listProviders"),
+    listProviders:  () => ipcRenderer.invoke("narration:listProviders"),
     listPiperVoices: () => ipcRenderer.invoke("narration:piper:listVoices"),
     piperSpeak: (payload) => ipcRenderer.invoke("narration:piper:speak", payload),
+    edgeListVoices: () => ipcRenderer.invoke("narration:edge:listVoices"),
+    edgeSpeak: (payload) => ipcRenderer.invoke("narration:edge:speak", payload),
   }
 });
