@@ -274,7 +274,7 @@ CrÃ©er les 15-20 chapitres restants.
 - Vocabulaire enfantin (Ã©viter jargon)
 - Ton bienveillant et encourageant
 - Tutoiement
-- Regle TTS app: texte_audio en ASCII simple (sans accents/caracteres speciaux) pour eviter les phrases saccadees.
+- Règle TTS app : textes en français correct avec accents (é, è, à, ç...). Le TTS lit du français — sans accents la prononciation est incompréhensible pour les enfants.
 
 ### Quiz
 - Toujours partir d'une position claire
