@@ -1147,6 +1147,9 @@ function partieScreen(){
     const clamped = Math.max(-1, Math.min(game.moves.length - 1, idx));
     moveIndex = clamped;
 
+    // Effacer les annotations à chaque navigation (style Lichess)
+    state.board.clearAnnotations();
+
     // Replay position from start
     state.board.setPositionFromFen(STARTING_FEN);
     for (let i = 0; i <= clamped; i++){

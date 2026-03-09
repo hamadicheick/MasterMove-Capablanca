@@ -87,6 +87,14 @@ export class BoardWidget {
     if (window.ResizeObserver) {
       this._ro = new ResizeObserver(() => this._syncSquareBoard());
     }
+
+    // Annotations Lichess-style (cercles + flèches)
+    this._annotations    = [];      // [{type:"circle"|"arrow", sq?, from?, to?, color}]
+    this._dragAnnotFrom  = null;    // case de départ du clic-droit
+    this._dragAnnotHover = null;    // case survolée pendant le drag
+    this._dragAnnotColor = "green"; // couleur en cours
+    this._annotSvg       = null;    // référence à l'élément <svg> overlay
+    this._onDocMouseUp   = null;    // référence pour nettoyage éventuel
   }
 
   _syncSquareBoard(){
@@ -98,6 +106,21 @@ export class BoardWidget {
 
   mount(node){
     node.appendChild(this.root);
+
+    // Listener global mouseup pour capturer le relâchement hors du plateau
+    this._onDocMouseUp = (e) => {
+      if (e.button !== 2 || !this._dragAnnotFrom) return;
+      const from  = this._dragAnnotFrom;
+      const color = this._dragAnnotColor;
+      const to    = this._dragAnnotHover;
+      this._dragAnnotFrom  = null;
+      this._dragAnnotHover = null;
+      if (!to) { this._renderAnnotations(); return; }
+      if (to === from) this._toggleAnnotCircle(from, color);
+      else             this._toggleAnnotArrow(from, to, color);
+      this._renderAnnotations();
+    };
+    document.addEventListener("mouseup", this._onDocMouseUp);
   }
 
   setLocked(v){
@@ -373,6 +396,68 @@ export class BoardWidget {
       }
     }
 
+    // ── Annotation overlay (Lichess-style : cercles + flèches) ──────────────
+    const _ns = "http://www.w3.org/2000/svg";
+    const _ANNOT_COLORS = {
+      green:  "rgba(0,160,0,0.85)",
+      red:    "rgba(210,40,40,0.85)",
+      blue:   "rgba(40,90,210,0.85)",
+      yellow: "rgba(210,175,0,0.85)",
+    };
+
+    // Créer le <svg> avec les marqueurs de flèche pour chaque couleur
+    const annotSvg = document.createElementNS(_ns, "svg");
+    annotSvg.setAttribute("class", "boardAnnotations");
+    annotSvg.setAttribute("viewBox", "0 0 8 8");
+    annotSvg.setAttribute("xmlns", _ns);
+    const _defs = document.createElementNS(_ns, "defs");
+    for (const [name, fill] of Object.entries(_ANNOT_COLORS)) {
+      const marker = document.createElementNS(_ns, "marker");
+      marker.setAttribute("id", `ah-${name}`);
+      marker.setAttribute("markerWidth", "4");
+      marker.setAttribute("markerHeight", "4");
+      marker.setAttribute("refX", "3.5");
+      marker.setAttribute("refY", "2");
+      marker.setAttribute("orient", "auto");
+      const poly = document.createElementNS(_ns, "polygon");
+      poly.setAttribute("points", "0,0 4,2 0,4");
+      poly.setAttribute("fill", fill);
+      marker.appendChild(poly);
+      _defs.appendChild(marker);
+    }
+    annotSvg.appendChild(_defs);
+    board.appendChild(annotSvg);
+    this._annotSvg = annotSvg;
+
+    // Gestionnaires de clic-droit sur le plateau
+    board.addEventListener("contextmenu", e => e.preventDefault());
+
+    board.addEventListener("mousedown", e => {
+      // Clic gauche → effacer toutes les annotations
+      if (e.button === 0) { this.clearAnnotations(); return; }
+      // Clic droit → démarrer une annotation
+      if (e.button !== 2) return;
+      const sq = this._sqFromAnnotEvent(e);
+      if (!sq) return;
+      this._dragAnnotFrom  = sq;
+      this._dragAnnotHover = sq;
+      this._dragAnnotColor = this._annotColorFromEvent(e);
+      this._renderAnnotations();
+    });
+
+    board.addEventListener("mousemove", e => {
+      if (!this._dragAnnotFrom) return;
+      const sq = this._sqFromAnnotEvent(e);
+      if (sq && sq !== this._dragAnnotHover) {
+        this._dragAnnotHover = sq;
+        this._renderAnnotations();
+      }
+    });
+
+    // Dessiner les annotations existantes (survivent aux re-renders)
+    this._renderAnnotations();
+    // ── Fin overlay annotations ──────────────────────────────────────────────
+
     const info = h("div", { class:"small", style:"margin-top:10px;" },
       this._locked ? "Mode demonstration (deplacements bloques)." : "Deplace les pieces en glissant ou en cliquant."
     );
@@ -393,6 +478,119 @@ export class BoardWidget {
     this.root.appendChild(info);
     this.root.appendChild(ctrl);
   }
+
+  // ── Méthodes d'annotation (Lichess-style) ─────────────────────────────────
+
+  /** Retourne la case sous le curseur à partir d'un MouseEvent */
+  _sqFromAnnotEvent(e) {
+    const el = e.target.closest("[data-sq]");
+    return el ? el.dataset.sq : null;
+  }
+
+  /** Couleur selon les touches modificatrices (style Lichess) */
+  _annotColorFromEvent(e) {
+    if (e.shiftKey) return "red";
+    if (e.altKey)   return "blue";
+    if (e.ctrlKey)  return "yellow";
+    return "green";
+  }
+
+  /** Centre SVG d'une case dans un viewBox 0 0 8 8 */
+  _sqCenter(sq) {
+    return {
+      x: sq.charCodeAt(0) - 97 + 0.5,  // 'a'=0 … 'h'=7
+      y: 8 - parseInt(sq[1]) + 0.5     // rang 1 → y=7.5, rang 8 → y=0.5
+    };
+  }
+
+  /** Toggle : même annotation existante → supprime, sinon → ajoute */
+  _toggleAnnotCircle(sq, color) {
+    const i = this._annotations.findIndex(
+      a => a.type === "circle" && a.sq === sq && a.color === color
+    );
+    if (i !== -1) this._annotations.splice(i, 1);
+    else          this._annotations.push({ type: "circle", sq, color });
+  }
+
+  _toggleAnnotArrow(from, to, color) {
+    const i = this._annotations.findIndex(
+      a => a.type === "arrow" && a.from === from && a.to === to && a.color === color
+    );
+    if (i !== -1) this._annotations.splice(i, 1);
+    else          this._annotations.push({ type: "arrow", from, to, color });
+  }
+
+  /** Efface toutes les annotations (appelé par clic gauche ou navigation) */
+  clearAnnotations() {
+    this._annotations    = [];
+    this._dragAnnotFrom  = null;
+    this._dragAnnotHover = null;
+    this._renderAnnotations();
+  }
+
+  /** Reconstruit le contenu SVG à partir de this._annotations */
+  _renderAnnotations() {
+    if (!this._annotSvg) return;
+    const svg = this._annotSvg;
+    const ns  = "http://www.w3.org/2000/svg";
+    const COLORS = {
+      green:  "rgba(0,160,0,0.85)",
+      red:    "rgba(210,40,40,0.85)",
+      blue:   "rgba(40,90,210,0.85)",
+      yellow: "rgba(210,175,0,0.85)",
+    };
+
+    // Supprimer tout sauf <defs>
+    [...svg.children].forEach(c => { if (c.tagName !== "defs") c.remove(); });
+
+    // Flèche preview pendant le drag (semi-transparente)
+    if (this._dragAnnotFrom && this._dragAnnotHover && this._dragAnnotHover !== this._dragAnnotFrom) {
+      svg.appendChild(
+        this._makeAnnotArrow(this._dragAnnotFrom, this._dragAnnotHover, this._dragAnnotColor, COLORS, ns, 0.4)
+      );
+    }
+
+    // Annotations validées
+    for (const a of this._annotations) {
+      if (a.type === "circle") {
+        const { x, y } = this._sqCenter(a.sq);
+        const el = document.createElementNS(ns, "circle");
+        el.setAttribute("cx", x);
+        el.setAttribute("cy", y);
+        el.setAttribute("r", "0.44");
+        el.setAttribute("stroke", COLORS[a.color]);
+        el.setAttribute("stroke-width", "0.1");
+        el.setAttribute("fill", "none");
+        el.setAttribute("opacity", "0.9");
+        svg.appendChild(el);
+      } else if (a.type === "arrow") {
+        svg.appendChild(this._makeAnnotArrow(a.from, a.to, a.color, COLORS, ns, 1));
+      }
+    }
+  }
+
+  /** Crée un élément <line> SVG représentant une flèche annotée */
+  _makeAnnotArrow(from, to, color, COLORS, ns, opacity) {
+    const p1  = this._sqCenter(from);
+    const p2  = this._sqCenter(to);
+    const dx  = p2.x - p1.x;
+    const dy  = p2.y - p1.y;
+    const len = Math.hypot(dx, dy);
+    const SHORTEN = 0.38; // recul pour laisser place à la pointe
+    const line = document.createElementNS(ns, "line");
+    line.setAttribute("x1", p1.x);
+    line.setAttribute("y1", p1.y);
+    line.setAttribute("x2", p2.x - (dx / len) * SHORTEN);
+    line.setAttribute("y2", p2.y - (dy / len) * SHORTEN);
+    line.setAttribute("stroke", COLORS[color]);
+    line.setAttribute("stroke-width", "0.14");
+    line.setAttribute("stroke-linecap", "round");
+    line.setAttribute("marker-end", `url(#ah-${color})`);
+    line.setAttribute("opacity", opacity);
+    return line;
+  }
+
+  // ── Fin méthodes d'annotation ─────────────────────────────────────────────
 
   _onSquareClick(sq){
     if (this._locked) return;
