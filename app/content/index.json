@@ -709,6 +709,17 @@
       "order": 1,
       "type": "game",
       "file": "capablanca_partie1.json"
+    },
+    {
+      "id": "capablanca_partie2_rubinstein_1911",
+      "chapter": 7,
+      "titre": "Partie n°2 — Rubinstein contre Capablanca, San Sebastián 1911",
+      "description": "Gambit-Dame refusé : Rubinstein punit une erreur de Capablanca par une combinaison brillante et un coup de Roi inattendu.",
+      "order": 2,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_partie2_rubinstein_1911.json"
     }
   ]
 }

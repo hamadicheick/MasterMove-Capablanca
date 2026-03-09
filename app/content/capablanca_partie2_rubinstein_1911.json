@@ -1,0 +1,71 @@
+{
+  "id": "capablanca_partie2_rubinstein_1911",
+  "title": "Partie 2 – Rubinstein contre Capablanca, San Sebastián 1911",
+  "sequences": [
+    {
+      "type": "diagram",
+      "fen": "2r1k2r/pp2q1pp/2n1pn2/2bp2B1/8/2N3PB/PP2PP1P/R2Q1RK1 b k - 3 13",
+      "text": "San Sebastián, 1911. Le grand maître Akiba Rubinstein (Blancs) affronte le futur champion du monde Capablanca (Noirs). Après 13 coups, la position est critique. Rubinstein vient de jouer 13.Fg5. Même Capablanca va faire une erreur ici ! Sauras-tu faire mieux ?"
+    },
+    {
+      "type": "animation",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "moves": [
+        { "uci": "d2d4", "comment": "Rubinstein ouvre avec le pion Dame. Il veut contrôler le centre." },
+        { "uci": "d7d5", "comment": "Capablanca répond au centre. Les deux joueurs occupent le centre !" },
+        { "uci": "g1f3", "comment": "Le Cavalier blanc sort vers le centre. Développement rapide !" },
+        { "uci": "c7c5", "comment": "Capablanca contre-attaque avec son pion c. Il crée de la tension au centre." },
+        { "uci": "c2c4", "comment": "Rubinstein attaque maintenant les deux pions noirs en même temps !" },
+        { "uci": "e7e6", "comment": "Capablanca protège son pion d5. C'est le Gambit-Dame refusé." },
+        { "uci": "c4d5", "comment": "Rubinstein échange au centre. Il veut un pion d isolé pour les Noirs." },
+        { "uci": "e6d5", "comment": "Capablanca reprend avec son pion e. Son pion d5 reste bien au centre." },
+        { "uci": "b1c3", "comment": "Le Cavalier blanc renforce le contrôle du centre. Développement harmonieux !" },
+        { "uci": "b8c6", "comment": "Capablanca développe son Cavalier en défendant le pion d5 en même temps." },
+        { "uci": "g2g3", "comment": "Rubinstein prépare le fianchetto de son Fou. Un plan solide et moderne." },
+        { "uci": "c8e6", "comment": "Capablanca sort son Fou sur une belle diagonale. Un coup original à l'époque !" },
+        { "uci": "f1g2", "comment": "Le Fou blanc en g2 surveille tout le centre depuis sa grande diagonale." },
+        { "uci": "f8e7", "comment": "Capablanca prépare son roque en développant son Fou." },
+        { "uci": "e1g1", "comment": "Rubinstein roque en toute sécurité. Son Roi est à l'abri !" },
+        { "uci": "a8c8", "comment": "Capablanca place sa Tour en c8 pour surveiller la colonne c. Très profond !" }
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2r1k2r/pp2q1pp/2n1pn2/2bp2B1/8/2N3PB/PP2PP1P/R2Q1RK1 b k - 3 13",
+      "question": "Rubinstein vient de jouer 13.Fg5. Le Fou blanc menace la Dame noire, et la Tour en h8 est sur la diagonale dangereuse du Fou blanc en h3 ! Capablanca a roqué (0-0), mais c'était une erreur. Quel coup de Tour aurait mieux défendu la position ?",
+      "correct_move": "c8d8",
+      "success_message": "Excellent ! Td8 était le bon coup selon Capablanca lui-même ! La Tour soutient le pion d5 et quitte la ligne du Fou blanc en h3. Capablanca a roqué trop vite et a été puni !",
+      "error_message": "Cherche un coup de Tour qui protège le pion d5 et éloigne la Tour de la diagonale du Fou blanc en h3. La Tour doit se mettre en sécurité !"
+    },
+    {
+      "type": "animation",
+      "fen": "2r1k2r/pp2q1pp/2n1pn2/2bp2B1/8/2N3PB/PP2PP1P/R2Q1RK1 b k - 3 13",
+      "moves": [
+        { "uci": "e8g8", "comment": "13...0-0 : Capablanca roque. C'est une erreur ! La Tour en h8 est maintenant exposée au Fou blanc en h3." },
+        { "uci": "g5f6", "comment": "14.Fxf6 ! Rubinstein capture le Cavalier en f6. Il détruit la protection du Roi noir !" },
+        { "uci": "e7f6", "comment": "14...Dxf6 : la Dame noire reprend. Elle quitte sa case centrale et perd sa coordination avec les autres pièces." },
+        { "uci": "c3d5", "comment": "15.Cxd5 !! Le Cavalier bondit en d5 en capturant le pion ! Une fourchette magnifique : il attaque la Dame et contrôle le centre." },
+        { "uci": "f6h6", "comment": "15...Dh6 : la Dame recule en h6 et menace Df4+ pour forcer la nulle par échec perpétuel. Comment Rubinstein neutralise-t-il cette menace ?" },
+        { "uci": "g1g2", "comment": "16.Rg2 !! Un coup de Roi EXTRAORDINAIRE ! Le Roi se déplace pour protéger le Fou en h3. La menace d'échec perpétuel disparaît complètement. Le génie de Rubinstein !" }
+      ]
+    },
+    {
+      "type": "quiz_interactif",
+      "fen": "2r2rk1/pp4pp/2n1p2q/2bN4/8/6PB/PP2PP1P/R2Q1RK1 w - - 1 16",
+      "question": "Les Noirs menacent Df4+ pour forcer la nulle par échec perpétuel ! Rubinstein joue ici un coup de Roi brillant et totalement inattendu qui neutralise cette menace. Trouve ce coup extraordinaire !",
+      "correct_move": "g1g2",
+      "success_message": "Magnifique ! Rg2 !! Le Roi monte en g2 pour protéger son Fou en h3. La Dame noire ne peut plus donner d'échec en f4. Le Cavalier domine en d5. Rubinstein contrôle tout ! C'est un coup de génie !",
+      "error_message": "La Dame noire menace Df4+ ! Il faut protéger la case f4. Une pièce peut se déplacer pour bloquer cette menace tout en protégeant le Fou blanc en h3. Laquelle ?"
+    },
+    {
+      "type": "text",
+      "title": "Ce qu'il faut retenir",
+      "content": [
+        "Même Capablanca, futur champion du monde, fait des erreurs ! Son 13...0-0 était une faute : la Tour en h8 devenait vulnérable à la diagonale du Fou blanc en h3.",
+        "Le bon coup était 13...Td8 pour soutenir le pion d5 et éloigner la Tour de la ligne dangereuse. Capablanca l'a reconnu lui-même dans ses notes !",
+        "La combinaison de Rubinstein (14.Fxf6, 15.Cd5 !) montre la puissance de la coordination : capturer une pièce pour placer son propre Cavalier sur une case dominante au centre.",
+        "Le coup 16.Rg2 !! est un exemple rare : même le Roi peut jouer un rôle actif ! Il protège le Fou et neutralise l'échec perpétuel en un seul mouvement. Un vrai coup de maître !"
+      ]
+    }
+  ]
+}

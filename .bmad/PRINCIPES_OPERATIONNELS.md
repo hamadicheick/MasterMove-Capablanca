@@ -26,7 +26,7 @@ Regle: tant que le renderer n'est pas migre, toute lecon doit etre testee en exe
 
 ## 4) Encodage et narration
 - JSON en UTF-8 sans BOM.
-- Textes TTS en ASCII simple recommande (pas de caracteres corrompus).
+- Textes TTS en français avec accents (é, è, à, ç, etc.) : le TTS lit du français, les accents sont indispensables pour une prononciation correcte et compréhensible par les enfants.
 - Toute corruption d'encodage bloque la validation de contenu.
 
 ## 5) Definition de Done (DoD) d'une lecon
