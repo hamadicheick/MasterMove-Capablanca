@@ -54,6 +54,20 @@ Chaque correction contenu doit tracer:
 - Tout quiz final doit avoir au minimum 2 etapes (3 etapes recommandees).
 - Les etapes doivent etre en UCI et legalement jouables depuis la FEN de depart.
 
+## 10) Workflow Git — règle absolue (problème récurrent)
+
+**Problème connu :** Claude Code crée automatiquement des worktrees (branches isolées `claude/*`).
+Le contenu commité sur ces branches N'EST PAS visible sur `main` tant que le PR n'est pas mergé.
+Un clone GitHub du repo ne donnera jamais le contenu le plus récent si cette règle n'est pas respectée.
+
+**Règle :** À chaque fin de session, vérifier et exécuter dans l'ordre :
+1. `git checkout main && git pull origin main` dans le répertoire principal
+2. Rebase de la branche worktree sur main si nécessaire
+3. Merge du PR vers `main` via `gh pr merge <N> --merge`
+4. `git pull origin main` pour confirmer que le répertoire principal est à jour
+
+**Signe de succès :** `git log --oneline -1` dans le repo principal affiche notre commit de contenu.
+
 ## 9) Fidelite au livre de reference (Decision 009)
 - Chaque lecon produite doit etre ancree dans "Les principes fondamentaux des echecs" de Jose Raul Capablanca.
 - L'inspiration pedagogique (structure, progression, ton) s'appuie sur les cours de Josh (Chessmaster 11).
