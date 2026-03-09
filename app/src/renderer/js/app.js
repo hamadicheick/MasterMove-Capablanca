@@ -1090,6 +1090,16 @@ async function openGame(gameId){
     const { meta, chapter } = await mmCall(mm => mm.content.loadChapter(gameId), "content:loadChapter");
     state.current.meta = meta;
     state.current.chapter = chapter;
+    // Parties au format sequences (interactives) → reader
+    // Parties au format game (moves list) → partieScreen
+    if (chapter.type !== "game") {
+      const progress = await mmCall(mm => mm.progress.load(state.profile.id), "progress:load", 10000);
+      state.current.progress = progress;
+      const last = getChapterLastIndex(progress, meta.id);
+      state.current.seqIndex = Math.max(0, Math.min(last, (chapter.sequences?.length || 1) - 1));
+      navigate(`#/reader/${encodeURIComponent(meta.id)}`);
+      return;
+    }
     navigate(`#/partie/${encodeURIComponent(gameId)}`);
   }catch(e){
     toast(String(e?.message || e));
