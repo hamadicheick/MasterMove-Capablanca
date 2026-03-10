@@ -720,6 +720,17 @@
       "level": "intermediaire",
       "estimated_minutes": 20,
       "file": "capablanca_partie2_rubinstein_1911.json"
+    },
+    {
+      "id": "capablanca_partie3_janowski_1913",
+      "chapter": 7,
+      "titre": "Partie n°3 — Janowski contre Capablanca, La Havane 1913",
+      "description": "Défense irrégulière : Capablanca commet une erreur stratégique en ne roquant pas, puis perd un pion par une nouvelle faute, avant de capituler face à deux pions passés.",
+      "order": 3,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_partie3_janowski_1913.json"
     }
   ]
 }
