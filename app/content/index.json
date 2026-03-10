@@ -731,6 +731,17 @@
       "level": "intermediaire",
       "estimated_minutes": 20,
       "file": "capablanca_partie3_janowski_1913.json"
+    },
+    {
+      "id": "capablanca_partie4_znosko_borovsky_1913",
+      "chapter": 7,
+      "titre": "Partie n°4 — Capablanca contre Znosko-Borovsky, Saint-Pétersbourg 1913",
+      "description": "Défense Française (variante McCutcheon) : Capablanca gère brillamment le centre avant de laisser passer la victoire, permettant à Znosko-Borovsky de sauver la nulle puis de gagner.",
+      "order": 4,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_partie4_znosko_borovsky_1913.json"
     }
   ]
 }
