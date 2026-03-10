@@ -134,7 +134,10 @@ Commits to `main` directly (no PR) are preferred for code fixes to avoid regress
 - **Deuxième partie** (annotated games, book pp. 78–116, 14 parties total):
   - Partie 1 Marshall–Capablanca 1909: done ✅ (game format)
   - Partie 2 Rubinstein–Capablanca 1911: done ✅ (4-bloc/sequences format)
-  - Parties 3–14: pending
+  - Partie 3 Janowski–Capablanca 1913: done ✅ (game format)
+  - Partie 4 Capablanca–Znosko-Borovsky 1913: done ✅ (game format)
+  - Parties 5–14: pending
+- **Encoding key for livre.txt** (chess figurine font — bytes): 0xcc=Cavalier, 0xcd=Fou, 0xcb=Dame, 0xce=Tour, 0xca=Roi. Pawn moves have no prefix byte. Use python3 binary read + decode latin-1.
 
 ## BMAD docs
 

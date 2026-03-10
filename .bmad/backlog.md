@@ -93,3 +93,11 @@ Contenu :
 - [ ] Réviser Ex40-Ex49 au format CORRIGE (Dame contre Tour, attaques, sacrifices, Cadeau Grec)
 - [ ] Refactor Chapitre 1
 - [ ] Produire Chapitre 2
+
+Deuxième partie (parties annotées) :
+- [x] Partie 1 Marshall–Capablanca 1909 (game format)
+- [x] Partie 2 Rubinstein–Capablanca 1911 (game format)
+- [x] Partie 3 Janowski–Capablanca 1913 (game format)
+- [x] Partie 4 Capablanca–Znosko-Borovsky 1913 (game format)
+- [ ] Partie 5 Lasker–Capablanca 1914 (Partie Espagnole)
+- [ ] Parties 6–14 : à produire
