@@ -753,6 +753,17 @@
       "level": "intermediaire",
       "estimated_minutes": 20,
       "file": "capablanca_partie5_lasker_1914.json"
+    },
+    {
+      "id": "capablanca_partie6_chajes_1916",
+      "chapter": 7,
+      "titre": "Partie n°6 — Chajes contre Capablanca, Tournoi mémoriel Rice 1916",
+      "description": "Défense Française (McCutcheon) : Capablanca gagne un pion en sortie d’ouverture, mais rate le coup décisif 29...Fc6 et finit par perdre.",
+      "order": 6,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 25,
+      "file": "capablanca_partie6_chajes_1916.json"
     }
   ]
 }
