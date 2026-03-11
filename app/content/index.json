@@ -775,6 +775,17 @@
       "level": "intermediaire",
       "estimated_minutes": 15,
       "file": "capablanca_partie7_burn_1911.json"
+    },
+    {
+      "id": "capablanca_partie8_mieses_1913",
+      "chapter": 7,
+      "titre": "Partie n°8 — Mieses contre Capablanca, Berlin 1913",
+      "description": "Partie du Centre : Capablanca sacrifie un pion pour l’initiative, surmonte une erreur au 13e coup et retourne la partie avec une attaque d’aile dame.",
+      "order": 8,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_partie8_mieses_1913.json"
     }
   ]
 }

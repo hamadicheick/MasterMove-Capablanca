@@ -1,0 +1,453 @@
+{
+  "type": "game",
+  "id": "capablanca_partie8_mieses_1913",
+  "number": 8,
+  "white": "Mieses",
+  "black": "Capablanca",
+  "event": "Berlin",
+  "year": 1913,
+  "opening": "Partie du Centre",
+  "result": "0-1",
+  "moves": [
+    {
+      "uci": "e2e4",
+      "san": "e4",
+      "comment": ""
+    },
+    {
+      "uci": "e7e5",
+      "san": "e5",
+      "comment": ""
+    },
+    {
+      "uci": "d2d4",
+      "san": "d4",
+      "comment": ""
+    },
+    {
+      "uci": "e5d4",
+      "san": "exd4",
+      "comment": ""
+    },
+    {
+      "uci": "d1d4",
+      "san": "Qxd4",
+      "comment": ""
+    },
+    {
+      "uci": "b8c6",
+      "san": "Nc6",
+      "comment": ""
+    },
+    {
+      "uci": "d4e3",
+      "san": "Qe3",
+      "comment": ""
+    },
+    {
+      "uci": "g8f6",
+      "san": "Nf6",
+      "comment": ""
+    },
+    {
+      "uci": "b1c3",
+      "san": "Nc3",
+      "comment": ""
+    },
+    {
+      "uci": "f8b4",
+      "san": "Bb4",
+      "comment": ""
+    },
+    {
+      "uci": "c1d2",
+      "san": "Bd2",
+      "comment": ""
+    },
+    {
+      "uci": "e8g8",
+      "san": "O-O",
+      "comment": ""
+    },
+    {
+      "uci": "e1c1",
+      "san": "O-O-O",
+      "comment": ""
+    },
+    {
+      "uci": "f8e8",
+      "san": "Re8",
+      "comment": "Dans cette position, au lieu du coup du texte, on joue souvent 7...d6 pour développer le Fou-dame. Mon idée était d’exercer assez de pression contre le pion e pour le gagner et obtenir ainsi un avantage matériel qui, au minimum, compenserait tout léger avantage de position que les Blancs puissent avoir. Le plan est à mon avis tout à fait jouable, mes difficultés ultérieures étant dues à l’exécution fautive de ce plan."
+    },
+    {
+      "uci": "e3g3",
+      "san": "Qg3",
+      "comment": ""
+    },
+    {
+      "uci": "f6e4",
+      "san": "Nxe4",
+      "comment": ""
+    },
+    {
+      "uci": "c3e4",
+      "san": "Nxe4",
+      "comment": ""
+    },
+    {
+      "uci": "e8e4",
+      "san": "Rxe4",
+      "comment": ""
+    },
+    {
+      "uci": "d2f4",
+      "san": "Bf4",
+      "comment": ""
+    },
+    {
+      "uci": "d8f6",
+      "san": "Qf6",
+      "comment": "Les Blancs ne menaçaient de regagner le pion que pour gagner le temps de développer leurs pièces. Les Noirs auraient pu jouer 10...d6, ouvrant la voie à leur Fou-dame, sur quoi aurait suivi 11.Fd3 Te8 12.Cf3, et les Blancs lanceraient bientôt une puissante attaque contre le Roi noir. Par le coup du texte, les Noirs cherchent à arracher l’initiative aux Blancs, en accord avec les principes énoncés dans cet ouvrage."
+    },
+    {
+      "uci": "g1h3",
+      "san": "Nh3",
+      "comment": "Ou 11.Fxc7 d6 et le Fou serait complètement enfermé et ne pourrait être extrait, pour autant que ce soit possible, qu’au prix d’un sérieux désavantage de position. Le coup du texte vise à un développement rapide pour conserver l’initiative."
+    },
+    {
+      "uci": "d7d6",
+      "san": "d6",
+      "comment": "Maintenant, ce n’est plus seulement un coup de développement, ça menace aussi de gagner une pièce par ...Fxh3."
+    },
+    {
+      "uci": "f1d3",
+      "san": "Bd3",
+      "comment": ""
+    },
+    {
+      "uci": "c6d4",
+      "san": "Nd4",
+      "comment": "Cela complique le jeu inutilement. 12...Te8 était simple et totalement sûr."
+    },
+    {
+      "uci": "f4e3",
+      "san": "Be3",
+      "comment": ""
+    },
+    {
+      "uci": "c8g4",
+      "san": "Bg4",
+      "comment": "Une faute grave. La position était extrêmement intéressante, et guère dangereuse pour les Noirs malgré les apparences. Le bon coup aurait été 13...Tg4, sur quoi aurait suivi 14.Fxd4 Txd4 15.c3 Fxc3 16.bxc3 Tg4 17.De3 (le meilleur coup) 17...Dxc3+ 18.Fc2 Dxe3+ 19.fxe3 Txg2, et avec quatre pions pour un Cavalier les Noirs ont la meilleure partie, sans compter que tous les pions blancs sont isolés."
+    },
+    {
+      "uci": "h3g5",
+      "san": "Ng5",
+      "comment": ""
+    },
+    {
+      "uci": "e4e3",
+      "san": "Rxe3",
+      "comment": "Il n’y avait rien de mieux."
+    },
+    {
+      "uci": "g3g4",
+      "san": "Qxg4",
+      "comment": ""
+    },
+    {
+      "uci": "d4e2",
+      "san": "Ne2+",
+      "comment": ""
+    },
+    {
+      "uci": "d3e2",
+      "san": "Bxe2",
+      "comment": ""
+    },
+    {
+      "uci": "e3e2",
+      "san": "Rxe2",
+      "comment": ""
+    },
+    {
+      "uci": "g5e4",
+      "san": "Ne4",
+      "comment": ""
+    },
+    {
+      "uci": "e2e4",
+      "san": "Rxe4",
+      "comment": ""
+    },
+    {
+      "uci": "g4e4",
+      "san": "Qxe4",
+      "comment": ""
+    },
+    {
+      "uci": "f6g5",
+      "san": "Qg5+",
+      "comment": ""
+    },
+    {
+      "uci": "f2f4",
+      "san": "f4",
+      "comment": ""
+    },
+    {
+      "uci": "g5b5",
+      "san": "Qb5",
+      "comment": ""
+    },
+    {
+      "uci": "c2c3",
+      "san": "c3",
+      "comment": ""
+    },
+    {
+      "uci": "b4c5",
+      "san": "Bc5",
+      "comment": ""
+    },
+    {
+      "uci": "h1e1",
+      "san": "Rhe1",
+      "comment": ""
+    },
+    {
+      "uci": "b5c6",
+      "san": "Qc6",
+      "comment": ""
+    },
+    {
+      "uci": "d1d5",
+      "san": "Rd5",
+      "comment": "22.Dxc6 aurait donné aux Blancs un avantage marqué, suffisant pour gagner avec un bon jeu. Mieses craint toutefois les difficultés d’une finale où, tout en ayant une qualité de plus, il aurait un pion de moins. Il préfère conserver les Dames et poursuivre l’attaque. À première vue, et même après un examen plus attentif, il ne semble pas y avoir d’objection à ce plan, bien qu’en réalité il en existe une. À partir d’ici, la partie des Noirs s’améliore graduellement jusqu’à ce que les Blancs, qui ont toujours la qualité de plus, soient perdus."
+    },
+    {
+      "uci": "c6d7",
+      "san": "Qd7",
+      "comment": ""
+    },
+    {
+      "uci": "f4f5",
+      "san": "f5",
+      "comment": ""
+    },
+    {
+      "uci": "c7c6",
+      "san": "c6",
+      "comment": ""
+    },
+    {
+      "uci": "d5d2",
+      "san": "Rd2",
+      "comment": ""
+    },
+    {
+      "uci": "d6d5",
+      "san": "d5",
+      "comment": "Mon plan est pour l’instant très simple. Il consiste à mener mon Fou en f6. Puis je tâcherai de paralyser l’attaque blanche contre mon Roi en jouant ...h6, tout en empêchant les Blancs de jamais jouer g5. Une fois mon Roi à l’abri des attaques, je commencerai à avancer mes pions de l’aile dame, où ils sont à quatre contre trois ; et cet avantage, couplé à l’énorme puissance offensive de mon Fou en f6, me donnera au moins des chances égales."
+    },
+    {
+      "uci": "e4f3",
+      "san": "Qf3",
+      "comment": ""
+    },
+    {
+      "uci": "c5e7",
+      "san": "Be7",
+      "comment": ""
+    },
+    {
+      "uci": "d2e2",
+      "san": "Rde2",
+      "comment": ""
+    },
+    {
+      "uci": "e7f6",
+      "san": "Bf6",
+      "comment": ""
+    },
+    {
+      "uci": "f3h5",
+      "san": "Qh5",
+      "comment": ""
+    },
+    {
+      "uci": "h7h6",
+      "san": "h6",
+      "comment": ""
+    },
+    {
+      "uci": "g2g4",
+      "san": "g4",
+      "comment": ""
+    },
+    {
+      "uci": "g8h7",
+      "san": "Kh7",
+      "comment": "Pour empêcher 29.h4 qui serait paré par 29...g6, gagnant la Dame. On peut maintenant considérer que mon Roi est à l’abri des attaques. Les Blancs devront retirer leur Dame par h3, et les Noirs pourront utiliser ce temps pour entamer leur avance à l’aile dame."
+    },
+    {
+      "uci": "c1b1",
+      "san": "Kb1",
+      "comment": ""
+    },
+    {
+      "uci": "a8d8",
+      "san": "Rd8",
+      "comment": ""
+    },
+    {
+      "uci": "e1d1",
+      "san": "Rd1",
+      "comment": ""
+    },
+    {
+      "uci": "c6c5",
+      "san": "c5",
+      "comment": "Notez qu’en se repliant en défense, les Blancs ont correctement placé leurs Tours d’un point de vue stratégique. Elles sont toutes les deux sur des cases blanches, libres de toute attaque de la part du Fou adverse."
+    },
+    {
+      "uci": "h5h3",
+      "san": "Qh3",
+      "comment": ""
+    },
+    {
+      "uci": "d7a4",
+      "san": "Qa4",
+      "comment": "Gagne du temps en attaquant la Tour et en maintenant la Dame blanche en h3 pour l’instant à cause du pion g. En outre, la Dame doit être au centre de la mêlée maintenant qu’il faut faire aboutir l’attaque. Les Blancs ont actuellement plus de matériel, et pour réussir les Noirs doivent donc utiliser toutes les forces dont ils disposent."
+    },
+    {
+      "uci": "e2d2",
+      "san": "Red2",
+      "comment": ""
+    },
+    {
+      "uci": "a4e4",
+      "san": "Qe4+",
+      "comment": ""
+    },
+    {
+      "uci": "b1a1",
+      "san": "Ka1",
+      "comment": ""
+    },
+    {
+      "uci": "b7b5",
+      "san": "b5",
+      "comment": "Menaçant ...b4, qui ouvrirait la ligne d’action du Fou tout en créant un pion passé."
+    },
+    {
+      "uci": "h3g2",
+      "san": "Qg2",
+      "comment": ""
+    },
+    {
+      "uci": "e4a4",
+      "san": "Qa4",
+      "comment": "Défendant indirectement le pion d, que les Blancs ne peuvent pas prendre en raison de 35...Dxd1+."
+    },
+    {
+      "uci": "a1b1",
+      "san": "Kb1",
+      "comment": ""
+    },
+    {
+      "uci": "b5b4",
+      "san": "b4",
+      "comment": "L’attaque croît en force car elle commence à viser directement le Roi. La position est maintenant extrêmement intéressante et difficile. Il n’existe probablement pas de bonne défense contre le meilleur jeu noir. Les variantes sont nombreuses et complexes."
+    },
+    {
+      "uci": "c3b4",
+      "san": "cxb4",
+      "comment": ""
+    },
+    {
+      "uci": "a4b4",
+      "san": "Qxb4",
+      "comment": "Les Noirs ont maintenant un pion passé, et leur Fou exerce une forte pression. Les Blancs ne peuvent pas vraiment jouer 37.Txd5 à cause de 37...Txd5 38.Txd5 Fxb2, et le Fou est imprenable, car De4+ gagnerait la Tour, laissant les Noirs avec un bon pion passé de plus."
+    },
+    {
+      "uci": "a2a3",
+      "san": "a3",
+      "comment": ""
+    },
+    {
+      "uci": "b4a4",
+      "san": "Qa4",
+      "comment": ""
+    },
+    {
+      "uci": "d2d5",
+      "san": "Rxd5",
+      "comment": ""
+    },
+    {
+      "uci": "d8b8",
+      "san": "Rb8",
+      "comment": ""
+    },
+    {
+      "uci": "d1d2",
+      "san": "R1d2",
+      "comment": ""
+    },
+    {
+      "uci": "c5c4",
+      "san": "c4",
+      "comment": ""
+    },
+    {
+      "uci": "g2g3",
+      "san": "Qg3",
+      "comment": ""
+    },
+    {
+      "uci": "b8b3",
+      "san": "Rb3",
+      "comment": ""
+    },
+    {
+      "uci": "g3d6",
+      "san": "Qd6",
+      "comment": ""
+    },
+    {
+      "uci": "c4c3",
+      "san": "c3",
+      "comment": "41...Fxb2 gagnerait aussi, ce qui montre à quel point la partie des Blancs s’est délitée. Dans de tels cas, cependant, ce n’est pas le coup le plus joli qui doit être joué, mais le plus efficace, celui qui obligera votre adversaire à abandonner le plus tôt."
+    },
+    {
+      "uci": "d2c2",
+      "san": "Rc2",
+      "comment": ""
+    },
+    {
+      "uci": "c3b2",
+      "san": "cxb2",
+      "comment": ""
+    },
+    {
+      "uci": "d5d3",
+      "san": "Rd3",
+      "comment": ""
+    },
+    {
+      "uci": "a4e4",
+      "san": "Qe4",
+      "comment": ""
+    },
+    {
+      "uci": "d3d1",
+      "san": "Rd1",
+      "comment": ""
+    },
+    {
+      "uci": "b3c3",
+      "san": "Rc3",
+      "comment": "Les Blancs abandonnent. Les Blancs doivent naturellement jouer 45.Dd2, à quoi les Noirs répliquent par 45...Txc2."
+    }
+  ]
+}
