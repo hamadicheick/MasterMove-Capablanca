@@ -742,6 +742,17 @@
       "level": "intermediaire",
       "estimated_minutes": 20,
       "file": "capablanca_partie4_znosko_borovsky_1913.json"
+    },
+    {
+      "id": "capablanca_partie5_lasker_1914",
+      "chapter": 7,
+      "titre": "Partie n°5 — Lasker contre Capablanca, Saint-Pétersbourg 1914",
+      "description": "Partie Espagnole : Capablanca joue contre son meilleur jugement et laisse s’installer le Cavalier en e6, puis erre sans trouver de bon plan face à une conclusion précise de Lasker.",
+      "order": 5,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_partie5_lasker_1914.json"
     }
   ]
 }
