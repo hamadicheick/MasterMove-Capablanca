@@ -1,0 +1,468 @@
+{
+  "type": "game",
+  "id": "capablanca_partie7_burn_1911",
+  "number": 7,
+  "white": "Capablanca",
+  "black": "Burn",
+  "event": "Tournoi international, San Sebastián",
+  "year": 1911,
+  "opening": "Partie Espagnole",
+  "result": "1-0",
+  "moves": [
+    {
+      "uci": "e2e4",
+      "san": "e4",
+      "comment": ""
+    },
+    {
+      "uci": "e7e5",
+      "san": "e5",
+      "comment": ""
+    },
+    {
+      "uci": "g1f3",
+      "san": "Nf3",
+      "comment": ""
+    },
+    {
+      "uci": "b8c6",
+      "san": "Nc6",
+      "comment": ""
+    },
+    {
+      "uci": "f1b5",
+      "san": "Bb5",
+      "comment": ""
+    },
+    {
+      "uci": "a7a6",
+      "san": "a6",
+      "comment": ""
+    },
+    {
+      "uci": "b5a4",
+      "san": "Ba4",
+      "comment": ""
+    },
+    {
+      "uci": "g8f6",
+      "san": "Nf6",
+      "comment": ""
+    },
+    {
+      "uci": "d2d3",
+      "san": "d3",
+      "comment": "Un développement très solide, auquel j’étais très attaché à l’époque à cause de mon ignorance des nombreuses variantes des ouvertures."
+    },
+    {
+      "uci": "d7d6",
+      "san": "d6",
+      "comment": ""
+    },
+    {
+      "uci": "c2c3",
+      "san": "c3",
+      "comment": ""
+    },
+    {
+      "uci": "f8e7",
+      "san": "Be7",
+      "comment": "Dans cette variante, on peut aussi développer le Fou via g7, après 6...g6."
+    },
+    {
+      "uci": "b1d2",
+      "san": "Nbd2",
+      "comment": ""
+    },
+    {
+      "uci": "e8g8",
+      "san": "O-O",
+      "comment": ""
+    },
+    {
+      "uci": "d2f1",
+      "san": "Nf1",
+      "comment": ""
+    },
+    {
+      "uci": "b7b5",
+      "san": "b5",
+      "comment": ""
+    },
+    {
+      "uci": "a4c2",
+      "san": "Bc2",
+      "comment": ""
+    },
+    {
+      "uci": "d6d5",
+      "san": "d5",
+      "comment": ""
+    },
+    {
+      "uci": "d1e2",
+      "san": "Qe2",
+      "comment": ""
+    },
+    {
+      "uci": "d5e4",
+      "san": "dxe4",
+      "comment": ""
+    },
+    {
+      "uci": "d3e4",
+      "san": "dxe4",
+      "comment": ""
+    },
+    {
+      "uci": "e7c5",
+      "san": "Bc5",
+      "comment": "Clairement pour céder e7 à la Dame, mais je ne pense pas que ce soit conseillé à ce stade. 11...Fe6 est un coup beaucoup plus naturel et efficace. Il développe une pièce et menace ...Fc4, qu’il faut alors empêcher."
+    },
+    {
+      "uci": "c1g5",
+      "san": "Bg5",
+      "comment": ""
+    },
+    {
+      "uci": "c8e6",
+      "san": "Be6",
+      "comment": "Ce coup n’est pas aussi efficace maintenant, parce que le Fou-dame des Blancs a été développé et le Cavalier se rend en e3, pour défendre c4, sans bloquer ce Fou."
+    },
+    {
+      "uci": "f1e3",
+      "san": "Ne3",
+      "comment": ""
+    },
+    {
+      "uci": "f8e8",
+      "san": "Re8",
+      "comment": ""
+    },
+    {
+      "uci": "e1g1",
+      "san": "O-O",
+      "comment": ""
+    },
+    {
+      "uci": "d8e7",
+      "san": "Qe7",
+      "comment": "Mauvais. La partie des Noirs n’était déjà pas bonne. Ils n’avaient probablement pas d’autre choix que de prendre le Cavalier avec leur Fou avant de jouer ce coup."
+    },
+    {
+      "uci": "e3d5",
+      "san": "Nd5",
+      "comment": ""
+    },
+    {
+      "uci": "e6d5",
+      "san": "Bxd5",
+      "comment": ""
+    },
+    {
+      "uci": "e4d5",
+      "san": "exd5",
+      "comment": ""
+    },
+    {
+      "uci": "c6b8",
+      "san": "Nb8",
+      "comment": "Pour revenir en d7, afin d’appuyer l’autre Cavalier ainsi que le pion roi. Les Blancs empêchent toutefois cela et parviennent à gagner un pion grâce à leur meilleure position."
+    },
+    {
+      "uci": "a2a4",
+      "san": "a4",
+      "comment": ""
+    },
+    {
+      "uci": "b5b4",
+      "san": "b4",
+      "comment": "Comme ils ne pouvaient en aucun cas éviter la perte d’un pion, les Noirs auraient dû le laisser où il était et jouer 17...Cbd7, de façon à consolider leur position. Le coup du texte ne perd pas seulement un pion, il affaiblit en outre gravement la position des Noirs."
+    },
+    {
+      "uci": "c3b4",
+      "san": "cxb4",
+      "comment": ""
+    },
+    {
+      "uci": "c5b4",
+      "san": "Bxb4",
+      "comment": ""
+    },
+    {
+      "uci": "g5f6",
+      "san": "Bxf6",
+      "comment": ""
+    },
+    {
+      "uci": "e7f6",
+      "san": "Qxf6",
+      "comment": ""
+    },
+    {
+      "uci": "e2e4",
+      "san": "Qe4",
+      "comment": ""
+    },
+    {
+      "uci": "b4d6",
+      "san": "Bd6",
+      "comment": ""
+    },
+    {
+      "uci": "e4h7",
+      "san": "Qxh7+",
+      "comment": ""
+    },
+    {
+      "uci": "g8f8",
+      "san": "Kf8",
+      "comment": "Avec un pion de plus et toutes leurs pièces prêtes à l’action, alors que les Noirs sont toujours en retard de développement, il suffit aux Blancs de concrétiser leur avantage avant que l’adversaire ne mobilise ses forces, faute de quoi ce dernier pourrait lancer une forte attaque contre leur Roi en utilisant la colonne h ouverte. Les Blancs parviennent à éliminer tout danger par leur prochain coup."
+    },
+    {
+      "uci": "f3h4",
+      "san": "Nh4",
+      "comment": ""
+    },
+    {
+      "uci": "f6h6",
+      "san": "Qh6",
+      "comment": "Pratiquement forcé. Les Noirs ne pouvaient jouer 22...g6 à cause de 23.Fxg6, tandis que les Blancs menaçaient Dh8+ suivi de Cf5+ et Dxg7."
+    },
+    {
+      "uci": "h7h6",
+      "san": "Qxh6",
+      "comment": ""
+    },
+    {
+      "uci": "g7h6",
+      "san": "gxh6",
+      "comment": ""
+    },
+    {
+      "uci": "h4f5",
+      "san": "Nf5",
+      "comment": ""
+    },
+    {
+      "uci": "h6h5",
+      "san": "h5",
+      "comment": ""
+    },
+    {
+      "uci": "c2d1",
+      "san": "Bd1",
+      "comment": ""
+    },
+    {
+      "uci": "b8d7",
+      "san": "Nd7",
+      "comment": ""
+    },
+    {
+      "uci": "d1h5",
+      "san": "Bxh5",
+      "comment": ""
+    },
+    {
+      "uci": "d7f6",
+      "san": "Nf6",
+      "comment": ""
+    },
+    {
+      "uci": "h5e2",
+      "san": "Be2",
+      "comment": ""
+    },
+    {
+      "uci": "f6d5",
+      "san": "Nxd5",
+      "comment": ""
+    },
+    {
+      "uci": "f1d1",
+      "san": "Rfd1",
+      "comment": ""
+    },
+    {
+      "uci": "d5f4",
+      "san": "Nf4",
+      "comment": ""
+    },
+    {
+      "uci": "e2c4",
+      "san": "Bc4",
+      "comment": ""
+    },
+    {
+      "uci": "e8d8",
+      "san": "Red8",
+      "comment": ""
+    },
+    {
+      "uci": "h2h4",
+      "san": "h4",
+      "comment": ""
+    },
+    {
+      "uci": "a6a5",
+      "san": "a5",
+      "comment": "Les Noirs doivent perdre du temps à assurer la sécurité de ce pion."
+    },
+    {
+      "uci": "g2g3",
+      "san": "g3",
+      "comment": ""
+    },
+    {
+      "uci": "f4e6",
+      "san": "Ne6",
+      "comment": ""
+    },
+    {
+      "uci": "c4e6",
+      "san": "Bxe6",
+      "comment": ""
+    },
+    {
+      "uci": "f7e6",
+      "san": "fxe6",
+      "comment": ""
+    },
+    {
+      "uci": "f5e3",
+      "san": "Ne3",
+      "comment": ""
+    },
+    {
+      "uci": "d8b8",
+      "san": "Rdb8",
+      "comment": ""
+    },
+    {
+      "uci": "e3c4",
+      "san": "Nc4",
+      "comment": ""
+    },
+    {
+      "uci": "f8e7",
+      "san": "Ke7",
+      "comment": "Le combat des Noirs est sans espoir. Ils ont pratiquement deux pions de moins, et les pions qui leur restent sont isolés et doivent être défendus par des pièces."
+    },
+    {
+      "uci": "a1c1",
+      "san": "Rac1",
+      "comment": ""
+    },
+    {
+      "uci": "a8a7",
+      "san": "Ra7",
+      "comment": "Les Blancs menaçaient Cxd6 suivi de Tc7+."
+    },
+    {
+      "uci": "d1e1",
+      "san": "Re1",
+      "comment": ""
+    },
+    {
+      "uci": "e7f6",
+      "san": "Kf6",
+      "comment": ""
+    },
+    {
+      "uci": "e1e4",
+      "san": "Re4",
+      "comment": ""
+    },
+    {
+      "uci": "b8b4",
+      "san": "Rb4",
+      "comment": ""
+    },
+    {
+      "uci": "g3g4",
+      "san": "g4",
+      "comment": ""
+    },
+    {
+      "uci": "a7a6",
+      "san": "Ra6",
+      "comment": "Si 38...Txa4, alors 39.Cxd6 gagnerait naturellement une pièce."
+    },
+    {
+      "uci": "c1c3",
+      "san": "Rc3",
+      "comment": ""
+    },
+    {
+      "uci": "d6c5",
+      "san": "Bc5",
+      "comment": ""
+    },
+    {
+      "uci": "c3f3",
+      "san": "Rf3+",
+      "comment": ""
+    },
+    {
+      "uci": "f6g7",
+      "san": "Kg7",
+      "comment": ""
+    },
+    {
+      "uci": "b2b3",
+      "san": "b3",
+      "comment": ""
+    },
+    {
+      "uci": "c5d4",
+      "san": "Bd4",
+      "comment": ""
+    },
+    {
+      "uci": "g1g2",
+      "san": "Kg2",
+      "comment": ""
+    },
+    {
+      "uci": "a6a8",
+      "san": "Ra8",
+      "comment": ""
+    },
+    {
+      "uci": "g4g5",
+      "san": "g5",
+      "comment": ""
+    },
+    {
+      "uci": "a8a6",
+      "san": "Ra6",
+      "comment": ""
+    },
+    {
+      "uci": "h4h5",
+      "san": "h5",
+      "comment": ""
+    },
+    {
+      "uci": "b4c4",
+      "san": "Rxc4",
+      "comment": ""
+    },
+    {
+      "uci": "b3c4",
+      "san": "bxc4",
+      "comment": ""
+    },
+    {
+      "uci": "a6c6",
+      "san": "Rc6",
+      "comment": ""
+    },
+    {
+      "uci": "g5g6",
+      "san": "g6",
+      "comment": "Les Noirs abandonnent."
+    }
+  ]
+}

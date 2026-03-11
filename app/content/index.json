@@ -764,6 +764,17 @@
       "level": "intermediaire",
       "estimated_minutes": 25,
       "file": "capablanca_partie6_chajes_1916.json"
+    },
+    {
+      "id": "capablanca_partie7_burn_1911",
+      "chapter": 7,
+      "titre": "Partie n°7 — Capablanca contre Burn, San Sebastián 1911",
+      "description": "Partie Espagnole : Capablanca gagne un pion dès le 17e coup, puis liquide en finale avec précision.",
+      "order": 7,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_partie7_burn_1911.json"
     }
   ]
 }
