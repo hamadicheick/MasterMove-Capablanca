@@ -808,6 +808,17 @@
       "level": "intermediaire",
       "estimated_minutes": 25,
       "file": "capablanca_partie10_marshall_1914.json"
+    },
+    {
+      "id": "capablanca_partie11_janowski_1914",
+      "chapter": 7,
+      "titre": "Partie n°11 — Capablanca contre Janowski, Saint-Pétersbourg 1914",
+      "description": "Partie Espagnole : Capablanca installe un Cavalier colossal en d5, prépare une attaque à l'aile dame et mate avec précision en 31 coups.",
+      "order": 11,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 20,
+      "file": "capablanca_partie11_janowski_1914.json"
     }
   ]
 }
