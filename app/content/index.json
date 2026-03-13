@@ -819,6 +819,17 @@
       "level": "intermediaire",
       "estimated_minutes": 20,
       "file": "capablanca_partie11_janowski_1914.json"
+    },
+    {
+      "id": "capablanca_partie12_chajes_1918",
+      "chapter": 7,
+      "titre": "Partie n°12 — Capablanca contre Chajes, New York 1918",
+      "description": "Défense Française : Capablanca exploite un pion faible en e5, marche son Roi jusqu'en g3 pour débloquer l'attaque et gagne en 45 coups.",
+      "order": 12,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 22,
+      "file": "capablanca_partie12_chajes_1918.json"
     }
   ]
 }
