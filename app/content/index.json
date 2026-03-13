@@ -797,6 +797,17 @@
       "level": "intermediaire",
       "estimated_minutes": 20,
       "file": "capablanca_partie9_teichmann_1913.json"
+    },
+    {
+      "id": "capablanca_partie10_marshall_1914",
+      "chapter": 7,
+      "titre": "Partie n°10 — Capablanca contre Marshall, Saint-Pétersbourg 1914",
+      "description": "Défense Russe : Capablanca exploite le retard de développement de Marshall, détruit son plan avec 18.Nd5 et remporte une finale technique malgré un jeu approximatif en fin de partie.",
+      "order": 10,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 25,
+      "file": "capablanca_partie10_marshall_1914.json"
     }
   ]
 }
