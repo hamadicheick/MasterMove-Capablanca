@@ -830,6 +830,17 @@
       "level": "intermediaire",
       "estimated_minutes": 22,
       "file": "capablanca_partie12_chajes_1918.json"
+    },
+    {
+      "id": "capablanca_partie9_teichmann_1913",
+      "chapter": 7,
+      "titre": "Partie n°9 — Capablanca contre Teichmann, Berlin 1913",
+      "description": "Gambit Dame refusé : Capablanca isole le pion dame, obtient un pion de plus et gagne la finale avec un Roi actif et un Fou dominant.",
+      "order": 9,
+      "type": "game",
+      "level": "intermediaire",
+      "estimated_minutes": 15,
+      "file": "capablanca_partie9_teichmann_1913.json"
     }
   ]
 }
