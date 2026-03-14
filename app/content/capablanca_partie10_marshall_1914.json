@@ -9,126 +9,610 @@
   "opening": "Défense Russe",
   "result": "1-0",
   "moves": [
-    { "uci": "e2e4", "san": "e4", "comment": "" },
-    { "uci": "e7e5", "san": "e5", "comment": "" },
-    { "uci": "g1f3", "san": "Nf3", "comment": "" },
-    { "uci": "g8f6", "san": "Nf6", "comment": "" },
-    { "uci": "f3e5", "san": "Nxe5", "comment": "" },
-    { "uci": "d7d6", "san": "d6", "comment": "" },
-    { "uci": "e5f3", "san": "Nf3", "comment": "" },
-    { "uci": "f6e4", "san": "Nxe4", "comment": "" },
-    { "uci": "d1e2", "san": "Qe2", "comment": "" },
-    { "uci": "d8e7", "san": "Qe7", "comment": "" },
-    { "uci": "d2d3", "san": "d3", "comment": "" },
-    { "uci": "e4f6", "san": "Nf6", "comment": "" },
-    { "uci": "c1g5", "san": "Bg5", "comment": "Un excellent coup, joué par Morphy. La pointe est que s'ils échangent les Dames, les Noirs auront un temps de développement de retard, et en conséquence une partie resserrée si les Blancs jouent de façon précise." },
-    { "uci": "c8e6", "san": "Be6", "comment": "Marshall pensait à l'époque que c'était le meilleur coup et l'a donc joué de préférence à 7...Qxe2+." },
-    { "uci": "b1c3", "san": "Nc3", "comment": "" },
-    { "uci": "h7h6", "san": "h6", "comment": "" },
-    { "uci": "g5f6", "san": "Bxf6", "comment": "" },
-    { "uci": "e7f6", "san": "Qxf6", "comment": "" },
-    { "uci": "d3d4", "san": "d4", "comment": "" },
-    { "uci": "f8e7", "san": "Be7", "comment": "" },
-    { "uci": "e2b5", "san": "Qb5+", "comment": "" },
-    { "uci": "b8d7", "san": "Nd7", "comment": "" },
-    { "uci": "f1d3", "san": "Bd3", "comment": "Il est maintenant temps d'examiner le résultat de l'ouverture. Du côté blanc, les pièces mineures sont bien placées et la Dame occupe une position il est vrai un peu étrange, mais elle n'est pas menacée et d'ailleurs attaque elle-même un pion. Les Blancs sont également prêts à roquer. Leur position est clairement exempte de tout danger et leurs pièces peuvent facilement manœuvrer. La première chose qu'on remarque du côté des Noirs est qu'ils ont conservé leurs deux Fous, ce qui est un avantage indiscutable ; mais en revanche leurs pièces se télescopent bien trop et leur Dame risque d'être attaquée sans avoir une seule bonne case où se rendre. Le Fou en e7 n'a aucune liberté et bloque la Dame qui, à son tour, bloque le Fou. Par ailleurs, les Noirs ne peuvent effectuer le petit roque car 13.Qxb7 Rab8 14.Qe4, qui menace mat, gagne un pion. Ils ne peuvent pas non plus faire le grand roque, car 13.Qa5 les mettrait tout de suite en danger. De tout cela, on doit conclure que l'ouverture est totalement en faveur des Blancs." },
-    { "uci": "g7g5", "san": "g5", "comment": "Pour faire de la place à la Dame, tout en menaçant ...g4." },
-    { "uci": "h2h3", "san": "h3", "comment": "" },
-    { "uci": "e8g8", "san": "O-O", "comment": "Donnant un pion pour tenter de libérer leur jeu et prendre l'initiative. Il était difficile pour les Noirs de trouver un coup, car les Blancs menaçaient 14.Ne4, et si la Dame fuit par 14...Qg7, alors 15.d5 Bf5 16.Nxd6+ suivi de Bxf5." },
-    { "uci": "b5b7", "san": "Qxb7", "comment": "" },
-    { "uci": "a8b8", "san": "Rab8", "comment": "" },
-    { "uci": "b7e4", "san": "Qe4", "comment": "" },
-    { "uci": "f6g7", "san": "Qg7", "comment": "" },
-    { "uci": "b2b3", "san": "b3", "comment": "" },
-    { "uci": "c7c5", "san": "c5", "comment": "Pour faire sauter le centre blanc et amener leur Cavalier en c5, posant ainsi les fondations d'une violente attaque contre le Roi blanc. Ce plan échoue toutefois, comme il doit forcément échouer en pareil cas, parce que les Noirs sont en retard de développement, et par conséquent leurs pièces sont mal placées." },
-    { "uci": "e1g1", "san": "O-O", "comment": "" },
-    { "uci": "c5d4", "san": "cxd4", "comment": "" },
-    { "uci": "c3d5", "san": "Nd5", "comment": "Un coup simple, qui détruit totalement le plan adverse. Les Noirs ne pourront maintenant mener d'action concertée avec leurs pièces, et comme tous leurs pions sont faibles, ils les perdront tôt ou tard." },
-    { "uci": "e7d8", "san": "Bd8", "comment": "" },
-    { "uci": "d3c4", "san": "Bc4", "comment": "" },
-    { "uci": "d7c5", "san": "Nc5", "comment": "" },
-    { "uci": "e4d4", "san": "Qxd4", "comment": "" },
-    { "uci": "g7d4", "san": "Qxd4", "comment": "Devoir échanger les Dames avec un pion de moins montre que la partie des Noirs est perdue." },
-    { "uci": "f3d4", "san": "Nfxd4", "comment": "" },
-    { "uci": "e6d5", "san": "Bxd5", "comment": "" },
-    { "uci": "c4d5", "san": "Bxd5", "comment": "" },
-    { "uci": "d8f6", "san": "Bf6", "comment": "" },
-    { "uci": "a1d1", "san": "Rad1", "comment": "" },
-    { "uci": "f6d4", "san": "Bxd4", "comment": "Le Cavalier était trop menaçant. Mais, dans la finale qui en résulte, le Fou est plus fort que le Cavalier, ce qui rend la situation des Noirs désespérée. La partie ne présente plus d'intérêt, et je ne l'ai donnée qu'à cause de sa valeur pour l'étude de cette variante de la défense Russe. Les Noirs sont parvenus à lutter jusqu'au soixantième coup à cause d'un jeu faible de la part des Blancs. J'indique le reste des coups pour la forme." },
-    { "uci": "d1d4", "san": "Rxd4", "comment": "" },
-    { "uci": "g8g7", "san": "Kg7", "comment": "" },
-    { "uci": "d5c4", "san": "Bc4", "comment": "" },
-    { "uci": "b8b6", "san": "Rb6", "comment": "" },
-    { "uci": "f1e1", "san": "Re1", "comment": "" },
-    { "uci": "g7f6", "san": "Kf6", "comment": "" },
-    { "uci": "f2f4", "san": "f4", "comment": "" },
-    { "uci": "c5e6", "san": "Ne6", "comment": "" },
-    { "uci": "f4g5", "san": "fxg5+", "comment": "" },
-    { "uci": "h6g5", "san": "hxg5", "comment": "" },
-    { "uci": "e1f1", "san": "Rf1+", "comment": "" },
-    { "uci": "f6e7", "san": "Ke7", "comment": "" },
-    { "uci": "d4g4", "san": "Rg4", "comment": "" },
-    { "uci": "f8g8", "san": "Rg8", "comment": "" },
-    { "uci": "f1f5", "san": "Rf5", "comment": "" },
-    { "uci": "b6c6", "san": "Rc6", "comment": "" },
-    { "uci": "h3h4", "san": "h4", "comment": "" },
-    { "uci": "g8c8", "san": "Rgc8", "comment": "" },
-    { "uci": "h4g5", "san": "hxg5", "comment": "" },
-    { "uci": "c6c5", "san": "Rc5", "comment": "" },
-    { "uci": "c4e6", "san": "Bxe6", "comment": "" },
-    { "uci": "f7e6", "san": "fxe6", "comment": "" },
-    { "uci": "f5c5", "san": "Rxc5", "comment": "" },
-    { "uci": "c8c5", "san": "Rxc5", "comment": "" },
-    { "uci": "g5g6", "san": "g6", "comment": "" },
-    { "uci": "e7f8", "san": "Kf8", "comment": "" },
-    { "uci": "g4c4", "san": "Rc4", "comment": "" },
-    { "uci": "c5a5", "san": "Ra5", "comment": "" },
-    { "uci": "a2a4", "san": "a4", "comment": "" },
-    { "uci": "f8g7", "san": "Kg7", "comment": "" },
-    { "uci": "c4c6", "san": "Rc6", "comment": "" },
-    { "uci": "a5d5", "san": "Rd5", "comment": "" },
-    { "uci": "c6c7", "san": "Rc7+", "comment": "" },
-    { "uci": "g7g6", "san": "Kxg6", "comment": "" },
-    { "uci": "c7a7", "san": "Rxa7", "comment": "" },
-    { "uci": "d5d1", "san": "Rd1+", "comment": "" },
-    { "uci": "g1h2", "san": "Kh2", "comment": "" },
-    { "uci": "d6d5", "san": "d5", "comment": "" },
-    { "uci": "a4a5", "san": "a5", "comment": "" },
-    { "uci": "d1c1", "san": "Rc1", "comment": "" },
-    { "uci": "a7c7", "san": "Rc7", "comment": "" },
-    { "uci": "c1a1", "san": "Ra1", "comment": "" },
-    { "uci": "b3b4", "san": "b4", "comment": "" },
-    { "uci": "a1a4", "san": "Ra4", "comment": "" },
-    { "uci": "c2c3", "san": "c3", "comment": "" },
-    { "uci": "d5d4", "san": "d4", "comment": "" },
-    { "uci": "c7c6", "san": "Rc6", "comment": "" },
-    { "uci": "d4c3", "san": "dxc3", "comment": "" },
-    { "uci": "c6c3", "san": "Rxc3", "comment": "" },
-    { "uci": "a4b4", "san": "Rxb4", "comment": "" },
-    { "uci": "c3a3", "san": "Ra3", "comment": "" },
-    { "uci": "b4b7", "san": "Rb7", "comment": "" },
-    { "uci": "a5a6", "san": "a6", "comment": "" },
-    { "uci": "b7a7", "san": "Ra7", "comment": "" },
-    { "uci": "a3a5", "san": "Ra5", "comment": "" },
-    { "uci": "g6f6", "san": "Kf6", "comment": "" },
-    { "uci": "g2g4", "san": "g4", "comment": "" },
-    { "uci": "f6e7", "san": "Ke7", "comment": "" },
-    { "uci": "h2g3", "san": "Kg3", "comment": "" },
-    { "uci": "e7d6", "san": "Kd6", "comment": "" },
-    { "uci": "g3f4", "san": "Kf4", "comment": "" },
-    { "uci": "d6c7", "san": "Kc7", "comment": "" },
-    { "uci": "f4e5", "san": "Ke5", "comment": "" },
-    { "uci": "c7d7", "san": "Kd7", "comment": "" },
-    { "uci": "g4g5", "san": "g5", "comment": "" },
-    { "uci": "d7e7", "san": "Ke7", "comment": "" },
-    { "uci": "g5g6", "san": "g6", "comment": "" },
-    { "uci": "e7f8", "san": "Kf8", "comment": "" },
-    { "uci": "e5e6", "san": "Kxe6", "comment": "" },
-    { "uci": "f8e8", "san": "Ke8", "comment": "" },
-    { "uci": "g6g7", "san": "g7", "comment": "" },
-    { "uci": "a7g7", "san": "Rxg7", "comment": "" },
-    { "uci": "a6a7", "san": "a7", "comment": "" },
-    { "uci": "g7g6", "san": "Rg6+", "comment": "" },
-    { "uci": "e6f5", "san": "Kf5", "comment": "Les Noirs abandonnent." }
+    {
+      "uci": "e2e4",
+      "san": "e4",
+      "comment": ""
+    },
+    {
+      "uci": "e7e5",
+      "san": "e5",
+      "comment": ""
+    },
+    {
+      "uci": "g1f3",
+      "san": "Nf3",
+      "comment": ""
+    },
+    {
+      "uci": "g8f6",
+      "san": "Nf6",
+      "comment": ""
+    },
+    {
+      "uci": "f3e5",
+      "san": "Nxe5",
+      "comment": ""
+    },
+    {
+      "uci": "d7d6",
+      "san": "d6",
+      "comment": ""
+    },
+    {
+      "uci": "e5f3",
+      "san": "Nf3",
+      "comment": ""
+    },
+    {
+      "uci": "f6e4",
+      "san": "Nxe4",
+      "comment": ""
+    },
+    {
+      "uci": "d1e2",
+      "san": "Qe2",
+      "comment": ""
+    },
+    {
+      "uci": "d8e7",
+      "san": "Qe7",
+      "comment": ""
+    },
+    {
+      "uci": "d2d3",
+      "san": "d3",
+      "comment": ""
+    },
+    {
+      "uci": "e4f6",
+      "san": "Nf6",
+      "comment": ""
+    },
+    {
+      "uci": "c1g5",
+      "san": "Bg5",
+      "comment": "Un excellent coup, joué par Morphy. La pointe est que s’ils échangent les Dames, les Noirs auront un temps de développement de retard, et en conséquence une partie reserrée si les Blancs jouent de façon précise."
+    },
+    {
+      "uci": "c8e6",
+      "san": "Be6",
+      "comment": "Marshall pensait à l’époque que c’était le meilleur coup et l’a donc joué de préférence à 7...Dxe2+."
+    },
+    {
+      "uci": "b1c3",
+      "san": "Nc3",
+      "comment": ""
+    },
+    {
+      "uci": "h7h6",
+      "san": "h6",
+      "comment": ""
+    },
+    {
+      "uci": "g5f6",
+      "san": "Bxf6",
+      "comment": ""
+    },
+    {
+      "uci": "e7f6",
+      "san": "Qxf6",
+      "comment": ""
+    },
+    {
+      "uci": "d3d4",
+      "san": "d4",
+      "comment": ""
+    },
+    {
+      "uci": "f8e7",
+      "san": "Be7",
+      "comment": ""
+    },
+    {
+      "uci": "e2b5",
+      "san": "Qb5+",
+      "comment": ""
+    },
+    {
+      "uci": "b8d7",
+      "san": "Nd7",
+      "comment": ""
+    },
+    {
+      "uci": "f1d3",
+      "san": "Bd3",
+      "comment": "Il est maintenant temps d’examiner le résultat de l’ouverture. Du côté blanc, les pièces mineures sont bien placées et la Dame occupe une position un peu étrange, mais elle n’est pas menacée et attaque elle-même un pion. Les Noirs ont conservé leurs deux Fous, mais leurs pièces se télescopent trop et le Fou en e7 n’a aucune liberté. Les Noirs ne peuvent roquer ni d’un côté ni de l’autre sans pénalité. L’ouverture est totalement en faveur des Blancs."
+    },
+    {
+      "uci": "g7g5",
+      "san": "g5",
+      "comment": "Pour faire de la place à la Dame, tout en menaçant ...g4."
+    },
+    {
+      "uci": "h2h3",
+      "san": "h3",
+      "comment": ""
+    },
+    {
+      "uci": "e8g8",
+      "san": "O-O",
+      "comment": "Donnant un pion pour tenter de libérer leur jeu et prendre l’initiative. Il était difficile pour les Noirs de trouver un coup, car les Blancs menaçaient 14.Ce4, et si la Dame fuit par 14...Dg7, alors 15.d5 Ff5 16.Cxd6+ suivi de Fxf5."
+    },
+    {
+      "uci": "b5b7",
+      "san": "Qxb7",
+      "comment": ""
+    },
+    {
+      "uci": "a8b8",
+      "san": "Rab8",
+      "comment": ""
+    },
+    {
+      "uci": "b7e4",
+      "san": "Qe4",
+      "comment": ""
+    },
+    {
+      "uci": "f6g7",
+      "san": "Qg7",
+      "comment": ""
+    },
+    {
+      "uci": "b2b3",
+      "san": "b3",
+      "comment": ""
+    },
+    {
+      "uci": "c7c5",
+      "san": "c5",
+      "comment": "Pour faire sauter le centre blanc et amener leur Cavalier en c5, posant ainsi les fondations d’une violente attaque contre le Roi blanc. Ce plan échoue toutefois, parce que les Noirs sont en retard de développement."
+    },
+    {
+      "uci": "e1g1",
+      "san": "O-O",
+      "comment": ""
+    },
+    {
+      "uci": "c5d4",
+      "san": "cxd4",
+      "comment": ""
+    },
+    {
+      "uci": "c3d5",
+      "san": "Nd5",
+      "comment": "Un coup simple, qui détruit totalement le plan adverse. Les Noirs ne pourront maintenant mener d’action concertée avec leurs pièces, et comme tous leurs pions sont faibles, ils les perdront tôt ou tard."
+    },
+    {
+      "uci": "e7d8",
+      "san": "Bd8",
+      "comment": ""
+    },
+    {
+      "uci": "d3c4",
+      "san": "Bc4",
+      "comment": ""
+    },
+    {
+      "uci": "d7c5",
+      "san": "Nc5",
+      "comment": ""
+    },
+    {
+      "uci": "e4d4",
+      "san": "Qxd4",
+      "comment": ""
+    },
+    {
+      "uci": "g7d4",
+      "san": "Qxd4",
+      "comment": "Devoir échanger les Dames avec un pion de moins montre que la partie des Noirs est perdue."
+    },
+    {
+      "uci": "f3d4",
+      "san": "Nxd4",
+      "comment": ""
+    },
+    {
+      "uci": "e6d5",
+      "san": "Bxd5",
+      "comment": ""
+    },
+    {
+      "uci": "c4d5",
+      "san": "Bxd5",
+      "comment": ""
+    },
+    {
+      "uci": "d8f6",
+      "san": "Bf6",
+      "comment": ""
+    },
+    {
+      "uci": "a1d1",
+      "san": "Rad1",
+      "comment": ""
+    },
+    {
+      "uci": "f6d4",
+      "san": "Bxd4",
+      "comment": "Le Cavalier était trop menaçant. Mais, dans la finale qui en résulte, le Fou est plus fort que le Cavalier, ce qui rend la situation des Noirs désespérée. La partie ne présente plus d’intérêt, et je ne l’ai donnée qu’à cause de sa valeur pour l’étude de cette variante de la défense Russe."
+    },
+    {
+      "uci": "d1d4",
+      "san": "Rxd4",
+      "comment": ""
+    },
+    {
+      "uci": "g8g7",
+      "san": "Kg7",
+      "comment": ""
+    },
+    {
+      "uci": "d5c4",
+      "san": "Bc4",
+      "comment": ""
+    },
+    {
+      "uci": "b8b6",
+      "san": "Rb6",
+      "comment": ""
+    },
+    {
+      "uci": "f1e1",
+      "san": "Re1",
+      "comment": ""
+    },
+    {
+      "uci": "g7f6",
+      "san": "Kf6",
+      "comment": ""
+    },
+    {
+      "uci": "f2f4",
+      "san": "f4",
+      "comment": ""
+    },
+    {
+      "uci": "c5e6",
+      "san": "Ne6",
+      "comment": ""
+    },
+    {
+      "uci": "f4g5",
+      "san": "fxg5+",
+      "comment": ""
+    },
+    {
+      "uci": "h6g5",
+      "san": "hxg5",
+      "comment": ""
+    },
+    {
+      "uci": "e1f1",
+      "san": "Rf1+",
+      "comment": ""
+    },
+    {
+      "uci": "f6e7",
+      "san": "Ke7",
+      "comment": ""
+    },
+    {
+      "uci": "d4g4",
+      "san": "Rg4",
+      "comment": ""
+    },
+    {
+      "uci": "f8g8",
+      "san": "Rg8",
+      "comment": ""
+    },
+    {
+      "uci": "f1f5",
+      "san": "Rf5",
+      "comment": ""
+    },
+    {
+      "uci": "b6c6",
+      "san": "Rc6",
+      "comment": ""
+    },
+    {
+      "uci": "h3h4",
+      "san": "h4",
+      "comment": ""
+    },
+    {
+      "uci": "g8c8",
+      "san": "Rgc8",
+      "comment": ""
+    },
+    {
+      "uci": "h4g5",
+      "san": "hxg5",
+      "comment": ""
+    },
+    {
+      "uci": "c6c5",
+      "san": "Rc5",
+      "comment": ""
+    },
+    {
+      "uci": "c4e6",
+      "san": "Bxe6",
+      "comment": ""
+    },
+    {
+      "uci": "f7e6",
+      "san": "fxe6",
+      "comment": ""
+    },
+    {
+      "uci": "f5c5",
+      "san": "Rxc5",
+      "comment": ""
+    },
+    {
+      "uci": "c8c5",
+      "san": "Rxc5",
+      "comment": ""
+    },
+    {
+      "uci": "g5g6",
+      "san": "g6",
+      "comment": ""
+    },
+    {
+      "uci": "e7f8",
+      "san": "Kf8",
+      "comment": ""
+    },
+    {
+      "uci": "g4c4",
+      "san": "Rc4",
+      "comment": ""
+    },
+    {
+      "uci": "c5a5",
+      "san": "Ra5",
+      "comment": ""
+    },
+    {
+      "uci": "a2a4",
+      "san": "a4",
+      "comment": ""
+    },
+    {
+      "uci": "f8g7",
+      "san": "Kg7",
+      "comment": ""
+    },
+    {
+      "uci": "c4c6",
+      "san": "Rc6",
+      "comment": ""
+    },
+    {
+      "uci": "a5d5",
+      "san": "Rd5",
+      "comment": ""
+    },
+    {
+      "uci": "c6c7",
+      "san": "Rc7+",
+      "comment": ""
+    },
+    {
+      "uci": "g7g6",
+      "san": "Kxg6",
+      "comment": ""
+    },
+    {
+      "uci": "c7a7",
+      "san": "Rxa7",
+      "comment": ""
+    },
+    {
+      "uci": "d5d1",
+      "san": "Rd1+",
+      "comment": ""
+    },
+    {
+      "uci": "g1h2",
+      "san": "Kh2",
+      "comment": ""
+    },
+    {
+      "uci": "d6d5",
+      "san": "d5",
+      "comment": ""
+    },
+    {
+      "uci": "a4a5",
+      "san": "a5",
+      "comment": ""
+    },
+    {
+      "uci": "d1c1",
+      "san": "Rc1",
+      "comment": ""
+    },
+    {
+      "uci": "a7c7",
+      "san": "Rc7",
+      "comment": ""
+    },
+    {
+      "uci": "c1a1",
+      "san": "Ra1",
+      "comment": ""
+    },
+    {
+      "uci": "b3b4",
+      "san": "b4",
+      "comment": ""
+    },
+    {
+      "uci": "a1a4",
+      "san": "Ra4",
+      "comment": ""
+    },
+    {
+      "uci": "c2c3",
+      "san": "c3",
+      "comment": ""
+    },
+    {
+      "uci": "d5d4",
+      "san": "d4",
+      "comment": ""
+    },
+    {
+      "uci": "c7c6",
+      "san": "Rc6",
+      "comment": ""
+    },
+    {
+      "uci": "d4c3",
+      "san": "dxc3",
+      "comment": ""
+    },
+    {
+      "uci": "c6c3",
+      "san": "Rxc3",
+      "comment": ""
+    },
+    {
+      "uci": "a4b4",
+      "san": "Rxb4",
+      "comment": ""
+    },
+    {
+      "uci": "c3a3",
+      "san": "Ra3",
+      "comment": ""
+    },
+    {
+      "uci": "b4b7",
+      "san": "Rb7",
+      "comment": ""
+    },
+    {
+      "uci": "a5a6",
+      "san": "a6",
+      "comment": ""
+    },
+    {
+      "uci": "b7a7",
+      "san": "Ra7",
+      "comment": ""
+    },
+    {
+      "uci": "a3a5",
+      "san": "Ra5",
+      "comment": ""
+    },
+    {
+      "uci": "g6f6",
+      "san": "Kf6",
+      "comment": ""
+    },
+    {
+      "uci": "g2g4",
+      "san": "g4",
+      "comment": ""
+    },
+    {
+      "uci": "f6e7",
+      "san": "Ke7",
+      "comment": ""
+    },
+    {
+      "uci": "h2g3",
+      "san": "Kg3",
+      "comment": ""
+    },
+    {
+      "uci": "e7d6",
+      "san": "Kd6",
+      "comment": ""
+    },
+    {
+      "uci": "g3f4",
+      "san": "Kf4",
+      "comment": ""
+    },
+    {
+      "uci": "d6c7",
+      "san": "Kc7",
+      "comment": ""
+    },
+    {
+      "uci": "f4e5",
+      "san": "Ke5",
+      "comment": ""
+    },
+    {
+      "uci": "c7d7",
+      "san": "Kd7",
+      "comment": ""
+    },
+    {
+      "uci": "g4g5",
+      "san": "g5",
+      "comment": ""
+    },
+    {
+      "uci": "d7e7",
+      "san": "Ke7",
+      "comment": ""
+    },
+    {
+      "uci": "g5g6",
+      "san": "g6",
+      "comment": ""
+    },
+    {
+      "uci": "e7f8",
+      "san": "Kf8",
+      "comment": ""
+    },
+    {
+      "uci": "e5e6",
+      "san": "Kxe6",
+      "comment": ""
+    },
+    {
+      "uci": "f8e8",
+      "san": "Ke8",
+      "comment": ""
+    },
+    {
+      "uci": "g6g7",
+      "san": "g7",
+      "comment": ""
+    },
+    {
+      "uci": "a7g7",
+      "san": "Rxg7",
+      "comment": ""
+    },
+    {
+      "uci": "a6a7",
+      "san": "a7",
+      "comment": ""
+    },
+    {
+      "uci": "g7g6",
+      "san": "Rg6+",
+      "comment": ""
+    },
+    {
+      "uci": "e6f5",
+      "san": "Kf5",
+      "comment": "Les Noirs abandonnent."
+    }
   ]
 }

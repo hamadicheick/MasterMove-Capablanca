@@ -841,6 +841,17 @@
       "level": "intermediaire",
       "estimated_minutes": 15,
       "file": "capablanca_partie9_teichmann_1913.json"
+    },
+    {
+      "id": "capablanca_partie10_marshall_1914",
+      "chapter": 7,
+      "titre": "Partie n°10 — Capablanca contre Marshall, Saint-Pétersbourg 1914",
+      "description": "Défense Russe : Capablanca obtient un avantage structural dès l’ouverture et gagne une longue finale de Tours.",
+      "order": 10,
+      "type": "game",
+      "level": "avance",
+      "estimated_minutes": 30,
+      "file": "capablanca_partie10_marshall_1914.json"
     }
   ]
 }
