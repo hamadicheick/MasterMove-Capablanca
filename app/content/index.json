@@ -832,26 +832,16 @@
       "file": "capablanca_partie12_chajes_1918.json"
     },
     {
-      "id": "capablanca_partie9_teichmann_1913",
-      "chapter": 7,
-      "titre": "Partie n°9 — Capablanca contre Teichmann, Berlin 1913",
-      "description": "Gambit Dame refusé : Capablanca isole le pion dame, obtient un pion de plus et gagne la finale avec un Roi actif et un Fou dominant.",
-      "order": 9,
+      "id": "capablanca_partie13_morrison_1918",
       "type": "game",
-      "level": "intermediaire",
-      "estimated_minutes": 15,
-      "file": "capablanca_partie9_teichmann_1913.json"
+      "title": "Partie 13 — Morrison–Capablanca, New York 1918",
+      "file": "capablanca_partie13_morrison_1918.json"
     },
     {
-      "id": "capablanca_partie10_marshall_1914",
-      "chapter": 7,
-      "titre": "Partie n°10 — Capablanca contre Marshall, Saint-Pétersbourg 1914",
-      "description": "Défense Russe : Capablanca obtient un avantage structural dès l’ouverture et gagne une longue finale de Tours.",
-      "order": 10,
+      "id": "capablanca_partie14_marshall_1918",
       "type": "game",
-      "level": "avance",
-      "estimated_minutes": 30,
-      "file": "capablanca_partie10_marshall_1914.json"
+      "title": "Partie 14 — Marshall–Capablanca, New York 1918",
+      "file": "capablanca_partie14_marshall_1918.json"
     }
   ]
 }
