@@ -81,6 +81,9 @@ export class BoardWidget {
 
     // Undo history (snapshots)
     this._history = [];
+    this._lastMove = null;         // { from, to } dernier coup joué
+    this._dragGhost = null;        // élément DOM fantôme pendant le drag custom
+    this._suppressNextClick = false;
 
     this._boardEl = null;
     this._ro = null;
@@ -200,6 +203,7 @@ export class BoardWidget {
 
     this._selected = null;
     this._legalTargets = [];
+    this._lastMove = { from, to };
     this.pos.turn = ignoreTurn ? savedTurn : this.pos.turn;
 
     this.onMove({ from, to, promo: promo || null, uci: u, source });
@@ -226,6 +230,7 @@ export class BoardWidget {
         this._history.push(snap);
         this._selected = null;
         this._legalTargets = [];
+        this._lastMove = { from: fromSq, to: toSq };
         this.onMove({ from: fromSq, to: toSq, promo, uci: fromSq + toSq + promo, source: "user" });
         this.render();
       });
@@ -236,6 +241,7 @@ export class BoardWidget {
     this._history.push(snap);
     this._selected = null;
     this._legalTargets = [];
+    this._lastMove = { from: fromSq, to: toSq };
     this.onMove({ from: fromSq, to: toSq, promo: null, uci: fromSq + toSq, source: "user" });
     this.render();
   }
@@ -319,25 +325,22 @@ export class BoardWidget {
         const piece = this.pos.board[r][c];
         const light = isLightSquare(r,c);
 
-        const isSel = this._selected === sq;
-        const isTarget = this._legalTargets.includes(sq);
+        const isSel      = this._selected === sq;
+        const isTarget   = this._legalTargets.includes(sq);
+        const isCapture  = isTarget && !!piece;
+        const isLastFrom = this._lastMove?.from === sq;
+        const isLastTo   = this._lastMove?.to   === sq;
 
         const sqEl = h("div", {
           class: [
             "square",
             light ? "light" : "dark",
             isSel ? "sel" : "",
+            (isLastFrom || isLastTo) ? "lastmove" : "",
             isTarget ? "target" : "",
+            isCapture ? "capture" : "",
           ].filter(Boolean).join(" "),
           "data-sq": sq,
-          ondragover: (ev) => { ev.preventDefault(); },
-          ondrop: (ev) => {
-            ev.preventDefault();
-            const from = this._dragFrom;
-            this._dragFrom = null;
-            if (!from) return;
-            this.tryMove(from, sq);
-          },
           onclick: () => this._onSquareClick(sq)
         });
 
@@ -355,14 +358,12 @@ export class BoardWidget {
             class: "piece" + (this._locked ? " locked" : ""),
             src: "",
             alt: pieceAlt(piece),
-            draggable: !this._locked,
-            ondragstart: (ev) => {
-              if (this._locked) { ev.preventDefault(); return; }
-              this._dragFrom = sq;
-              // hint selection during drag
-              this._selected = sq;
-            this._legalTargets = legalMovesFrom(this.pos, sq);
-              this.render();
+            draggable: false,
+            onmousedown: (ev) => {
+              if (this._locked) return;
+              if (ev.button !== 0) return;
+              ev.preventDefault();
+              this._startDrag(sq, img, ev);
             }
           });
           applyPieceSrcWithFallback(img, getPieceSet(), piece.color, piece.type);
@@ -394,8 +395,80 @@ export class BoardWidget {
     this.root.appendChild(ctrl);
   }
 
+  _startDrag(sq, pieceImg, ev) {
+    // Vérifie que la pièce appartient au camp qui a le trait
+    const { r, c } = squareToCoords(sq);
+    const p = this.pos.board[r][c];
+    if (!p || p.color !== this.pos.turn) return;
+
+    // Sélectionner + coups légaux
+    this._selected = sq;
+    this._legalTargets = legalMovesFrom(this.pos, sq);
+    this._dragFrom = sq;
+    this.render();
+
+    // Retrouver l'img après le re-render (le DOM a été reconstruit)
+    const freshImg = this._boardEl?.querySelector(`[data-sq="${sq}"] .piece`);
+
+    // Créer le ghost qui suit la souris
+    const rect = (freshImg || pieceImg).getBoundingClientRect();
+    const ghost = document.createElement("img");
+    ghost.src = (freshImg || pieceImg).src;
+    ghost.alt = (freshImg || pieceImg).alt;
+    ghost.className = "piece piece-drag-ghost";
+    ghost.style.width  = rect.width  + "px";
+    ghost.style.height = rect.height + "px";
+    ghost.style.left   = ev.clientX  + "px";
+    ghost.style.top    = ev.clientY  + "px";
+    document.body.appendChild(ghost);
+    this._dragGhost = ghost;
+
+    // Atténuer la pièce d'origine
+    if (freshImg) freshImg.classList.add("dragging-origin");
+
+    const onMove = (e) => {
+      ghost.style.left = e.clientX + "px";
+      ghost.style.top  = e.clientY + "px";
+    };
+
+    const onUp = (e) => {
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup",   onUp);
+      ghost.remove();
+      this._dragGhost = null;
+
+      // Retrouver la pièce d'origine (toujours via le DOM actuel)
+      const originImg = this._boardEl?.querySelector(`[data-sq="${sq}"] .piece`);
+      if (originImg) originImg.classList.remove("dragging-origin");
+
+      // Trouver la case sous le curseur
+      ghost.style.display = "none"; // masquer le ghost pour elementFromPoint
+      const el = document.elementFromPoint(e.clientX, e.clientY);
+      const targetSq = el?.closest("[data-sq]")?.dataset?.sq;
+
+      const from = this._dragFrom;
+      this._dragFrom = null;
+      this._suppressNextClick = true;
+      // Le click qui suit le mouseup ne doit pas re-déclencher _onSquareClick
+      setTimeout(() => { this._suppressNextClick = false; }, 50);
+
+      if (targetSq && targetSq !== from) {
+        this.tryMove(from, targetSq);
+      } else {
+        // Relâché sur la même case ou hors du plateau → déselectionner
+        this._selected = null;
+        this._legalTargets = [];
+        this.render();
+      }
+    };
+
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup",   onUp);
+  }
+
   _onSquareClick(sq){
     if (this._locked) return;
+    if (this._suppressNextClick) return;
 
     if (!this._selected){
       // select if has piece of side-to-move
