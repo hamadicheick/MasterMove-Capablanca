@@ -67,6 +67,22 @@ export function parseFen(fen){
   return { board, turn, castling, ep, halfmove, fullmove };
 }
 
+export function toFen(pos){
+  const PIECES = { w:{p:"P",n:"N",b:"B",r:"R",q:"Q",k:"K"}, b:{p:"p",n:"n",b:"b",r:"r",q:"q",k:"k"} };
+  let boardStr = "";
+  for (let r = 0; r < 8; r++){
+    let empty = 0;
+    for (let c = 0; c < 8; c++){
+      const p = pos.board[r][c];
+      if (!p){ empty++; }
+      else { if (empty){ boardStr += empty; empty = 0; } boardStr += PIECES[p.color][p.type]; }
+    }
+    if (empty) boardStr += empty;
+    if (r < 7) boardStr += "/";
+  }
+  return `${boardStr} ${pos.turn} ${pos.castling || "-"} ${pos.ep || "-"} ${pos.halfmove ?? 0} ${pos.fullmove ?? 1}`;
+}
+
 export function clonePos(pos){
   return {
     board: pos.board.map(row => row.map(p => p ? ({...p}) : null)),

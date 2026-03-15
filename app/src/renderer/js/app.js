@@ -1122,6 +1122,15 @@ function partieScreen(){
   const moveListEl = h("div", { class: "moveList" });
   const btnPrev    = h("button", { class: "btn secondary" }, "← Précédent");
   const btnNext    = h("button", { class: "btn" }, "Suivant →");
+  const btnAuto    = h("button", { class: "btn" }, "▶ Lecture auto");
+  const btnFen     = h("button", { class: "btn secondary", onclick: () => {
+    const turn = moveIndex < 0 ? "w" : (moveIndex % 2 === 0 ? "b" : "w");
+    const fen = state.board.getFen(turn);
+    if (!fen) return;
+    navigator.clipboard.writeText(fen)
+      .then(() => toast("FEN copié !"))
+      .catch(() => toast("Erreur copie FEN."));
+  }}, "Copier FEN");
   const boardHost  = h("div", { id: "boardHost" });
 
   // Board widget (singleton, locked = lecture seule)
@@ -1146,7 +1155,7 @@ function partieScreen(){
     }
     const span = h("span", {
       class: "moveToken" + (move.comment ? " hasComment" : ""),
-      onclick: () => goTo(i),
+      onclick: () => { autoplay = false; clearAutoTimer(); updateAutoBtn(); goTo(i); },
       title: move.san  // notation compacte en tooltip
     }, sanToFr(move.san));
     moveSpans.push(span);
@@ -1194,16 +1203,57 @@ function partieScreen(){
     }
   };
 
-  btnPrev.onclick = () => goTo(moveIndex - 1);
-  btnNext.onclick = () => goTo(moveIndex + 1);
+  // Autoplay
+  let autoplay  = false;
+  let autoTimer = null;
+
+  const clearAutoTimer = () => {
+    if (autoTimer) { clearTimeout(autoTimer); autoTimer = null; }
+  };
+
+  const updateAutoBtn = () => {
+    btnAuto.textContent = autoplay ? "⏸ Pause" : "▶ Lecture auto";
+  };
+
+  const scheduleNext = () => {
+    clearAutoTimer();
+    if (!autoplay || moveIndex >= game.moves.length - 1) {
+      autoplay = false;
+      updateAutoBtn();
+      return;
+    }
+    const comment = moveIndex >= 0 ? (game.moves[moveIndex].comment || "") : "";
+    const delay = comment
+      ? state.tts.estimateSpeakMs(commentToSpeech(comment)) + 500
+      : 1000;
+    autoTimer = setTimeout(() => {
+      goTo(moveIndex + 1);
+      scheduleNext();
+    }, delay);
+  };
+
+  const toggleAutoplay = () => {
+    autoplay = !autoplay;
+    if (autoplay) {
+      scheduleNext();
+    } else {
+      clearAutoTimer();
+    }
+    updateAutoBtn();
+  };
+
+  btnAuto.onclick = toggleAutoplay;
+  btnPrev.onclick = () => { autoplay = false; clearAutoTimer(); updateAutoBtn(); goTo(moveIndex - 1); };
+  btnNext.onclick = () => { autoplay = false; clearAutoTimer(); updateAutoBtn(); goTo(moveIndex + 1); };
 
   // Navigation clavier
   const onKey = (e) => {
-    if (e.key === "ArrowLeft")  { e.preventDefault(); goTo(moveIndex - 1); }
-    if (e.key === "ArrowRight") { e.preventDefault(); goTo(moveIndex + 1); }
+    if (e.key === "ArrowLeft")  { e.preventDefault(); autoplay = false; clearAutoTimer(); updateAutoBtn(); goTo(moveIndex - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); autoplay = false; clearAutoTimer(); updateAutoBtn(); goTo(moveIndex + 1); }
   };
   document.addEventListener("keydown", onKey);
   const cleanup = () => {
+    clearAutoTimer();
     document.removeEventListener("keydown", onKey);
     window.removeEventListener("hashchange", cleanup);
   };
@@ -1234,7 +1284,7 @@ function partieScreen(){
     h("div", { class: "hr" }),
     commentEl,
     h("div", { class: "hr" }),
-    h("div", { class: "controls" }, btnPrev, btnNext)
+    h("div", { class: "controls" }, btnPrev, btnNext, btnAuto, btnFen)
   );
 
   const right = h("div", { class: "rightCol card scroll" }, boardHost);

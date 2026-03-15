@@ -1,6 +1,6 @@
 import { h, clear, toast } from "../ui/dom.js";
 import { Store } from "../infra/store.js";
-import { parseFen } from "./fen.js";
+import { parseFen, toFen } from "./fen.js";
 import { coordsToSquare, squareToCoords, parseUci } from "./square.js";
 import { isLegalMove, legalMovesFrom, makeMoveLegal, undoMove } from "./rules_legal.js";
 
@@ -116,6 +116,12 @@ export class BoardWidget {
     this._history = [];
     this.stopAnimations();
     this.render();
+  }
+
+  getFen(turnOverride = null){
+    if (!this.pos) return null;
+    const pos = turnOverride ? { ...this.pos, turn: turnOverride } : this.pos;
+    return toFen(pos);
   }
 
   setAnimations(movesUci){

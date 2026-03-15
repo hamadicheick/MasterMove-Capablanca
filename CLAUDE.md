@@ -89,6 +89,14 @@ Multi-step quiz uses `steps[]` instead of `correct_move`:
 }
 ```
 
+### partieScreen features
+
+`partieScreen()` in `app.js` renders a game-format file with:
+- **Autoplay** (▶ Lecture auto / ⏸ Pause): advances moves automatically. Delay = 1 s for moves without comment, `estimateSpeakMs(comment) + 500 ms` for commented moves. Any manual navigation (buttons, arrow keys, move-list click) stops autoplay.
+- **Copy FEN** (Copier FEN): copies the current position as a FEN string to the clipboard. Uses `board.getFen(turn)` from `board_widget.js` with the correct turn computed from `moveIndex` (since `ignoreTurn: true` replay does not update `pos.turn`).
+
+`chess/fen.js` exports both `parseFen(fen)` and `toFen(pos)`. `board_widget.js` exposes `getFen(turnOverride?)`.
+
 ### Game format (annotated parties — Deuxième partie)
 
 ```json
@@ -131,12 +139,7 @@ Commits to `main` directly (no PR) are preferred for code fixes to avoid regress
 - **Source of truth:** `livre.txt` (full book text, has encoding artefacts — use with `sed` or Python to extract)
 - **PGN files:** `les_Principes_Fondamentaux_-_Capablanca_*.pgn` at repo root
 - **Première partie** (Chapitres I–VI, Ex1–Ex67): complete ✅
-- **Deuxième partie** (annotated games, book pp. 78–116, 14 parties total):
-  - Partie 1 Marshall–Capablanca 1909: done ✅ (game format)
-  - Partie 2 Rubinstein–Capablanca 1911: done ✅ (4-bloc/sequences format)
-  - Partie 3 Janowski–Capablanca 1913: done ✅ (game format)
-  - Partie 4 Capablanca–Znosko-Borovsky 1913: done ✅ (game format)
-  - Parties 5–14: pending
+- **Deuxième partie** (annotated games, book pp. 78–116, 14 parties total): complete ✅
 - **Encoding key for livre.txt** (chess figurine font — bytes): 0xcc=Cavalier, 0xcd=Fou, 0xcb=Dame, 0xce=Tour, 0xca=Roi. Pawn moves have no prefix byte. Use python3 binary read + decode latin-1.
 
 ## BMAD docs
